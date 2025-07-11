@@ -1,4 +1,4 @@
-# 👋 Hola, soy David · Hi, I'm David
+# 👋 Hola, soy David Sebastian Diaz · Hi, I'm David Sebastian Diaz
 
 🎓 Analista certificado por Google en Ciencia de Datos, UX y Business Intelligence  
 📊 Aplico visualización, estrategia y machine learning para resolver problemas reales en contextos interdisciplinarios.
@@ -23,7 +23,7 @@ _Machine learning aplicado sobre datos reales, parte del portfolio profesional._
 ## 📫 Contacto / Contact
 
 - [LinkedIn](https://www.linkedin.com/in/david-sebastian-diaz-586568332))
-- 📧 david.tu.email@example.com
+- 📧 dsd228.dd@gmail.com
 
 ---
 
