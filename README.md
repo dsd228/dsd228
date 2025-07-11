@@ -1,3 +1,4 @@
+![Banner](./banner.png)
 # 👋 Hola, soy David Sebastian Diaz · Hi, I'm David Sebastian Diaz
 
 🎓 Analista certificado por Google en Ciencia de Datos, UX y Business Intelligence  
