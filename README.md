@@ -1,4 +1,4 @@
-![Banner](https://raw.githubusercontent.com/dsd228/dsd228/main/images/banner_kaggle.png)
+
 ![Banner](./banner.png)
 # 💳 Detección de Fraude Financiero con Aprendizaje Automático · Proyecto Interdisciplinario
 
