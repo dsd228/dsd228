@@ -10,10 +10,10 @@
 
 ### About Me
 
-I am a passionate and driven **Student and Consultant-in-training specializing in UX, Digital Marketing, and Data Science**, based in Colonia Caroya, Córdoba, Argentina. I thrive on challenges and am constantly learning new technologies to build efficient and scalable applications. My work is guided by a commitment to sustainability, social impact, and continuous improvement.
+I am a passionate and driven **Student and Consultant-in-training specializing in UX, Digital Marketing, and Data Science**, based in Colonia Caroya, Córdoba, Argentina. I thrive on challenges and am constantly learning new technologies to build efficient and scalable solutions. My work is guided by a commitment to sustainability, social impact, and continuous improvement.
 
-- 🔭 I’m currently working on a **digital strategy for a specialist in reconstructive surgery**.
-- 🌱 I’m currently learning and applying **advanced data analysis and visualization techniques**.
+- 🔭 I'm currently developing a **digital strategy for a reconstructive surgery specialist**.
+- 🌱 I'm exploring and applying **advanced techniques in data analysis and visualization**.
 - 👯 I’m looking to collaborate on **projects that integrate social impact and technology**.
 - 🤔 I’m looking for help with **connecting with international collaborators**.
 - 💬 Ask me about **UX/UI Design, Data Analytics, and Digital Marketing**.
@@ -23,12 +23,16 @@ I am a passionate and driven **Student and Consultant-in-training specializing i
 
 ---
 
-### My Top Skills
+### My Top Skills & Certifications
 
 Here are some of the technologies and tools I work with:
 
 ![My Skills](https://skillicons.dev/icons?i=python,figma,google,powerbi,ps,ai,idea)
-*UX/UI Design (Google UX Design Certified), Digital Marketing & E-Commerce (Google Certified), Data Analytics (Python, Excel, Google Analytics, Power BI), Visual Storytelling, and interdisciplinary consulting with a focus on sustainability.*
+*UX/UI Design, Digital Marketing & E-Commerce, Data Analytics (Python, Excel, Google Analytics, Power BI), Visual Storytelling, and interdisciplinary consulting with a focus on sustainability.*
+
+![Google UX Certified](https://img.shields.io/badge/Google-UX%20Design-blue)
+![Google Digital Marketing](https://img.shields.io/badge/Google-Digital%20Marketing-green)
+![Coursera](https://img.shields.io/badge/Coursera-Professional%20Certificate-yellow)
 
 ---
 
