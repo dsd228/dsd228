@@ -1,73 +1,66 @@
 
 ![Banner](./banner.png)
-# 👋 ¡Hola, soy David Sebastian Diaz! | Hi, I'm David Sebastian Diaz
-
-Bienvenido a mi perfil de GitHub.  
-Welcome to my GitHub profile.
-
----
-
-## 👨🏻‍💼 Sobre mí | About Me
-
-Analista certificado por Google en Ciencia de Datos, UX y Business Intelligence.  
-Google-certified Analyst in Data Science, UX, and Business Intelligence.
-
-Apasionado por la tecnología, los datos y la innovación interdisciplinaria.  
-Passionate about technology, data, and interdisciplinary innovation.
+<div align="center">
+  <a href="https://github.com/dsd228">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Roboto&size=23&pause=1000&color=24292E&width=435&lines=Hi+there+%F0%9F%91%8B%2C+I'm+David+Sebastian+Diaz;Welcome+to+my+GitHub+Profile!" alt="Typing SVG" />
+  </a>
+</div>
 
 ---
 
-## 💡 Habilidades Principales | Top Skills
+### About Me
 
-- Ciencia de Datos · Data Science
-- UX / Experiencia de Usuario · User Experience
-- Business Intelligence
-- Machine Learning (Random Forest, XGBoost, SMOTE)
-- Python · SQL · Tableau · Excel
+I am a passionate and driven **Student and Consultant-in-training specializing in UX, Digital Marketing, and Data Science**, based in Colonia Caroya, Córdoba, Argentina. I thrive on challenges and am constantly learning new technologies to build efficient and scalable applications. My work is guided by a commitment to sustainability, social impact, and continuous improvement.
 
----
-
-## 🌟 Proyecto Destacado | Featured Project
-
-### 💳 Detección de Fraude Financiero con Aprendizaje Automático  
-**Credit Card Fraud Detection with Machine Learning**
-
-Este proyecto forma parte de mi portafolio profesional como Analista certificado por Google en Ciencia de Datos, UX y Business Intelligence.  
-This project is part of my professional portfolio as a Google-certified analyst in Data Science, UX, and Business Intelligence.
-
-Aplicamos técnicas de balanceo con SMOTE y algoritmos de Machine Learning para identificar transacciones fraudulentas utilizando un dataset bancario real.  
-We apply SMOTE balancing techniques and machine learning algorithms to identify fraudulent transactions using a real-world banking dataset.
-
-**🔗 [Ver el proyecto / View Project](https://github.com/dsd228/credit-card-fraud-detection)**
+- 🔭 I’m currently working on a **digital strategy for a specialist in reconstructive surgery**.
+- 🌱 I’m currently learning and applying **advanced data analysis and visualization techniques**.
+- 👯 I’m looking to collaborate on **projects that integrate social impact and technology**.
+- 🤔 I’m looking for help with **connecting with international collaborators**.
+- 💬 Ask me about **UX/UI Design, Data Analytics, and Digital Marketing**.
+- 📫 How to reach me: **david.diaz.uxdata@gmail.com**
+- 😄 Pronouns: **He/Him**
+- ⚡ Fun fact: **I'm developing a business idea for a sustainable senior living space!**
 
 ---
 
-## 📚 Otros Proyectos | Other Projects
+### My Top Skills
 
-- [Tu segundo proyecto destacado aquí / Your next flagship project here](#)
-- [Más proyectos en mis repositorios públicos / More in my public repositories](https://github.com/dsd228?tab=repositories)
+Here are some of the technologies and tools I work with:
 
----
-
-## 🌐 Contacto & Redes | Connect & Social Links
-
-- [GitHub](https://github.com/dsd228)
-- [LinkedIn](https://linkedin.com/in/dsd228)
-- [Kaggle](https://www.kaggle.com/dsd228)
+![My Skills](https://skillicons.dev/icons?i=python,figma,google,powerbi,ps,ai,idea)
+*UX/UI Design (Google UX Design Certified), Digital Marketing & E-Commerce (Google Certified), Data Analytics (Python, Excel, Google Analytics, Power BI), Visual Storytelling, and interdisciplinary consulting with a focus on sustainability.*
 
 ---
 
-## 📈 Estadísticas de GitHub | GitHub Stats
+### My Favorite Projects
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=dsd228&show_icons=true&theme=radical)
+Here are some of the projects I'm most proud of. You can find more on my repositories page.
+
+| Project Name | Description | Link |
+|--------------|-------------|------|
+| **Apple Inc. 2025 — Interdisciplinary Visual Benchmarking**  | An academic-professional project integrating financial KPIs, UX/UI, technological innovation, and sustainability based on real Apple data. Features advanced visualizations and visual storytelling. | [View Project](https://github.com/dsd228/presentation) |
+| **Dr. Javier Belinky Clinic**  | Development of web content and digital strategy for a specialist in reconstructive and transgender surgery. (In progress, no public repository due to confidentiality). | Confidential |
+| **Senior Living Project – Colonia Caroya**  | A business idea in development focused on creating a sustainable and dignified resting space for seniors, with a human and strategic focus. | In Development |
 
 ---
 
-¡Gracias por visitar mi perfil!  
-Thanks for visiting my profile!
+### Connect with Me
 
-¿Te gustaría colaborar o tienes preguntas? Contáctame por LinkedIn o revisa mis proyectos.  
-Interested in collaborating or have questions? Reach out on LinkedIn or check out my projects.
+You can find me on the following platforms:
+
+<p align="left">
+<a href="https://linkedin.com/in/david-data-conecta" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="David Sebastian Diaz's LinkedIn" height="30" width="40" /></a>
+</p>
+
+---
+
+### My GitHub Stats
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=dsd228&show_icons=true&theme=radical" alt="dsd228's GitHub Stats" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=dsd228&theme=radical" alt="dsd228's GitHub Streak" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=dsd228&layout=compact&theme=radical" alt="dsd228's Top Languages" />
+</p>
 
 
 
