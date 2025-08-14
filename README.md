@@ -1,71 +1,77 @@
-
 ![Banner](./banner.png)
+
 <div align="center">
   <a href="https://github.com/dsd228">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Roboto&size=23&pause=1000&color=24292E&width=435&lines=Hi+there+%F0%9F%91%8B%2C+I'm+David+Sebastian+Diaz;Welcome+to+my+GitHub+Profile!" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.herokuapp.com?font=Roboto&size=23&pause=1000&color=24292E&width=435&lines=Hi+there+%F0%9F%91%8B%2C+I'm+David+Sebastian+Diaz;Welcome+to+my+GitHub+Profile!" alt="Typing SVG" />
   </a>
 </div>
 
 ---
 
-### About Me
+## 👨‍💻 Sobre Mí
 
-I am a passionate and driven **Student and Consultant-in-training specializing in UX, Digital Marketing, and Data Science**, based in Colonia Caroya, Córdoba, Argentina. I thrive on challenges and am constantly learning new technologies to build efficient and scalable solutions. My work is guided by a commitment to sustainability, social impact, and continuous improvement.
+Soy **David Sebastian Diaz**, estudiante y consultor en formación especializado en **UX, Marketing Digital y Ciencia de Datos**. Apasionado por la innovación y el impacto social, busco integrar tecnología y sostenibilidad en cada proyecto.
 
-- 🔭 I'm currently developing a **digital strategy for a reconstructive surgery specialist**.
-- 🌱 I'm exploring and applying **advanced techniques in data analysis and visualization**.
-- 👯 I’m looking to collaborate on **projects that integrate social impact and technology**.
-- 🤔 I’m looking for help with **connecting with international collaborators**.
-- 💬 Ask me about **UX/UI Design, Data Analytics, and Digital Marketing**.
-- 📫 How to reach me: **david.diaz.uxdata@gmail.com**
-- 😄 Pronouns: **He/Him**
-- ⚡ Fun fact: **I'm developing a business idea for a sustainable senior living space!**
+- 🔭 Actualmente desarrollo una estrategia digital para un especialista en cirugía reconstructiva.
+- 🌱 Explorando técnicas avanzadas en análisis y visualización de datos.
+- 🤝 Abierto a colaboraciones internacionales con enfoque social y tecnológico.
+- 💬 Consultas sobre **UX/UI Design, Data Analytics y Marketing Digital**.
+- 📫 Contacto: **david.diaz.uxdata@gmail.com**
+- 😄 Pronombres: **Él**
+- ⚡ Fun fact: ¡Estoy creando una idea de negocio para viviendas sustentables para adultos mayores!
 
 ---
 
-### My Top Skills & Certifications
+## 🛠️ Habilidades & Certificaciones
 
-Here are some of the technologies and tools I work with:
+**Tecnologías y herramientas:**
 
 ![My Skills](https://skillicons.dev/icons?i=python,figma,google,powerbi,ps,ai,idea)
-*UX/UI Design, Digital Marketing & E-Commerce, Data Analytics (Python, Excel, Google Analytics, Power BI), Visual Storytelling, and interdisciplinary consulting with a focus on sustainability.*
 
+- Diseño UX/UI
+- Marketing Digital & E-Commerce
+- Analítica de Datos (Python, Excel, Google Analytics, Power BI)
+- Storytelling Visual
+- Consultoría interdisciplinaria con foco en sostenibilidad
+
+**Certificaciones:**
 ![Google UX Certified](https://img.shields.io/badge/Google-UX%20Design-blue)
 ![Google Digital Marketing](https://img.shields.io/badge/Google-Digital%20Marketing-green)
 ![Coursera](https://img.shields.io/badge/Coursera-Professional%20Certificate-yellow)
 
 ---
 
-### My Favorite Projects
+## 🌟 Proyectos Destacados
 
-Here are some of the projects I'm most proud of. You can find more on my repositories page.
-
-| Project Name | Description | Link |
-|--------------|-------------|------|
-| **Apple Inc. 2025 — Interdisciplinary Visual Benchmarking**  | An academic-professional project integrating financial KPIs, UX/UI, technological innovation, and sustainability based on real Apple data. Features advanced visualizations and visual storytelling. | [View Project](https://github.com/dsd228/presentation) |
-| **Dr. Javier Belinky Clinic**  | Development of web content and digital strategy for a specialist in reconstructive and transgender surgery. (In progress, no public repository due to confidentiality). | Confidential |
-| **Senior Living Project – Colonia Caroya**  | A business idea in development focused on creating a sustainable and dignified resting space for seniors, with a human and strategic focus. | In Development |
+| Proyecto | Descripción | Estado/Enlace |
+|----------|-------------|---------------|
+| **Apple Inc. 2025 – Visual Benchmarking Interdisciplinario** | Integración de KPIs financieros, UX/UI, innovación tecnológica y sostenibilidad aplicados a casos reales de Apple. | [Ver caso académico](#) |
+| **Clínica Dr. Javier Belinky** | Desarrollo de contenido web y estrategia digital para especialista en cirugía reconstructiva y transgénero. | Privado (confidencialidad) |
+| **Senior Living Project – Colonia Caroya** | Idea de negocio en desarrollo: espacio digno y sustentable para adultos mayores, integrando enfoque humano y estratégico. | En desarrollo |
 
 ---
 
-### Connect with Me
-
-You can find me on the following platforms:
+## 🤝 Conecta Conmigo
 
 <p align="left">
-<a href="https://linkedin.com/in/david-data-conecta" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="David Sebastian Diaz's LinkedIn" height="30" width="40" /></a>
+  <a href="https://linkedin.com/in/david-data-conecta" target="_blank">
+    <img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" height="30" alt="LinkedIn"/>
+  </a>
+  <a href="mailto:david.diaz.uxdata@gmail.com" target="_blank">
+    <img src="https://img.shields.io/badge/Email-david.diaz.uxdata%40gmail.com-red" height="30" alt="Email"/>
+  </a>
 </p>
 
 ---
 
-### My GitHub Stats
+## 📊 Estadísticas de GitHub
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=dsd228&show_icons=true&theme=radical" alt="dsd228's GitHub Stats" />
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=dsd228&theme=radical" alt="dsd228's GitHub Streak" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=dsd228&layout=compact&theme=radical" alt="dsd228's Top Languages" />
+  <img src="https://github-readme-stats.vercel.app/api?username=dsd228&show_icons=true&theme=radical" alt="GitHub Stats" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=dsd228&theme=radical" alt="GitHub Streak" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=dsd228&layout=compact&theme=radical" alt="Top Languages" />
 </p>
 
+---
 
-
-
+¡Gracias por visitar mi perfil! 🚀
