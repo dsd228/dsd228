@@ -8,33 +8,32 @@
 
 ---
 
-## 👨‍💻 Sobre Mí
+# 👋 ¡Hola! Soy David Sebastian Diaz
 
-Soy **David Sebastian Diaz**, estudiante y consultor en formación especializado en **UX, Marketing Digital y Ciencia de Datos**. Apasionado por la innovación y el impacto social, busco integrar tecnología y sostenibilidad en cada proyecto.
+**Consultor en formación, apasionado por la UX, marketing digital y ciencia de datos.**  
+Basado en Colonia Caroya, Córdoba, Argentina.
 
-- 🔭 Actualmente desarrollo una estrategia digital para un especialista en cirugía reconstructiva.
-- 🌱 Explorando técnicas avanzadas en análisis y visualización de datos.
-- 🤝 Abierto a colaboraciones internacionales con enfoque social y tecnológico.
-- 💬 Consultas sobre **UX/UI Design, Data Analytics y Marketing Digital**.
-- 📫 Contacto: **david.diaz.uxdata@gmail.com**
-- 😄 Pronombres: **Él**
-- ⚡ Fun fact: ¡Estoy creando una idea de negocio para viviendas sustentables para adultos mayores!
+- 🚀 Desarrollo estrategias digitales para especialistas médicos.
+- 📊 Aplico técnicas avanzadas de análisis y visualización de datos.
+- 🌍 Busco colaboraciones internacionales con enfoque social y tecnológico.
+- 💬 ¿Dudas sobre UX/UI, analítica de datos o marketing digital? ¡Escríbeme!
+- ✉️ Contacto: david.diaz.uxdata@gmail.com
+- ⚡ Fun fact: Impulsando una idea de negocio sustentable para adultos mayores.
 
 ---
 
-## 🛠️ Habilidades & Certificaciones
-
-**Tecnologías y herramientas:**
+## 🛠️ Habilidades Técnicas
 
 ![My Skills](https://skillicons.dev/icons?i=python,figma,google,powerbi,ps,ai,idea)
 
-- Diseño UX/UI
-- Marketing Digital & E-Commerce
-- Analítica de Datos (Python, Excel, Google Analytics, Power BI)
-- Storytelling Visual
-- Consultoría interdisciplinaria con foco en sostenibilidad
+- **Diseño UX/UI**
+- **Data Analytics** (Python, Excel, Power BI, Google Analytics)
+- **Marketing Digital & E-Commerce**
+- **Storytelling Visual**
+- **Consultoría interdisciplinaria y sustentabilidad**
 
-**Certificaciones:**
+### Certificaciones
+
 ![Google UX Certified](https://img.shields.io/badge/Google-UX%20Design-blue)
 ![Google Digital Marketing](https://img.shields.io/badge/Google-Digital%20Marketing-green)
 ![Coursera](https://img.shields.io/badge/Coursera-Professional%20Certificate-yellow)
@@ -45,9 +44,9 @@ Soy **David Sebastian Diaz**, estudiante y consultor en formación especializado
 
 | Proyecto | Descripción | Estado/Enlace |
 |----------|-------------|---------------|
-| **Apple Inc. 2025 – Visual Benchmarking Interdisciplinario** | Integración de KPIs financieros, UX/UI, innovación tecnológica y sostenibilidad aplicados a casos reales de Apple. | [Ver caso académico](#) |
-| **Clínica Dr. Javier Belinky** | Desarrollo de contenido web y estrategia digital para especialista en cirugía reconstructiva y transgénero. | Privado (confidencialidad) |
-| **Senior Living Project – Colonia Caroya** | Idea de negocio en desarrollo: espacio digno y sustentable para adultos mayores, integrando enfoque humano y estratégico. | En desarrollo |
+| **Apple Inc. 2025 – Benchmarking Visual** | Integración de KPIs financieros, UX/UI, innovación y sostenibilidad con datos reales de Apple. | [Ver caso académico](#) |
+| **Clínica Dr. Javier Belinky** | Estrategia digital y desarrollo web para cirugía reconstructiva y transgénero. | Privado |
+| **Senior Living – Colonia Caroya** | Idea de negocio para espacios dignos y sustentables para adultos mayores. | En desarrollo |
 
 ---
 
@@ -74,4 +73,4 @@ Soy **David Sebastian Diaz**, estudiante y consultor en formación especializado
 
 ---
 
-¡Gracias por visitar mi perfil! 🚀
+<p align="center"><b>¡Gracias por tu visita! 🚀</b></p>
