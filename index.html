@@ -465,7 +465,7 @@
             font-weight: bold;
         }
 
-        /* Projects */
+        /* Projects - Carrusel de Imágenes */
         .project-card {
             background: var(--bg);
             border-radius: 35px;
@@ -566,16 +566,107 @@
             color: var(--text-light);
         }
 
+        /* Carrusel de imágenes para proyectos */
         .project-images {
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .image-carousel {
+            width: 100%;
+            height: 400px;
+            position: relative;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: inset 8px 8px 16px var(--shadow-dark), inset -8px -8px 16px var(--shadow-light);
+        }
+
+        .carousel-track {
+            display: flex;
+            width: 300%;
+            height: 100%;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-slide {
+            width: 33.333%;
+            height: 100%;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 2rem;
+            flex-shrink: 0;
+        }
+
+        .carousel-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+
+        .carousel-nav {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            z-index: 10;
+        }
+
+        .carousel-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--shadow-light);
+            border: 2px solid var(--primary);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .carousel-dot.active {
+            background: var(--primary);
+            transform: scale(1.2);
+        }
+
+        .carousel-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+            background: var(--bg);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 4px 4px 8px var(--shadow-dark), -4px -4px 8px var(--shadow-light);
+            z-index: 10;
+            opacity: 0;
+            transition: all 0.3s;
+        }
+
+        .carousel-arrow:hover {
+            box-shadow: inset 3px 3px 6px var(--shadow-dark), inset -3px -3px 6px var(--shadow-light);
+        }
+
+        .carousel-arrow.prev {
+            left: 10px;
+        }
+
+        .carousel-arrow.next {
+            right: 10px;
+        }
+
+        .image-carousel:hover .carousel-arrow {
+            opacity: 1;
         }
 
         .project-image-placeholder {
             width: 100%;
-            height: 400px;
+            height: 100%;
             background: var(--bg);
             border-radius: 25px;
             display: flex;
@@ -585,6 +676,26 @@
             font-size: 1.25rem;
             font-weight: 600;
             box-shadow: inset 8px 8px 16px var(--shadow-dark), inset -8px -8px 16px var(--shadow-light);
+        }
+
+        /* Efecto de hover para carrusel automático */
+        .project-card:hover .carousel-track {
+            animation: slideShow 12s infinite;
+        }
+
+        @keyframes slideShow {
+            0%, 28% {
+                transform: translateX(0);
+            }
+            33%, 61% {
+                transform: translateX(-33.333%);
+            }
+            66%, 94% {
+                transform: translateX(-66.666%);
+            }
+            100% {
+                transform: translateX(0);
+            }
         }
 
         /* Contact */
@@ -693,6 +804,7 @@
             section { padding: 3rem 1rem; }
             .project-info, .about-card, .skill-card { padding: 2rem; }
             .hero-banner { height: 200px; }
+            .image-carousel { height: 300px; }
         }
     </style>
 </head>
@@ -834,61 +946,197 @@
             <h2 class="section-title">Proyectos Destacados</h2>
             <p class="section-subtitle">Casos donde el diseño estratégico generó resultados tangibles</p>
             
-            <div class="project-card">
+            <!-- Proyecto PASEO -->
+            <div class="project-card" data-project="paseo">
                 <div class="project-content">
                     <div class="project-info">
                         <span class="project-tag">Mobile App</span>
                         <h3>PASEO</h3>
-                        <p>App móvil que conecta dueños de mascotas con paseadores verificados.</p>
+                        <p>App móvil que conecta dueños de mascotas con paseadores verificados. Diseño centrado en la seguridad y confianza de los usuarios.</p>
                         
                         <div class="project-metrics">
                             <div class="metric">
                                 <div class="metric-value">4.8/5</div>
-                                <div class="metric-label">Rating</div>
+                                <div class="metric-label">Rating App Store</div>
                             </div>
                             <div class="metric">
-                                <div class="metric-value">87%</div>
-                                <div class="metric-label">Success</div>
+                                <div class="metric-value">+87%</div>
+                                <div class="metric-label">Retención</div>
                             </div>
                         </div>
                         
                         <div class="project-meta">
-                            <h4>Solución</h4>
-                            <p>Verificación de paseadores, GPS en tiempo real, reviews y fotos.</p>
+                            <h4>Características principales</h4>
+                            <p>Verificación de paseadores, GPS en tiempo real, sistema de reviews, historial de paseos y fotos.</p>
                         </div>
                         
-                        <a href="#" class="btn-neu">Ver caso</a>
+                        <a href="#" class="btn-neu">Ver caso completo</a>
                     </div>
                     
                     <div class="project-images">
-                        <div class="project-image-placeholder">🐕 PASEO</div>
+                        <div class="image-carousel">
+                            <div class="carousel-track">
+                                <!-- Imagen 1 -->
+                                <div class="carousel-slide">
+                                    <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" 
+                                         alt="PASEO App - Pantalla principal" 
+                                         class="carousel-image">
+                                </div>
+                                <!-- Imagen 2 -->
+                                <div class="carousel-slide">
+                                    <img src="https://images.unsplash.com/photo-1560743641-3914f2c45636?ixlib=rb-1.2.1&auto=format&fit=crop&w-600&q=80" 
+                                         alt="PASEO App - Paseadores disponibles" 
+                                         class="carousel-image">
+                                </div>
+                                <!-- Imagen 3 -->
+                                <div class="carousel-slide">
+                                    <img src="https://images.unsplash.com/photo-1576201836106-db1758fd1c97?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" 
+                                         alt="PASEO App - Seguimiento en tiempo real" 
+                                         class="carousel-image">
+                                </div>
+                            </div>
+                            
+                            <!-- Navegación -->
+                            <div class="carousel-nav">
+                                <span class="carousel-dot active" data-slide="0"></span>
+                                <span class="carousel-dot" data-slide="1"></span>
+                                <span class="carousel-dot" data-slide="2"></span>
+                            </div>
+                            
+                            <!-- Flechas -->
+                            <div class="carousel-arrow prev">←</div>
+                            <div class="carousel-arrow next">→</div>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="project-card">
+            <!-- Proyecto Yale School of Art -->
+            <div class="project-card" data-project="yale">
                 <div class="project-content">
                     <div class="project-info">
                         <span class="project-tag">Web Redesign</span>
                         <h3>Yale School of Art</h3>
-                        <p>Rediseño del sitio académico con foco en usabilidad y claridad.</p>
+                        <p>Rediseño completo del sitio web académico con foco en usabilidad, accesibilidad y claridad de información.</p>
                         
                         <div class="project-metrics">
                             <div class="metric">
-                                <div class="metric-value">65%</div>
+                                <div class="metric-value">+65%</div>
                                 <div class="metric-label">Findability</div>
                             </div>
                             <div class="metric">
                                 <div class="metric-value">-42%</div>
-                                <div class="metric-label">Tiempo</div>
+                                <div class="metric-label">Tiempo de búsqueda</div>
                             </div>
                         </div>
                         
-                        <a href="#" class="btn-neu">Ver caso</a>
+                        <div class="project-meta">
+                            <h4>Desafío</h4>
+                            <p>Organizar información compleja de programas académicos, eventos y recursos para estudiantes y profesores.</p>
+                        </div>
+                        
+                        <a href="#" class="btn-neu">Ver caso completo</a>
                     </div>
                     
                     <div class="project-images">
-                        <div class="project-image-placeholder">🎨 Yale</div>
+                        <div class="image-carousel">
+                            <div class="carousel-track">
+                                <!-- Imagen 1 -->
+                                <div class="carousel-slide">
+                                    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" 
+                                         alt="Yale School of Art - Homepage" 
+                                         class="carousel-image">
+                                </div>
+                                <!-- Imagen 2 -->
+                                <div class="carousel-slide">
+                                    <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" 
+                                         alt="Yale School of Art - Programas" 
+                                         class="carousel-image">
+                                </div>
+                                <!-- Imagen 3 -->
+                                <div class="carousel-slide">
+                                    <img src="https://images.unsplash.com/photo-1501504905252-473c47e087f8?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" 
+                                         alt="Yale School of Art - Galería" 
+                                         class="carousel-image">
+                                </div>
+                            </div>
+                            
+                            <!-- Navegación -->
+                            <div class="carousel-nav">
+                                <span class="carousel-dot active" data-slide="0"></span>
+                                <span class="carousel-dot" data-slide="1"></span>
+                                <span class="carousel-dot" data-slide="2"></span>
+                            </div>
+                            
+                            <!-- Flechas -->
+                            <div class="carousel-arrow prev">←</div>
+                            <div class="carousel-arrow next">→</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Proyecto adicional -->
+            <div class="project-card" data-project="eco">
+                <div class="project-content">
+                    <div class="project-info">
+                        <span class="project-tag">E-commerce</span>
+                        <h3>EcoMarket</h3>
+                        <p>Plataforma de e-commerce sostenible con foco en experiencia de compra consciente y trazabilidad de productos.</p>
+                        
+                        <div class="project-metrics">
+                            <div class="metric">
+                                <div class="metric-value">+35%</div>
+                                <div class="metric-label">Conversión</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">92%</div>
+                                <div class="metric-label">Satisfacción</div>
+                            </div>
+                        </div>
+                        
+                        <div class="project-meta">
+                            <h4>Innovación</h4>
+                            <p>Integración de historial de sostenibilidad, calculadora de impacto ecológico y comunidades de compradores.</p>
+                        </div>
+                        
+                        <a href="#" class="btn-neu">Ver caso completo</a>
+                    </div>
+                    
+                    <div class="project-images">
+                        <div class="image-carousel">
+                            <div class="carousel-track">
+                                <!-- Imagen 1 -->
+                                <div class="carousel-slide">
+                                    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" 
+                                         alt="EcoMarket - Catálogo" 
+                                         class="carousel-image">
+                                </div>
+                                <!-- Imagen 2 -->
+                                <div class="carousel-slide">
+                                    <img src="https://images.unsplash.com/photo-1556742044-3c52d6e88c62?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" 
+                                         alt="EcoMarket - Producto" 
+                                         class="carousel-image">
+                                </div>
+                                <!-- Imagen 3 -->
+                                <div class="carousel-slide">
+                                    <img src="https://images.unsplash.com/photo-1556742051-5ccfbc51d1ee?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" 
+                                         alt="EcoMarket - Checkout" 
+                                         class="carousel-image">
+                                </div>
+                            </div>
+                            
+                            <!-- Navegación -->
+                            <div class="carousel-nav">
+                                <span class="carousel-dot active" data-slide="0"></span>
+                                <span class="carousel-dot" data-slide="1"></span>
+                                <span class="carousel-dot" data-slide="2"></span>
+                            </div>
+                            
+                            <!-- Flechas -->
+                            <div class="carousel-arrow prev">←</div>
+                            <div class="carousel-arrow next">→</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -954,17 +1202,96 @@
             });
         });
 
-        // Efecto de sonido de agua para el banner (opcional)
-        const banner = document.querySelector('.hero-banner');
-        banner.addEventListener('mouseenter', () => {
-            // Puedes agregar aquí un sonido de agua si lo deseas
-            // new Audio('water-sound.mp3').play().catch(e => console.log('Sonido no disponible'));
+        // Sistema de carrusel para proyectos
+        document.querySelectorAll('.image-carousel').forEach((carousel, index) => {
+            const track = carousel.querySelector('.carousel-track');
+            const slides = carousel.querySelectorAll('.carousel-slide');
+            const dots = carousel.querySelectorAll('.carousel-dot');
+            const prevBtn = carousel.querySelector('.carousel-arrow.prev');
+            const nextBtn = carousel.querySelector('.carousel-arrow.next');
+            
+            let currentSlide = 0;
+            const totalSlides = slides.length;
+            
+            // Actualizar posición del carrusel
+            function updateCarousel() {
+                track.style.transform = `translateX(-${currentSlide * (100 / totalSlides)}%)`;
+                
+                // Actualizar dots
+                dots.forEach((dot, i) => {
+                    dot.classList.toggle('active', i === currentSlide);
+                });
+            }
+            
+            // Navegación con dots
+            dots.forEach((dot, i) => {
+                dot.addEventListener('click', () => {
+                    currentSlide = i;
+                    updateCarousel();
+                });
+            });
+            
+            // Botón anterior
+            prevBtn.addEventListener('click', () => {
+                currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+                updateCarousel();
+            });
+            
+            // Botón siguiente
+            nextBtn.addEventListener('click', () => {
+                currentSlide = (currentSlide + 1) % totalSlides;
+                updateCarousel();
+            });
+            
+            // Auto-slide al pasar el mouse (se activa con CSS)
+            // Pero mantenemos control manual también
+            
+            // Navegación con teclado
+            carousel.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowLeft') {
+                    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+                    updateCarousel();
+                } else if (e.key === 'ArrowRight') {
+                    currentSlide = (currentSlide + 1) % totalSlides;
+                    updateCarousel();
+                }
+            });
+            
+            // Hacer el carrusel enfocable
+            carousel.setAttribute('tabindex', '0');
         });
 
-        // Efecto interactivo para el banner en dispositivos táctiles
+        // Efecto interactivo para el banner
+        const banner = document.querySelector('.hero-banner');
         banner.addEventListener('touchstart', () => {
             banner.classList.add('active');
             setTimeout(() => banner.classList.remove('active'), 1500);
+        });
+
+        // Efecto de sonido opcional (descomentar si quieres agregar sonido)
+        // banner.addEventListener('mouseenter', () => {
+        //     new Audio('water-sound.mp3').play().catch(e => console.log('Sonido no disponible'));
+        // });
+
+        // Animación de entrada para las cards de proyecto
+        const projectCards = document.querySelectorAll('.project-card');
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = 'fadeInUp 0.8s ease forwards';
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        projectCards.forEach(card => {
+            card.style.opacity = '0';
+            observer.observe(card);
         });
     </script>
 </body>
