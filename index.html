@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>David Díaz — UX/Product Designer</title>
+  <title>David Díaz — UX / Product Designer</title>
 
-  <!-- Fonts -->
+  <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Icons -->
   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -20,7 +20,7 @@
 <!-- ================= NAV ================= -->
 <nav class="navbar">
   <div class="nav-container">
-    <div class="nav-logo">David Díaz</div>
+    <span class="nav-logo">David Díaz</span>
     <ul class="nav-menu">
       <li><a href="#about">Sobre mí</a></li>
       <li><a href="#skills">Skills</a></li>
@@ -31,15 +31,13 @@
 </nav>
 
 <!-- ================= HERO ================= -->
-<section class="hero">
-  <div class="container hero-container">
-    <div class="hero-content">
-      <h1 class="hero-title">UX & Product Designer</h1>
+<header class="hero">
+  <div class="container hero-layout">
+
+    <div class="hero-text">
+      <h1>UX & Product Designer</h1>
       <p class="hero-subtitle">
-        Diseño experiencias digitales claras, humanas y escalables.
-      </p>
-      <p class="hero-description">
-        Enfoque en investigación, estrategia, UI avanzada y sistemas de diseño.
+        Diseño experiencias digitales claras, humanas y basadas en datos.
       </p>
 
       <div class="hero-actions">
@@ -47,26 +45,31 @@
         <a href="#contact" class="btn-secondary">Contactar</a>
       </div>
     </div>
+
+    <div class="hero-visual">
+      <img src="images/banner.png" alt="UX Portfolio Banner">
+    </div>
+
   </div>
-</section>
+</header>
 
 <!-- ================= ABOUT ================= -->
 <section id="about">
-  <div class="container about-content">
+  <div class="container narrow">
     <h2 class="section-title">Sobre mí</h2>
 
-    <div class="about-text">
+    <div class="card">
       <p>
-        Diseñador UX/UI con foco en producto digital, investigación de usuarios
-        y diseño basado en datos. Trabajo combinando estrategia, diseño visual
-        y validación continua.
+        Diseñador UX/UI enfocado en producto digital, investigación de usuarios
+        y diseño estratégico. Trabajo integrando UX, UI y datos para crear
+        experiencias escalables.
       </p>
 
-      <ul class="about-highlights">
-        <li>✔ UX Research & Testing</li>
-        <li>✔ Product Thinking</li>
-        <li>✔ Design Systems</li>
-        <li>✔ Data-informed UX</li>
+      <ul class="about-list">
+        <li><i class="ri-check-line"></i> UX Research & Testing</li>
+        <li><i class="ri-check-line"></i> Product Thinking</li>
+        <li><i class="ri-check-line"></i> Design Systems</li>
+        <li><i class="ri-check-line"></i> Data-informed UX</li>
       </ul>
     </div>
   </div>
@@ -77,38 +80,37 @@
   <div class="container">
     <h2 class="section-title">Habilidades & Herramientas</h2>
 
-    <div class="skills-grid">
+    <div class="grid-3">
 
-      <div class="skill-card">
+      <div class="card">
         <h3><i class="ri-compasses-2-line"></i> UX & Producto</h3>
         <ul>
-          <li>UX Research & Discovery</li>
+          <li>Research & Discovery</li>
           <li>User Personas</li>
           <li>Journey Maps</li>
-          <li>Arquitectura de Información</li>
+          <li>IA & Flujos</li>
           <li>Usability Testing</li>
         </ul>
       </div>
 
-      <div class="skill-card">
+      <div class="card">
         <h3><i class="ri-palette-line"></i> UI & Visual</h3>
         <ul>
-          <li>Neumorphism & Glass</li>
+          <li>Neumorphism</li>
+          <li>Glassmorphism</li>
           <li>Interaction Design</li>
-          <li>Design Systems</li>
-          <li>Accesibilidad (WCAG)</li>
+          <li>Accesibilidad</li>
           <li>Microinteracciones</li>
         </ul>
       </div>
 
-      <div class="skill-card">
+      <div class="card">
         <h3><i class="ri-tools-line"></i> Herramientas</h3>
-        <div class="tools-grid">
+        <div class="tools">
           <span class="tool"><i class="ri-figma-line"></i> Figma</span>
           <span class="tool"><i class="ri-adobe-line"></i> Adobe</span>
-          <span class="tool"><i class="ri-html5-line"></i> HTML5</span>
-          <span class="tool"><i class="ri-css3-line"></i> CSS3</span>
-          <span class="tool"><i class="ri-git-branch-line"></i> Git</span>
+          <span class="tool"><i class="ri-html5-line"></i> HTML</span>
+          <span class="tool"><i class="ri-css3-line"></i> CSS</span>
           <span class="tool"><i class="ri-bar-chart-line"></i> Data</span>
         </div>
       </div>
@@ -122,26 +124,21 @@
   <div class="container">
     <h2 class="section-title">Proyectos</h2>
 
-    <div class="projects-grid">
+    <div class="grid-2">
 
-      <div class="project-card featured">
+      <div class="card featured">
         <h3>PASEO — Mobile UX</h3>
         <p>
           App que conecta dueños de mascotas con paseadores verificados.
-          UX Research, flujos, UI y validación.
+          Research, flujos, UI y validación.
         </p>
-        <div class="project-tags">
-          <span class="tag">UX Research</span>
-          <span class="tag">Mobile</span>
-          <span class="tag">Product</span>
-        </div>
       </div>
 
-      <div class="project-card featured">
-        <h3>Yale School of Art — Rediseño UX</h3>
+      <div class="card featured">
+        <h3>Yale School of Art — UX Redesign</h3>
         <p>
-          Reorganización total del sitio académico enfocada en claridad,
-          jerarquía y experiencia de usuario.
+          Rediseño completo del sitio académico enfocado en claridad,
+          jerarquía visual y usabilidad.
         </p>
         <a class="btn-secondary" target="_blank"
            href="https://www.figma.com/design/fKPimush1CbGcvlXghoJpE">
@@ -149,7 +146,7 @@
         </a>
       </div>
 
-      <div class="project-card">
+      <div class="card">
         <h3>Apple Inc. 2025 — UX KPIs</h3>
         <a class="btn-secondary" target="_blank"
            href="https://dsd228.github.io/-Apple-Inc.-2025-UX-KPIs-Innovation-Strategy/">
@@ -157,27 +154,11 @@
         </a>
       </div>
 
-      <div class="project-card">
+      <div class="card">
         <h3>Arcor — UX basada en datos</h3>
         <a class="btn-secondary" target="_blank"
            href="https://dsd228.github.io/Arcor-estrategia-de-Marketing-UX-basada-en-datos/">
           Ver proyecto
-        </a>
-      </div>
-
-      <div class="project-card">
-        <h3>Credit Card Fraud Detection</h3>
-        <a class="btn-secondary" target="_blank"
-           href="https://dsd228.github.io/credit-card-fraud-detection/">
-          Ver proyecto
-        </a>
-      </div>
-
-      <div class="project-card">
-        <h3>DataConecta</h3>
-        <a class="btn-secondary" target="_blank"
-           href="https://dataconecta.me/">
-          Visitar sitio
         </a>
       </div>
 
@@ -187,26 +168,18 @@
 
 <!-- ================= CONTACT ================= -->
 <section id="contact">
-  <div class="container contact-content">
-    <div class="contact-info">
-      <h3>Contacto</h3>
-      <p>¿Querés trabajar juntos o charlar sobre diseño?</p>
-      <p><strong>Email:</strong> david@email.com</p>
-    </div>
+  <div class="container narrow">
+    <h2 class="section-title">Contacto</h2>
 
-    <div class="contact-form">
-      <form>
-        <input type="text" placeholder="Nombre">
-        <input type="email" placeholder="Email">
-        <textarea placeholder="Mensaje"></textarea>
-        <button class="btn-primary">Enviar</button>
-      </form>
+    <div class="card">
+      <p>¿Querés trabajar juntos o conversar sobre diseño?</p>
+      <p><strong>Email:</strong> david@email.com</p>
     </div>
   </div>
 </section>
 
 <footer class="footer">
-  © 2026 — David Díaz · UX/Product Designer
+  © 2026 — David Díaz · UX / Product Designer
 </footer>
 
 </body>
