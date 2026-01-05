@@ -2,22 +2,54 @@
 
 // ================= NAV TOGGLE =================
 const toggle = document.querySelector('.nav-toggle');
-const navList = document.querySelector('.nav-list');
+const navMenu = document.querySelector('.nav-menu');
 
-if (toggle) {
+if (toggle && navMenu) {
   toggle.addEventListener('click', () => {
     const expanded = toggle.getAttribute('aria-expanded') === 'true';
     toggle.setAttribute('aria-expanded', String(!expanded));
-    navList.classList.toggle('open');
+    navMenu.classList.toggle('open');
+    
+    // Change icon
+    const icon = toggle.querySelector('i');
+    if (icon) {
+      if (navMenu.classList.contains('open')) {
+        icon.className = 'ri-close-line';
+      } else {
+        icon.className = 'ri-menu-line';
+      }
+    }
   });
 }
 
 // Accesibilidad: cerrar menú al seleccionar un enlace en móvil
-document.querySelectorAll('.nav-list a').forEach(a => {
+document.querySelectorAll('.nav-menu a').forEach(a => {
   a.addEventListener('click', () => {
-    navList.classList.remove('open');
-    if (toggle) toggle.setAttribute('aria-expanded', 'false');
+    if (navMenu) {
+      navMenu.classList.remove('open');
+    }
+    if (toggle) {
+      toggle.setAttribute('aria-expanded', 'false');
+      const icon = toggle.querySelector('i');
+      if (icon) {
+        icon.className = 'ri-menu-line';
+      }
+    }
   });
+});
+
+// Cerrar menú al hacer click fuera
+document.addEventListener('click', (e) => {
+  if (navMenu && toggle && navMenu.classList.contains('open')) {
+    if (!navMenu.contains(e.target) && !toggle.contains(e.target)) {
+      navMenu.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+      const icon = toggle.querySelector('i');
+      if (icon) {
+        icon.className = 'ri-menu-line';
+      }
+    }
+  }
 });
 
 // ================= BANNER PARALLAX =================
