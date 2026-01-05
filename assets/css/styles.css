@@ -94,7 +94,6 @@ section {
   
   /* Accessibility - touch target */
   padding: 8px 12px;
-  display: block;
   min-height: 44px;
   display: flex;
   align-items: center;
@@ -102,13 +101,6 @@ section {
 
 .nav-menu a:visited {
   color: var(--text);
-}
-
-.nav-menu a:hover {
-  color: var(--accent);
-  text-shadow:
-    1px 1px 2px rgba(255,255,255,0.6),
-   -1px -1px 2px rgba(0,0,0,0.08);
 }
 
 .nav-menu a:focus {
@@ -195,10 +187,6 @@ p:last-child {
   transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
-.card:hover {
-  transform: translateY(-4px);
-}
-
 .card.featured {
   border: 1px solid rgba(0,0,0,0.05);
 }
@@ -261,11 +249,69 @@ p:last-child {
   justify-content: center;
 }
 
-.btn-primary:hover,
-.btn-secondary:hover {
-  box-shadow:
-    inset 4px 4px 8px var(--dark),
-    inset -4px -4px 8px var(--light);
+/* Only apply hover effects on devices that support hover */
+@media (hover: hover) {
+  .btn-primary:hover,
+  .btn-secondary:hover {
+    box-shadow:
+      inset 4px 4px 8px var(--dark),
+      inset -4px -4px 8px var(--light);
+  }
+
+  .nav-toggle:hover {
+    background: rgba(0,0,0,0.05);
+  }
+
+  .nav-menu a:hover {
+    color: var(--accent);
+    text-shadow:
+      1px 1px 2px rgba(255,255,255,0.6),
+     -1px -1px 2px rgba(0,0,0,0.08);
+  }
+
+  .card:hover {
+    transform: translateY(-4px);
+  }
+
+  .banner img:hover {
+    transform: translateY(-4px);
+    box-shadow:
+      12px 12px 28px var(--dark),
+      -12px -12px 28px var(--light);
+  }
+
+  .banner-wrap:hover img {
+    transform: scale(1.02);
+  }
+
+  .banner-wrap:hover .iridescent-layer {
+    opacity: 1;
+  }
+
+  .banner-wrap:hover .b1 {
+    transform: translate(12px, -8px);
+    opacity: 0.55;
+  }
+
+  .banner-wrap:hover .b2 {
+    transform: translate(-10px, 10px);
+    opacity: 0.55;
+  }
+
+  .banner-wrap:hover .b3 {
+    transform: translate(6px, -12px);
+    opacity: 0.55;
+  }
+
+  .project-hover:hover .project-info {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+
+  .project-hover:hover .project-preview {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .btn-primary:focus,
@@ -302,10 +348,6 @@ p:last-child {
   min-height: 44px;
   border-radius: 8px;
   transition: background 0.2s ease;
-}
-
-.nav-toggle:hover {
-  background: rgba(0,0,0,0.05);
 }
 
 .nav-toggle:focus {
@@ -552,15 +594,6 @@ p:last-child {
     -10px -10px 20px var(--light);
 }
 
-.project-hover:hover .project-info {
-  opacity: 0;
-  transform: translateY(-8px);
-}
-
-.project-hover:hover .project-preview {
-  opacity: 1;
-  transform: translateY(0);
-}
 /* ================= BANNER ================= */
 .banner {
   margin-top: 96px; /* respeta la nav sticky */
@@ -585,13 +618,6 @@ p:last-child {
   backdrop-filter: blur(8px);
 
   transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-.banner img:hover {
-  transform: translateY(-4px);
-  box-shadow:
-    12px 12px 28px var(--dark),
-    -12px -12px 28px var(--light);
 }
 
 /* Responsive */
@@ -694,30 +720,6 @@ p:last-child {
   height: 60px;
   top: 30%;
   right: 35%;
-}
-
-/* ===== HOVER MAGIC ===== */
-.banner-wrap:hover img {
-  transform: scale(1.02);
-}
-
-.banner-wrap:hover .iridescent-layer {
-  opacity: 1;
-}
-
-.banner-wrap:hover .b1 {
-  transform: translate(12px, -8px);
-  opacity: 0.55;
-}
-
-.banner-wrap:hover .b2 {
-  transform: translate(-10px, 10px);
-  opacity: 0.55;
-}
-
-.banner-wrap:hover .b3 {
-  transform: translate(6px, -12px);
-  opacity: 0.55;
 }
 
 /* ===== RESPONSIVE ===== */

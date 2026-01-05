@@ -4,6 +4,27 @@
 const toggle = document.querySelector('.nav-toggle');
 const navMenu = document.querySelector('.nav-menu');
 
+// Helper function to reset menu icon
+function resetMenuIcon() {
+  if (toggle) {
+    const icon = toggle.querySelector('i');
+    if (icon) {
+      icon.className = 'ri-menu-line';
+    }
+  }
+}
+
+// Helper function to close menu
+function closeMenu() {
+  if (navMenu) {
+    navMenu.classList.remove('open');
+  }
+  if (toggle) {
+    toggle.setAttribute('aria-expanded', 'false');
+  }
+  resetMenuIcon();
+}
+
 if (toggle && navMenu) {
   toggle.addEventListener('click', () => {
     const expanded = toggle.getAttribute('aria-expanded') === 'true';
@@ -25,16 +46,7 @@ if (toggle && navMenu) {
 // Accesibilidad: cerrar menú al seleccionar un enlace en móvil
 document.querySelectorAll('.nav-menu a').forEach(a => {
   a.addEventListener('click', () => {
-    if (navMenu) {
-      navMenu.classList.remove('open');
-    }
-    if (toggle) {
-      toggle.setAttribute('aria-expanded', 'false');
-      const icon = toggle.querySelector('i');
-      if (icon) {
-        icon.className = 'ri-menu-line';
-      }
-    }
+    closeMenu();
   });
 });
 
@@ -42,12 +54,7 @@ document.querySelectorAll('.nav-menu a').forEach(a => {
 document.addEventListener('click', (e) => {
   if (navMenu && toggle && navMenu.classList.contains('open')) {
     if (!navMenu.contains(e.target) && !toggle.contains(e.target)) {
-      navMenu.classList.remove('open');
-      toggle.setAttribute('aria-expanded', 'false');
-      const icon = toggle.querySelector('i');
-      if (icon) {
-        icon.className = 'ri-menu-line';
-      }
+      closeMenu();
     }
   }
 });
