@@ -535,8 +535,9 @@ p:last-child {
   }
 
   /* Optimize project previews for tablets */
+  /* Use 2 columns instead of 3 for better readability on medium screens */
   .project-preview {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 10px;
     padding: 20px;
   }
@@ -600,7 +601,7 @@ p:last-child {
   .about-list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 8px;
+    gap: 12px; /* Maintain consistent gap with base styles */
   }
 
   /* Tools - better wrapping */
