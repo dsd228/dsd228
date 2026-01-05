@@ -10,7 +10,7 @@
 
 <p align="center">
   <a href="https://dsd228.github.io" target="_blank">
-    <img src="https://img.shields.io/badge/Portfolio-dsd228.github.io-blue?style=for-the-badge&logo=vercel" />
+    <img src="[https://img.shields.io/badge/Portfolio-dsd228.github.io-blue?style=for-the-badge&logo=vercel](https://dsd228.github.io/dsd228/)" />
   </a>
   <a href="https://linkedin.com/in/david-data-conecta" target="_blank">
     <img src="https://img.shields.io/badge/LinkedIn-david--data--conecta-blue?style=for-the-badge&logo=linkedin" />
