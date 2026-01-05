@@ -510,6 +510,7 @@ p:last-child {
 }
 
 /* Tablets - portrait mode (768px - 900px) */
+/* This media query provides tablet-specific overrides on top of the general mobile styles above */
 @media (max-width: 900px) and (min-width: 768px) {
   /* Fine tune for tablets */
   .hero-layout {
@@ -542,6 +543,7 @@ p:last-child {
 }
 
 /* Mobile landscape and small tablets (481px - 767px) */
+/* Intermediate breakpoint for larger phones and small tablets in landscape */
 @media (max-width: 767px) and (min-width: 481px) {
   /* Container */
   .container {
@@ -594,6 +596,7 @@ p:last-child {
   }
 
   /* About list */
+  /* Display in 2-column grid on larger mobile devices for better use of space */
   .about-list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -684,6 +687,7 @@ p:last-child {
   }
 
   /* About list */
+  /* Reduce font size on small screens while keeping single column layout */
   .about-list {
     font-size: 0.9rem;
   }
