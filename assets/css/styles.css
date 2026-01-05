@@ -318,4 +318,131 @@ section {
     border-radius: 24px;
   }
 }
+/* ================= BANNER INTERACTIVE ================= */
+
+.banner {
+  margin-top: 96px;
+  padding: 0 24px;
+}
+
+.banner-wrap {
+  position: relative;
+  max-width: 1200px;
+  margin: auto;
+  border-radius: 32px;
+  overflow: hidden;
+}
+
+.banner img {
+  width: 100%;
+  display: block;
+  border-radius: 32px;
+
+  box-shadow:
+    18px 18px 36px var(--dark),
+    -18px -18px 36px var(--light);
+
+  transition: transform 0.6s ease;
+}
+
+/* ===== IRIDESCENT GLOW ===== */
+.iridescent-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+
+  background:
+    radial-gradient(
+      circle at 20% 30%,
+      rgba(173, 216, 230, 0.35),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 80% 60%,
+      rgba(255, 182, 193, 0.35),
+      transparent 45%
+    ),
+    radial-gradient(
+      circle at 50% 80%,
+      rgba(216, 191, 216, 0.35),
+      transparent 50%
+    );
+
+  mix-blend-mode: screen;
+  filter: blur(18px);
+}
+
+/* ===== BUBBLES ===== */
+.bubble {
+  position: absolute;
+  border-radius: 50%;
+  background: var(--bg);
+
+  box-shadow:
+    inset 6px 6px 12px var(--dark),
+    inset -6px -6px 12px var(--light);
+
+  opacity: 0.35;
+  pointer-events: none;
+  transition: transform 1.2s ease, opacity 0.6s ease;
+}
+
+.b1 {
+  width: 140px;
+  height: 140px;
+  top: 20%;
+  left: 10%;
+}
+
+.b2 {
+  width: 90px;
+  height: 90px;
+  bottom: 18%;
+  right: 15%;
+}
+
+.b3 {
+  width: 60px;
+  height: 60px;
+  top: 30%;
+  right: 35%;
+}
+
+/* ===== HOVER MAGIC ===== */
+.banner-wrap:hover img {
+  transform: scale(1.02);
+}
+
+.banner-wrap:hover .iridescent-layer {
+  opacity: 1;
+}
+
+.banner-wrap:hover .b1 {
+  transform: translate(12px, -8px);
+  opacity: 0.55;
+}
+
+.banner-wrap:hover .b2 {
+  transform: translate(-10px, 10px);
+  opacity: 0.55;
+}
+
+.banner-wrap:hover .b3 {
+  transform: translate(6px, -12px);
+  opacity: 0.55;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .banner {
+    margin-top: 72px;
+  }
+
+  .banner-wrap,
+  .banner img {
+    border-radius: 24px;
+  }
+}
 
