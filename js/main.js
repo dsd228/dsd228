@@ -43,14 +43,14 @@ if (toggle && navMenu) {
   });
 }
 
-// Accesibilidad: cerrar menú al seleccionar un enlace en móvil
+// Accessibility: close menu when clicking links on mobile
 document.querySelectorAll('.nav-menu a').forEach(a => {
   a.addEventListener('click', () => {
     closeMenu();
   });
 });
 
-// Cerrar menú al hacer click fuera
+// Close menu when clicking outside
 document.addEventListener('click', (e) => {
   if (navMenu && toggle && navMenu.classList.contains('open')) {
     if (!navMenu.contains(e.target) && !toggle.contains(e.target)) {

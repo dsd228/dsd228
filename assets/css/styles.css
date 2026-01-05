@@ -535,17 +535,6 @@ p:last-child {
     font-size: 0.9rem;
   }
 
-  /* Project hover - disable on small screens */
-  .project-hover:hover .project-info {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  .project-hover:hover .project-preview {
-    opacity: 0;
-    transform: translateY(12px);
-  }
-
   /* Footer */
   .footer {
     padding: 32px 16px;
@@ -764,11 +753,6 @@ p:last-child {
   /* Hide bubbles on small mobile for better performance */
   .bubble {
     display: none;
-  }
-
-  /* Disable parallax on mobile */
-  .banner-wrap:hover img {
-    transform: scale(1);
   }
 }
 
