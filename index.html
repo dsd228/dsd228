@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>David Sebastián Díaz — UX/UI Designer</title>
+  <meta name="description" content="Portafolio UX/UI de David Sebastián Díaz: proyectos, proceso y contacto." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <nav class="nav" aria-label="Principal">
+      <a class="brand" href="#home">David Sebastián Díaz</a>
+      <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+      <ul class="nav-list">
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="home">
+    <!-- Hero -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-content">
+        <h1 id="hero-title">UX/UI Designer</h1>
+        <p class="tagline">Diseño experiencias digitales accesibles, consistentes y centradas en las personas.</p>
+        <div class="cta">
+          <a class="btn primary" href="#proyectos">Ver proyectos</a>
+          <a class="btn secondary" href="#contacto">Contactar</a>
+        </div>
+      </div>
+      <figure class="hero-media">
+        <img src="assets/images/hero-placeholder.png" alt="Mockup de interfaz representativa del portafolio" />
+      </figure>
+    </section>
+
+    <!-- Sobre mí -->
+    <section id="sobre-mi" class="section" aria-labelledby="sobre-title">
+      <h2 id="sobre-title">Sobre mí</h2>
+      <div class="two-col">
+        <div>
+          <p>Soy <strong>David Sebastián Díaz</strong>, diseñador UX/UI apasionado por crear experiencias digitales accesibles, consistentes y centradas en las personas. Mi enfoque combina investigación, diseño visual y prototipado para transformar ideas en productos funcionales y escalables.</p>
+          <p>Con formación en programación, ciberseguridad y diseño, me interesa comprender a fondo las necesidades de los usuarios y convertirlas en soluciones intuitivas que generen confianza. Disfruto trabajar en todo el proceso: investigación, definición de flujos, interfaces claras y pruebas de usabilidad.</p>
+          <p>Estoy en constante aprendizaje y abierto a colaborar en proyectos con impacto positivo mediante tecnología y diseño.</p>
+        </div>
+        <aside class="facts" aria-label="Datos rápidos">
+          <ul>
+            <li><strong>Ubicación:</strong> Colonia Caroya, Córdoba, Argentina</li>
+            <li><strong>Intereses:</strong> Accesibilidad, design systems, impacto social</li>
+            <li><strong>Herramientas:</strong> Figma, Miro, Notion, Power BI</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Proyectos -->
+    <section id="proyectos" class="section" aria-labelledby="proyectos-title">
+      <h2 id="proyectos-title">Proyectos destacados</h2>
+
+      <!-- Proyecto 1: Rediseño Web -->
+      <article class="project-card" aria-labelledby="p1-title">
+        <div class="project-media">
+          <img src="assets/images/redisenio-web-hero.png" alt="Captura del prototipo del rediseño web" />
+        </div>
+        <div class="project-info">
+          <h3 id="p1-title">Rediseño Web — UX/UI Design</h3>
+          <p class="project-desc">Mejoré la claridad de la navegación y la toma de decisiones en una plataforma de inversión. Trabajo realizado: research, user flows, wireframes, diseño visual y prototipo en Figma.</p>
+          <ul class="project-meta">
+            <li><strong>Objetivo:</strong> Simplificar la experiencia y aumentar la confianza</li>
+            <li><strong>Proceso:</strong> Investigación, arquitectura, prototipado, pruebas</li>
+            <li><strong>Impacto:</strong> Reducción del tiempo de navegación durante tests</li>
+          </ul>
+          <div class="project-actions">
+            <a class="btn link" href="https://www.figma.com/proto/XXXXXXXX" target="_blank" rel="noopener">Ver prototipo</a>
+            <a class="btn link" href="case-studies/redisenio-web.html">Case study</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Proyecto 2: PASEO -->
+      <article class="project-card" aria-labelledby="p2-title">
+        <div class="project-media">
+          <img src="assets/images/paseo-grid.png" alt="Pantallas clave de la app PASEO: inicio, perfil de paseador y contratación" />
+        </div>
+        <div class="project-info">
+          <h3 id="p2-title">PASEO — App para paseadores de mascotas</h3>
+          <p class="project-desc">App móvil para conectar dueños y paseadores con transparencia y seguridad. Incluye perfiles verificados, reseñas y seguimiento del paseo.</p>
+          <ul class="project-meta">
+            <li><strong>Objetivo:</strong> Generar confianza y facilidad en la contratación</li>
+            <li><strong>Proceso:</strong> UX Research, UI Design, prototipado</li>
+            <li><strong>Resultado:</strong> Mayor percepción de seguridad en pruebas con usuarios</li>
+          </ul>
+          <div class="project-actions">
+            <a class="btn link" href="https://www.figma.com/design/ITK9JEewMyYbiprJ6h3Jr3/app-para-paseadores-de-perros?m=dev" target="_blank" rel="noopener">Ver prototipo</a>
+            <a class="btn link" href="case-studies/paseo.html">Case study</a>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- Habilidades -->
+    <section id="habilidades" class="section" aria-labelledby="skills-title">
+      <h2 id="skills-title">Habilidades</h2>
+      <div class="skills-grid" role="list">
+        <div role="listitem">UX Research</div>
+        <div role="listitem">User Flows</div>
+        <div role="listitem">Wireframes</div>
+        <div role="listitem">Prototyping</div>
+        <div role="listitem">Design Systems</div>
+        <div role="listitem">Visual Design</div>
+        <div role="listitem">Usability Testing</div>
+        <div role="listitem">Data Analytics</div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="section" aria-labelledby="contact-title">
+      <h2 id="contact-title">Contacto</h2>
+      <ul class="contact-list">
+        <li><strong>Email:</strong> <a href="mailto:david.diaz.uxdata@gmail.com">david.diaz.uxdata@gmail.com</a></li>
+        <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/david-data-conecta" target="_blank" rel="noopener">linkedin.com/in/david-data-conecta</a></li>
+        <li><strong>GitHub:</strong> <a href="https://github.com/dsd228" target="_blank" rel="noopener">github.com/dsd228</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <small>© 2026 David Sebastián Díaz — UX/UI Designer</small>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
