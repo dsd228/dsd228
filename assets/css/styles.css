@@ -10,16 +10,26 @@
   --bg: #eef1f6;
   --light: rgba(255,255,255,0.9);
   --dark: rgba(180,184,195,0.6);
+
+  /* texto */
   --text: #1f2937;
   --muted: #6b7280;
+
+  /* acento profesional */
+  --accent: #6c63ff;
+
+  /* glass */
+  --glass-bg: rgba(255,255,255,0.45);
+  --glass-border: rgba(255,255,255,0.25);
 }
 
 /* ================= BASE ================= */
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   background: var(--bg);
   color: var(--text);
   line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
 }
 
 section {
@@ -36,17 +46,23 @@ section {
   max-width: 720px;
 }
 
-/* ================= NAV ================= */
+/* ================= NAV (PULIDA PRO) ================= */
 .navbar {
   position: sticky;
   top: 0;
-  background: var(--bg);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+  z-index: 100;
+
+  background: var(--glass-bg);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  border-bottom: 1px solid var(--glass-border);
 }
 
 .nav-container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 20px 32px;
 }
 
@@ -54,6 +70,35 @@ section {
   display: flex;
   gap: 28px;
   list-style: none;
+}
+
+/* links nav — CORREGIDO color y tipografía */
+.nav-menu a {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+
+  color: var(--text);
+  text-decoration: none;
+
+  transition: color 0.25s ease, text-shadow 0.25s ease;
+}
+
+.nav-menu a:visited {
+  color: var(--text);
+}
+
+.nav-menu a:hover {
+  color: var(--accent);
+  text-shadow:
+    1px 1px 2px rgba(255,255,255,0.6),
+   -1px -1px 2px rgba(0,0,0,0.08);
+}
+
+.nav-menu a.active {
+  color: var(--accent);
+  font-weight: 600;
 }
 
 /* ================= HERO ================= */
@@ -80,6 +125,8 @@ section {
 .section-title {
   text-align: center;
   font-size: 2.2rem;
+  font-weight: 600;
+  letter-spacing: -0.3px;
   margin-bottom: 56px;
 }
 
@@ -91,6 +138,12 @@ section {
   box-shadow:
     16px 16px 32px var(--dark),
     -16px -16px 32px var(--light);
+
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
 }
 
 .card.featured {
@@ -120,6 +173,9 @@ section {
 .tool {
   padding: 10px 18px;
   border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 500;
+
   background: var(--bg);
   box-shadow:
     inset 6px 6px 12px var(--dark),
@@ -132,13 +188,18 @@ section {
   display: inline-block;
   margin-top: 16px;
   padding: 14px 32px;
+
   border-radius: 999px;
   background: var(--bg);
   color: var(--text);
+  font-weight: 500;
   text-decoration: none;
+
   box-shadow:
     8px 8px 16px var(--dark),
     -8px -8px 16px var(--light);
+
+  transition: all 0.25s ease;
 }
 
 .btn-primary:hover,
@@ -153,6 +214,7 @@ section {
   padding: 40px;
   text-align: center;
   color: var(--muted);
+  font-size: 0.85rem;
 }
 
 /* ================= RESPONSIVE ================= */
@@ -162,8 +224,8 @@ section {
     text-align: center;
   }
 }
-/* ================= PROJECT HOVER ================= */
 
+/* ================= PROJECT HOVER ================= */
 .project-hover {
   position: relative;
   overflow: hidden;
@@ -179,6 +241,7 @@ section {
 .project-preview {
   position: absolute;
   inset: 0;
+
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 12px;
@@ -188,7 +251,8 @@ section {
   transform: translateY(12px);
   transition: all 0.35s ease;
 
-  background: var(--bg);
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
 }
 
 .project-preview img {
