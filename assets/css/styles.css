@@ -446,3 +446,15 @@ section {
   }
 }
 
+/* ===== PARALLAX PREP ===== */
+
+.banner-wrap {
+  perspective: 1200px;
+}
+
+.banner-wrap img,
+.iridescent-layer,
+.bubble {
+  will-change: transform;
+  transition: transform 0.2s ease-out;
+}
