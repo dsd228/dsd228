@@ -3,135 +3,187 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <title>David Sebastián Díaz — UX/UI Designer</title>
-  <meta name="description" content="Portafolio UX/UI de David Sebastián Díaz: proyectos, proceso y contacto." />
+
+  <meta name="description" content="Portafolio UX/UI de David Sebastián Díaz. Diseño productos digitales centrados en las personas, basados en investigación y datos." />
+  <meta name="author" content="David Sebastián Díaz" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="David Sebastián Díaz — UX/UI Designer" />
+  <meta property="og:description" content="UX/UI Designer con enfoque en research, flujos y análisis de datos." />
+  <meta property="og:image" content="assets/images/og-banner.png" />
+  <meta property="og:url" content="https://dsd228.github.io" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
+
 <body>
-  <header class="site-header" role="banner">
-    <nav class="nav" aria-label="Principal">
-      <a class="brand" href="#home">David Sebastián Díaz</a>
-      <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
-      <ul class="nav-list">
-        <li><a href="#sobre-mi">Sobre mí</a></li>
-        <li><a href="#proyectos">Proyectos</a></li>
-        <li><a href="#habilidades">Habilidades</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
-    </nav>
-  </header>
+<header class="site-header">
+  <nav class="nav" aria-label="Principal">
+    <a class="brand" href="#home">David Díaz</a>
+    <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+    <ul class="nav-list">
+      <li><a href="#sobre-mi">Sobre mí</a></li>
+      <li><a href="#proceso">Proceso</a></li>
+      <li><a href="#proyectos">Proyectos</a></li>
+      <li><a href="#habilidades">Habilidades</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
 
-  <main id="home">
-    <!-- Hero -->
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-content">
-        <h1 id="hero-title">UX/UI Designer</h1>
-        <p class="tagline">Diseño experiencias digitales accesibles, consistentes y centradas en las personas.</p>
-        <div class="cta">
-          <a class="btn primary" href="#proyectos">Ver proyectos</a>
-          <a class="btn secondary" href="#contacto">Contactar</a>
-        </div>
+<main id="home">
+
+  <!-- HERO -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-content">
+      <h1 id="hero-title">
+        Diseño productos digitales basados en investigación y datos
+      </h1>
+      <p class="tagline">
+        UX/UI Designer enfocado en crear experiencias claras, accesibles y confiables
+        mediante research, flujos y diseño visual.
+      </p>
+      <p class="hero-meta">
+        UX/UI · Data Analytics · Digital Strategy
+      </p>
+      <div class="cta">
+        <a class="btn primary" href="#proyectos">Ver proyectos</a>
+        <a class="btn secondary" href="#contacto">Contactar</a>
       </div>
-      <figure class="hero-media">
-        <img src="assets/images/hero-placeholder.png" alt="Mockup de interfaz representativa del portafolio" />
-      </figure>
-    </section>
+    </div>
 
-    <!-- Sobre mí -->
-    <section id="sobre-mi" class="section" aria-labelledby="sobre-title">
-      <h2 id="sobre-title">Sobre mí</h2>
-      <div class="two-col">
-        <div>
-          <p>Soy <strong>David Sebastián Díaz</strong>, diseñador UX/UI apasionado por crear experiencias digitales accesibles, consistentes y centradas en las personas. Mi enfoque combina investigación, diseño visual y prototipado para transformar ideas en productos funcionales y escalables.</p>
-          <p>Con formación en programación, ciberseguridad y diseño, me interesa comprender a fondo las necesidades de los usuarios y convertirlas en soluciones intuitivas que generen confianza. Disfruto trabajar en todo el proceso: investigación, definición de flujos, interfaces claras y pruebas de usabilidad.</p>
-          <p>Estoy en constante aprendizaje y abierto a colaborar en proyectos con impacto positivo mediante tecnología y diseño.</p>
-        </div>
-        <aside class="facts" aria-label="Datos rápidos">
-          <ul>
-            <li><strong>Ubicación:</strong> Colonia Caroya, Córdoba, Argentina</li>
-            <li><strong>Intereses:</strong> Accesibilidad, design systems, impacto social</li>
-            <li><strong>Herramientas:</strong> Figma, Miro, Notion, Power BI</li>
-          </ul>
-        </aside>
+    <figure class="hero-media">
+      <img src="assets/images/hero-placeholder.png" alt="Mockups de proyectos UX/UI diseñados por David Díaz" />
+    </figure>
+  </section>
+
+  <!-- SOBRE MI -->
+  <section id="sobre-mi" class="section">
+    <h2>Sobre mí</h2>
+    <div class="two-col">
+      <div>
+        <p>
+          Soy <strong>David Sebastián Díaz</strong>, UX/UI Designer con formación en análisis de datos
+          y estrategia digital. Diseño experiencias digitales centradas en las personas,
+          combinando investigación, diseño visual y métricas para tomar mejores decisiones.
+        </p>
+        <p>
+          Trabajo de punta a punta en el proceso UX: entender el problema,
+          definir flujos, diseñar interfaces claras y validar soluciones con usuarios reales.
+          Me interesa especialmente la accesibilidad, el impacto social y los productos con propósito.
+        </p>
       </div>
-    </section>
 
-    <!-- Proyectos -->
-    <section id="proyectos" class="section" aria-labelledby="proyectos-title">
-      <h2 id="proyectos-title">Proyectos destacados</h2>
+      <aside class="facts">
+        <ul>
+          <li><strong>Ubicación:</strong> Córdoba, Argentina</li>
+          <li><strong>Enfoque:</strong> UX Research · UI · Data-informed design</li>
+          <li><strong>Herramientas:</strong> Figma, Power BI, Miro, Notion</li>
+        </ul>
+      </aside>
+    </div>
+  </section>
 
-      <!-- Proyecto 1: Rediseño Web -->
-      <article class="project-card" aria-labelledby="p1-title">
-        <div class="project-media">
-          <img src="assets/images/redisenio-web-hero.png" alt="Captura del prototipo del rediseño web" />
-        </div>
-        <div class="project-info">
-          <h3 id="p1-title">Rediseño Web — UX/UI Design</h3>
-          <p class="project-desc">Mejoré la claridad de la navegación y la toma de decisiones en una plataforma de inversión. Trabajo realizado: research, user flows, wireframes, diseño visual y prototipo en Figma.</p>
-          <ul class="project-meta">
-            <li><strong>Objetivo:</strong> Simplificar la experiencia y aumentar la confianza</li>
-            <li><strong>Proceso:</strong> Investigación, arquitectura, prototipado, pruebas</li>
-            <li><strong>Impacto:</strong> Reducción del tiempo de navegación durante tests</li>
-          </ul>
-          <div class="project-actions">
-            <a class="btn link" href="https://www.figma.com/proto/XXXXXXXX" target="_blank" rel="noopener">Ver prototipo</a>
-            <a class="btn link" href="case-studies/redisenio-web.html">Case study</a>
-          </div>
-        </div>
-      </article>
+  <!-- PROCESO -->
+  <section id="proceso" class="section">
+    <h2>Cómo trabajo</h2>
+    <ul class="process">
+      <li>🔍 Investigación UX + análisis de datos</li>
+      <li>🧠 Definición del problema y flujos de usuario</li>
+      <li>🎨 Diseño de interfaces y sistemas</li>
+      <li>🧪 Testeo, métricas e iteración continua</li>
+    </ul>
+  </section>
 
-      <!-- Proyecto 2: PASEO -->
-      <article class="project-card" aria-labelledby="p2-title">
-        <div class="project-media">
-          <img src="assets/images/paseo-grid.png" alt="Pantallas clave de la app PASEO: inicio, perfil de paseador y contratación" />
-        </div>
-        <div class="project-info">
-          <h3 id="p2-title">PASEO — App para paseadores de mascotas</h3>
-          <p class="project-desc">App móvil para conectar dueños y paseadores con transparencia y seguridad. Incluye perfiles verificados, reseñas y seguimiento del paseo.</p>
-          <ul class="project-meta">
-            <li><strong>Objetivo:</strong> Generar confianza y facilidad en la contratación</li>
-            <li><strong>Proceso:</strong> UX Research, UI Design, prototipado</li>
-            <li><strong>Resultado:</strong> Mayor percepción de seguridad en pruebas con usuarios</li>
-          </ul>
-          <div class="project-actions">
-            <a class="btn link" href="https://www.figma.com/design/ITK9JEewMyYbiprJ6h3Jr3/app-para-paseadores-de-perros?m=dev" target="_blank" rel="noopener">Ver prototipo</a>
-            <a class="btn link" href="case-studies/paseo.html">Case study</a>
-          </div>
-        </div>
-      </article>
-    </section>
+  <!-- PROYECTOS -->
+  <section id="proyectos" class="section">
+    <h2>Proyectos destacados</h2>
 
-    <!-- Habilidades -->
-    <section id="habilidades" class="section" aria-labelledby="skills-title">
-      <h2 id="skills-title">Habilidades</h2>
-      <div class="skills-grid" role="list">
-        <div role="listitem">UX Research</div>
-        <div role="listitem">User Flows</div>
-        <div role="listitem">Wireframes</div>
-        <div role="listitem">Prototyping</div>
-        <div role="listitem">Design Systems</div>
-        <div role="listitem">Visual Design</div>
-        <div role="listitem">Usability Testing</div>
-        <div role="listitem">Data Analytics</div>
+    <!-- PASEO -->
+    <article class="project-card">
+      <div class="project-media">
+        <img src="assets/images/paseo-grid.png" alt="Pantallas de la app PASEO" />
       </div>
-    </section>
+      <div class="project-info">
+        <h3>PASEO — App para paseadores de mascotas</h3>
+        <p class="project-desc">
+          App móvil diseñada para generar confianza entre dueños y paseadores,
+          con perfiles verificados, reseñas y seguimiento del paseo.
+        </p>
+        <ul class="project-meta">
+          <li>Rol: UX/UI Designer</li>
+          <li>Proceso: Research · Flujos · UI · Prototipo</li>
+          <li>Resultado: Mayor percepción de seguridad en tests</li>
+        </ul>
+        <a class="btn link" href="https://www.figma.com/design/ITK9JEewMyYbiprJ6h3Jr3" target="_blank" rel="noopener">
+          Ver prototipo en Figma →
+        </a>
+      </div>
+    </article>
 
-    <!-- Contacto -->
-    <section id="contacto" class="section" aria-labelledby="contact-title">
-      <h2 id="contact-title">Contacto</h2>
-      <ul class="contact-list">
-        <li><strong>Email:</strong> <a href="mailto:david.diaz.uxdata@gmail.com">david.diaz.uxdata@gmail.com</a></li>
-        <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/david-data-conecta" target="_blank" rel="noopener">linkedin.com/in/david-data-conecta</a></li>
-        <li><strong>GitHub:</strong> <a href="https://github.com/dsd228" target="_blank" rel="noopener">github.com/dsd228</a></li>
-      </ul>
-    </section>
-  </main>
+    <!-- DATA + UX -->
+    <article class="project-card">
+      <div class="project-media">
+        <img src="assets/images/apple-benchmark.png" alt="Benchmark visual Apple Inc." />
+      </div>
+      <div class="project-info">
+        <h3>Apple Inc. 2025 — Visual Benchmarking</h3>
+        <p class="project-desc">
+          Proyecto de análisis visual donde combiné métricas de negocio,
+          UX y sostenibilidad para comunicar insights de forma clara.
+        </p>
+        <ul class="project-meta">
+          <li>Rol: UX + Data Analysis</li>
+          <li>Herramientas: Power BI · Research visual</li>
+          <li>Objetivo: facilitar la toma de decisiones</li>
+        </ul>
+      </div>
+    </article>
+  </section>
 
-  <footer class="site-footer" role="contentinfo">
-    <small>© 2026 David Sebastián Díaz — UX/UI Designer</small>
-  </footer>
+  <!-- HABILIDADES -->
+  <section id="habilidades" class="section">
+    <h2>Habilidades</h2>
 
-  <script src="assets/js/main.js"></script>
+    <div class="skills-grid">
+      <div>
+        <strong>UX/UI Design</strong><br />
+        Research · User Flows · Wireframes · Prototipos · Design Systems
+      </div>
+      <div>
+        <strong>Data & Analytics</strong><br />
+        Power BI · Google Analytics · Visualización · Métricas UX
+      </div>
+      <div>
+        <strong>Digital Strategy</strong><br />
+        SEO · CRO · E-commerce UX · Marketing Digital
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="section">
+    <h2>Contacto</h2>
+    <ul class="contact-list">
+      <li><strong>Email:</strong> <a href="mailto:david.diaz.uxdata@gmail.com">david.diaz.uxdata@gmail.com</a></li>
+      <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/david-data-conecta" target="_blank">linkedin.com/in/david-data-conecta</a></li>
+      <li><strong>GitHub:</strong> <a href="https://github.com/dsd228" target="_blank">github.com/dsd228</a></li>
+    </ul>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <small>Diseñado y prototipado por mí · © 2026</small>
+</footer>
+
+<script src="assets/js/main.js"></script>
 </body>
 </html>
