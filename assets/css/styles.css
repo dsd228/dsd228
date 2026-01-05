@@ -223,6 +223,27 @@ p:last-child {
     inset -6px -6px 12px var(--light);
 }
 
+/* ================= ABOUT LIST ================= */
+.about-list {
+  list-style: none;
+  margin-top: 20px;
+  display: grid;
+  gap: 12px;
+}
+
+.about-list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+}
+
+.about-list i {
+  color: var(--accent);
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
 /* ================= BUTTONS ================= */
 .btn-primary,
 .btn-secondary {
@@ -359,6 +380,25 @@ p:last-child {
   transform: scale(0.95);
 }
 
+/* Large Desktop - optimize for 4K and ultrawide screens */
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1400px;
+  }
+
+  .hero-text h1 {
+    font-size: 3rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+  }
+}
+
 /* Tablet and below */
 @media (max-width: 900px) {
   /* Navigation */
@@ -381,6 +421,7 @@ p:last-child {
     border-left: 1px solid var(--glass-border);
     transition: right 0.3s ease;
     box-shadow: -4px 0 12px rgba(0,0,0,0.1);
+    overflow-y: auto;
   }
 
   .nav-menu.open {
@@ -460,6 +501,118 @@ p:last-child {
     padding: 12px 20px;
     font-size: 0.9rem;
     min-height: 44px;
+  }
+
+  /* Hero actions - center on mobile/tablet */
+  .hero-actions {
+    justify-content: center;
+  }
+}
+
+/* Tablets - portrait mode (768px - 900px) */
+@media (max-width: 900px) and (min-width: 768px) {
+  /* Fine tune for tablets */
+  .hero-layout {
+    gap: 40px;
+  }
+
+  .hero-text h1 {
+    font-size: 2.25rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+
+  .card {
+    padding: 32px;
+  }
+
+  /* Optimize project previews for tablets */
+  .project-preview {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 20px;
+  }
+}
+
+/* Mobile landscape and small tablets (481px - 767px) */
+@media (max-width: 767px) and (min-width: 481px) {
+  /* Container */
+  .container {
+    padding: 0 20px;
+  }
+
+  /* Navigation */
+  .nav-container {
+    padding: 16px 20px;
+  }
+
+  /* Hero */
+  .hero {
+    padding-top: 70px;
+  }
+
+  .hero-text h1 {
+    font-size: 1.9rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.05rem;
+  }
+
+  .hero-actions {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  /* Sections */
+  section {
+    padding: 56px 0;
+  }
+
+  .section-title {
+    font-size: 1.65rem;
+    margin-bottom: 36px;
+  }
+
+  /* Cards */
+  .card {
+    padding: 24px;
+  }
+
+  /* Buttons */
+  .btn-primary,
+  .btn-secondary {
+    padding: 14px 32px;
+    font-size: 0.95rem;
+  }
+
+  /* About list */
+  .about-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  /* Tools - better wrapping */
+  .tools {
+    gap: 10px;
+  }
+
+  .tool {
+    padding: 10px 16px;
+    font-size: 0.85rem;
+  }
+
+  /* Banner */
+  .banner {
+    margin-top: 60px;
   }
 }
 
