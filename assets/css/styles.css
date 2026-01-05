@@ -162,3 +162,52 @@ section {
     text-align: center;
   }
 }
+/* ================= PROJECT HOVER ================= */
+
+.project-hover {
+  position: relative;
+  overflow: hidden;
+  min-height: 280px;
+}
+
+.project-info {
+  position: relative;
+  z-index: 2;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.project-preview {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  padding: 24px;
+
+  opacity: 0;
+  transform: translateY(12px);
+  transition: all 0.35s ease;
+
+  background: var(--bg);
+}
+
+.project-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 18px;
+
+  box-shadow:
+    10px 10px 20px var(--dark),
+    -10px -10px 20px var(--light);
+}
+
+.project-hover:hover .project-info {
+  opacity: 0;
+  transform: translateY(-8px);
+}
+
+.project-hover:hover .project-preview {
+  opacity: 1;
+  transform: translateY(0);
+}
