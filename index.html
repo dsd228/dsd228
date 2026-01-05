@@ -1,97 +1,188 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>David Sebastián Díaz — UX/UI Designer</title>
+  <title>David Sebastian Diaz — UX/UI Designer & Data Specialist</title>
 
-  <meta name="description" content="Portafolio UX/UI de David Sebastián Díaz." />
-  <meta name="author" content="David Sebastián Díaz" />
+  <meta name="description" content="Portafolio profesional de David Sebastian Diaz. UX/UI Designer enfocado en research, diseño de producto y soluciones basadas en datos.">
+  <meta name="author" content="David Sebastian Diaz">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <meta property="og:title" content="David Sebastian Diaz — UX/UI Designer">
+  <meta property="og:description" content="Diseño productos digitales basados en investigación y datos.">
+  <meta property="og:image" content="./banner.png">
+  <meta property="og:url" content="https://dsd228.github.io">
 
-  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
 
-<header class="site-header">
-  <nav class="nav">
-    <a class="brand" href="#home">David Díaz</a>
-    <button class="nav-toggle">☰</button>
-    <ul class="nav-list">
-      <li><a href="#sobre-mi">Sobre mí</a></li>
-      <li><a href="#proceso">Proceso</a></li>
-      <li><a href="#proyectos">Proyectos</a></li>
-      <li><a href="#habilidades">Habilidades</a></li>
-      <li><a href="#contacto">Contacto</a></li>
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="nav-logo">
+      <a href="#home">DSD</a>
+    </div>
+    <ul class="nav-menu">
+      <li><a href="#home">Inicio</a></li>
+      <li><a href="#about">Sobre mí</a></li>
+      <li><a href="#ux-projects">UX/UI</a></li>
+      <li><a href="#projects">Otros proyectos</a></li>
+      <li><a href="#contact">Contacto</a></li>
     </ul>
-  </nav>
-</header>
+  </div>
+</nav>
 
-<main id="home">
-
-  <!-- HERO -->
-  <section class="hero">
+<!-- HERO -->
+<section id="home" class="hero">
+  <div class="hero-container">
     <div class="hero-content">
       <h1>Diseño productos digitales basados en investigación y datos</h1>
-      <p class="tagline">
-        UX/UI Designer enfocado en research, flujos y diseño visual.
+      <p class="hero-subtitle">
+        UX/UI Designer enfocado en research, flujos de usuario y diseño visual.
+      </p>
+      <p class="hero-description">
+        Diseño experiencias claras, escalables y centradas en las personas,
+        combinando UX, análisis y criterio visual profesional.
       </p>
 
-      <div class="cta">
-        <a class="btn primary" href="#proyectos">Ver proyectos</a>
-        <a class="btn secondary" href="#contacto">Contactar</a>
+      <div class="hero-buttons">
+        <a href="#ux-projects" class="btn-primary">Ver proyectos UX</a>
+        <a href="#contact" class="btn-secondary">Contactar</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="about">
+  <div class="container">
+    <h2 class="section-title">Sobre mí</h2>
+    <div class="about-content">
+      <div class="about-text">
+        <p>
+          Soy David Sebastian Diaz, UX/UI Designer con interés en investigación,
+          diseño de producto y soluciones digitales con impacto real.
+        </p>
+        <ul class="about-highlights">
+          <li>🔍 UX Research & User Testing</li>
+          <li>🧠 Diseño basado en datos y métricas</li>
+          <li>📱 Diseño de productos digitales end-to-end</li>
+          <li>🌍 Enfoque social, accesible y sostenible</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- UX/UI PROJECTS -->
+<section id="ux-projects" class="projects">
+  <div class="container">
+    <h2 class="section-title">Proyectos UX/UI</h2>
+
+    <!-- PASEO CASE STUDY -->
+    <div class="project-card">
+      <div class="project-content">
+        <h3>PASEO — App mobile</h3>
+        <p>
+          Aplicación mobile para conectar dueños de mascotas con paseadores
+          confiables, enfocada en generar confianza y seguimiento del servicio.
+        </p>
+
+        <div class="project-tags">
+          <span class="tag">UX Research</span>
+          <span class="tag">Product Design</span>
+          <span class="tag">Mobile App</span>
+        </div>
+
+        <p><strong>Problema</strong><br>
+          Los dueños de mascotas no cuentan con una forma simple y confiable
+          de encontrar paseadores verificados.
+        </p>
+
+        <p><strong>Mi rol</strong><br>
+          Research, arquitectura de información, flujos y diseño visual.
+        </p>
+
+        <a href="https://www.figma.com/" target="_blank" class="project-link">
+          Ver prototipo en Figma →
+        </a>
       </div>
     </div>
 
-    <figure class="hero-media">
-      <img src="assets/images/hero-placeholder.png" alt="Mockups UX/UI" />
-    </figure>
-  </section>
+    <!-- OTRO UX -->
+    <div class="project-card">
+      <div class="project-content">
+        <h3>Rediseño Plataforma Educativa</h3>
+        <p>
+          Rediseño UX/UI de una plataforma educativa enfocada en mejorar
+          la comprensión, navegación y retención de usuarios.
+        </p>
+        <div class="project-tags">
+          <span class="tag">UX/UI</span>
+          <span class="tag">Usability</span>
+          <span class="tag">Web App</span>
+        </div>
+        <a href="#" class="project-link">Case Study →</a>
+      </div>
+    </div>
 
-  <!-- CASE STUDY PASEO -->
-  <section class="case-study" id="paseo">
+    <div class="project-card">
+      <div class="project-content">
+        <h3>Dashboard UX para BI</h3>
+        <p>
+          Diseño de dashboards orientados a toma de decisiones,
+          priorizando jerarquía visual y claridad cognitiva.
+        </p>
+        <div class="project-tags">
+          <span class="tag">UX</span>
+          <span class="tag">Data Visualization</span>
+        </div>
+        <a href="#" class="project-link">Ver proyecto →</a>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <header class="case-hero">
-      <h1>PASEO</h1>
-      <p class="case-subtitle">
-        App mobile para conectar dueños de mascotas con paseadores confiables
-      </p>
-    </header>
+<!-- OTHER PROJECTS -->
+<section id="projects" class="projects">
+  <div class="container">
+    <h2 class="section-title">Otros proyectos</h2>
 
-    <section class="case-section">
-      <h2>Problema</h2>
-      <p>
-        Los dueños de mascotas no cuentan con una forma simple y confiable
-        de encontrar paseadores verificados.
-      </p>
-    </section>
+    <div class="projects-grid">
+      <!-- mantenés acá Apple, BI, ML, etc tal como los tenías -->
+    </div>
+  </div>
+</section>
 
-    <section class="case-section highlight">
-      <h2>Problem Statement</h2>
-      <p>
-        ¿Cómo podríamos ayudar a dueños de mascotas a encontrar paseadores confiables?
-      </p>
-    </section>
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <div class="container">
+    <h2 class="section-title">Contacto</h2>
+    <div class="contact-content">
+      <div class="contact-info">
+        <h3>¿Trabajamos juntos?</h3>
+        <p>
+          Si buscás un diseñador UX/UI con criterio, investigación y foco
+          en producto, hablemos.
+        </p>
+        <p>📩 david.diaz.uxdata@gmail.com</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <footer class="case-footer">
-      <a class="btn primary" href="https://www.figma.com/" target="_blank">
-        Ver prototipo en Figma →
-      </a>
-    </footer>
-
-  </section>
-
-</main>
-
-<footer class="site-footer">
-  <small>© 2026 — Diseñado por David Sebastián Díaz</small>
+<footer class="footer">
+  <div class="container">
+    <p>© 2026 — David Sebastian Diaz</p>
+  </div>
 </footer>
 
-<script src="assets/js/main.js"></script>
 </body>
 </html>
