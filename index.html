@@ -1,213 +1,769 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>David Sebastián Díaz — UX/UI / Product Designer</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>David Sebastián Díaz — UX & Product Designer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-  <!-- Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+        :root {
+            --bg: #e8ecf4;
+            --shadow-light: #ffffff;
+            --shadow-dark: #a3b1c6;
+            --text: #334155;
+            --text-light: #64748b;
+            --primary: #6366f1;
+            --accent: #ec4899;
+            --success: #10b981;
+        }
 
-  <!-- Icons -->
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="assets/css/styles.css">
+        /* Neumorphic Styles */
+        .neu-out {
+            background: var(--bg);
+            box-shadow: 8px 8px 16px var(--shadow-dark), -8px -8px 16px var(--shadow-light);
+        }
+
+        .neu-in {
+            background: var(--bg);
+            box-shadow: inset 6px 6px 12px var(--shadow-dark), inset -6px -6px 12px var(--shadow-light);
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            background: var(--bg);
+            box-shadow: 8px 8px 16px var(--shadow-dark), -8px -8px 16px var(--shadow-light);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 600;
+            padding: 0.5rem 1.25rem;
+            border-radius: 25px;
+            transition: all 0.3s;
+        }
+
+        nav a.active, nav a:hover {
+            color: var(--primary);
+            box-shadow: inset 4px 4px 8px var(--shadow-dark), inset -4px -4px 8px var(--shadow-light);
+        }
+
+        /* Hero */
+        .hero {
+            margin-top: 100px;
+            padding: 5rem 2rem;
+            text-align: center;
+            min-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .hero-avatar {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            margin: 0 auto 2rem;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            box-shadow: 12px 12px 24px var(--shadow-dark), -12px -12px 24px var(--shadow-light);
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .hero-avatar::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .hero-avatar:hover::before {
+            width: 400px;
+            height: 400px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            animation: fadeInUp 0.8s ease 0.2s backwards;
+        }
+
+        .hero .subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+            font-weight: 600;
+            animation: fadeInUp 0.8s ease 0.3s backwards;
+        }
+
+        .hero .tagline {
+            font-size: 1.1rem;
+            margin-bottom: 2.5rem;
+            color: var(--text-light);
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.8;
+            animation: fadeInUp 0.8s ease 0.4s backwards;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.8s ease 0.5s backwards;
+        }
+
+        .btn-neu {
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            background: var(--bg);
+            color: var(--text);
+            box-shadow: 8px 8px 16px var(--shadow-dark), -8px -8px 16px var(--shadow-light);
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-neu:hover {
+            box-shadow: 4px 4px 8px var(--shadow-dark), -4px -4px 8px var(--shadow-light);
+            transform: translateY(-2px);
+        }
+
+        .btn-neu:active {
+            box-shadow: inset 4px 4px 8px var(--shadow-dark), inset -4px -4px 8px var(--shadow-light);
+            transform: translateY(0);
+        }
+
+        /* Sections */
+        section {
+            padding: 5rem 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-light);
+            font-size: 1.1rem;
+            margin-bottom: 4rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* About */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .about-card {
+            background: var(--bg);
+            padding: 3rem;
+            border-radius: 30px;
+            box-shadow: 12px 12px 24px var(--shadow-dark), -12px -12px 24px var(--shadow-light);
+        }
+
+        .about-text h3 {
+            font-size: 1.75rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            color: var(--text-light);
+        }
+
+        .about-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .stat-card {
+            background: var(--bg);
+            padding: 2rem;
+            border-radius: 25px;
+            text-align: center;
+            box-shadow: 8px 8px 16px var(--shadow-dark), -8px -8px 16px var(--shadow-light);
+            transition: all 0.3s;
+        }
+
+        .stat-card:hover {
+            box-shadow: inset 4px 4px 8px var(--shadow-dark), inset -4px -4px 8px var(--shadow-light);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .stat-label {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-top: 0.5rem;
+        }
+
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .skill-card {
+            background: var(--bg);
+            padding: 2.5rem;
+            border-radius: 30px;
+            box-shadow: 10px 10px 20px var(--shadow-dark), -10px -10px 20px var(--shadow-light);
+            transition: all 0.4s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 15px 15px 30px var(--shadow-dark), -15px -15px 30px var(--shadow-light);
+        }
+
+        .skill-icon {
+            width: 70px;
+            height: 70px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            background: var(--bg);
+            box-shadow: inset 6px 6px 12px var(--shadow-dark), inset -6px -6px 12px var(--shadow-light);
+        }
+
+        .skill-icon svg {
+            width: 32px;
+            height: 32px;
+            fill: var(--primary);
+        }
+
+        .skill-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .skill-card ul {
+            list-style: none;
+        }
+
+        .skill-card li {
+            padding: 0.75rem 0.75rem 0.75rem 2rem;
+            color: var(--text-light);
+            position: relative;
+            margin-bottom: 0.5rem;
+            border-radius: 12px;
+            transition: all 0.3s;
+        }
+
+        .skill-card li:hover {
+            box-shadow: inset 3px 3px 6px var(--shadow-dark), inset -3px -3px 6px var(--shadow-light);
+        }
+
+        .skill-card li::before {
+            content: '✓';
+            position: absolute;
+            left: 0.5rem;
+            color: var(--success);
+            font-weight: bold;
+        }
+
+        /* Projects */
+        .project-card {
+            background: var(--bg);
+            border-radius: 35px;
+            margin-bottom: 4rem;
+            box-shadow: 15px 15px 30px var(--shadow-dark), -15px -15px 30px var(--shadow-light);
+            transition: all 0.4s;
+            overflow: hidden;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 20px 20px 40px var(--shadow-dark), -20px -20px 40px var(--shadow-light);
+        }
+
+        .project-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .project-info {
+            padding: 3rem;
+        }
+
+        .project-tag {
+            display: inline-block;
+            background: var(--bg);
+            color: var(--primary);
+            padding: 0.6rem 1.25rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            box-shadow: inset 4px 4px 8px var(--shadow-dark), inset -4px -4px 8px var(--shadow-light);
+        }
+
+        .project-info h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-info p {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+        }
+
+        .project-meta {
+            margin: 1.5rem 0;
+            padding: 1.5rem;
+            background: var(--bg);
+            border-radius: 20px;
+            box-shadow: inset 6px 6px 12px var(--shadow-dark), inset -6px -6px 12px var(--shadow-light);
+        }
+
+        .project-meta h4 {
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--primary);
+            margin-bottom: 0.75rem;
+            font-weight: 700;
+        }
+
+        .project-meta p {
+            margin: 0;
+            font-weight: 500;
+        }
+
+        .project-metrics {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .metric {
+            text-align: center;
+            padding: 1.5rem;
+            background: var(--bg);
+            border-radius: 20px;
+            box-shadow: 6px 6px 12px var(--shadow-dark), -6px -6px 12px var(--shadow-light);
+            transition: all 0.3s;
+        }
+
+        .metric:hover {
+            box-shadow: inset 4px 4px 8px var(--shadow-dark), inset -4px -4px 8px var(--shadow-light);
+        }
+
+        .metric-value {
+            font-size: 2rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--success), #34d399);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .metric-label {
+            font-size: 0.875rem;
+            color: var(--text-light);
+        }
+
+        .project-images {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .project-image-placeholder {
+            width: 100%;
+            height: 400px;
+            background: var(--bg);
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-light);
+            font-size: 1.25rem;
+            font-weight: 600;
+            box-shadow: inset 8px 8px 16px var(--shadow-dark), inset -8px -8px 16px var(--shadow-light);
+        }
+
+        /* Contact */
+        .contact-methods {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .contact-card {
+            background: var(--bg);
+            padding: 2.5rem;
+            border-radius: 30px;
+            box-shadow: 10px 10px 20px var(--shadow-dark), -10px -10px 20px var(--shadow-light);
+            transition: all 0.3s;
+            text-align: center;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 15px 15px 30px var(--shadow-dark), -15px -15px 30px var(--shadow-light);
+        }
+
+        .contact-icon {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--bg);
+            box-shadow: inset 6px 6px 12px var(--shadow-dark), inset -6px -6px 12px var(--shadow-light);
+        }
+
+        .contact-icon svg {
+            width: 28px;
+            height: 28px;
+            fill: var(--primary);
+        }
+
+        .contact-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-card a {
+            color: var(--text-light);
+            text-decoration: none;
+            word-break: break-all;
+            transition: color 0.3s;
+        }
+
+        .contact-card a:hover {
+            color: var(--primary);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--bg);
+            padding: 3rem 2rem;
+            text-align: center;
+            box-shadow: inset 0 8px 16px var(--shadow-dark);
+        }
+
+        footer p {
+            color: var(--text-light);
+        }
+
+        /* Progress Bar */
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            width: 0%;
+            z-index: 1001;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .hero .subtitle { font-size: 1.25rem; }
+            nav { width: 90%; padding: 0.75rem 1rem; }
+            nav ul { gap: 1rem; }
+            nav a { padding: 0.4rem 0.75rem; font-size: 0.875rem; }
+            .about-content, .project-content { grid-template-columns: 1fr; }
+            .about-stats, .skills-grid { grid-template-columns: 1fr; }
+            section { padding: 3rem 1rem; }
+            .project-info, .about-card, .skill-card { padding: 2rem; }
+        }
+    </style>
 </head>
-
 <body>
+    <div class="progress-bar" id="progressBar"></div>
 
-<!-- ================= NAV ================= -->
-<nav class="navbar">
-  <div class="nav-container">
-    <span class="nav-logo">David Sebastián Díaz</span>
-    <button class="nav-toggle" aria-label="Abrir menú de navegación" aria-expanded="false">
-      <i class="ri-menu-line"></i>
-    </button>
-    <ul class="nav-menu">
-      <li><a href="#about">Sobre mí</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Proyectos</a></li>
-      <li><a href="#contact">Contacto</a></li>
-    </ul>
-  </div>
-</nav>
-
-<!-- ================= HERO ================= -->
-<header class="hero">
-  <div class="container hero-layout">
-
-    <div class="hero-text">
-      <h1>UX & Product Designer</h1>
-      <p class="hero-subtitle">
-        Diseño experiencias digitales claras, humanas y basadas en datos.
-      </p>
-
-      <div class="hero-actions">
-        <a href="#projects" class="btn-primary">Ver proyectos</a>
-        <a href="#contact" class="btn-secondary">Contactar</a>
-      </div>
-    </div>
-
-   <section class="banner">
-  <div class="banner-wrap">
-    <img src="banner.png" alt="Portfolio banner" />
-    <span class="iridescent-layer"></span>
-    <span class="bubble b1"></span>
-    <span class="bubble b2"></span>
-    <span class="bubble b3"></span>
-  </div>
-</section>
-
-<!-- ================= ABOUT ================= -->
-<section id="about">
-  <div class="container narrow">
-    <h2 class="section-title">Sobre mí</h2>
-
-    <div class="card">
-      <p>
-        Diseñador UX/UI enfocado en producto digital, investigación de usuarios
-        y diseño estratégico. Trabajo integrando UX, UI y datos para crear
-        experiencias escalables.
-      </p>
-
-      <ul class="about-list">
-        <li><i class="ri-check-line"></i> UX Research & Testing</li>
-        <li><i class="ri-check-line"></i> Product Thinking</li>
-        <li><i class="ri-check-line"></i> Design Systems</li>
-        <li><i class="ri-check-line"></i> Data-informed UX</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- ================= SKILLS ================= -->
-<section id="skills">
-  <div class="container">
-    <h2 class="section-title">Habilidades & Herramientas</h2>
-
-    <div class="grid-3">
-
-      <div class="card">
-        <h3><i class="ri-compasses-2-line"></i> UX & Producto</h3>
+    <nav>
         <ul>
-          <li>Research & Discovery</li>
-          <li>User Personas</li>
-          <li>Journey Maps</li>
-          <li>IA & Flujos</li>
-          <li>Usability Testing</li>
+            <li><a href="#about" class="nav-link">Sobre mí</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#projects" class="nav-link">Proyectos</a></li>
+            <li><a href="#contact" class="nav-link">Contacto</a></li>
         </ul>
-      </div>
+    </nav>
 
-      <div class="card">
-        <h3><i class="ri-palette-line"></i> UI & Visual</h3>
-        <ul>
-          <li>Neumorphism</li>
-          <li>Glassmorphism</li>
-          <li>Interaction Design</li>
-          <li>Accesibilidad</li>
-          <li>Microinteracciones</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h3><i class="ri-tools-line"></i> Herramientas</h3>
-        <div class="tools">
-          <span class="tool"><i class="ri-figma-line"></i> Figma</span>
-          <span class="tool"><i class="ri-figma-line"></i> Python</span>
-          <span class="tool"><i class="ri-adobe-line"></i> Adobe</span>
-          <span class="tool"><i class="ri-html5-line"></i> HTML</span>
-          <span class="tool"><i class="ri-css3-line"></i> CSS</span>
-          <span class="tool"><i class="ri-bar-chart-line"></i> Data</span>
+    <section class="hero">
+        <div class="hero-avatar">👨‍💻</div>
+        <h1>David Sebastián Díaz</h1>
+        <p class="subtitle">UX & Product Designer</p>
+        <p class="tagline">Diseño experiencias digitales que combinan investigación profunda, pensamiento estratégico y datos para crear productos que la gente ama usar.</p>
+        <div class="cta-buttons">
+            <a href="#projects" class="btn-neu">Ver mis proyectos</a>
+            <a href="#contact" class="btn-neu">Conversemos</a>
         </div>
-      </div>
+    </section>
 
-    </div>
-  </div>
-</section>
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">Sobre mí</h2>
+            <p class="section-subtitle">Diseñador apasionado por resolver problemas reales a través del diseño centrado en el usuario</p>
+            
+            <div class="about-content">
+                <div class="about-card">
+                    <h3>De la investigación al impacto</h3>
+                    <p>Soy un diseñador UX/UI especializado en producto digital, con un enfoque particular en la intersección entre diseño, datos y estrategia. Mi objetivo es crear experiencias que no solo se vean bien, sino que resuelvan problemas reales y generen resultados medibles.</p>
+                    <p>Creo firmemente que el mejor diseño nace de entender profundamente a los usuarios, validar hipótesis con datos, e iterar constantemente.</p>
+                </div>
+                
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <span class="stat-number">5+</span>
+                        <span class="stat-label">Años experiencia</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">20+</span>
+                        <span class="stat-label">Proyectos</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">15+</span>
+                        <span class="stat-label">Clientes</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Dedicación</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- ================= PROJECTS ================= -->
-<section id="projects">
-  <div class="container">
-    <h2 class="section-title">Proyectos</h2>
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-title">Habilidades & Herramientas</h2>
+            <p class="section-subtitle">Skills completos para llevar productos desde la idea hasta el lanzamiento</p>
+            
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+                    </div>
+                    <h3>UX Research</h3>
+                    <ul>
+                        <li>User Interviews</li>
+                        <li>Competitive Analysis</li>
+                        <li>User Personas</li>
+                        <li>Usability Testing</li>
+                        <li>A/B Testing</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                    </div>
+                    <h3>UI Design</h3>
+                    <ul>
+                        <li>Interface Design</li>
+                        <li>Design Systems</li>
+                        <li>Prototyping</li>
+                        <li>Responsive Design</li>
+                        <li>Accessibility</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 24 24"><path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z"/></svg>
+                    </div>
+                    <h3>Tools</h3>
+                    <ul>
+                        <li>Figma</li>
+                        <li>Adobe Suite</li>
+                        <li>HTML/CSS/JS</li>
+                        <li>Python</li>
+                        <li>Git</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/></svg>
+                    </div>
+                    <h3>Data</h3>
+                    <ul>
+                        <li>Analytics</li>
+                        <li>Data Visualization</li>
+                        <li>Metrics & KPIs</li>
+                        <li>User Behavior</li>
+                        <li>Optimization</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <div class="grid-2">
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title">Proyectos Destacados</h2>
+            <p class="section-subtitle">Casos donde el diseño estratégico generó resultados tangibles</p>
+            
+            <div class="project-card">
+                <div class="project-content">
+                    <div class="project-info">
+                        <span class="project-tag">Mobile App</span>
+                        <h3>PASEO</h3>
+                        <p>App móvil que conecta dueños de mascotas con paseadores verificados.</p>
+                        
+                        <div class="project-metrics">
+                            <div class="metric">
+                                <div class="metric-value">4.8/5</div>
+                                <div class="metric-label">Rating</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">87%</div>
+                                <div class="metric-label">Success</div>
+                            </div>
+                        </div>
+                        
+                        <div class="project-meta">
+                            <h4>Solución</h4>
+                            <p>Verificación de paseadores, GPS en tiempo real, reviews y fotos.</p>
+                        </div>
+                        
+                        <a href="#" class="btn-neu">Ver caso</a>
+                    </div>
+                    
+                    <div class="project-images">
+                        <div class="project-image-placeholder">🐕 PASEO</div>
+                    </div>
+                </div>
+            </div>
 
-      <div class="card project-hover">
+            <div class="project-card">
+                <div class="project-content">
+                    <div class="project-info">
+                        <span class="project-tag">Web Redesign</span>
+                        <h3>Yale School of Art</h3>
+                        <p>Rediseño del sitio académico con foco en usabilidad y claridad.</p>
+                        
+                        <div class="project-metrics">
+                            <div class="metric">
+                                <div class="metric-value">65%</div>
+                                <div class="metric-label">Findability</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">-42%</div>
+                                <div class="metric-label">Tiempo</div>
+                            </div>
+                        </div>
+                        
+                        <a href="#" class="btn-neu">Ver caso</a>
+                    </div>
+                    
+                    <div class="project-images">
+                        <div class="project-image-placeholder">🎨 Yale</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <div class="project-info">
-    <h3>PASEO — Mobile UX</h3>
-    <p>
-      App para conectar dueños de mascotas con paseadores confiables.
-      UX Research, Flujos, UI y Validación.
-    </p>
-  </div>
-
-  <div class="project-preview">
-    <img src="images/paseo-1.png" alt="Pantalla PASEO 1">
-    <img src="images/paseo-2.png" alt="Pantalla PASEO 2">
-    <img src="images/paseo-3.png" alt="Pantalla PASEO 3">
-  </div>
-
-</div>
-<div class="card project-hover">
-
-  <div class="project-info">
-    <h3>Yale School of Art — UX Redesign</h3>
-    <p>
-      Rediseño del sitio académico enfocado en jerarquía visual,
-      usabilidad y claridad.
-    </p>
-  </div>
-
-  <div class="project-preview">
-    <img src="images/yale-chaos.png" alt="Yale versión caótica">
-    <img src="images/yale-solution.png" alt="Yale rediseño">
-    <img src="images/yale-detail.png" alt="Detalle UI Yale">
-  </div>
-
-</div>
-
-
-      <div class="card">
-        <h3>Apple Inc. 2025 — UX KPIs</h3>
-        <a class="btn-secondary" target="_blank"
-           href="https://dsd228.github.io/-Apple-Inc.-2025-UX-KPIs-Innovation-Strategy/">
-          Ver proyecto
-        </a>
-      </div>
-
-      <div class="card">
-        <h3>Arcor — UX basada en datos</h3>
-        <a class="btn-secondary" target="_blank"
-           href="https://dsd228.github.io/Arcor-estrategia-de-Marketing-UX-basada-en-datos/">
-          Ver proyecto
-        </a>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ================= CONTACT ================= -->
-<section id="contact">
-  <div class="container narrow">
-    <h2 class="section-title">Contacto</h2>
-
-    <div class="card">
-      <p>¿Querés trabajar juntos o conversar sobre diseño?</p>
-      <p><strong>Email:</strong>david.diaz.uxdata@gmail.com</p>
-      <p><strong>Linkedin:</strong>linkedin.com/in/david-sebastian-diaz</p>
-      <p><strong>GitHub:</strong>github.com/dsd228</p>
-      
-    </div>
-  </div>
-</section>
-
-<footer class="footer">
-  © 2026 — David Sebatsián Díaz · UX / Product Designer
-</footer>
-
-<script src="js/main.js"></script>
-</body>
-</html>
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">¿Trabajamos juntos?</h2>
+            <p class="section-subtitle">Abierto a nuevos proyectos y colaboraciones</p>
+            
+            <div class="contact-methods">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                    </div>
+                    <h3>Email</h3>
+                    <a href="mailto:david.diaz.uxdata@gmail.com">david.diaz.uxdata@gmail.com</a>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 24 24"><path d="M19 3
