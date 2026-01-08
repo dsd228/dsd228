@@ -257,3 +257,14 @@ section {
     display: none;
   }
 }
+/* ================= HERO BANNER ================= */
+#hero-banner {
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  border-radius: 28px;
+  box-shadow:
+    18px 18px 36px var(--dark),
+    -18px -18px 36px var(--light);
+}
+
