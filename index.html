@@ -3,13 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  
+
   <title>David Sebastián Díaz — UX/UI & Product Designer</title>
-  <meta name="description" content="UX/UI y Product Designer enfocado en producto digital, research y diseño basado en datos. Portfolio de proyectos reales y conceptuales." />
+  <meta name="description"
+        content="Portfolio de David Sebastián Díaz, UX/UI y Product Designer enfocado en producto digital, research y diseño estratégico.">
 
   <!-- Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Icons -->
@@ -22,12 +21,14 @@
 <body>
 
 <!-- ================= NAV ================= -->
-<nav class="navbar" aria-label="Navegación principal">
+<nav class="navbar" role="navigation">
   <div class="nav-container">
     <span class="nav-logo">David Sebastián Díaz</span>
 
-    <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
-      <i class="ri-menu-line" aria-hidden="true"></i>
+    <button class="nav-toggle"
+            aria-label="Abrir menú"
+            aria-expanded="false">
+      <i class="ri-menu-line"></i>
     </button>
 
     <ul class="nav-menu">
@@ -38,8 +39,6 @@
     </ul>
   </div>
 </nav>
-
-<main>
 
 <!-- ================= HERO ================= -->
 <header class="hero">
@@ -57,15 +56,15 @@
       </div>
     </div>
 
-    <figure class="banner">
+    <section class="banner" aria-hidden="true">
       <div class="banner-wrap">
-        <img src="banner.png" alt="Banner visual del portfolio de David Díaz" loading="lazy">
+        <img src="banner.png" alt="Banner visual del portfolio" loading="lazy"/>
         <span class="iridescent-layer"></span>
         <span class="bubble b1"></span>
         <span class="bubble b2"></span>
         <span class="bubble b3"></span>
       </div>
-    </figure>
+    </section>
 
   </div>
 </header>
@@ -75,11 +74,11 @@
   <div class="container narrow">
     <h2 class="section-title">Sobre mí</h2>
 
-    <article class="card">
+    <div class="card">
       <p>
         Diseñador UX/UI enfocado en producto digital, investigación de usuarios
         y diseño estratégico. Integro UX, UI y datos para crear experiencias
-        escalables y centradas en las personas.
+        escalables y orientadas a negocio.
       </p>
 
       <ul class="about-list">
@@ -88,7 +87,7 @@
         <li><i class="ri-check-line"></i> Design Systems</li>
         <li><i class="ri-check-line"></i> Data-informed UX</li>
       </ul>
-    </article>
+    </div>
   </div>
 </section>
 
@@ -99,18 +98,18 @@
 
     <div class="grid-3">
 
-      <article class="card">
+      <div class="card">
         <h3><i class="ri-compasses-2-line"></i> UX & Producto</h3>
         <ul>
           <li>Research & Discovery</li>
           <li>User Personas</li>
           <li>Journey Maps</li>
-          <li>IA & Flujos</li>
+          <li>Arquitectura de Información</li>
           <li>Usability Testing</li>
         </ul>
-      </article>
+      </div>
 
-      <article class="card">
+      <div class="card">
         <h3><i class="ri-palette-line"></i> UI & Visual</h3>
         <ul>
           <li>Neumorphism</li>
@@ -119,19 +118,18 @@
           <li>Accesibilidad</li>
           <li>Microinteracciones</li>
         </ul>
-      </article>
+      </div>
 
-      <article class="card">
+      <div class="card">
         <h3><i class="ri-tools-line"></i> Herramientas</h3>
         <div class="tools">
           <span class="tool"><i class="ri-figma-line"></i> Figma</span>
-          <span class="tool"><i class="ri-code-line"></i> Python</span>
-          <span class="tool"><i class="ri-adobe-line"></i> Adobe</span>
-          <span class="tool"><i class="ri-html5-line"></i> HTML</span>
+          <span class="tool"><i class="ri-code-line"></i> HTML</span>
           <span class="tool"><i class="ri-css3-line"></i> CSS</span>
           <span class="tool"><i class="ri-bar-chart-line"></i> Data</span>
+          <span class="tool"><i class="ri-adobe-line"></i> Adobe</span>
         </div>
-      </article>
+      </div>
 
     </div>
   </div>
@@ -144,6 +142,32 @@
 
     <div class="grid-2">
 
+      <!-- ===== BODEGA LA CAROYENSE ===== -->
+      <article class="card project-hover">
+        <div class="project-info">
+          <h3>Bodega La Caroyense — UX/UI Redesign</h3>
+          <p>
+            Caso de estudio UX/UI enfocado en reorganizar la experiencia digital
+            de una bodega histórica. Se trabajó arquitectura de información,
+            storytelling y conversión hacia visitas guiadas.
+          </p>
+
+          <ul class="project-tags">
+            <li>UX Strategy</li>
+            <li>IA</li>
+            <li>UI Design</li>
+            <li>Mobile-first</li>
+          </ul>
+        </div>
+
+        <div class="project-preview">
+          <img src="images/caroyense-home.png" alt="Home rediseñado Bodega La Caroyense" loading="lazy">
+          <img src="images/caroyense-vinos.png" alt="Sección vinos Bodega La Caroyense" loading="lazy">
+          <img src="images/caroyense-visitas.png" alt="Visitas guiadas Bodega La Caroyense" loading="lazy">
+        </div>
+      </article>
+
+      <!-- ===== PASEO ===== -->
       <article class="card project-hover">
         <div class="project-info">
           <h3>PASEO — Mobile UX</h3>
@@ -154,12 +178,13 @@
         </div>
 
         <div class="project-preview">
-          <img src="images/paseo-1.png" alt="Pantalla principal app Paseo" loading="lazy">
-          <img src="images/paseo-2.png" alt="Flujo de reserva app Paseo" loading="lazy">
-          <img src="images/paseo-3.png" alt="Perfil de paseador Paseo" loading="lazy">
+          <img src="images/paseo-1.png" alt="Pantalla PASEO 1" loading="lazy">
+          <img src="images/paseo-2.png" alt="Pantalla PASEO 2" loading="lazy">
+          <img src="images/paseo-3.png" alt="Pantalla PASEO 3" loading="lazy">
         </div>
       </article>
 
+      <!-- ===== YALE ===== -->
       <article class="card project-hover">
         <div class="project-info">
           <h3>Yale School of Art — UX Redesign</h3>
@@ -170,27 +195,28 @@
         </div>
 
         <div class="project-preview">
-          <img src="images/yale-chaos.png" alt="Versión original Yale School of Art" loading="lazy">
-          <img src="images/yale-solution.png" alt="Rediseño UX Yale School of Art" loading="lazy">
-          <img src="images/yale-detail.png" alt="Detalle visual del rediseño Yale" loading="lazy">
+          <img src="images/yale-chaos.png" alt="Yale versión original" loading="lazy">
+          <img src="images/yale-solution.png" alt="Yale rediseño" loading="lazy">
+          <img src="images/yale-detail.png" alt="Detalle UI Yale" loading="lazy">
         </div>
       </article>
 
-      <article class="card">
+      <!-- ===== LINKS ===== -->
+      <div class="card">
         <h3>Apple Inc. 2025 — UX KPIs</h3>
-        <a class="btn-secondary" target="_blank" rel="noopener"
+        <a class="btn-secondary" target="_blank"
            href="https://dsd228.github.io/-Apple-Inc.-2025-UX-KPIs-Innovation-Strategy/">
           Ver proyecto
         </a>
-      </article>
+      </div>
 
-      <article class="card">
+      <div class="card">
         <h3>Arcor — UX basada en datos</h3>
-        <a class="btn-secondary" target="_blank" rel="noopener"
+        <a class="btn-secondary" target="_blank"
            href="https://dsd228.github.io/Arcor-estrategia-de-Marketing-UX-basada-en-datos/">
           Ver proyecto
         </a>
-      </article>
+      </div>
 
     </div>
   </div>
@@ -201,16 +227,14 @@
   <div class="container narrow">
     <h2 class="section-title">Contacto</h2>
 
-    <article class="card">
+    <div class="card">
       <p>¿Querés trabajar juntos o conversar sobre diseño?</p>
-      <p><strong>Email:</strong> <a href="mailto:david.diaz.uxdata@gmail.com">david.diaz.uxdata@gmail.com</a></p>
-      <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/david-sebastian-diaz" target="_blank" rel="noopener">linkedin.com/in/david-sebastian-diaz</a></p>
-      <p><strong>GitHub:</strong> <a href="https://github.com/dsd228" target="_blank" rel="noopener">github.com/dsd228</a></p>
-    </article>
+      <p><strong>Email:</strong> david.diaz.uxdata@gmail.com</p>
+      <p><strong>LinkedIn:</strong> linkedin.com/in/david-sebastian-diaz</p>
+      <p><strong>GitHub:</strong> github.com/dsd228</p>
+    </div>
   </div>
 </section>
-
-</main>
 
 <footer class="footer">
   © 2026 — David Sebastián Díaz · UX / Product Designer
