@@ -1,1298 +1,221 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>David Sebastián Díaz — UX & Product Designer</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --bg: #e8ecf4;
-            --shadow-light: #ffffff;
-            --shadow-dark: #a3b1c6;
-            --text: #334155;
-            --text-light: #64748b;
-            --primary: #6366f1;
-            --accent: #ec4899;
-            --success: #10b981;
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: var(--bg);
-            color: var(--text);
-            line-height: 1.6;
-        }
-
-        /* Neumorphic Styles */
-        .neu-out {
-            background: var(--bg);
-            box-shadow: 8px 8px 16px var(--shadow-dark), -8px -8px 16px var(--shadow-light);
-        }
-
-        .neu-in {
-            background: var(--bg);
-            box-shadow: inset 6px 6px 12px var(--shadow-dark), inset -6px -6px 12px var(--shadow-light);
-        }
-
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 1000;
-            padding: 1rem 2rem;
-            border-radius: 50px;
-            background: var(--bg);
-            box-shadow: 8px 8px 16px var(--shadow-dark), -8px -8px 16px var(--shadow-light);
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: var(--text);
-            font-weight: 600;
-            padding: 0.5rem 1.25rem;
-            border-radius: 25px;
-            transition: all 0.3s;
-        }
-
-        nav a.active, nav a:hover {
-            color: var(--primary);
-            box-shadow: inset 4px 4px 8px var(--shadow-dark), inset -4px -4px 8px var(--shadow-light);
-        }
-
-        /* Hero */
-        .hero {
-            margin-top: 100px;
-            padding: 5rem 2rem;
-            text-align: center;
-            min-height: 90vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        /* Estilos para el banner con efecto tornasolado */
-        .hero-banner {
-            position: relative;
-            width: 100%;
-            max-width: 900px;
-            height: 300px;
-            margin: 0 auto 3rem;
-            border-radius: 30px;
-            overflow: hidden;
-            box-shadow: 15px 15px 30px var(--shadow-dark), -15px -15px 30px var(--shadow-light);
-            cursor: pointer;
-        }
-
-        .hero-banner img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 30px;
-            transition: transform 0.8s ease;
-            position: relative;
-            z-index: 2;
-        }
-
-        /* Efecto de agua tornasolado */
-        .water-effect {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(
-                45deg, 
-                rgba(99, 102, 241, 0.1) 0%, 
-                rgba(236, 72, 153, 0.1) 20%, 
-                rgba(16, 185, 129, 0.1) 40%,
-                rgba(59, 130, 246, 0.1) 60%,
-                rgba(168, 85, 247, 0.1) 80%,
-                rgba(99, 102, 241, 0.1) 100%
-            );
-            background-size: 400% 400%;
-            border-radius: 30px;
-            z-index: 1;
-            opacity: 0;
-            transition: opacity 0.5s ease;
-            mix-blend-mode: overlay;
-        }
-
-        /* Efecto de ondas de agua */
-        .water-waves {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border-radius: 30px;
-            overflow: hidden;
-            z-index: 3;
-            pointer-events: none;
-            opacity: 0;
-            transition: opacity 0.5s ease;
-        }
-
-        .wave {
-            position: absolute;
-            width: 200%;
-            height: 200%;
-            top: -50%;
-            left: -50%;
-            background: radial-gradient(
-                circle at center,
-                rgba(255, 255, 255, 0.3) 0%,
-                rgba(255, 255, 255, 0.2) 25%,
-                rgba(255, 255, 255, 0.1) 50%,
-                transparent 70%
-            );
-            border-radius: 40%;
-            animation: wave-animation 3s infinite linear;
-            transform-origin: center;
-        }
-
-        .wave:nth-child(2) {
-            animation-delay: -1s;
-            opacity: 0.7;
-        }
-
-        .wave:nth-child(3) {
-            animation-delay: -2s;
-            opacity: 0.5;
-        }
-
-        /* Efectos al pasar el mouse */
-        .hero-banner:hover img {
-            transform: scale(1.05);
-        }
-
-        .hero-banner:hover .water-effect {
-            opacity: 1;
-            animation: shimmer 4s infinite linear;
-        }
-
-        .hero-banner:hover .water-waves {
-            opacity: 1;
-        }
-
-        /* Animación del efecto tornasolado */
-        @keyframes shimmer {
-            0% {
-                background-position: 0% 50%;
-            }
-            50% {
-                background-position: 100% 50%;
-            }
-            100% {
-                background-position: 0% 50%;
-            }
-        }
-
-        /* Animación de ondas */
-        @keyframes wave-animation {
-            0% {
-                transform: rotate(0deg) scale(1);
-            }
-            50% {
-                transform: rotate(180deg) scale(1.1);
-            }
-            100% {
-                transform: rotate(360deg) scale(1);
-            }
-        }
-
-        /* Efecto de reflejo de luz */
-        .light-reflection {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(
-                120deg,
-                transparent 30%,
-                rgba(255, 255, 255, 0.2) 50%,
-                transparent 70%
-            );
-            border-radius: 30px;
-            z-index: 4;
-            pointer-events: none;
-            opacity: 0;
-            transition: opacity 0.5s ease;
-            transform: translateX(-100%);
-        }
-
-        .hero-banner:hover .light-reflection {
-            opacity: 0.8;
-            animation: light-sweep 1.5s ease-out;
-        }
-
-        @keyframes light-sweep {
-            0% {
-                transform: translateX(-100%) skewX(-15deg);
-            }
-            100% {
-                transform: translateX(200%) skewX(-15deg);
-            }
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 800;
-            margin-bottom: 0.5rem;
-            animation: fadeInUp 0.8s ease 0.2s backwards;
-        }
-
-        .hero .subtitle {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: var(--primary);
-            font-weight: 600;
-            animation: fadeInUp 0.8s ease 0.3s backwards;
-        }
-
-        .hero .tagline {
-            font-size: 1.1rem;
-            margin-bottom: 2.5rem;
-            color: var(--text-light);
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-            line-height: 1.8;
-            animation: fadeInUp 0.8s ease 0.4s backwards;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 1.5rem;
-            justify-content: center;
-            flex-wrap: wrap;
-            animation: fadeInUp 0.8s ease 0.5s backwards;
-        }
-
-        .btn-neu {
-            padding: 1rem 2.5rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            background: var(--bg);
-            color: var(--text);
-            box-shadow: 8px 8px 16px var(--shadow-dark), -8px -8px 16px var(--shadow-light);
-            transition: all 0.3s;
-            border: none;
-            cursor: pointer;
-        }
-
-        .btn-neu:hover {
-            box-shadow: 4px 4px 8px var(--shadow-dark), -4px -4px 8px var(--shadow-light);
-            transform: translateY(-2px);
-        }
-
-        .btn-neu:active {
-            box-shadow: inset 4px 4px 8px var(--shadow-dark), inset -4px -4px 8px var(--shadow-light);
-            transform: translateY(0);
-        }
-
-        /* Sections */
-        section {
-            padding: 5rem 2rem;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .section-title {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            text-align: center;
-        }
-
-        .section-subtitle {
-            text-align: center;
-            color: var(--text-light);
-            font-size: 1.1rem;
-            margin-bottom: 4rem;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        /* About */
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        .about-card {
-            background: var(--bg);
-            padding: 3rem;
-            border-radius: 30px;
-            box-shadow: 12px 12px 24px var(--shadow-dark), -12px -12px 24px var(--shadow-light);
-        }
-
-        .about-text h3 {
-            font-size: 1.75rem;
-            margin-bottom: 1.5rem;
-            color: var(--primary);
-        }
-
-        .about-text p {
-            margin-bottom: 1.5rem;
-            line-height: 1.8;
-            color: var(--text-light);
-        }
-
-        .about-stats {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
-        }
-
-        .stat-card {
-            background: var(--bg);
-            padding: 2rem;
-            border-radius: 25px;
-            text-align: center;
-            box-shadow: 8px 8px 16px var(--shadow-dark), -8px -8px 16px var(--shadow-light);
-            transition: all 0.3s;
-        }
-
-        .stat-card:hover {
-            box-shadow: inset 4px 4px 8px var(--shadow-dark), inset -4px -4px 8px var(--shadow-light);
-        }
-
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, var(--primary), var(--accent));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .stat-label {
-            color: var(--text-light);
-            font-size: 0.95rem;
-            margin-top: 0.5rem;
-        }
-
-        /* Skills */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2.5rem;
-        }
-
-        .skill-card {
-            background: var(--bg);
-            padding: 2.5rem;
-            border-radius: 30px;
-            box-shadow: 10px 10px 20px var(--shadow-dark), -10px -10px 20px var(--shadow-light);
-            transition: all 0.4s;
-        }
-
-        .skill-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 15px 15px 30px var(--shadow-dark), -15px -15px 30px var(--shadow-light);
-        }
-
-        .skill-icon {
-            width: 70px;
-            height: 70px;
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1.5rem;
-            background: var(--bg);
-            box-shadow: inset 6px 6px 12px var(--shadow-dark), inset -6px -6px 12px var(--shadow-light);
-        }
-
-        .skill-icon svg {
-            width: 32px;
-            height: 32px;
-            fill: var(--primary);
-        }
-
-        .skill-card h3 {
-            font-size: 1.4rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .skill-card ul {
-            list-style: none;
-        }
-
-        .skill-card li {
-            padding: 0.75rem 0.75rem 0.75rem 2rem;
-            color: var(--text-light);
-            position: relative;
-            margin-bottom: 0.5rem;
-            border-radius: 12px;
-            transition: all 0.3s;
-        }
-
-        .skill-card li:hover {
-            box-shadow: inset 3px 3px 6px var(--shadow-dark), inset -3px -3px 6px var(--shadow-light);
-        }
-
-        .skill-card li::before {
-            content: '✓';
-            position: absolute;
-            left: 0.5rem;
-            color: var(--success);
-            font-weight: bold;
-        }
-
-        /* Projects - Carrusel de Imágenes */
-        .project-card {
-            background: var(--bg);
-            border-radius: 35px;
-            margin-bottom: 4rem;
-            box-shadow: 15px 15px 30px var(--shadow-dark), -15px -15px 30px var(--shadow-light);
-            transition: all 0.4s;
-            overflow: hidden;
-        }
-
-        .project-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 20px 20px 40px var(--shadow-dark), -20px -20px 40px var(--shadow-light);
-        }
-
-        .project-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-        }
-
-        .project-info {
-            padding: 3rem;
-        }
-
-        .project-tag {
-            display: inline-block;
-            background: var(--bg);
-            color: var(--primary);
-            padding: 0.6rem 1.25rem;
-            border-radius: 20px;
-            font-size: 0.875rem;
-            font-weight: 600;
-            margin-bottom: 1.5rem;
-            box-shadow: inset 4px 4px 8px var(--shadow-dark), inset -4px -4px 8px var(--shadow-light);
-        }
-
-        .project-info h3 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        .project-info p {
-            color: var(--text-light);
-            margin-bottom: 1.5rem;
-        }
-
-        .project-meta {
-            margin: 1.5rem 0;
-            padding: 1.5rem;
-            background: var(--bg);
-            border-radius: 20px;
-            box-shadow: inset 6px 6px 12px var(--shadow-dark), inset -6px -6px 12px var(--shadow-light);
-        }
-
-        .project-meta h4 {
-            font-size: 0.875rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: var(--primary);
-            margin-bottom: 0.75rem;
-            font-weight: 700;
-        }
-
-        .project-meta p {
-            margin: 0;
-            font-weight: 500;
-        }
-
-        .project-metrics {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1rem;
-            margin: 2rem 0;
-        }
-
-        .metric {
-            text-align: center;
-            padding: 1.5rem;
-            background: var(--bg);
-            border-radius: 20px;
-            box-shadow: 6px 6px 12px var(--shadow-dark), -6px -6px 12px var(--shadow-light);
-            transition: all 0.3s;
-        }
-
-        .metric:hover {
-            box-shadow: inset 4px 4px 8px var(--shadow-dark), inset -4px -4px 8px var(--shadow-light);
-        }
-
-        .metric-value {
-            font-size: 2rem;
-            font-weight: 700;
-            background: linear-gradient(135deg, var(--success), #34d399);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .metric-label {
-            font-size: 0.875rem;
-            color: var(--text-light);
-        }
-
-        /* Carrusel de imágenes para proyectos */
-        .project-images {
-            padding: 2rem;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .image-carousel {
-            width: 100%;
-            height: 400px;
-            position: relative;
-            border-radius: 25px;
-            overflow: hidden;
-            box-shadow: inset 8px 8px 16px var(--shadow-dark), inset -8px -8px 16px var(--shadow-light);
-        }
-
-        .carousel-track {
-            display: flex;
-            width: 300%;
-            height: 100%;
-            transition: transform 0.5s ease-in-out;
-        }
-
-        .carousel-slide {
-            width: 33.333%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-        }
-
-        .carousel-image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 20px;
-        }
-
-        .carousel-nav {
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            gap: 10px;
-            z-index: 10;
-        }
-
-        .carousel-dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: var(--shadow-light);
-            border: 2px solid var(--primary);
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-
-        .carousel-dot.active {
-            background: var(--primary);
-            transform: scale(1.2);
-        }
-
-        .carousel-arrow {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 40px;
-            height: 40px;
-            background: var(--bg);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            box-shadow: 4px 4px 8px var(--shadow-dark), -4px -4px 8px var(--shadow-light);
-            z-index: 10;
-            opacity: 0;
-            transition: all 0.3s;
-        }
-
-        .carousel-arrow:hover {
-            box-shadow: inset 3px 3px 6px var(--shadow-dark), inset -3px -3px 6px var(--shadow-light);
-        }
-
-        .carousel-arrow.prev {
-            left: 10px;
-        }
-
-        .carousel-arrow.next {
-            right: 10px;
-        }
-
-        .image-carousel:hover .carousel-arrow {
-            opacity: 1;
-        }
-
-        .project-image-placeholder {
-            width: 100%;
-            height: 100%;
-            background: var(--bg);
-            border-radius: 25px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--text-light);
-            font-size: 1.25rem;
-            font-weight: 600;
-            box-shadow: inset 8px 8px 16px var(--shadow-dark), inset -8px -8px 16px var(--shadow-light);
-        }
-
-        /* Efecto de hover para carrusel automático */
-        .project-card:hover .carousel-track {
-            animation: slideShow 12s infinite;
-        }
-
-        @keyframes slideShow {
-            0%, 28% {
-                transform: translateX(0);
-            }
-            33%, 61% {
-                transform: translateX(-33.333%);
-            }
-            66%, 94% {
-                transform: translateX(-66.666%);
-            }
-            100% {
-                transform: translateX(0);
-            }
-        }
-
-        /* Contact */
-        .contact-methods {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .contact-card {
-            background: var(--bg);
-            padding: 2.5rem;
-            border-radius: 30px;
-            box-shadow: 10px 10px 20px var(--shadow-dark), -10px -10px 20px var(--shadow-light);
-            transition: all 0.3s;
-            text-align: center;
-        }
-
-        .contact-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 15px 15px 30px var(--shadow-dark), -15px -15px 30px var(--shadow-light);
-        }
-
-        .contact-icon {
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
-            margin: 0 auto 1.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: var(--bg);
-            box-shadow: inset 6px 6px 12px var(--shadow-dark), inset -6px -6px 12px var(--shadow-light);
-        }
-
-        .contact-icon svg {
-            width: 28px;
-            height: 28px;
-            fill: var(--primary);
-        }
-
-        .contact-card h3 {
-            font-size: 1.25rem;
-            margin-bottom: 1rem;
-        }
-
-        .contact-card a {
-            color: var(--text-light);
-            text-decoration: none;
-            word-break: break-all;
-            transition: color 0.3s;
-        }
-
-        .contact-card a:hover {
-            color: var(--primary);
-        }
-
-        /* Footer */
-        footer {
-            background: var(--bg);
-            padding: 3rem 2rem;
-            text-align: center;
-            box-shadow: inset 0 8px 16px var(--shadow-dark);
-        }
-
-        footer p {
-            color: var(--text-light);
-        }
-
-        /* Progress Bar */
-        .progress-bar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 4px;
-            background: linear-gradient(90deg, var(--primary), var(--accent));
-            width: 0%;
-            z-index: 1001;
-        }
-
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2.5rem; }
-            .hero .subtitle { font-size: 1.25rem; }
-            nav { width: 90%; padding: 0.75rem 1rem; }
-            nav ul { gap: 1rem; }
-            nav a { padding: 0.4rem 0.75rem; font-size: 0.875rem; }
-            .about-content, .project-content { grid-template-columns: 1fr; }
-            .about-stats, .skills-grid { grid-template-columns: 1fr; }
-            section { padding: 3rem 1rem; }
-            .project-info, .about-card, .skill-card { padding: 2rem; }
-            .hero-banner { height: 200px; }
-            .image-carousel { height: 300px; }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+  <title>David Sebastián Díaz — UX/UI & Product Designer</title>
+  <meta name="description" content="UX/UI y Product Designer enfocado en producto digital, research y diseño basado en datos. Portfolio de proyectos reales y conceptuales." />
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
+
 <body>
-    <div class="progress-bar" id="progressBar"></div>
 
-    <nav>
+<!-- ================= NAV ================= -->
+<nav class="navbar" aria-label="Navegación principal">
+  <div class="nav-container">
+    <span class="nav-logo">David Sebastián Díaz</span>
+
+    <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+      <i class="ri-menu-line" aria-hidden="true"></i>
+    </button>
+
+    <ul class="nav-menu">
+      <li><a href="#about">Sobre mí</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Proyectos</a></li>
+      <li><a href="#contact">Contacto</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+
+<!-- ================= HERO ================= -->
+<header class="hero">
+  <div class="container hero-layout">
+
+    <div class="hero-text">
+      <h1>UX & Product Designer</h1>
+      <p class="hero-subtitle">
+        Diseño experiencias digitales claras, humanas y basadas en datos.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#projects" class="btn-primary">Ver proyectos</a>
+        <a href="#contact" class="btn-secondary">Contactar</a>
+      </div>
+    </div>
+
+    <figure class="banner">
+      <div class="banner-wrap">
+        <img src="banner.png" alt="Banner visual del portfolio de David Díaz" loading="lazy">
+        <span class="iridescent-layer"></span>
+        <span class="bubble b1"></span>
+        <span class="bubble b2"></span>
+        <span class="bubble b3"></span>
+      </div>
+    </figure>
+
+  </div>
+</header>
+
+<!-- ================= ABOUT ================= -->
+<section id="about">
+  <div class="container narrow">
+    <h2 class="section-title">Sobre mí</h2>
+
+    <article class="card">
+      <p>
+        Diseñador UX/UI enfocado en producto digital, investigación de usuarios
+        y diseño estratégico. Integro UX, UI y datos para crear experiencias
+        escalables y centradas en las personas.
+      </p>
+
+      <ul class="about-list">
+        <li><i class="ri-check-line"></i> UX Research & Testing</li>
+        <li><i class="ri-check-line"></i> Product Thinking</li>
+        <li><i class="ri-check-line"></i> Design Systems</li>
+        <li><i class="ri-check-line"></i> Data-informed UX</li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+<!-- ================= SKILLS ================= -->
+<section id="skills">
+  <div class="container">
+    <h2 class="section-title">Habilidades & Herramientas</h2>
+
+    <div class="grid-3">
+
+      <article class="card">
+        <h3><i class="ri-compasses-2-line"></i> UX & Producto</h3>
         <ul>
-            <li><a href="#about" class="nav-link">Sobre mí</a></li>
-            <li><a href="#skills" class="nav-link">Skills</a></li>
-            <li><a href="#projects" class="nav-link">Proyectos</a></li>
-            <li><a href="#contact" class="nav-link">Contacto</a></li>
+          <li>Research & Discovery</li>
+          <li>User Personas</li>
+          <li>Journey Maps</li>
+          <li>IA & Flujos</li>
+          <li>Usability Testing</li>
         </ul>
-    </nav>
+      </article>
 
-    <section class="hero">
-        <!-- Banner con efecto de agua tornasolado -->
-        <div class="hero-banner">
-            <div class="water-effect"></div>
-            <div class="water-waves">
-                <div class="wave"></div>
-                <div class="wave"></div>
-                <div class="wave"></div>
-            </div>
-            <div class="light-reflection"></div>
-            <img src="banner.png" alt="Banner Portfolio" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'; this.alt='Portfolio Banner'">
+      <article class="card">
+        <h3><i class="ri-palette-line"></i> UI & Visual</h3>
+        <ul>
+          <li>Neumorphism</li>
+          <li>Glassmorphism</li>
+          <li>Interaction Design</li>
+          <li>Accesibilidad</li>
+          <li>Microinteracciones</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3><i class="ri-tools-line"></i> Herramientas</h3>
+        <div class="tools">
+          <span class="tool"><i class="ri-figma-line"></i> Figma</span>
+          <span class="tool"><i class="ri-code-line"></i> Python</span>
+          <span class="tool"><i class="ri-adobe-line"></i> Adobe</span>
+          <span class="tool"><i class="ri-html5-line"></i> HTML</span>
+          <span class="tool"><i class="ri-css3-line"></i> CSS</span>
+          <span class="tool"><i class="ri-bar-chart-line"></i> Data</span>
         </div>
-        
-        <h1>David Sebastián Díaz</h1>
-        <p class="subtitle">UX & Product Designer</p>
-        <p class="tagline">Diseño experiencias digitales que combinan investigación profunda, pensamiento estratégico y datos para crear productos que la gente ama usar.</p>
-        <div class="cta-buttons">
-            <a href="#projects" class="btn-neu">Ver mis proyectos</a>
-            <a href="#contact" class="btn-neu">Conversemos</a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROJECTS ================= -->
+<section id="projects">
+  <div class="container">
+    <h2 class="section-title">Proyectos</h2>
+
+    <div class="grid-2">
+
+      <article class="card project-hover">
+        <div class="project-info">
+          <h3>PASEO — Mobile UX</h3>
+          <p>
+            App para conectar dueños de mascotas con paseadores confiables.
+            UX Research, flujos, UI y validación.
+          </p>
         </div>
-    </section>
 
-    <section id="about">
-        <div class="container">
-            <h2 class="section-title">Sobre mí</h2>
-            <p class="section-subtitle">Diseñador apasionado por resolver problemas reales a través del diseño centrado en el usuario</p>
-            
-            <div class="about-content">
-                <div class="about-card">
-                    <h3>De la investigación al impacto</h3>
-                    <p>Soy un diseñador UX/UI especializado en producto digital, con un enfoque particular en la intersección entre diseño, datos y estrategia. Mi objetivo es crear experiencias que no solo se vean bien, sino que resuelvan problemas reales y generen resultados medibles.</p>
-                    <p>Creo firmemente que el mejor diseño nace de entender profundamente a los usuarios, validar hipótesis con datos, e iterar constantemente.</p>
-                </div>
-                
-                <div class="about-stats">
-                    <div class="stat-card">
-                        <span class="stat-number">5+</span>
-                        <span class="stat-label">Años experiencia</span>
-                    </div>
-                    <div class="stat-card">
-                        <span class="stat-number">20+</span>
-                        <span class="stat-label">Proyectos</span>
-                    </div>
-                    <div class="stat-card">
-                        <span class="stat-number">15+</span>
-                        <span class="stat-label">Clientes</span>
-                    </div>
-                    <div class="stat-card">
-                        <span class="stat-number">100%</span>
-                        <span class="stat-label">Dedicación</span>
-                    </div>
-                </div>
-            </div>
+        <div class="project-preview">
+          <img src="images/paseo-1.png" alt="Pantalla principal app Paseo" loading="lazy">
+          <img src="images/paseo-2.png" alt="Flujo de reserva app Paseo" loading="lazy">
+          <img src="images/paseo-3.png" alt="Perfil de paseador Paseo" loading="lazy">
         </div>
-    </section>
+      </article>
 
-    <section id="skills">
-        <div class="container">
-            <h2 class="section-title">Habilidades & Herramientas</h2>
-            <p class="section-subtitle">Skills completos para llevar productos desde la idea hasta el lanzamiento</p>
-            
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
-                    </div>
-                    <h3>UX Research</h3>
-                    <ul>
-                        <li>User Interviews</li>
-                        <li>Competitive Analysis</li>
-                        <li>User Personas</li>
-                        <li>Usability Testing</li>
-                        <li>A/B Testing</li>
-                    </ul>
-                </div>
-                
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-                    </div>
-                    <h3>UI Design</h3>
-                    <ul>
-                        <li>Interface Design</li>
-                        <li>Design Systems</li>
-                        <li>Prototyping</li>
-                        <li>Responsive Design</li>
-                        <li>Accessibility</li>
-                    </ul>
-                </div>
-                
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <svg viewBox="0 0 24 24"><path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z"/></svg>
-                    </div>
-                    <h3>Tools</h3>
-                    <ul>
-                        <li>Figma</li>
-                        <li>Adobe Suite</li>
-                        <li>HTML/CSS/JS</li>
-                        <li>Python</li>
-                        <li>Git</li>
-                    </ul>
-                </div>
-                
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/></svg>
-                    </div>
-                    <h3>Data</h3>
-                    <ul>
-                        <li>Analytics</li>
-                        <li>Data Visualization</li>
-                        <li>Metrics & KPIs</li>
-                        <li>User Behavior</li>
-                        <li>Optimization</li>
-                    </ul>
-                </div>
-            </div>
+      <article class="card project-hover">
+        <div class="project-info">
+          <h3>Yale School of Art — UX Redesign</h3>
+          <p>
+            Rediseño del sitio académico enfocado en jerarquía visual,
+            usabilidad y claridad.
+          </p>
         </div>
-    </section>
 
-    <section id="projects">
-        <div class="container">
-            <h2 class="section-title">Proyectos Destacados</h2>
-            <p class="section-subtitle">Casos donde el diseño estratégico generó resultados tangibles</p>
-            
-            <!-- Proyecto PASEO -->
-            <div class="project-card" data-project="paseo">
-                <div class="project-content">
-                    <div class="project-info">
-                        <span class="project-tag">Mobile App</span>
-                        <h3>PASEO</h3>
-                        <p>App móvil que conecta dueños de mascotas con paseadores verificados. Diseño centrado en la seguridad y confianza de los usuarios.</p>
-                        
-                        <div class="project-metrics">
-                            <div class="metric">
-                                <div class="metric-value">4.8/5</div>
-                                <div class="metric-label">Rating App Store</div>
-                            </div>
-                            <div class="metric">
-                                <div class="metric-value">+87%</div>
-                                <div class="metric-label">Retención</div>
-                            </div>
-                        </div>
-                        
-                        <div class="project-meta">
-                            <h4>Características principales</h4>
-                            <p>Verificación de paseadores, GPS en tiempo real, sistema de reviews, historial de paseos y fotos.</p>
-                        </div>
-                        
-                        <a href="#" class="btn-neu">Ver caso completo</a>
-                    </div>
-                    
-                    <div class="project-images">
-                        <div class="image-carousel">
-                            <div class="carousel-track">
-                                <!-- Imagen 1 -->
-                                <div class="carousel-slide">
-                                    <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" 
-                                         alt="PASEO App - Pantalla principal" 
-                                         class="carousel-image">
-                                </div>
-                                <!-- Imagen 2 -->
-                                <div class="carousel-slide">
-                                    <img src="https://images.unsplash.com/photo-1560743641-3914f2c45636?ixlib=rb-1.2.1&auto=format&fit=crop&w-600&q=80" 
-                                         alt="PASEO App - Paseadores disponibles" 
-                                         class="carousel-image">
-                                </div>
-                                <!-- Imagen 3 -->
-                                <div class="carousel-slide">
-                                    <img src="https://images.unsplash.com/photo-1576201836106-db1758fd1c97?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" 
-                                         alt="PASEO App - Seguimiento en tiempo real" 
-                                         class="carousel-image">
-                                </div>
-                            </div>
-                            
-                            <!-- Navegación -->
-                            <div class="carousel-nav">
-                                <span class="carousel-dot active" data-slide="0"></span>
-                                <span class="carousel-dot" data-slide="1"></span>
-                                <span class="carousel-dot" data-slide="2"></span>
-                            </div>
-                            
-                            <!-- Flechas -->
-                            <div class="carousel-arrow prev">←</div>
-                            <div class="carousel-arrow next">→</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Proyecto Yale School of Art -->
-            <div class="project-card" data-project="yale">
-                <div class="project-content">
-                    <div class="project-info">
-                        <span class="project-tag">Web Redesign</span>
-                        <h3>Yale School of Art</h3>
-                        <p>Rediseño completo del sitio web académico con foco en usabilidad, accesibilidad y claridad de información.</p>
-                        
-                        <div class="project-metrics">
-                            <div class="metric">
-                                <div class="metric-value">+65%</div>
-                                <div class="metric-label">Findability</div>
-                            </div>
-                            <div class="metric">
-                                <div class="metric-value">-42%</div>
-                                <div class="metric-label">Tiempo de búsqueda</div>
-                            </div>
-                        </div>
-                        
-                        <div class="project-meta">
-                            <h4>Desafío</h4>
-                            <p>Organizar información compleja de programas académicos, eventos y recursos para estudiantes y profesores.</p>
-                        </div>
-                        
-                        <a href="#" class="btn-neu">Ver caso completo</a>
-                    </div>
-                    
-                    <div class="project-images">
-                        <div class="image-carousel">
-                            <div class="carousel-track">
-                                <!-- Imagen 1 -->
-                                <div class="carousel-slide">
-                                    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" 
-                                         alt="Yale School of Art - Homepage" 
-                                         class="carousel-image">
-                                </div>
-                                <!-- Imagen 2 -->
-                                <div class="carousel-slide">
-                                    <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" 
-                                         alt="Yale School of Art - Programas" 
-                                         class="carousel-image">
-                                </div>
-                                <!-- Imagen 3 -->
-                                <div class="carousel-slide">
-                                    <img src="https://images.unsplash.com/photo-1501504905252-473c47e087f8?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" 
-                                         alt="Yale School of Art - Galería" 
-                                         class="carousel-image">
-                                </div>
-                            </div>
-                            
-                            <!-- Navegación -->
-                            <div class="carousel-nav">
-                                <span class="carousel-dot active" data-slide="0"></span>
-                                <span class="carousel-dot" data-slide="1"></span>
-                                <span class="carousel-dot" data-slide="2"></span>
-                            </div>
-                            
-                            <!-- Flechas -->
-                            <div class="carousel-arrow prev">←</div>
-                            <div class="carousel-arrow next">→</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Proyecto adicional -->
-            <div class="project-card" data-project="eco">
-                <div class="project-content">
-                    <div class="project-info">
-                        <span class="project-tag">E-commerce</span>
-                        <h3>EcoMarket</h3>
-                        <p>Plataforma de e-commerce sostenible con foco en experiencia de compra consciente y trazabilidad de productos.</p>
-                        
-                        <div class="project-metrics">
-                            <div class="metric">
-                                <div class="metric-value">+35%</div>
-                                <div class="metric-label">Conversión</div>
-                            </div>
-                            <div class="metric">
-                                <div class="metric-value">92%</div>
-                                <div class="metric-label">Satisfacción</div>
-                            </div>
-                        </div>
-                        
-                        <div class="project-meta">
-                            <h4>Innovación</h4>
-                            <p>Integración de historial de sostenibilidad, calculadora de impacto ecológico y comunidades de compradores.</p>
-                        </div>
-                        
-                        <a href="#" class="btn-neu">Ver caso completo</a>
-                    </div>
-                    
-                    <div class="project-images">
-                        <div class="image-carousel">
-                            <div class="carousel-track">
-                                <!-- Imagen 1 -->
-                                <div class="carousel-slide">
-                                    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" 
-                                         alt="EcoMarket - Catálogo" 
-                                         class="carousel-image">
-                                </div>
-                                <!-- Imagen 2 -->
-                                <div class="carousel-slide">
-                                    <img src="https://images.unsplash.com/photo-1556742044-3c52d6e88c62?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" 
-                                         alt="EcoMarket - Producto" 
-                                         class="carousel-image">
-                                </div>
-                                <!-- Imagen 3 -->
-                                <div class="carousel-slide">
-                                    <img src="https://images.unsplash.com/photo-1556742051-5ccfbc51d1ee?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" 
-                                         alt="EcoMarket - Checkout" 
-                                         class="carousel-image">
-                                </div>
-                            </div>
-                            
-                            <!-- Navegación -->
-                            <div class="carousel-nav">
-                                <span class="carousel-dot active" data-slide="0"></span>
-                                <span class="carousel-dot" data-slide="1"></span>
-                                <span class="carousel-dot" data-slide="2"></span>
-                            </div>
-                            
-                            <!-- Flechas -->
-                            <div class="carousel-arrow prev">←</div>
-                            <div class="carousel-arrow next">→</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="project-preview">
+          <img src="images/yale-chaos.png" alt="Versión original Yale School of Art" loading="lazy">
+          <img src="images/yale-solution.png" alt="Rediseño UX Yale School of Art" loading="lazy">
+          <img src="images/yale-detail.png" alt="Detalle visual del rediseño Yale" loading="lazy">
         </div>
-    </section>
+      </article>
 
-    <section id="contact">
-        <div class="container">
-            <h2 class="section-title">¿Trabajamos juntos?</h2>
-            <p class="section-subtitle">Abierto a nuevos proyectos y colaboraciones</p>
-            
-            <div class="contact-methods">
-                <div class="contact-card">
-                    <div class="contact-icon">
-                        <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-                    </div>
-                    <h3>Email</h3>
-                    <a href="mailto:david.diaz.uxdata@gmail.com">david.diaz.uxdata@gmail.com</a>
-                </div>
-                
-                <div class="contact-card">
-                    <div class="contact-icon">
-                        <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/></svg>
-                    </div>
-                    <h3>LinkedIn</h3>
-                    <a href="#" target="_blank">David Sebastián Díaz</a>
-                </div>
-                
-                <div class="contact-card">
-                    <div class="contact-icon">
-                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-                    </div>
-                    <h3>Portafolio</h3>
-                    <a href="#" target="_blank">Behance/DavidDiaz</a>
-                </div>
-            </div>
-        </div>
-    </section>
+      <article class="card">
+        <h3>Apple Inc. 2025 — UX KPIs</h3>
+        <a class="btn-secondary" target="_blank" rel="noopener"
+           href="https://dsd228.github.io/-Apple-Inc.-2025-UX-KPIs-Innovation-Strategy/">
+          Ver proyecto
+        </a>
+      </article>
 
-    <footer>
-        <p>&copy; 2023 David Sebastián Díaz — UX & Product Designer</p>
-    </footer>
+      <article class="card">
+        <h3>Arcor — UX basada en datos</h3>
+        <a class="btn-secondary" target="_blank" rel="noopener"
+           href="https://dsd228.github.io/Arcor-estrategia-de-Marketing-UX-basada-en-datos/">
+          Ver proyecto
+        </a>
+      </article>
 
-    <script>
-        // Scroll progress bar
-        window.addEventListener('scroll', () => {
-            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            const scrolled = (winScroll / height) * 100;
-            document.getElementById('progressBar').style.width = scrolled + '%';
-        });
+    </div>
+  </div>
+</section>
 
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('nav a').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                const targetSection = document.querySelector(targetId);
-                window.scrollTo({
-                    top: targetSection.offsetTop - 80,
-                    behavior: 'smooth'
-                });
-            });
-        });
+<!-- ================= CONTACT ================= -->
+<section id="contact">
+  <div class="container narrow">
+    <h2 class="section-title">Contacto</h2>
 
-        // Sistema de carrusel para proyectos
-        document.querySelectorAll('.image-carousel').forEach((carousel, index) => {
-            const track = carousel.querySelector('.carousel-track');
-            const slides = carousel.querySelectorAll('.carousel-slide');
-            const dots = carousel.querySelectorAll('.carousel-dot');
-            const prevBtn = carousel.querySelector('.carousel-arrow.prev');
-            const nextBtn = carousel.querySelector('.carousel-arrow.next');
-            
-            let currentSlide = 0;
-            const totalSlides = slides.length;
-            
-            // Actualizar posición del carrusel
-            function updateCarousel() {
-                track.style.transform = `translateX(-${currentSlide * (100 / totalSlides)}%)`;
-                
-                // Actualizar dots
-                dots.forEach((dot, i) => {
-                    dot.classList.toggle('active', i === currentSlide);
-                });
-            }
-            
-            // Navegación con dots
-            dots.forEach((dot, i) => {
-                dot.addEventListener('click', () => {
-                    currentSlide = i;
-                    updateCarousel();
-                });
-            });
-            
-            // Botón anterior
-            prevBtn.addEventListener('click', () => {
-                currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-                updateCarousel();
-            });
-            
-            // Botón siguiente
-            nextBtn.addEventListener('click', () => {
-                currentSlide = (currentSlide + 1) % totalSlides;
-                updateCarousel();
-            });
-            
-            // Auto-slide al pasar el mouse (se activa con CSS)
-            // Pero mantenemos control manual también
-            
-            // Navegación con teclado
-            carousel.addEventListener('keydown', (e) => {
-                if (e.key === 'ArrowLeft') {
-                    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-                    updateCarousel();
-                } else if (e.key === 'ArrowRight') {
-                    currentSlide = (currentSlide + 1) % totalSlides;
-                    updateCarousel();
-                }
-            });
-            
-            // Hacer el carrusel enfocable
-            carousel.setAttribute('tabindex', '0');
-        });
+    <article class="card">
+      <p>¿Querés trabajar juntos o conversar sobre diseño?</p>
+      <p><strong>Email:</strong> <a href="mailto:david.diaz.uxdata@gmail.com">david.diaz.uxdata@gmail.com</a></p>
+      <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/david-sebastian-diaz" target="_blank" rel="noopener">linkedin.com/in/david-sebastian-diaz</a></p>
+      <p><strong>GitHub:</strong> <a href="https://github.com/dsd228" target="_blank" rel="noopener">github.com/dsd228</a></p>
+    </article>
+  </div>
+</section>
 
-        // Efecto interactivo para el banner
-        const banner = document.querySelector('.hero-banner');
-        banner.addEventListener('touchstart', () => {
-            banner.classList.add('active');
-            setTimeout(() => banner.classList.remove('active'), 1500);
-        });
+</main>
 
-        // Efecto de sonido opcional (descomentar si quieres agregar sonido)
-        // banner.addEventListener('mouseenter', () => {
-        //     new Audio('water-sound.mp3').play().catch(e => console.log('Sonido no disponible'));
-        // });
+<footer class="footer">
+  © 2026 — David Sebastián Díaz · UX / Product Designer
+</footer>
 
-        // Animación de entrada para las cards de proyecto
-        const projectCards = document.querySelectorAll('.project-card');
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -100px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.animation = 'fadeInUp 0.8s ease forwards';
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, observerOptions);
-
-        projectCards.forEach(card => {
-            card.style.opacity = '0';
-            observer.observe(card);
-        });
-    </script>
+<script src="js/main.js"></script>
 </body>
 </html>
