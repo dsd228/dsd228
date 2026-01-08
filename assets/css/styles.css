@@ -34,6 +34,14 @@
   --glass-border: rgba(255,255,255,0.06);
 }
 
+[data-theme="dark"] .card,
+[data-theme="dark"] .btn-primary,
+[data-theme="dark"] .btn-secondary,
+[data-theme="dark"] .theme-toggle {
+  box-shadow:
+    6px 6px 16px rgba(0,0,0,0.9),
+    -6px -6px 16px rgba(255,255,255,0.04);
+}
 
 /* ================= BASE ================= */
 body {
