@@ -2,13 +2,10 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>David Sebastián Díaz — UX / Product Designer</title>
 
-  <title>David Sebastián Díaz — UX/UI & Product Designer</title>
-  <meta name="description"
-        content="Portfolio de David Sebastián Díaz, UX/UI y Product Designer enfocado en producto digital, research y diseño estratégico.">
-
-  <!-- Font -->
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Icons -->
@@ -21,19 +18,16 @@
 <body>
 
 <!-- ================= NAV ================= -->
-<nav class="navbar" role="navigation">
+<nav class="navbar">
   <div class="nav-container">
-    <span class="nav-logo">David Sebastián Díaz</span>
+    <span class="logo">David Díaz</span>
 
-    <button class="nav-toggle"
-            aria-label="Abrir menú"
-            aria-expanded="false">
+    <button class="nav-toggle" aria-label="Abrir menú">
       <i class="ri-menu-line"></i>
     </button>
 
-    <ul class="nav-menu">
+    <ul class="nav-links">
       <li><a href="#about">Sobre mí</a></li>
-      <li><a href="#skills">Skills</a></li>
       <li><a href="#projects">Proyectos</a></li>
       <li><a href="#contact">Contacto</a></li>
     </ul>
@@ -42,35 +36,14 @@
 
 <!-- ================= HERO ================= -->
 <header class="hero">
-  <div class="container hero-layout">
-
-    <div class="hero-text">
-      <h1>UX & Product Designer</h1>
-      <p class="hero-subtitle">
-        Diseño experiencias digitales claras, humanas y basadas en datos.
-      </p>
-
-      <div class="hero-actions">
-        <a href="#projects" class="btn-primary">Ver proyectos</a>
-        <a href="#contact" class="btn-secondary">Contactar</a>
-      </div>
-    </div>
-
-    <section class="banner" aria-hidden="true">
-      <div class="banner-wrap">
-        <img src="banner.png" alt="Banner visual del portfolio" loading="lazy"/>
-        <span class="iridescent-layer"></span>
-        <span class="bubble b1"></span>
-        <span class="bubble b2"></span>
-        <span class="bubble b3"></span>
-      </div>
-    </section>
-
+  <div class="hero-content">
+    <h1>UX & Product Designer</h1>
+    <p>Diseño experiencias digitales claras, humanas y basadas en datos.</p>
   </div>
 </header>
 
 <!-- ================= ABOUT ================= -->
-<section id="about">
+<section id="about" class="section">
   <div class="container narrow">
     <h2 class="section-title">Sobre mí</h2>
 
@@ -78,7 +51,7 @@
       <p>
         Diseñador UX/UI enfocado en producto digital, investigación de usuarios
         y diseño estratégico. Integro UX, UI y datos para crear experiencias
-        escalables y orientadas a negocio.
+        escalables y centradas en las personas.
       </p>
 
       <ul class="about-list">
@@ -91,144 +64,78 @@
   </div>
 </section>
 
-<!-- ================= SKILLS ================= -->
-<section id="skills">
-  <div class="container">
-    <h2 class="section-title">Habilidades & Herramientas</h2>
-
-    <div class="grid-3">
-
-      <div class="card">
-        <h3><i class="ri-compasses-2-line"></i> UX & Producto</h3>
-        <ul>
-          <li>Research & Discovery</li>
-          <li>User Personas</li>
-          <li>Journey Maps</li>
-          <li>Arquitectura de Información</li>
-          <li>Usability Testing</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h3><i class="ri-palette-line"></i> UI & Visual</h3>
-        <ul>
-          <li>Neumorphism</li>
-          <li>Glassmorphism</li>
-          <li>Interaction Design</li>
-          <li>Accesibilidad</li>
-          <li>Microinteracciones</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h3><i class="ri-tools-line"></i> Herramientas</h3>
-        <div class="tools">
-          <span class="tool"><i class="ri-figma-line"></i> Figma</span>
-          <span class="tool"><i class="ri-code-line"></i> HTML</span>
-          <span class="tool"><i class="ri-css3-line"></i> CSS</span>
-          <span class="tool"><i class="ri-bar-chart-line"></i> Data</span>
-          <span class="tool"><i class="ri-adobe-line"></i> Adobe</span>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
 <!-- ================= PROJECTS ================= -->
-<section id="projects">
+<section id="projects" class="section">
   <div class="container">
     <h2 class="section-title">Proyectos</h2>
 
-    <div class="grid-2">
-
-      <!-- ===== BODEGA LA CAROYENSE ===== -->
-      <article class="card project-hover">
-        <div class="project-info">
-          <h3>Bodega La Caroyense — UX/UI Redesign</h3>
-          <p>
-            Caso de estudio UX/UI enfocado en reorganizar la experiencia digital
-            de una bodega histórica. Se trabajó arquitectura de información,
-            storytelling y conversión hacia visitas guiadas.
-          </p>
-
-          <ul class="project-tags">
-            <li>UX Strategy</li>
-            <li>IA</li>
-            <li>UI Design</li>
-            <li>Mobile-first</li>
-          </ul>
-        </div>
-
-        <div class="project-preview">
-          <img src="images/caroyense-home.png" alt="Home rediseñado Bodega La Caroyense" loading="lazy">
-          <img src="images/caroyense-vinos.png" alt="Sección vinos Bodega La Caroyense" loading="lazy">
-          <img src="images/caroyense-visitas.png" alt="Visitas guiadas Bodega La Caroyense" loading="lazy">
-        </div>
-      </article>
-
-      <!-- ===== PASEO ===== -->
-      <article class="card project-hover">
-        <div class="project-info">
-          <h3>PASEO — Mobile UX</h3>
-          <p>
-            App para conectar dueños de mascotas con paseadores confiables.
-            UX Research, flujos, UI y validación.
-          </p>
-        </div>
-
-        <div class="project-preview">
-          <img src="images/paseo-1.png" alt="Pantalla PASEO 1" loading="lazy">
-          <img src="images/paseo-2.png" alt="Pantalla PASEO 2" loading="lazy">
-          <img src="images/paseo-3.png" alt="Pantalla PASEO 3" loading="lazy">
-        </div>
-      </article>
-
-      <!-- ===== YALE ===== -->
-      <article class="card project-hover">
-        <div class="project-info">
-          <h3>Yale School of Art — UX Redesign</h3>
-          <p>
-            Rediseño del sitio académico enfocado en jerarquía visual,
-            usabilidad y claridad.
-          </p>
-        </div>
-
-        <div class="project-preview">
-          <img src="images/yale-chaos.png" alt="Yale versión original" loading="lazy">
-          <img src="images/yale-solution.png" alt="Yale rediseño" loading="lazy">
-          <img src="images/yale-detail.png" alt="Detalle UI Yale" loading="lazy">
-        </div>
-      </article>
-
-      <!-- ===== LINKS ===== -->
-      <div class="card">
-        <h3>Apple Inc. 2025 — UX KPIs</h3>
-        <a class="btn-secondary" target="_blank"
-           href="https://dsd228.github.io/-Apple-Inc.-2025-UX-KPIs-Innovation-Strategy/">
-          Ver proyecto
-        </a>
+    <!-- PASEO -->
+    <article class="project-card">
+      <div class="project-info">
+        <h3>PASEO — Mobile UX</h3>
+        <p>
+          App para conectar dueños de mascotas con paseadores confiables.
+          Investigación, flujos, UI y validación.
+        </p>
       </div>
 
-      <div class="card">
-        <h3>Arcor — UX basada en datos</h3>
-        <a class="btn-secondary" target="_blank"
-           href="https://dsd228.github.io/Arcor-estrategia-de-Marketing-UX-basada-en-datos/">
-          Ver proyecto
-        </a>
+      <div class="project-images">
+        <img src="assets/images/paseo-1.png" alt="PASEO pantalla 1">
+        <img src="assets/images/paseo-2.png" alt="PASEO pantalla 2">
+        <img src="assets/images/paseo-3.png" alt="PASEO pantalla 3">
+      </div>
+    </article>
+
+    <!-- YALE -->
+    <article class="project-card">
+      <div class="project-info">
+        <h3>Yale School of Art — UX Redesign</h3>
+        <p>
+          Rediseño del sitio académico enfocado en jerarquía visual,
+          usabilidad y claridad.
+        </p>
       </div>
 
-    </div>
+      <div class="project-images">
+        <img src="assets/images/yale-chaos.png" alt="Yale sitio original">
+        <img src="assets/images/yale-solution.png" alt="Yale rediseño">
+        <img src="assets/images/yale-detail.png" alt="Detalle UI Yale">
+      </div>
+    </article>
+
+    <!-- CAROYENSE -->
+    <article class="project-card featured">
+      <div class="project-info">
+        <h3>Bodega La Caroyense — UX/UI Redesign</h3>
+        <p>
+          Rediseño del sitio institucional con foco en identidad,
+          storytelling, enoturismo y optimización del flujo a visitas guiadas.
+        </p>
+
+        <ul class="tags">
+          <li>UX Audit</li>
+          <li>UI Redesign</li>
+          <li>Storytelling</li>
+          <li>Responsive</li>
+        </ul>
+      </div>
+
+      <div class="project-images">
+        <img src="assets/images/caroyense-1.png" alt="Caroyense home">
+        <img src="assets/images/caroyense-2.png" alt="Caroyense sobre nosotros">
+        <img src="assets/images/caroyense-3.png" alt="Caroyense visitas">
+      </div>
+    </article>
+
   </div>
 </section>
 
 <!-- ================= CONTACT ================= -->
-<section id="contact">
+<section id="contact" class="section">
   <div class="container narrow">
     <h2 class="section-title">Contacto</h2>
 
     <div class="card">
-      <p>¿Querés trabajar juntos o conversar sobre diseño?</p>
       <p><strong>Email:</strong> david.diaz.uxdata@gmail.com</p>
       <p><strong>LinkedIn:</strong> linkedin.com/in/david-sebastian-diaz</p>
       <p><strong>GitHub:</strong> github.com/dsd228</p>
@@ -236,10 +143,20 @@
   </div>
 </section>
 
+<!-- ================= FOOTER ================= -->
 <footer class="footer">
   © 2026 — David Sebastián Díaz · UX / Product Designer
 </footer>
 
-<script src="js/main.js"></script>
+<!-- JS -->
+<script>
+  const toggle = document.querySelector('.nav-toggle');
+  const nav = document.querySelector('.nav-links');
+
+  toggle.addEventListener('click', () => {
+    nav.classList.toggle('open');
+  });
+</script>
+
 </body>
 </html>
