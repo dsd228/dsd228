@@ -24,7 +24,7 @@
 [data-theme="dark"] {
   --bg: #0f172a;
   --light: rgba(255,255,255,0.04);
-  --dark: rgba(0,0,0,0.75);
+  --dark: rgba(0,0,0,0.0);
 
   --text: #e5e7eb;
   --muted: #94a3b8;
@@ -40,6 +40,13 @@ body {
   color: var(--text);
   line-height: 1.6;
   overflow-x: hidden;
+}
+.project-preview img {
+  width: 100%;
+  height: 100%;
+  max-height: 180px;
+  object-fit: cover;
+  border-radius: 16px;
 }
 
 /* ================= LAYOUT ================= */
