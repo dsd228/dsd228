@@ -219,3 +219,24 @@ section {
     grid-template-columns: 1fr;
   }
 }
+/* ================= PROJECT PREVIEW FIX ================= */
+
+/* Desktop */
+@media (hover: hover) {
+  .project-preview {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .project-hover:hover .project-preview {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+/* Mobile: desactivar preview hover */
+@media (hover: none) {
+  .project-preview {
+    display: none;
+  }
+}
