@@ -3,229 +3,243 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Arcor — Estrategia de Marketing UX basada en datos</title>
-  <meta name="description" content="Análisis estratégico de Arcor con enfoque en UX, sostenibilidad y benchmarking digital."/>
 
+  <title>David Sebastián Díaz — UX/UI & Product Designer</title>
+  <meta name="description"
+        content="Portfolio de David Sebastián Díaz, UX/UI y Product Designer enfocado en producto digital, research y diseño estratégico.">
+
+  <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
 
-  <style>
-    :root {
-      --bg: #eef1f6;
-      --light: rgba(255,255,255,0.9);
-      --dark: rgba(180,184,195,0.6);
-      --text: #1f2937;
-      --muted: #6b7280;
-      --accent: #86EFC2;
-      --glass-bg: rgba(255,255,255,0.45);
-      --glass-border: rgba(255,255,255,0.25);
-    }
-
-    [data-theme="dark"] {
-      --bg: #121212;
-      --light: rgba(255,255,255,0.1);
-      --dark: rgba(0,0,0,0.4);
-      --text: #f3f4f6;
-      --muted: #9ca3af;
-      --glass-bg: rgba(30,30,30,0.6);
-      --glass-border: rgba(255,255,255,0.1);
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-      padding: 2rem;
-    }
-
-    .container {
-      max-width: 900px;
-      margin: auto;
-    }
-
-    header {
-      text-align: center;
-      margin-bottom: 2.5rem;
-    }
-
-    h1, h2, h3 {
-      margin-bottom: 1rem;
-    }
-
-    h1 {
-      font-size: 2.2rem;
-    }
-
-    h2 {
-      font-size: 1.6rem;
-      position: relative;
-      padding-bottom: 0.5rem;
-    }
-
-    h2::after {
-      content: "";
-      display: block;
-      width: 40px;
-      height: 3px;
-      background: var(--accent);
-      margin-top: 0.5rem;
-      border-radius: 2px;
-    }
-
-    p, ul {
-      margin-bottom: 1.2rem;
-    }
-
-    ul {
-      padding-left: 1.5rem;
-    }
-
-    li {
-      margin-bottom: 0.5rem;
-    }
-
-    .card {
-      background: var(--bg);
-      border-radius: 24px;
-      padding: 1.8rem;
-      margin-bottom: 2rem;
-      box-shadow:
-        12px 12px 24px var(--dark),
-        -12px -12px 24px var(--light);
-    }
-
-    img {
-      max-width: 100%;
-      border-radius: 16px;
-      margin: 1.5rem 0;
-    }
-
-    @media (max-width: 600px) {
-      body {
-        padding: 1.2rem;
-      }
-      h1 {
-        font-size: 1.8rem;
-      }
-      .card {
-        padding: 1.4rem;
-      }
-    }
-  </style>
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
+
 <body>
-  <div class="container">
-    <header>
-      <h1>Arcor — Estrategia de Marketing UX basada en datos</h1>
-    </header>
 
-    <div class="card">
-      <h2>Introducción</h2>
-      <p>Este proyecto explora el caso de <strong>Arcor</strong>, una de las marcas más icónicas de Latinoamérica, desde una perspectiva estratégica y técnica, combinando análisis de datos, experiencia de usuario (UX) y marketing digital.</p>
-      <p>Incluye visualizaciones interactivas, benchmarking con Nestlé / Mondelez, análisis de consumo por país, propuestas ecológicas y auditoría UX del sitio web oficial.</p>
+<!-- ================= NAV ================= -->
+<nav class="navbar" role="navigation">
+  <div class="nav-container">
+    <span class="nav-logo">David Sebastián Díaz</span>
+
+    <button class="nav-toggle"
+            aria-label="Abrir menú"
+            aria-expanded="false">
+      <i class="ri-menu-line"></i>
+    </button>
+
+    <ul class="nav-menu">
+      <li><a href="#about">Sobre mí</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Proyectos</a></li>
+      <li><a href="#contact">Contacto</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+<header class="hero">
+  <div class="container hero-layout">
+
+    <div class="hero-text">
+      <h1>UX & Product Designer</h1>
+      <p class="hero-subtitle">
+        Diseño experiencias digitales claras, humanas y basadas en datos.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#projects" class="btn-primary">Ver proyectos</a>
+        <a href="#contact" class="btn-secondary">Contactar</a>
+      </div>
     </div>
 
-    <div class="card">
-      <h2>Objetivos</h2>
-      <ul>
-        <li>Análisis de estrategias de marketing digital y tradicional.</li>
-        <li>Evaluación de presencia online, segmentación y experiencia de usuario.</li>
-        <li>Propuestas de mejora basadas en datos, diseño y KPIs.</li>
-        <li>Comparación con competidores globales.</li>
-        <li>Incorporación de contexto de consumo y sostenibilidad.</li>
-      </ul>
-    </div>
+    <section class="banner" aria-hidden="true">
+      <div class="banner-wrap">
+        <img src="banner.png" alt="Banner visual del portfolio" loading="lazy"/>
+        <span class="iridescent-layer"></span>
+        <span class="bubble b1"></span>
+        <span class="bubble b2"></span>
+        <span class="bubble b3"></span>
+      </div>
+    </section>
+
+  </div>
+</header>
+
+<!-- ================= ABOUT ================= -->
+<section id="about">
+  <div class="container narrow">
+    <h2 class="section-title">Sobre mí</h2>
 
     <div class="card">
-      <h2>Fuentes de datos</h2>
-      <ul>
-        <li>Sitio oficial: www.arcor.com</li>
-        <li>Redes sociales: Instagram, Facebook, YouTube</li>
-        <li>Plataformas externas: SimilarWeb, SEMrush, Google Trends</li>
-        <li>Estudios de caso: Gutbit, VirtualMailer, Kantar</li>
-        <li>Métricas UX: Lighthouse, heurísticas de Nielsen</li>
-        <li>Reportes financieros Arcor 2024–2025</li>
-      </ul>
-    </div>
+      <p>
+        Diseñador UX/UI enfocado en producto digital, investigación de usuarios
+        y diseño estratégico. Integro UX, UI y datos para crear experiencias
+        escalables y orientadas a negocio.
+      </p>
 
-    <div class="card">
-      <h2>Visualizaciones</h2>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Heatmap.png/640px-Heatmap.png" alt="Mapa de calor de consumo">
-    </div>
-
-    <div class="card">
-      <h2>Hipótesis y KPIs</h2>
-      <p><strong>Hipótesis:</strong></p>
-      <ul>
-        <li>El canal digital tiene mayor ROI en segmentos jóvenes.</li>
-        <li>El sitio web presenta oportunidades de mejora UX.</li>
-        <li>Nestlé tiene mayor engagement social, pero Arcor lidera en SEO.</li>
-        <li>El packaging ecológico mejora percepción de marca.</li>
-      </ul>
-      <p><strong>KPIs:</strong></p>
-      <ul>
-        <li>Engagement Rate (%)</li>
-        <li>Bounce Rate y duración promedio</li>
-        <li>SEO Ranking y tiempo de carga</li>
-        <li>% de productos compostables</li>
-        <li>Variación de consumo por país</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <h2>Estrategias sostenibles</h2>
-      <ul>
-        <li>Packaging biodegradable (PLA, NatureFlex™, papel compostable)</li>
-        <li>Campañas verdes con QR educativo y gamificación</li>
-        <li>KPI: kg de plástico evitado, % de productos sostenibles</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <h2>Usabilidad digital</h2>
-      <ul>
-        <li>Auditoría UX con heurísticas de Nielsen</li>
-        <li>Métricas Lighthouse: <strong>LCP ≈ 2.9s · TTI ≈ 3.2s · Accesibilidad: 78/100</strong></li>
-        <li>Propuesta de app de fidelización con escaneo de productos</li>
-        <li>Mejora de navegación: búsqueda predictiva, breadcrumbs</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <h2>Datos corporativos</h2>
-      <ul>
-        <li>Empleados: +21,000 en 40 plantas</li>
-        <li>Exportaciones: +120 países</li>
-        <li>Ingresos 2024: $3.9 mil millones</li>
-        <li>Inversión: $410M en packaging sostenible</li>
-        <li>Estrategia 2030: “Living Better” alineada con ODS ONU</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <h2>Conclusiones</h2>
-      <ul>
-        <li>Arcor tiene fuerte posicionamiento SEO, pero menor engagement social.</li>
-        <li>El sitio presenta oportunidades de mejora UX.</li>
-        <li>El canal digital muestra mayor ROI en segmentos jóvenes.</li>
-        <li>Nestlé destaca en fidelización y diseño UX.</li>
-        <li>El enfoque ecológico puede reposicionar la marca.</li>
+      <ul class="about-list">
+        <li><i class="ri-check-line"></i> UX Research & Testing</li>
+        <li><i class="ri-check-line"></i> Product Thinking</li>
+        <li><i class="ri-check-line"></i> Design Systems</li>
+        <li><i class="ri-check-line"></i> Data-informed UX</li>
       </ul>
     </div>
   </div>
+</section>
 
-  <script>
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      document.body.setAttribute('data-theme', 'dark');
-    }
-  </script>
+<!-- ================= SKILLS ================= -->
+<section id="skills">
+  <div class="container">
+    <h2 class="section-title">Habilidades & Herramientas</h2>
+
+    <div class="grid-3">
+
+      <div class="card">
+        <h3><i class="ri-compasses-2-line"></i> UX & Producto</h3>
+        <ul>
+          <li>Research & Discovery</li>
+          <li>User Personas</li>
+          <li>Journey Maps</li>
+          <li>Arquitectura de Información</li>
+          <li>Usability Testing</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3><i class="ri-palette-line"></i> UI & Visual</h3>
+        <ul>
+          <li>Neumorphism</li>
+          <li>Glassmorphism</li>
+          <li>Interaction Design</li>
+          <li>Accesibilidad</li>
+          <li>Microinteracciones</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3><i class="ri-tools-line"></i> Herramientas</h3>
+        <div class="tools">
+          <span class="tool"><i class="ri-figma-line"></i> Figma</span>
+          <span class="tool"><i class="ri-code-line"></i> HTML</span>
+          <span class="tool"><i class="ri-css3-line"></i> CSS</span>
+          <span class="tool"><i class="ri-bar-chart-line"></i> Data</span>
+          <span class="tool"><i class="ri-adobe-line"></i> Adobe</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROJECTS ================= -->
+<section id="projects">
+  <div class="container">
+    <h2 class="section-title">Proyectos</h2>
+
+    <div class="grid-2">
+
+      <!-- ===== BODEGA LA CAROYENSE ===== -->
+      <article class="card project-hover">
+        <div class="project-info">
+          <h3>Bodega La Caroyense — UX/UI Redesign</h3>
+          <p>
+            Caso de estudio UX/UI enfocado en reorganizar la experiencia digital
+            de una bodega histórica. Se trabajó arquitectura de información,
+            storytelling y conversión hacia visitas guiadas.
+          </p>
+
+          <ul class="project-tags">
+            <li>UX Strategy</li>
+            <li>IA</li>
+            <li>UI Design</li>
+            <li>Mobile-first</li>
+          </ul>
+        </div>
+
+        <div class="project-preview">
+          <img src="images/caroyense-home.png" alt="Home rediseñado Bodega La Caroyense" loading="lazy">
+          <img src="images/caroyense-vinos.png" alt="Sección vinos Bodega La Caroyense" loading="lazy">
+          <img src="images/caroyense-visitas.png" alt="Visitas guiadas Bodega La Caroyense" loading="lazy">
+        </div>
+      </article>
+
+      <!-- ===== PASEO ===== -->
+      <article class="card project-hover">
+        <div class="project-info">
+          <h3>PASEO — Mobile UX</h3>
+          <p>
+            App para conectar dueños de mascotas con paseadores confiables.
+            UX Research, flujos, UI y validación.
+          </p>
+        </div>
+
+        <div class="project-preview">
+          <img src="images/paseo-1.png" alt="Pantalla PASEO 1" loading="lazy">
+          <img src="images/paseo-2.png" alt="Pantalla PASEO 2" loading="lazy">
+          <img src="images/paseo-3.png" alt="Pantalla PASEO 3" loading="lazy">
+        </div>
+      </article>
+
+      <!-- ===== YALE ===== -->
+      <article class="card project-hover">
+        <div class="project-info">
+          <h3>Yale School of Art — UX Redesign</h3>
+          <p>
+            Rediseño del sitio académico enfocado en jerarquía visual,
+            usabilidad y claridad.
+          </p>
+        </div>
+
+        <div class="project-preview">
+          <img src="images/yale-chaos.png" alt="Yale versión original" loading="lazy">
+          <img src="images/yale-solution.png" alt="Yale rediseño" loading="lazy">
+          <img src="images/yale-detail.png" alt="Detalle UI Yale" loading="lazy">
+        </div>
+      </article>
+
+      <!-- ===== LINKS ===== -->
+      <div class="card">
+        <h3>Apple Inc. 2025 — UX KPIs</h3>
+        <a class="btn-secondary" target="_blank"
+           href="https://dsd228.github.io/-Apple-Inc.-2025-UX-KPIs-Innovation-Strategy/">
+          Ver proyecto
+        </a>
+      </div>
+
+      <div class="card">
+        <h3>Arcor — UX basada en datos</h3>
+        <a class="btn-secondary" target="_blank"
+           href="https://dsd228.github.io/Arcor-estrategia-de-Marketing-UX-basada-en-datos/">
+          Ver proyecto
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact">
+  <div class="container narrow">
+    <h2 class="section-title">Contacto</h2>
+
+    <div class="card">
+      <p>¿Querés trabajar juntos o conversar sobre diseño?</p>
+      <p><strong>Email:</strong> david.diaz.uxdata@gmail.com</p>
+      <p><strong>LinkedIn:</strong> linkedin.com/in/david-sebastian-diaz</p>
+      <p><strong>GitHub:</strong> github.com/dsd228</p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  © 2026 — David Sebastián Díaz · UX / Product Designer
+</footer>
+
+<script src="js/main.js"></script>
 </body>
 </html>
