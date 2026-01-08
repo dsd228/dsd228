@@ -232,12 +232,7 @@
 
 <!-- ================= JS ================= -->
 <script>
-  const navToggle = document.querySelector('.nav-toggle');
-  const navMenu = document.querySelector('.nav-menu');
-  navToggle.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-  });
-<script>
+  /* ================= NAV MOBILE ================= */
   const navToggle = document.querySelector('.nav-toggle');
   const navMenu = document.querySelector('.nav-menu');
 
@@ -245,6 +240,7 @@
     navMenu.classList.toggle('active');
   });
 
+  /* ================= DARK MODE ================= */
   const themeToggle = document.querySelector('.theme-toggle');
   const html = document.documentElement;
   const banner = document.getElementById('hero-banner');
@@ -260,16 +256,6 @@
 
     /* Cambiar icono */
     icon.className = isDark ? 'ri-moon-line' : 'ri-sun-line';
-  });
-</script>
-
-  const themeToggle = document.querySelector('.theme-toggle');
-  const html = document.documentElement;
-  themeToggle.addEventListener('click', () => {
-    html.setAttribute(
-      'data-theme',
-      html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'
-    );
   });
 </script>
 
