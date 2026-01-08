@@ -187,9 +187,9 @@ section {
 }
 
 /* ================= BANNER ================= */
-.banner {
-  margin-top: 48px;
-}
+.banner { margin-top: 96px; padding: 0 24px; }
+.banner-wrap { position: relative; max-width: 1200px; margin: auto; border-radius: 32px; overflow: hidden; } 
+.banner img { width: 100%; border-radius: 32px; box-shadow: 18px 18px 36px var(--dark), -18px -18px 36px var(--light); transition: transform 0.6s ease; }
 
 /* ================= FOOTER ================= */
 .footer {
