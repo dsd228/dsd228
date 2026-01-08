@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -25,9 +25,7 @@
   <div class="nav-container">
     <span class="nav-logo">David Sebastián Díaz</span>
 
-    <button class="nav-toggle"
-            aria-label="Abrir menú"
-            aria-expanded="false">
+    <button class="nav-toggle" aria-label="Abrir menú">
       <i class="ri-menu-line"></i>
     </button>
 
@@ -37,6 +35,10 @@
       <li><a href="#projects">Proyectos</a></li>
       <li><a href="#contact">Contacto</a></li>
     </ul>
+
+    <button class="theme-toggle" aria-label="Cambiar tema">
+      <i class="ri-moon-line"></i>
+    </button>
   </div>
 </nav>
 
@@ -59,10 +61,6 @@
     <section class="banner" aria-hidden="true">
       <div class="banner-wrap">
         <img src="banner.png" alt="Banner visual del portfolio" loading="lazy"/>
-        <span class="iridescent-layer"></span>
-        <span class="bubble b1"></span>
-        <span class="bubble b2"></span>
-        <span class="bubble b3"></span>
       </div>
     </section>
 
@@ -142,66 +140,56 @@
 
     <div class="grid-2">
 
-      <!-- ===== BODEGA LA CAROYENSE ===== -->
+      <!-- BODEGA -->
       <article class="card project-hover">
         <div class="project-info">
           <h3>Bodega La Caroyense — UX/UI Redesign</h3>
           <p>
             Caso de estudio UX/UI enfocado en reorganizar la experiencia digital
-            de una bodega histórica. Se trabajó arquitectura de información,
-            storytelling y conversión hacia visitas guiadas.
+            de una bodega histórica.
           </p>
-
-          <ul class="project-tags">
-            <li>UX Strategy</li>
-            <li>IA</li>
-            <li>UI Design</li>
-            <li>Mobile-first</li>
-          </ul>
         </div>
 
         <div class="project-preview">
-          <img src="images/caroyense-home.png" alt="Home rediseñado Bodega La Caroyense" loading="lazy">
-          <img src="images/caroyense-vinos.png" alt="Sección vinos Bodega La Caroyense" loading="lazy">
-          <img src="images/caroyense-visitas.png" alt="Visitas guiadas Bodega La Caroyense" loading="lazy">
+          <img src="images/caroyense-home.png" alt="">
+          <img src="images/caroyense-vinos.png" alt="">
+          <img src="images/caroyense-visitas.png" alt="">
         </div>
       </article>
 
-      <!-- ===== PASEO ===== -->
+      <!-- PASEO -->
       <article class="card project-hover">
         <div class="project-info">
           <h3>PASEO — Mobile UX</h3>
           <p>
             App para conectar dueños de mascotas con paseadores confiables.
-            UX Research, flujos, UI y validación.
           </p>
         </div>
 
         <div class="project-preview">
-          <img src="images/paseo-1.png" alt="Pantalla PASEO 1" loading="lazy">
-          <img src="images/paseo-2.png" alt="Pantalla PASEO 2" loading="lazy">
-          <img src="images/paseo-3.png" alt="Pantalla PASEO 3" loading="lazy">
+          <img src="images/paseo-1.png" alt="">
+          <img src="images/paseo-2.png" alt="">
+          <img src="images/paseo-3.png" alt="">
         </div>
       </article>
 
-      <!-- ===== YALE ===== -->
+      <!-- YALE -->
       <article class="card project-hover">
         <div class="project-info">
           <h3>Yale School of Art — UX Redesign</h3>
           <p>
-            Rediseño del sitio académico enfocado en jerarquía visual,
-            usabilidad y claridad.
+            Rediseño del sitio académico enfocado en jerarquía visual y usabilidad.
           </p>
         </div>
 
         <div class="project-preview">
-          <img src="images/yale-chaos.png" alt="Yale versión original" loading="lazy">
-          <img src="images/yale-solution.png" alt="Yale rediseño" loading="lazy">
-          <img src="images/yale-detail.png" alt="Detalle UI Yale" loading="lazy">
+          <img src="images/yale-chaos.png" alt="">
+          <img src="images/yale-solution.png" alt="">
+          <img src="images/yale-detail.png" alt="">
         </div>
       </article>
 
-      <!-- ===== LINKS ===== -->
+      <!-- LINKS -->
       <div class="card">
         <h3>Apple Inc. 2025 — UX KPIs</h3>
         <a class="btn-secondary" target="_blank"
@@ -240,6 +228,23 @@
   © 2026 — David Sebastián Díaz · UX / Product Designer
 </footer>
 
-<script src="js/main.js"></script>
+<!-- ================= JS ================= -->
+<script>
+  const navToggle = document.querySelector('.nav-toggle');
+  const navMenu = document.querySelector('.nav-menu');
+  navToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+  });
+
+  const themeToggle = document.querySelector('.theme-toggle');
+  const html = document.documentElement;
+  themeToggle.addEventListener('click', () => {
+    html.setAttribute(
+      'data-theme',
+      html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'
+    );
+  });
+</script>
+
 </body>
 </html>
