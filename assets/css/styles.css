@@ -11,9 +11,9 @@
   --light: rgba(255,255,255,0.9);
   --dark: rgba(180,184,195,0.6);
 
-  --text: #1f2937;
-  --text-secondary: #374151;
-  --muted: #6b7280;
+  --text: #0f172a;
+  --text-secondary: #1f2937;
+  --muted: #4b5563;
 
   --accent: #D4AF37;
   --accent-hover: #C9A020;
@@ -363,13 +363,13 @@ section > .container > .section-title::after {
 .grid-2 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: var(--space-2xl);
+  gap: var(--space-4xl);
 }
 
 .grid-3 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: var(--space-2xl);
+  gap: var(--space-3xl);
 }
 
 /* ================= PROJECT ================= */
