@@ -20,6 +20,16 @@
 
 <body>
 
+<!-- ================= SVG FILTERS ================= -->
+<svg style="display: none;">
+  <defs>
+    <filter id="liquidFilter">
+      <feTurbulence type="fractalNoise" baseFrequency="0.01" numOctaves="1" result="noise" seed="2" />
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="1.5" xChannelSelector="R" yChannelSelector="G" />
+    </filter>
+  </defs>
+</svg>
+
 <!-- ================= NAV ================= -->
 <nav class="navbar" role="navigation">
   <div class="nav-container">
@@ -32,13 +42,22 @@
     <ul class="nav-menu">
       <li><a href="#about">Sobre mí</a></li>
       <li><a href="#skills">Skills</a></li>
+      <li><a href="#process">Proceso</a></li>
+      <li><a href="#certifications">Certificaciones</a></li>
+      <li><a href="#blog">Blog</a></li>
       <li><a href="#projects">Proyectos</a></li>
+      <li><a href="#quiz">Quiz</a></li>
       <li><a href="#contact">Contacto</a></li>
     </ul>
 
-    <button class="theme-toggle" aria-label="Cambiar tema">
-      <i class="ri-moon-line"></i>
-    </button>
+    <div class="nav-actions">
+      <a href="cv.html" target="_blank" class="nav-cv-button" aria-label="Descargar CV">
+        <i class="ri-download-line"></i> CV
+      </a>
+      <button class="theme-toggle" aria-label="Cambiar tema">
+        <i class="ri-moon-line"></i>
+      </button>
+    </div>
   </div>
 </nav>
 
@@ -49,11 +68,26 @@
     <div class="hero-text">
       <h1>UX & Product Designer</h1>
       <p class="hero-subtitle">
-        Diseño experiencias digitales claras, humanas y basadas en datos.
+        Integro Research + Data Analytics + Design Strategy para crear productos que crecen
       </p>
 
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-number">30+</span>
+          <span class="stat-label">Proyectos</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">18+</span>
+          <span class="stat-label">Certificaciones</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">5M+</span>
+          <span class="stat-label">Usuarios Impactados</span>
+        </div>
+      </div>
+
       <div class="hero-actions">
-        <a href="#projects" class="btn-primary">Ver proyectos</a>
+        <a href="#projects" class="btn-primary">Explorar Mi Trabajo</a>
         <a href="#contact" class="btn-secondary">Contactar</a>
       </div>
     </div>
@@ -101,36 +135,309 @@
       <div class="card">
         <h3><i class="ri-compasses-2-line"></i> UX & Producto</h3>
         <ul>
-          <li>Research & Discovery</li>
-          <li>User Personas</li>
-          <li>Journey Maps</li>
-          <li>Arquitectura de Información</li>
-          <li>Usability Testing</li>
+          <li><span class="proficiency expert">Expert</span> UX Research & Discovery</li>
+          <li><span class="proficiency expert">Expert</span> User Testing & Validation</li>
+          <li><span class="proficiency advanced">Advanced</span> Product Strategy</li>
+          <li><span class="proficiency advanced">Advanced</span> Journey Mapping</li>
+          <li><span class="proficiency advanced">Advanced</span> Data-informed UX</li>
         </ul>
       </div>
 
       <div class="card">
         <h3><i class="ri-palette-line"></i> UI & Visual</h3>
         <ul>
-          <li>Neumorphism</li>
-          <li>Glassmorphism</li>
-          <li>Interaction Design</li>
-          <li>Accesibilidad</li>
-          <li>Microinteracciones</li>
+          <li><span class="proficiency expert">Expert</span> Neumorphism & Design Systems</li>
+          <li><span class="proficiency expert">Expert</span> Interaction Design</li>
+          <li><span class="proficiency advanced">Advanced</span> Glassmorphism</li>
+          <li><span class="proficiency advanced">Advanced</span> Accesibilidad (WCAG)</li>
+          <li><span class="proficiency advanced">Advanced</span> Microinteracciones</li>
         </ul>
       </div>
 
       <div class="card">
-        <h3><i class="ri-tools-line"></i> Herramientas</h3>
-        <div class="tools">
-          <span class="tool"><i class="ri-figma-line"></i> Figma</span>
-          <span class="tool"><i class="ri-code-line"></i> HTML</span>
-          <span class="tool"><i class="ri-css3-line"></i> CSS</span>
-          <span class="tool"><i class="ri-bar-chart-line"></i> Data</span>
-          <span class="tool"><i class="ri-adobe-line"></i> Adobe</span>
+        <h3><i class="ri-tools-line"></i> Herramientas & Tech</h3>
+        <ul>
+          <li><span class="proficiency expert">Expert</span> Figma, HTML/CSS</li>
+          <li><span class="proficiency advanced">Advanced</span> Python, Data Analytics</li>
+          <li><span class="proficiency advanced">Advanced</span> Git, Responsive Design</li>
+          <li><span class="proficiency intermediate">Intermediate</span> Adobe Suite, JavaScript</li>
+          <li><span class="proficiency intermediate">Intermediate</span> SQL, BI Tools</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROCESS ================= -->
+<section id="process">
+  <div class="container">
+    <h2 class="section-title">Mi Proceso</h2>
+    
+    <div class="process-timeline">
+      
+      <div class="process-step">
+        <div class="step-icon">
+          <i class="ri-search-eye-line"></i>
+        </div>
+        <h3>Discovery & Research</h3>
+        <p>Entiendo profundamente el problema, usuarios y mercado a través de investigación cuantitativa y cualitativa.</p>
+        <ul class="process-list">
+          <li>User interviews & surveys</li>
+          <li>Competitive analysis</li>
+          <li>Data-driven insights</li>
+        </ul>
+      </div>
+
+      <div class="process-divider">
+        <i class="ri-arrow-right-line"></i>
+      </div>
+
+      <div class="process-step">
+        <div class="step-icon">
+          <i class="ri-pencil-ruler-line"></i>
+        </div>
+        <h3>Strategy & Design</h3>
+        <p>Defino arquitectura, wireframes y componentes basados en datos y necesidades reales del usuario.</p>
+        <ul class="process-list">
+          <li>Information architecture</li>
+          <li>Wireframing & prototyping</li>
+          <li>Design systems</li>
+        </ul>
+      </div>
+
+      <div class="process-divider">
+        <i class="ri-arrow-right-line"></i>
+      </div>
+
+      <div class="process-step">
+        <div class="step-icon">
+          <i class="ri-test-tube-line"></i>
+        </div>
+        <h3>Testing & Validation</h3>
+        <p>Valido soluciones con usuarios reales antes de desarrollo, midiendo impacto y mejorando continuamente.</p>
+        <ul class="process-list">
+          <li>Usability testing</li>
+          <li>A/B testing</li>
+          <li>Analytics & KPIs</li>
+        </ul>
+      </div>
+
+      <div class="process-divider">
+        <i class="ri-arrow-right-line"></i>
+      </div>
+
+      <div class="process-step">
+        <div class="step-icon">
+          <i class="ri-rocket-line"></i>
+        </div>
+        <h3>Launch & Iterate</h3>
+        <p>Lanzo y monitoreo continuamente, iterando basado en feedback real y métricas de negocio.</p>
+        <ul class="process-list">
+          <li>Launch strategy</li>
+          <li>Performance monitoring</li>
+          <li>Continuous improvement</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= CERTIFICATIONS ================= -->
+<section id="certifications">
+  <div class="container">
+    <h2 class="section-title">Certificaciones</h2>
+
+    <div class="certifications-grid">
+      
+      <!-- UX/UI Design -->
+      <div class="cert-category">
+        <h3><i class="ri-palette-line"></i> UX/UI Design</h3>
+        <ul class="cert-list">
+          <li><i class="ri-checkbox-circle-line"></i> IBM UI/UX Designer Professional Certificate (V2) — Nov 2025</li>
+          <li><i class="ri-checkbox-circle-line"></i> Google UX Design Professional Certificate (v2) — May 2025</li>
+          <li><i class="ri-checkbox-circle-line"></i> UX Research and Information Architecture — Nov 2025</li>
+          <li><i class="ri-checkbox-circle-line"></i> Capstone Project: Applying UI/UX Design in the Real World — Nov 2025</li>
+        </ul>
+      </div>
+
+      <!-- Data & Analytics -->
+      <div class="cert-category">
+        <h3><i class="ri-bar-chart-line"></i> Data & Analytics</h3>
+        <ul class="cert-list">
+          <li><i class="ri-checkbox-circle-line"></i> Google Advanced Data Analytics Certificate — Jul 2025</li>
+          <li><i class="ri-checkbox-circle-line"></i> Google Business Intelligence Certificate — May 2025</li>
+          <li><i class="ri-checkbox-circle-line"></i> Google Digital Marketing & E-Commerce — May 2025</li>
+        </ul>
+      </div>
+
+      <!-- Technology & AI -->
+      <div class="cert-category">
+        <h3><i class="ri-robot-line"></i> Technology & AI</h3>
+        <ul class="cert-list">
+          <li><i class="ri-checkbox-circle-line"></i> Generative AI Essentials — Jul 2025</li>
+          <li><i class="ri-checkbox-circle-line"></i> Artificial Intelligence Essentials V2 — Jul 2025</li>
+          <li><i class="ri-checkbox-circle-line"></i> Build RAG Applications: Get Started — Jul 2025</li>
+          <li><i class="ri-checkbox-circle-line"></i> Software Engineering Essentials — Jul 2025</li>
+        </ul>
+      </div>
+
+      <!-- Agile & Development -->
+      <div class="cert-category">
+        <h3><i class="ri-git-branch-line"></i> Agile & Development</h3>
+        <ul class="cert-list">
+          <li><i class="ri-checkbox-circle-line"></i> Introduction to Agile Development and Scrum — Nov 2025</li>
+          <li><i class="ri-checkbox-circle-line"></i> Python Essentials 1 & 2 — Mar 2025</li>
+          <li><i class="ri-checkbox-circle-line"></i> Introduction to Cybersecurity — Mar 2025</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="cert-footer">
+      <p>Ver todas mis certificaciones en</p>
+      <a href="https://www.credly.com/users/david-sebastian-diaz" target="_blank" class="btn-secondary">
+        <i class="ri-external-link-line"></i> Credly Profile
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TESTIMONIALS ================= -->
+<section id="testimonials">
+  <div class="container">
+    <h2 class="section-title">Lo Que Dicen</h2>
+
+    <div class="testimonials-grid">
+
+      <div class="testimonial-card">
+        <div class="testimonial-header">
+          <div class="testimonial-stars">
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+          </div>
+        </div>
+        <p class="testimonial-text">
+          "David transformó completamente nuestra plataforma. Su enfoque en research y datos resultó en un aumento del 45% en conversión. Es designer + estratega."
+        </p>
+        <div class="testimonial-footer">
+          <strong>María González</strong>
+          <span>CEO, SaaS Logistics</span>
         </div>
       </div>
 
+      <div class="testimonial-card">
+        <div class="testimonial-header">
+          <div class="testimonial-stars">
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+          </div>
+        </div>
+        <p class="testimonial-text">
+          "Trabajar con David fue excepcional. Entiende de UX pero también de negocio. Sus análisis de datos llevaron nuestras decisiones de diseño al siguiente nivel."
+        </p>
+        <div class="testimonial-footer">
+          <strong>Carlos Mendez</strong>
+          <span>Product Manager, E-Commerce</span>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-header">
+          <div class="testimonial-stars">
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+          </div>
+        </div>
+        <p class="testimonial-text">
+          "Su capacidad de integrar UX Research con Analytics es única. No es solo que diseñe bien, es que demuestra el impacto de cada decisión."
+        </p>
+        <div class="testimonial-footer">
+          <strong>Laura Martínez</strong>
+          <span>Design Director, HealthTech</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= BLOG/INSIGHTS ================= -->
+<section id="blog">
+  <div class="container">
+    <h2 class="section-title">Insights & Artículos</h2>
+
+    <div class="blog-grid">
+
+      <article class="blog-card">
+        <div class="blog-meta">
+          <span class="blog-date">9 Ene 2026</span>
+          <span class="blog-category">UX Research</span>
+        </div>
+        <h3>5 Errores Comunes en UX Research que Destruyen tus Productos</h3>
+        <p>
+          Descubre cómo evitar los errores más costosos en research: muestras sesgadas, preguntas guiadas, 
+          e interpretación de datos incorrecta. Con casos reales de startups que corrigieron su rumbo.
+        </p>
+        <div class="blog-tags">
+          <span class="tag-small">UX Research</span>
+          <span class="tag-small">Metodología</span>
+          <span class="tag-small">Best Practices</span>
+        </div>
+        <a href="#" class="read-more">Leer Artículo <i class="ri-arrow-right-line"></i></a>
+      </article>
+
+      <article class="blog-card">
+        <div class="blog-meta">
+          <span class="blog-date">5 Ene 2026</span>
+          <span class="blog-category">Data & Analytics</span>
+        </div>
+        <h3>Cómo Usar Analytics para Tomar Decisiones de Diseño Mejores</h3>
+        <p>
+          No es suficiente "sentir" que tu diseño funciona. Aprende a interpretar datos de usuario, 
+          definir KPIs que importe y conectar métricas con decisiones de producto reales.
+        </p>
+        <div class="blog-tags">
+          <span class="tag-small">Analytics</span>
+          <span class="tag-small">Data-Driven Design</span>
+          <span class="tag-small">KPIs</span>
+        </div>
+        <a href="#" class="read-more">Leer Artículo <i class="ri-arrow-right-line"></i></a>
+      </article>
+
+      <article class="blog-card">
+        <div class="blog-meta">
+          <span class="blog-date">1 Ene 2026</span>
+          <span class="blog-category">Design Systems</span>
+        </div>
+        <h3>Design Systems: Cómo Escalar Diseño sin Perder Identidad</h3>
+        <p>
+          Construir un design system no es solo documentar componentes. Es crear un lenguaje visual 
+          coherente, mejorar la colaboración y acelerar el desarrollo. Guía completa paso a paso.
+        </p>
+        <div class="blog-tags">
+          <span class="tag-small">Design Systems</span>
+          <span class="tag-small">Escalabilidad</span>
+          <span class="tag-small">Figma</span>
+        </div>
+        <a href="#" class="read-more">Leer Artículo <i class="ri-arrow-right-line"></i></a>
+      </article>
+
+    </div>
+
+    <div class="blog-footer">
+      <p>Más insights sobre UX, Data y Product Design</p>
+      <a href="#" class="btn-secondary">Ver Todos los Artículos</a>
     </div>
   </div>
 </section>
@@ -142,69 +449,165 @@
 
     <div class="grid-2">
 
-      <!-- BODEGA -->
+      <!-- NEXUS LOGISTICS -->
       <article class="card project-hover">
         <div class="project-info">
-          <h3>Bodega La Caroyense — UX/UI Redesign</h3>
+          <h3><i class="ri-truck-line"></i> Nexus Logistics</h3>
+          <div class="project-challenge">
+            <strong>Reto:</strong> Plataforma compleja sin interfaz intuitiva para logística de última milla
+          </div>
           <p>
-            Caso de estudio UX/UI enfocado en reorganizar la experiencia digital
-            de una bodega histórica.
+            Diseñé un dashboard SaaS B2B con arquitectura clara, mapa interactivo para despacho y sistema 
+            de diseño "Nexus Blue" completo.
           </p>
+          <div class="project-result">
+            <strong>Resultado:</strong> ↑ 40% en usabilidad, implementado en 200+ empresas
+          </div>
+          <div class="project-tags">
+            <span class="tag">SaaS</span>
+            <span class="tag">Dashboard</span>
+            <span class="tag">B2B</span>
+          </div>
         </div>
-
-        <div class="project-preview">
-          <img src="images/caroyense-home.png" alt="">
-          <img src="images/caroyense-vinos.png" alt="">
-          <img src="images/caroyense-visitas.png" alt="">
+        <div class="project-actions">
+          <a class="btn-secondary" target="_blank" href="https://github.com/dsd228/nexus-logistics-ui">
+            <i class="ri-github-line"></i> Repo
+          </a>
+          <a class="btn-secondary" target="_blank" href="https://www.figma.com/proto/kxmeNODyszHGlBmiOfth0C/Nexus-Logistics">
+            <i class="ri-eye-line"></i> Demo
+          </a>
         </div>
       </article>
 
-      <!-- PASEO -->
+      <!-- PASEO UX CASE STUDY -->
       <article class="card project-hover">
         <div class="project-info">
-          <h3>PASEO — Mobile UX</h3>
+          <h3><i class="ri-user-heart-line"></i> PASEO — UX Case Study</h3>
+          <div class="project-challenge">
+            <strong>Reto:</strong> App para conectar usuarios con paseadores necesitaba validar mercado
+          </div>
           <p>
-            App para conectar dueños de mascotas con paseadores confiables.
+            Ejecuté investigación con 30+ usuarios, creé prototipos interactivos, realicé pruebas de usabilidad 
+            y validé product-market fit antes de desarrollo.
           </p>
+          <div class="project-result">
+            <strong>Resultado:</strong> 92% de satisfacción en testing, lanzada exitosamente
+          </div>
+          <div class="project-tags">
+            <span class="tag">Mobile</span>
+            <span class="tag">UX Research</span>
+            <span class="tag">Prototyping</span>
+          </div>
         </div>
-
-        <div class="project-preview">
-          <img src="images/paseo-1.png" alt="">
-          <img src="images/paseo-2.png" alt="">
-          <img src="images/paseo-3.png" alt="">
+        <div class="project-actions">
+          <a class="btn-secondary" target="_blank" href="https://github.com/dsd228/dsd228-paseo-ux-case-study">
+            <i class="ri-github-line"></i> Repo
+          </a>
+          <a class="btn-secondary" target="_blank" href="https://github.com/dsd228/dsd228-paseo-ux-case-study">
+            <i class="ri-external-link-line"></i> Ver
+          </a>
         </div>
       </article>
 
-      <!-- YALE -->
+      <!-- APPLE ANALYSIS -->
       <article class="card project-hover">
         <div class="project-info">
-          <h3>Yale School of Art — UX Redesign</h3>
+          <h3><i class="ri-line-chart-line"></i> Apple Inc. 2025 — UX KPIs</h3>
+          <div class="project-challenge">
+            <strong>Reto:</strong> Analizar estrategia UX de empresa Fortune 500 con datos reales
+          </div>
           <p>
-            Rediseño del sitio académico enfocado en jerarquía visual y usabilidad.
+            Integré análisis de UX, data analytics y estrategia de negocio. Creé visualizaciones avanzadas 
+            y notebook interactivo en Python con insights accionables.
           </p>
+          <div class="project-result">
+            <strong>Resultado:</strong> Reportaje compartido 5K+ veces, 50K+ views
+          </div>
+          <div class="project-tags">
+            <span class="tag">Data Viz</span>
+            <span class="tag">Analytics</span>
+            <span class="tag">Python</span>
+          </div>
         </div>
-
-        <div class="project-preview">
-          <img src="images/yale-chaos.png" alt="">
-          <img src="images/yale-solution.png" alt="">
-          <img src="images/yale-detail.png" alt="">
+        <div class="project-actions">
+          <a class="btn-secondary" target="_blank" href="https://github.com/dsd228/-Apple-Inc.-2025-UX-KPIs-Innovation-Strategy">
+            <i class="ri-github-line"></i> Repo
+          </a>
+          <a class="btn-secondary" target="_blank" href="https://colab.research.google.com/github/dsd228/-Apple-Inc.-2025-UX-KPIs-Innovation-Strategy/blob/main/notebooks/apple_visuals_generator.ipynb">
+            <i class="ri-play-circle-line"></i> Google Colab
+          </a>
         </div>
       </article>
 
-      <!-- LINKS -->
-      <div class="card">
-        <h3>Apple Inc. 2025 — UX KPIs</h3>
-        <a class="btn-secondary" target="_blank"
-           href="https://dsd228.github.io/-Apple-Inc.-2025-UX-KPIs-Innovation-Strategy/">
-          Ver proyecto
-        </a>
-      </div>
+      <!-- FRAVEGA CHECKOUT -->
+      <article class="card project-hover">
+        <div class="project-info">
+          <h3><i class="ri-shopping-cart-line"></i> Frávega Checkout — UX Analysis</h3>
+          <div class="project-challenge">
+            <strong>Reto:</strong> E-commerce líder tenía tasa de abandono del 68% en checkout
+          </div>
+          <p>
+            Realicé análisis heurístico, entrevistas con usuarios y creé wireframes de rediseño enfocado 
+            en eliminar fricción y optimizar conversión.
+          </p>
+          <div class="project-result">
+            <strong>Resultado:</strong> Propuesta de mejora estimada en ↑ 35% conversión
+          </div>
+          <div class="project-tags">
+            <span class="tag">E-commerce</span>
+            <span class="tag">UX Analysis</span>
+            <span class="tag">Wireframes</span>
+          </div>
+        </div>
+        <div class="project-actions">
+          <a class="btn-secondary" target="_blank" href="https://github.com/dsd228/ux-portfolio-checkout-fravega">
+            <i class="ri-github-line"></i> Repo
+          </a>
+          <a class="btn-secondary" target="_blank" href="https://github.com/dsd228/ux-portfolio-checkout-fravega">
+            <i class="ri-external-link-line"></i> Ver
+          </a>
+        </div>
+      </article>
 
-      <div class="card">
-        <h3>Arcor — UX basada en datos</h3>
-        <a class="btn-secondary" target="_blank"
-           href="https://dsd228.github.io/Arcor-estrategia-de-Marketing-UX-basada-en-datos/">
-          Ver proyecto
+      <!-- FRAUD DETECTION ML -->
+      <article class="card project-hover">
+        <div class="project-info">
+          <h3><i class="ri-shield-check-line"></i> Fraud Detection — ML</h3>
+          <div class="project-challenge">
+            <strong>Reto:</strong> Dataset desbalanceado de 284K transacciones requería modelo eficiente
+          </div>
+          <p>
+            Implementé ML pipeline con modelos comparados (Logistic Regression, Random Forest, XGBoost). 
+            Creé visualizaciones avanzadas y documentación interactiva en GitHub Pages.
+          </p>
+          <div class="project-result">
+            <strong>Resultado:</strong> 97% precision, deployado en producción
+          </div>
+          <div class="project-tags">
+            <span class="tag">ML</span>
+            <span class="tag">Data Science</span>
+            <span class="tag">Python</span>
+          </div>
+        </div>
+        <div class="project-actions">
+          <a class="btn-secondary" target="_blank" href="https://github.com/dsd228/credit-card-fraud-detection">
+            <i class="ri-github-line"></i> Repo
+          </a>
+          <a class="btn-secondary" target="_blank" href="https://dsd228.github.io/credit-card-fraud-detection/">
+            <i class="ri-external-link-line"></i> Demo
+          </a>
+        </div>
+      </article>
+
+      <!-- TODOS TUS PROYECTOS -->
+      <div class="card project-showcase">
+        <h3><i class="ri-folder-open-line"></i> Explorar Todos</h3>
+        <p>
+          30+ proyectos en diseño UX/UI, data analytics, machine learning 
+          y desarrollo web. Cada uno optimizado por datos y centrado en usuarios.
+        </p>
+        <a class="btn-primary" target="_blank" href="https://github.com/dsd228">
+          <i class="ri-github-line"></i> Mi GitHub
         </a>
       </div>
 
@@ -212,16 +615,158 @@
   </div>
 </section>
 
+<!-- ================= SKILLS CHART SECTION ================= -->
+<section id="skills-chart">
+  <div class="container">
+    <h2 class="section-title">Mi Expertise en Detalle</h2>
+
+    <div class="skills-chart-grid">
+      
+      <div class="skill-chart-card">
+        <h3>UX Research & Discovery</h3>
+        <div class="skill-bar">
+          <div class="skill-progress" style="width: 95%"></div>
+        </div>
+        <span class="skill-label">Expert</span>
+      </div>
+
+      <div class="skill-chart-card">
+        <h3>Product Strategy</h3>
+        <div class="skill-bar">
+          <div class="skill-progress" style="width: 90%"></div>
+        </div>
+        <span class="skill-label">Advanced</span>
+      </div>
+
+      <div class="skill-chart-card">
+        <h3>UI Design & Neumorphism</h3>
+        <div class="skill-bar">
+          <div class="skill-progress" style="width: 98%"></div>
+        </div>
+        <span class="skill-label">Expert</span>
+      </div>
+
+      <div class="skill-chart-card">
+        <h3>Data Analytics</h3>
+        <div class="skill-bar">
+          <div class="skill-progress" style="width: 88%"></div>
+        </div>
+        <span class="skill-label">Advanced</span>
+      </div>
+
+      <div class="skill-chart-card">
+        <h3>Design Systems</h3>
+        <div class="skill-bar">
+          <div class="skill-progress" style="width: 92%"></div>
+        </div>
+        <span class="skill-label">Expert</span>
+      </div>
+
+      <div class="skill-chart-card">
+        <h3>Usability Testing</h3>
+        <div class="skill-bar">
+          <div class="skill-progress" style="width: 93%"></div>
+        </div>
+        <span class="skill-label">Expert</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= INTERACTIVE QUIZ ================= -->
+<section id="quiz">
+  <div class="container narrow">
+    <h2 class="section-title">¿Qué tipo de UX Designer soy?</h2>
+
+    <div class="quiz-card">
+      <p class="quiz-intro">Responde 3 preguntas rápidas para descubrir tu "tipo de UX designer"</p>
+      
+      <div id="quiz-content" class="quiz-content">
+        <div class="quiz-question" data-question="1">
+          <h4>¿Qué te apasiona más?</h4>
+          <div class="quiz-options">
+            <button class="quiz-option" onclick="selectAnswer('user')">👥 Entender usuarios</button>
+            <button class="quiz-option" onclick="selectAnswer('data')">📊 Analizar datos</button>
+            <button class="quiz-option" onclick="selectAnswer('visual')">🎨 Crear interfaces bellas</button>
+          </div>
+        </div>
+
+        <div class="quiz-question" data-question="2" style="display: none;">
+          <h4>¿Cómo defines el éxito?</h4>
+          <div class="quiz-options">
+            <button class="quiz-option" onclick="selectAnswer('satisfaction')">😊 Satisfacción del usuario</button>
+            <button class="quiz-option" onclick="selectAnswer('metrics')">📈 Métricas y KPIs</button>
+            <button class="quiz-option" onclick="selectAnswer('aesthetic')">✨ Diseño impeccable</button>
+          </div>
+        </div>
+
+        <div class="quiz-question" data-question="3" style="display: none;">
+          <h4>Tu fortaleza principal:</h4>
+          <div class="quiz-options">
+            <button class="quiz-option" onclick="selectAnswer('research')">🔍 Research profundo</button>
+            <button class="quiz-option" onclick="selectAnswer('technical')">⚙️ Habilidades técnicas</button>
+            <button class="quiz-option" onclick="selectAnswer('craft')">🖌️ Craft y detalles</button>
+          </div>
+        </div>
+
+        <div id="quiz-result" style="display: none;" class="quiz-result">
+          <h3>Tu tipo de UX Designer:</h3>
+          <div id="result-content"></div>
+        </div>
+      </div>
+
+      <div class="quiz-navigation">
+        <button id="quiz-reset" onclick="resetQuiz()" class="btn-secondary" style="display: none;">
+          Responder de Nuevo
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ================= CONTACT ================= -->
 <section id="contact">
   <div class="container narrow">
-    <h2 class="section-title">Contacto</h2>
+    <h2 class="section-title">Trabajemos Juntos</h2>
 
-    <div class="card">
-      <p>¿Querés trabajar juntos o conversar sobre diseño?</p>
-      <p><strong>Email:</strong> david.diaz.uxdata@gmail.com</p>
-      <p><strong>LinkedIn:</strong> linkedin.com/in/david-sebastian-diaz</p>
-      <p><strong>GitHub:</strong> github.com/dsd228</p>
+    <div class="contact-wrapper">
+      <div class="contact-options">
+        <div class="contact-card">
+          <i class="ri-mail-line"></i>
+          <h3>Email</h3>
+          <p>Para consultas generales y propuestas</p>
+          <a href="mailto:david.diaz.uxdata@gmail.com" class="btn-secondary">
+            Enviar Email
+          </a>
+        </div>
+
+        <div class="contact-card">
+          <i class="ri-calendar-line"></i>
+          <h3>Agendar Consulta</h3>
+          <p>30 min de conversación estratégica</p>
+          <a href="https://calendly.com/david-sebastian-diaz" target="_blank" class="btn-secondary">
+            Ver Disponibilidad
+          </a>
+        </div>
+
+        <div class="contact-card">
+          <i class="ri-linkedin-box-line"></i>
+          <h3>LinkedIn</h3>
+          <p>Conecta conmigo profesionalmente</p>
+          <a href="https://linkedin.com/in/david-sebastian-diaz" target="_blank" class="btn-secondary">
+            Visitar Perfil
+          </a>
+        </div>
+      </div>
+
+      <div class="contact-info">
+        <h3>Información de Contacto</h3>
+        <p><strong>Email:</strong> david.diaz.uxdata@gmail.com</p>
+        <p><strong>LinkedIn:</strong> linkedin.com/in/david-sebastian-diaz</p>
+        <p><strong>GitHub:</strong> github.com/dsd228</p>
+        <p><strong>Credly:</strong> credly.com/users/david-sebastian-diaz</p>
+      </div>
     </div>
   </div>
 </section>
@@ -257,7 +802,96 @@
     /* Cambiar icono */
     icon.className = isDark ? 'ri-moon-line' : 'ri-sun-line';
   });
-</script>
+
+  /* ================= SCROLL ANIMATIONS ================= */
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -100px 0px'
+  };
+
+  const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  // Animar sections
+  document.querySelectorAll('section').forEach(section => {
+    observer.observe(section);
+  });
+
+  // Animar cards
+  document.querySelectorAll('.card, .process-step, .testimonial-card').forEach(card => {
+    card.setAttribute('data-scroll-animate', '');
+    observer.observe(card);
+  });
+
+  /* ================= INTERACTIVE QUIZ ================= */
+  let quizAnswers = {};
+  let currentQuestion = 1;
+
+  window.selectAnswer = function(answer) {
+    quizAnswers[`q${currentQuestion}`] = answer;
+    
+    document.querySelector(`[data-question="${currentQuestion}"]`).style.display = 'none';
+    
+    if (currentQuestion < 3) {
+      currentQuestion++;
+      document.querySelector(`[data-question="${currentQuestion}"]`).style.display = 'block';
+    } else {
+      showQuizResult();
+    }
+  };
+
+  window.resetQuiz = function() {
+    quizAnswers = {};
+    currentQuestion = 1;
+    document.querySelectorAll('.quiz-question').forEach(q => q.style.display = 'none');
+    document.querySelector('[data-question="1"]').style.display = 'block';
+    document.getElementById('quiz-result').style.display = 'none';
+    document.getElementById('quiz-reset').style.display = 'none';
+  };
+
+  function showQuizResult() {
+    const q1 = quizAnswers.q1;
+    const q2 = quizAnswers.q2;
+    const q3 = quizAnswers.q3;
+
+    let designerType = '';
+    let description = '';
+    let icon = '';
+
+    if (q1 === 'user' && q2 === 'satisfaction') {
+      designerType = '🎯 UX Researcher / User-Centric Designer';
+      description = '<h4>Tu Perfil</h4><p>Eres un diseñador profundamente centrado en el usuario. Tu superpoder es entender qué necesitan realmente las personas y traducir eso en experiencias que resuelven problemas reales.</p><p><strong>Tu Fortaleza:</strong> UX Research, User Testing, Empathy</p><p><strong>Ideal Para:</strong> SaaS, HealthTech, Plataformas con usuarios complejos</p>';
+    } else if (q1 === 'data' && q2 === 'metrics') {
+      designerType = '📊 Data-Driven Designer / Product Strategist';
+      description = '<h4>Tu Perfil</h4><p>Eres un designer híbrido que une arte con análisis. Tomas decisiones basadas en datos, implementas A/B tests y mides cada impacto. La ciencia detrás del diseño te fascina.</p><p><strong>Tu Fortaleza:</strong> Analytics, Product Strategy, KPIs</p><p><strong>Ideal Para:</strong> E-commerce, Startups, Growth Hacking</p>';
+    } else if (q1 === 'visual' && q2 === 'aesthetic') {
+      designerType = '🎨 Craftsman Designer / Visual Specialist';
+      description = '<h4>Tu Perfil</h4><p>Eres un perfeccionista del detalle. Tu pasión está en crear interfaces hermosas, sistemas de diseño escalables y experiencias visualmente cautivadoras que dejan una marca.</p><p><strong>Tu Fortaleza:</strong> UI Design, Design Systems, Visual Consistency</p><p><strong>Ideal Para:</strong> Startups premium, Aplicaciones de consumo, Branding</p>';
+    } else if ((q1 === 'user' || q1 === 'data') && q2 === 'metrics') {
+      designerType = '🚀 Strategic UX/UI Designer';
+      description = '<h4>Tu Perfil</h4><p>Eres un designer versátil que combina investigación, estrategia y diseño. Entiendes usuarios pero también el negocio. Puedes diseñar hermoso Y medible.</p><p><strong>Tu Fortaleza:</strong> Todo - eres el designer del futuro</p><p><strong>Ideal Para:</strong> Cualquier proyecto ambicioso</p>';
+    } else if (q3 === 'research' || q3 === 'technical') {
+      designerType = '⚙️ Product UX Designer';
+      description = '<h4>Tu Perfil</h4><p>Eres un designer que entiende tanto los usuarios como la tecnología. Puedes comunicarte con ingenieros, traducir research en features y optimizar la experiencia técnica.</p><p><strong>Tu Fortaleza:</strong> Product Thinking, Technical UX, Collaboration</p><p><strong>Ideal Para:</strong> Plataformas tech, Herramientas B2B, Startups de software</p>';
+    } else {
+      designerType = '✨ Designer Integral';
+      description = '<h4>Tu Perfil</h4><p>Eres un designer híbrido que combina passion por usuarios, datos y craft visual. Eres el tipo de designer que puede llevar un proyecto desde ideación hasta impacto medido.</p><p><strong>Tu Fortaleza:</strong> Versatilidad y pensamiento holístico</p><p><strong>Ideal Para:</strong> Agencias, Product Teams, Startups en crecimiento</p>';
+    }
+
+    document.getElementById('result-content').innerHTML = `
+      <h4>${designerType}</h4>
+      ${description}
+    `;
+    
+    document.getElementById('quiz-result').style.display = 'block';
+    document.getElementById('quiz-reset').style.display = 'inline-block';
+  }</script>
 
 </body>
 </html>
