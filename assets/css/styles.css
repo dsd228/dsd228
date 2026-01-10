@@ -328,39 +328,43 @@ section > .container > .section-title::after {
 }
 
 .flow-circle {
-  animation: flowCircleAppear 0.6s ease-out forwards;
+  animation: flowCircleAppear 0.6s ease-out forwards, flowCirclePulse 3s ease-in-out infinite;
   transition: all var(--transition-smooth);
+  transform-origin: center;
 }
 
 .flow-circle:hover {
   r: 42;
   filter: drop-shadow(0 4px 12px rgba(201, 160, 32, 0.3));
+  animation-play-state: paused;
 }
 
-.flow-1 { animation-delay: 0.2s; }
-.flow-2 { animation-delay: 0.4s; }
-.flow-3 { animation-delay: 0.6s; }
-.flow-4 { animation-delay: 0.8s; }
+.flow-1 { animation-delay: 0.2s, 0s; }
+.flow-2 { animation-delay: 0.4s, 0.75s; }
+.flow-3 { animation-delay: 0.6s, 1.5s; }
+.flow-4 { animation-delay: 0.8s, 2.25s; }
 
 .flow-label {
   font-size: 12px;
   font-weight: 600;
-  animation: fadeInUp 0.5s ease-out forwards;
+  animation: fadeInUp 0.5s ease-out forwards, flowLabelScale 3s ease-in-out infinite;
   opacity: 0;
+  transform-origin: center;
 }
 
-.flow-label {
-  animation-delay: 0.3s;
-}
-.flow-2 ~ .flow-label { animation-delay: 0.5s; }
+.flow-1 + .flow-label { animation-delay: 0.3s, 0s; }
+.flow-2 + .flow-label { animation-delay: 0.5s, 0.75s; }
+.flow-3 + .flow-label { animation-delay: 0.7s, 1.5s; }
+.flow-4 + .flow-label { animation-delay: 0.9s, 2.25s; }
 
 .flow-line {
-  animation: flowLineDraw 0.8s ease-out forwards;
+  animation: flowLineDraw 0.8s ease-out forwards, flowLineFlow 3s ease-in-out infinite;
+  stroke-dasharray: 30;
 }
 
-.flow-line-1 { animation-delay: 1s; }
-.flow-line-2 { animation-delay: 1.2s; }
-.flow-line-3 { animation-delay: 1.4s; }
+.flow-line-1 { animation-delay: 1s, 0s; }
+.flow-line-2 { animation-delay: 1.2s, 0.75s; }
+.flow-line-3 { animation-delay: 1.4s, 1.5s; }
 
 .hero-visual-text {
   font-size: 0.95rem;
@@ -1537,6 +1541,49 @@ a:focus-visible {
   }
   to {
     stroke-dashoffset: 0;
+  }
+}
+
+@keyframes flowCirclePulse {
+  0%, 100% {
+    r: 35;
+    opacity: 1;
+    filter: drop-shadow(0 2px 8px rgba(201, 160, 32, 0.15));
+  }
+  50% {
+    r: 38;
+    opacity: 0.95;
+    filter: drop-shadow(0 6px 16px rgba(201, 160, 32, 0.25));
+  }
+}
+
+@keyframes flowLabelScale {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 0.95;
+  }
+}
+
+@keyframes flowLineFlow {
+  0%, 100% {
+    stroke-dashoffset: 0;
+    opacity: 0.6;
+  }
+  25% {
+    stroke-dashoffset: -30;
+    opacity: 0.8;
+  }
+  50% {
+    stroke-dashoffset: -60;
+    opacity: 1;
+  }
+  75% {
+    stroke-dashoffset: -30;
+    opacity: 0.8;
   }
 }
 
