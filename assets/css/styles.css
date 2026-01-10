@@ -2475,3 +2475,20 @@ a:focus-visible {
     grid-template-columns: 1fr;
   }
 }
+
+/* ================= NEUMORPHIC BACKGROUND PRESS EFFECT ================= */
+body {
+  transition: background-color var(--transition-base), box-shadow var(--transition-base);
+}
+
+body.bg-pressed {
+  background-color: #ead7e5;
+  box-shadow: inset 0 20px 60px rgba(0, 0, 0, 0.15), 
+              inset 0 -20px 60px rgba(255, 255, 255, 0.3);
+}
+
+[data-theme="dark"] body.bg-pressed {
+  background-color: #0a0a0a;
+  box-shadow: inset 0 20px 60px rgba(0, 0, 0, 0.8), 
+              inset 0 -20px 60px rgba(255, 255, 255, 0.05);
+}
