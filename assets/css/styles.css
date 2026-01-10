@@ -2394,6 +2394,57 @@ a:focus-visible {
   color: #ef4444;
 }
 
+/* ================= CERTIFICATES BADGES ================= */
+.certs-badges {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: var(--space-lg);
+  margin: var(--space-2xl) 0;
+}
+
+.cert-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: var(--space-lg);
+  background: linear-gradient(135deg, rgba(201, 160, 32, 0.08) 0%, rgba(32, 201, 151, 0.04) 100%);
+  border: 2px solid rgba(201, 160, 32, 0.3);
+  border-radius: 12px;
+  transition: all var(--transition-base);
+}
+
+.cert-badge:hover {
+  border-color: var(--accent);
+  background: linear-gradient(135deg, rgba(201, 160, 32, 0.15) 0%, rgba(32, 201, 151, 0.1) 100%);
+  transform: translateY(-4px);
+}
+
+.cert-badge i {
+  font-size: 2.5rem;
+  color: var(--accent);
+  margin-bottom: var(--space-sm);
+}
+
+.cert-badge strong {
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.cert-badge p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+/* ================= PROJECT SUMMARY ================= */
+.project-summary {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+  margin: var(--space-md) 0;
+}
+
 /* ================= RESPONSIVE CONTACT ================= */
 @media (max-width: 900px) {
   .contact-options {
@@ -2412,5 +2463,15 @@ a:focus-visible {
     flex: 1;
     min-width: 200px;
     justify-content: center;
+  }
+
+  .certs-badges {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .certs-badges {
+    grid-template-columns: 1fr;
   }
 }
