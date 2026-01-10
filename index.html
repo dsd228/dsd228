@@ -142,13 +142,29 @@
       </div>
     </div>
 
-    <img
-  id="hero-banner"
-  src="banner.png"
-  alt="Banner visual del portfolio"
-  loading="lazy"
-/>
-
+    <!-- SVG Animated Process Flow -->
+    <div class="hero-visual">
+      <svg viewBox="0 0 400 300" width="400" height="300" class="process-flow">
+        <!-- Circles (steps) -->
+        <circle cx="50" cy="150" r="35" class="flow-circle flow-1" fill="none" stroke="var(--accent-secondary)" stroke-width="2" />
+        <text x="50" y="155" text-anchor="middle" class="flow-label" fill="var(--accent-secondary)">Escucha</text>
+        
+        <circle cx="150" cy="150" r="35" class="flow-circle flow-2" fill="none" stroke="var(--accent)" stroke-width="2" />
+        <text x="150" y="155" text-anchor="middle" class="flow-label" fill="var(--accent)">Analiza</text>
+        
+        <circle cx="250" cy="150" r="35" class="flow-circle flow-3" fill="none" stroke="var(--accent-secondary)" stroke-width="2" />
+        <text x="250" y="155" text-anchor="middle" class="flow-label" fill="var(--accent-secondary)">Diseña</text>
+        
+        <circle cx="350" cy="150" r="35" class="flow-circle flow-4" fill="none" stroke="var(--accent)" stroke-width="2" />
+        <text x="350" y="155" text-anchor="middle" class="flow-label" fill="var(--accent)">Valida</text>
+        
+        <!-- Connecting lines (animated) -->
+        <line x1="85" y1="150" x2="115" y2="150" class="flow-line flow-line-1" stroke="var(--accent-secondary)" stroke-width="2" stroke-dasharray="30" stroke-dashoffset="30" />
+        <line x1="185" y1="150" x2="215" y2="150" class="flow-line flow-line-2" stroke="var(--accent)" stroke-width="2" stroke-dasharray="30" stroke-dashoffset="30" />
+        <line x1="285" y1="150" x2="315" y2="150" class="flow-line flow-line-3" stroke="var(--accent-secondary)" stroke-width="2" stroke-dasharray="30" stroke-dashoffset="30" />
+      </svg>
+      <p class="hero-visual-text">Tu desafío → Mi metodología → Tu solución</p>
+    </div>
 
   </div>
 </header>
@@ -237,6 +253,102 @@
           <li><span class="proficiency intermediate">Intermediate</span> Adobe Suite, JavaScript</li>
           <li><span class="proficiency intermediate">Intermediate</span> SQL, BI Tools</li>
         </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= CHALLENGES VISUAL ================= -->
+<section id="challenges" class="challenges-section">
+  <div class="container">
+    <h2 class="section-title">Desafíos Resueltos</h2>
+    
+    <div class="challenges-grid">
+      
+      <div class="challenge-card">
+        <div class="challenge-header">
+          <i class="ri-layout-2-line"></i>
+          <h3>Arquitectura Compleja</h3>
+        </div>
+        <div class="challenge-comparison">
+          <div class="comparison-block before">
+            <p class="comparison-label">Antes</p>
+            <div class="comparison-visual">
+              <div style="height: 80px; background: #f0f0f0; border-radius: 8px; opacity: 0.5;"></div>
+              <p style="font-size: 0.8rem; color: #999; text-align: center; margin-top: 8px;">Estructura caótica</p>
+            </div>
+          </div>
+          <i class="ri-arrow-right-line" style="color: var(--accent);"></i>
+          <div class="comparison-block after">
+            <p class="comparison-label">Después</p>
+            <div class="comparison-visual">
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4px;">
+                <div style="height: 35px; background: var(--accent); border-radius: 6px;"></div>
+                <div style="height: 35px; background: var(--accent); border-radius: 6px;"></div>
+                <div style="height: 35px; background: var(--accent-secondary); border-radius: 6px;"></div>
+                <div style="height: 35px; background: var(--accent-secondary); border-radius: 6px;"></div>
+              </div>
+              <p style="font-size: 0.8rem; color: var(--accent-text); text-align: center; margin-top: 8px;">Sistema coherente</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="challenge-card">
+        <div class="challenge-header">
+          <i class="ri-eye-line"></i>
+          <h3>Experiencia Confusa</h3>
+        </div>
+        <div class="challenge-comparison">
+          <div class="comparison-block before">
+            <p class="comparison-label">Antes</p>
+            <div class="comparison-visual">
+              <div style="height: 16px; background: #ddd; border-radius: 3px; margin-bottom: 8px;"></div>
+              <div style="height: 16px; background: #ddd; border-radius: 3px; width: 80%;"></div>
+            </div>
+          </div>
+          <i class="ri-arrow-right-line" style="color: var(--accent);"></i>
+          <div class="comparison-block after">
+            <p class="comparison-label">Después</p>
+            <div class="comparison-visual">
+              <div style="height: 20px; background: var(--accent); border-radius: 4px; margin-bottom: 8px;"></div>
+              <div style="height: 16px; background: var(--accent-secondary); border-radius: 3px;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="challenge-card">
+        <div class="challenge-header">
+          <i class="ri-pulse-line"></i>
+          <h3>Engagement Bajo</h3>
+        </div>
+        <div class="challenge-comparison">
+          <div class="comparison-block before">
+            <p class="comparison-label">Antes</p>
+            <div class="comparison-visual">
+              <div style="display: flex; gap: 4px; justify-content: center;">
+                <div style="width: 20px; height: 40px; background: #eee; border-radius: 3px;"></div>
+                <div style="width: 20px; height: 20px; background: #eee; border-radius: 3px;"></div>
+                <div style="width: 20px; height: 35px; background: #eee; border-radius: 3px;"></div>
+              </div>
+              <p style="font-size: 0.8rem; color: #999; text-align: center; margin-top: 8px;">Bajo impacto</p>
+            </div>
+          </div>
+          <i class="ri-arrow-right-line" style="color: var(--accent);"></i>
+          <div class="comparison-block after">
+            <p class="comparison-label">Después</p>
+            <div class="comparison-visual">
+              <div style="display: flex; gap: 4px; justify-content: center;">
+                <div style="width: 20px; height: 60px; background: var(--accent); border-radius: 3px;"></div>
+                <div style="width: 20px; height: 50px; background: var(--accent-secondary); border-radius: 3px;"></div>
+                <div style="width: 20px; height: 55px; background: var(--accent); border-radius: 3px;"></div>
+              </div>
+              <p style="font-size: 0.8rem; color: var(--accent-text); text-align: center; margin-top: 8px;">+45% engagement</p>
+            </div>
+          </div>
+        </div>
       </div>
 
     </div>

@@ -165,6 +165,8 @@ section > .container > .section-title {
   position: relative;
   padding-bottom: var(--space-lg);
   margin-bottom: var(--space-3xl);
+  animation: fadeInUp 0.8s ease-out forwards;
+  opacity: 0;
 }
 
 section > .container > .section-title::after {
@@ -174,8 +176,11 @@ section > .container > .section-title::after {
   left: 0;
   width: 100px;
   height: 4px;
-  background: var(--accent);
+  background: linear-gradient(90deg, var(--accent), var(--accent-secondary));
   border-radius: 2px;
+  animation: slideInLeft 0.8s ease-out 0.2s forwards;
+  transform: scaleX(0);
+  transform-origin: left;
 }
 
 .container {
@@ -295,6 +300,61 @@ section > .container > .section-title::after {
   gap: var(--space-lg);
   flex-wrap: wrap;
   align-items: center;
+  margin-bottom: var(--space-2xl);
+}
+
+/* ================= HERO VISUAL SVG ================= */
+.hero-visual {
+  margin-top: var(--space-2xl);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-lg);
+  animation: fadeInUp 0.8s ease-out 0.4s forwards;
+  opacity: 0;
+}
+
+.process-flow {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+}
+
+.flow-circle {
+  animation: flowCircleAppear 0.6s ease-out forwards;
+}
+
+.flow-1 { animation-delay: 0.2s; }
+.flow-2 { animation-delay: 0.4s; }
+.flow-3 { animation-delay: 0.6s; }
+.flow-4 { animation-delay: 0.8s; }
+
+.flow-label {
+  font-size: 12px;
+  font-weight: 600;
+  animation: fadeInUp 0.5s ease-out forwards;
+  opacity: 0;
+}
+
+.flow-label {
+  animation-delay: 0.3s;
+}
+.flow-2 ~ .flow-label { animation-delay: 0.5s; }
+
+.flow-line {
+  animation: flowLineDraw 0.8s ease-out forwards;
+}
+
+.flow-line-1 { animation-delay: 1s; }
+.flow-line-2 { animation-delay: 1.2s; }
+.flow-line-3 { animation-delay: 1.4s; }
+
+.hero-visual-text {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  text-align: center;
+  font-style: italic;
+  letter-spacing: 0.5px;
 }
 
 .btn-primary,
@@ -396,11 +456,28 @@ section > .container > .section-title::after {
   border-radius: 28px;
 }
 
+.card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.08), transparent);
+  pointer-events: none;
+  transition: left var(--transition-smooth);
+}
+
 .card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-8px) scale(1.02);
   box-shadow: 
     24px 24px 48px var(--dark),
-    -16px -16px 36px var(--light);
+    -16px -16px 36px var(--light),
+    0 0 20px rgba(32, 201, 151, 0.1);
+}
+
+.card:hover::after {
+  left: 100%;
 }
 
 .card ul {
@@ -610,6 +687,106 @@ section > .container > .section-title::after {
   .grid-2,
   .grid-3 {
     gap: var(--space-xl);
+  }
+}
+
+/* ================= CHALLENGES SECTION ================= */
+#challenges {
+  background: linear-gradient(180deg, var(--bg) 0%, rgba(201, 160, 32, 0.02) 100%);
+  position: relative;
+}
+
+.challenges-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-3xl);
+  margin-top: var(--space-3xl);
+}
+
+.challenge-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-left: 3px solid var(--accent-secondary);
+  padding: var(--space-xl);
+  border-radius: 24px;
+  box-shadow:
+    12px 12px 24px var(--dark),
+    -8px -8px 20px var(--light);
+  animation: fadeInUp 0.6s ease-out forwards;
+  opacity: 0;
+  transition: all var(--transition-smooth);
+}
+
+.challenge-card:nth-child(1) { animation-delay: 0.1s; }
+.challenge-card:nth-child(2) { animation-delay: 0.2s; }
+.challenge-card:nth-child(3) { animation-delay: 0.3s; }
+
+.challenge-card:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow:
+    18px 18px 32px var(--dark),
+    -10px -10px 24px var(--light),
+    0 0 20px rgba(32, 201, 151, 0.15);
+}
+
+.challenge-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.challenge-header i {
+  font-size: var(--icon-lg);
+  color: var(--accent);
+}
+
+.challenge-header h3 {
+  color: var(--text);
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.challenge-comparison {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-lg);
+}
+
+.comparison-block {
+  flex: 1;
+  text-align: center;
+}
+
+.comparison-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--muted);
+  margin-bottom: var(--space-md);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.comparison-visual {
+  background: rgba(0,0,0,0.02);
+  padding: var(--space-md);
+  border-radius: 12px;
+  min-height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--space-sm);
+}
+
+@media (max-width: 640px) {
+  .challenge-comparison {
+    flex-direction: column;
+  }
+  
+  .challenge-comparison i {
+    transform: rotate(90deg);
   }
 
   section > .container > .section-title::after {
@@ -1025,6 +1202,8 @@ a:focus-visible {
 /* ================= PROCESS SECTION ================= */
 #process {
   padding: var(--space-4xl) 0;
+  position: relative;
+  animation: distortionWave 5s ease-in-out infinite;
 }
 
 .process-timeline {
@@ -1240,6 +1419,38 @@ a:focus-visible {
   }
   50% {
     transform: scale(1.1);
+  }
+}
+
+@keyframes flowCircleAppear {
+  0% {
+    opacity: 0;
+    r: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    r: 35;
+  }
+}
+
+@keyframes flowLineDraw {
+  from {
+    stroke-dashoffset: 30;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes distortionWave {
+  0%, 100% {
+    filter: skewY(0deg);
+  }
+  50% {
+    filter: skewY(0.5deg);
   }
 }
 
