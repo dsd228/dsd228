@@ -910,19 +910,23 @@
   const themeToggle = document.querySelector('.theme-toggle');
   const html = document.documentElement;
   const banner = document.getElementById('hero-banner');
-  const icon = themeToggle.querySelector('i');
+  const icon = themeToggle ? themeToggle.querySelector('i') : null;
 
-  themeToggle.addEventListener('click', () => {
-    const isDark = html.getAttribute('data-theme') === 'dark';
+  if (themeToggle && icon) {
+    themeToggle.addEventListener('click', () => {
+      const isDark = html.getAttribute('data-theme') === 'dark';
 
-    html.setAttribute('data-theme', isDark ? 'light' : 'dark');
+      html.setAttribute('data-theme', isDark ? 'light' : 'dark');
 
-    /* Cambiar banner */
-    banner.src = isDark ? 'banner.png' : 'banner2.png';
+      /* Cambiar banner si existe */
+      if (banner) {
+        banner.src = isDark ? 'banner.png' : 'banner2.png';
+      }
 
-    /* Cambiar icono */
-    icon.className = isDark ? 'ri-moon-line' : 'ri-sun-line';
-  });
+      /* Cambiar icono */
+      icon.className = isDark ? 'ri-moon-line' : 'ri-sun-line';
+    });
+  }
 
   /* ================= SCROLL TO TOP BUTTON ================= */
   const scrollTopBtn = document.getElementById('scroll-to-top');
