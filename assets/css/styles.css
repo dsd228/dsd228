@@ -1445,6 +1445,26 @@ a:focus-visible {
   flex-grow: 1;
 }
 
+.blog-content-preview {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin: 0;
+  padding: var(--space-md);
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  border-left: 3px solid var(--accent);
+}
+
+[data-theme="dark"] .blog-content-preview {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.blog-content-preview strong {
+  color: var(--text);
+  font-weight: 700;
+}
+
 .blog-tags {
   display: flex;
   flex-wrap: wrap;
