@@ -926,14 +926,18 @@
 
   /* ================= SCROLL TO TOP BUTTON ================= */
   const scrollTopBtn = document.getElementById('scroll-to-top');
-  
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 500) {
+  const scrollThreshold = 200;
+
+  const updateScrollBtn = () => {
+    if (window.scrollY > scrollThreshold) {
       scrollTopBtn.classList.add('show');
     } else {
       scrollTopBtn.classList.remove('show');
     }
-  });
+  };
+
+  window.addEventListener('scroll', updateScrollBtn);
+  document.addEventListener('DOMContentLoaded', updateScrollBtn);
   
   scrollTopBtn.addEventListener('click', () => {
     window.scrollTo({
