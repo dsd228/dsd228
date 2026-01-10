@@ -18,6 +18,7 @@
   --accent: #C9A020;
   --accent-hover: #B8941D;
   --accent-text: #9d7d15;
+  --accent-secondary: rgba(32, 201, 151, 0.4);
 
   --glass-bg: rgba(255,255,255,0.65);
   --glass-border: rgba(255,255,255,0.35);
@@ -52,6 +53,7 @@
   --text: #f3f4f6;
   --text-secondary: #e5e7eb;
   --muted: #9ca3af;
+  --accent-secondary: rgba(32, 201, 151, 0.3);
 
   --glass-bg: rgba(15,15,15,0.85);
   --glass-border: rgba(255,255,255,0.12);
@@ -842,10 +844,12 @@ a:focus-visible {
   display: flex;
   align-items: center;
   gap: var(--space-sm);
-  color: var(--accent);
+  color: var(--accent-secondary);
   font-size: 1.1rem;
   margin-bottom: var(--space-lg);
   font-weight: 700;
+  padding-bottom: var(--space-md);
+  border-bottom: 2px solid var(--accent-secondary);
 }
 
 .cert-category i {
@@ -1034,6 +1038,7 @@ a:focus-visible {
   background: var(--glass-bg);
   backdrop-filter: blur(12px);
   border: 1px solid var(--glass-border);
+  border-left: 3px solid var(--accent-secondary);
   padding: var(--space-xl);
   border-radius: 24px;
   box-shadow:
@@ -1064,9 +1069,9 @@ a:focus-visible {
   width: 60px;
   height: 60px;
   margin: 0 auto var(--space-lg);
-  background: var(--accent);
+  background: var(--accent-secondary);
   border-radius: 16px;
-  color: #0b0b0c;
+  color: var(--text);
   font-size: 1.8rem;
   font-weight: 700;
 }
@@ -1147,6 +1152,7 @@ a:focus-visible {
   background: var(--glass-bg);
   backdrop-filter: blur(12px);
   border: 1px solid var(--glass-border);
+  border-top: 3px solid var(--accent-secondary);
   padding: 2.5rem;
   border-radius: 24px;
   box-shadow:
