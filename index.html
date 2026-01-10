@@ -926,10 +926,10 @@
 
   /* ================= SCROLL TO TOP BUTTON ================= */
   const scrollTopBtn = document.getElementById('scroll-to-top');
-  const scrollThreshold = 200;
+  const scrollThreshold = 0;
 
   const updateScrollBtn = () => {
-    if (window.scrollY > scrollThreshold) {
+    if (window.scrollY >= scrollThreshold) {
       scrollTopBtn.classList.add('show');
     } else {
       scrollTopBtn.classList.remove('show');
