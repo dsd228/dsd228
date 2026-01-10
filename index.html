@@ -1020,6 +1020,11 @@
   </div>
 </section>
 
+<!-- ================= SCROLL TO TOP BUTTON ================= -->
+<button id="scroll-to-top" class="scroll-to-top" aria-label="Volver al inicio">
+  <i class="ri-arrow-up-line"></i>
+</button>
+
 <footer class="footer">
   © 2026 — David Sebastián Díaz · UX / Product Designer
 </footer>
@@ -1052,6 +1057,34 @@
     icon.className = isDark ? 'ri-moon-line' : 'ri-sun-line';
   });
 
+  /* ================= SCROLL TO TOP BUTTON ================= */
+  const scrollTopBtn = document.getElementById('scroll-to-top');
+  
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 500) {
+      scrollTopBtn.classList.add('show');
+    } else {
+      scrollTopBtn.classList.remove('show');
+    }
+  });
+  
+  scrollTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+
+  /* ================= PARALLAX EFFECT ================= */
+  const heroVisual = document.querySelector('.hero-visual');
+  
+  window.addEventListener('scroll', () => {
+    if (heroVisual) {
+      const scrollPosition = window.scrollY;
+      heroVisual.style.transform = `translateY(${scrollPosition * 0.3}px)`;
+    }
+  });
+
   /* ================= SCROLL ANIMATIONS ================= */
   const observerOptions = {
     threshold: 0.1,
@@ -1073,9 +1106,20 @@
   });
 
   // Animar cards
-  document.querySelectorAll('.card, .process-step, .testimonial-card').forEach(card => {
+  document.querySelectorAll('.card, .process-step, .testimonial-card, .challenge-card').forEach(card => {
     card.setAttribute('data-scroll-animate', '');
     observer.observe(card);
+  });
+
+  /* ================= PARALLAX EN CHALLENGE CARDS ================= */
+  const challengeCards = document.querySelectorAll('.challenge-card');
+  
+  challengeCards.forEach((card, index) => {
+    window.addEventListener('scroll', () => {
+      const scrollPosition = window.scrollY;
+      const offset = (index + 1) * 0.1;
+      card.style.transform = `translateY(${scrollPosition * offset * 0.2}px) scale(1)`;
+    });
   });
 
   /* ================= INTERACTIVE QUIZ ================= */
