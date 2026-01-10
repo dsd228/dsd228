@@ -103,6 +103,26 @@
   </div>
 </header>
 
+<!-- ================= SOCIAL PROOF ================= -->
+<section id="social-proof">
+  <div class="container">
+    <div class="proof-badges">
+      <a href="https://www.credly.com/users/david-sebastian-diaz" target="_blank" rel="noopener noreferrer" class="proof-badge">
+        <i class="ri-shield-check-line"></i>
+        <span>18+ Certificaciones Verificadas</span>
+      </a>
+      <a href="https://github.com/dsd228" target="_blank" rel="noopener noreferrer" class="proof-badge">
+        <i class="ri-git-repository-line"></i>
+        <span>30+ Proyectos en GitHub</span>
+      </a>
+      <a href="https://linkedin.com/in/david-sebastian-diaz" target="_blank" rel="noopener noreferrer" class="proof-badge">
+        <i class="ri-linkedin-box-line"></i>
+        <span>Conectado con 500+ profesionales</span>
+      </a>
+    </div>
+  </div>
+</section>
+
 <!-- ================= ABOUT ================= -->
 <section id="about">
   <div class="container narrow">
@@ -312,6 +332,7 @@
     <div class="testimonials-grid">
 
       <div class="testimonial-card">
+        <div class="testimonial-avatar" style="background: linear-gradient(135deg, #D4AF37, #C9A020);">MG</div>
         <div class="testimonial-header">
           <div class="testimonial-stars">
             <i class="ri-star-fill"></i>
@@ -331,6 +352,7 @@
       </div>
 
       <div class="testimonial-card">
+        <div class="testimonial-avatar" style="background: linear-gradient(135deg, #667eea, #764ba2);">CM</div>
         <div class="testimonial-header">
           <div class="testimonial-stars">
             <i class="ri-star-fill"></i>
@@ -349,8 +371,7 @@
         </div>
       </div>
 
-      <div class="testimonial-card">
-        <div class="testimonial-header">
+      <div class="testimonial-card">        <div class="testimonial-avatar" style="background: linear-gradient(135deg, #f093fb, #f5576c);">LM</div>        <div class="testimonial-header">
           <div class="testimonial-stars">
             <i class="ri-star-fill"></i>
             <i class="ri-star-fill"></i>
@@ -731,11 +752,28 @@
     <h2 class="section-title">Trabajemos Juntos</h2>
 
     <div class="contact-wrapper">
+      <div class="contact-form-section">
+        <h3>Envíame un Mensaje</h3>
+        <form class="contact-form" id="contactForm" action="https://formspree.io/f/xvgoeqvq" method="POST">
+          <div class="form-group">
+            <input type="text" name="name" placeholder="Tu Nombre" required>
+          </div>
+          <div class="form-group">
+            <input type="email" name="email" placeholder="tu@email.com" required>
+          </div>
+          <div class="form-group">
+            <textarea name="message" placeholder="Cuéntame sobre tu proyecto..." rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn-primary">Enviar Mensaje</button>
+          <span class="form-note" id="formStatus"></span>
+        </form>
+      </div>
+
       <div class="contact-options">
         <div class="contact-card">
           <i class="ri-mail-line"></i>
           <h3>Email</h3>
-          <p>Para consultas generales y propuestas</p>
+          <p>Para consultas generales</p>
           <a href="mailto:david.diaz.uxdata@gmail.com" class="btn-secondary">
             Enviar Email
           </a>
@@ -744,7 +782,7 @@
         <div class="contact-card">
           <i class="ri-calendar-line"></i>
           <h3>Agendar Consulta</h3>
-          <p>30 min de conversación estratégica</p>
+          <p>30 min estratégicos</p>
           <a href="https://calendly.com/david-sebastian-diaz" target="_blank" class="btn-secondary">
             Ver Disponibilidad
           </a>
@@ -753,19 +791,11 @@
         <div class="contact-card">
           <i class="ri-linkedin-box-line"></i>
           <h3>LinkedIn</h3>
-          <p>Conecta conmigo profesionalmente</p>
+          <p>Conecta conmigo</p>
           <a href="https://linkedin.com/in/david-sebastian-diaz" target="_blank" class="btn-secondary">
             Visitar Perfil
           </a>
         </div>
-      </div>
-
-      <div class="contact-info">
-        <h3>Información de Contacto</h3>
-        <p><strong>Email:</strong> david.diaz.uxdata@gmail.com</p>
-        <p><strong>LinkedIn:</strong> linkedin.com/in/david-sebastian-diaz</p>
-        <p><strong>GitHub:</strong> github.com/dsd228</p>
-        <p><strong>Credly:</strong> credly.com/users/david-sebastian-diaz</p>
       </div>
     </div>
   </div>
@@ -891,7 +921,75 @@
     
     document.getElementById('quiz-result').style.display = 'block';
     document.getElementById('quiz-reset').style.display = 'inline-block';
-  }</script>
+  }
+
+  /* ================= CONTACT FORM ENHANCEMENT ================= */
+  const contactForm = document.getElementById('contactForm');
+  const formStatus = document.getElementById('formStatus');
+
+  if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const formData = new FormData(contactForm);
+      
+      fetch(contactForm.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      }).then(response => {
+        if (response.ok) {
+          formStatus.textContent = '✅ ¡Mensaje enviado exitosamente!';
+          formStatus.classList.add('success');
+          contactForm.reset();
+          
+          setTimeout(() => {
+            formStatus.textContent = '';
+            formStatus.classList.remove('success');
+          }, 5000);
+        } else {
+          throw new Error('Error en envío');
+        }
+      }).catch(error => {
+        formStatus.textContent = '❌ Error al enviar. Intenta de nuevo.';
+        formStatus.classList.add('error');
+        
+        setTimeout(() => {
+          formStatus.textContent = '';
+          formStatus.classList.remove('error');
+        }, 5000);
+      });
+    });
+  }
+
+  /* ================= COUNTER ANIMATION ================= */
+  const observer2 = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
+        entry.target.classList.add('animated');
+        
+        const target = parseInt(entry.target.textContent);
+        let current = 0;
+        const increment = target / 50;
+        
+        const timer = setInterval(() => {
+          current += increment;
+          if (current >= target) {
+            entry.target.textContent = target + '+';
+            clearInterval(timer);
+          } else {
+            entry.target.textContent = Math.floor(current) + '+';
+          }
+        }, 30);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  document.querySelectorAll('.stat-number').forEach(stat => {
+    observer2.observe(stat);
+  });</script>
 
 </body>
 </html>
