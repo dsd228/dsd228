@@ -13,13 +13,14 @@
 
   --text: #0f172a;
   --text-secondary: #1f2937;
-  --muted: #4b5563;
+  --muted: #374151;
 
-  --accent: #D4AF37;
-  --accent-hover: #C9A020;
+  --accent: #C9A020;
+  --accent-hover: #B8941D;
+  --accent-text: #9d7d15;
 
-  --glass-bg: rgba(255,255,255,0.45);
-  --glass-border: rgba(255,255,255,0.25);
+  --glass-bg: rgba(255,255,255,0.65);
+  --glass-border: rgba(255,255,255,0.35);
   
   /* Spacing scale */
   --space-xs: 8px;
@@ -46,8 +47,8 @@
   --text-secondary: #e5e7eb;
   --muted: #9ca3af;
 
-  --glass-bg: rgba(15,15,15,0.7);
-  --glass-border: rgba(255,255,255,0.08);
+  --glass-bg: rgba(15,15,15,0.85);
+  --glass-border: rgba(255,255,255,0.12);
 }
 
 [data-theme="dark"] .card,
@@ -101,7 +102,7 @@ p {
 }
 
 a {
-  color: var(--accent);
+  color: var(--accent-text);
   text-decoration: none;
   transition: color var(--transition-fast);
 }
@@ -299,7 +300,7 @@ section > .container > .section-title::after {
 
 .btn-primary {
   background: var(--accent);
-  color: #000;
+  color: #0f172a;
   box-shadow: 8px 8px 16px rgba(134, 239, 194, 0.2), -4px -4px 12px rgba(255, 255, 255, 0.3);
 }
 
