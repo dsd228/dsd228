@@ -1,271 +1,402 @@
 <div align="center">
   
-  ![Banner](./banner.png)
-  
-  # 🎯 DAVID SEBASTIÁN DÍAZ
-  ## ⚡ UX/UI & PRODUCT DESIGNER ⚡
-  ### TRANSFORMO PROBLEMAS COMPLEJOS EN EXPERIENCIAS DIGITALES QUE CRECEN
-  
+![Banner](./banner.png)
+
 </div>
 
 ---
 
 <div align="center">
-  
-  [![Portfolio](https://img.shields.io/badge/🌐_PORTFOLIO-dsd228.github.io/dsd228-D4AF37?style=for-the-badge&labelColor=111111&color=D4AF37)](https://dsd228.github.io/dsd228/)
-  [![LinkedIn](https://img.shields.io/badge/💼_LINKEDIN-DAVID_SEBASTIÁN-0A66C2?style=for-the-badge&labelColor=111111)](https://linkedin.com/in/david-sebastian-diaz)
-  [![GitHub](https://img.shields.io/badge/💻_GITHUB-30_PROYECTOS-181717?style=for-the-badge&labelColor=111111)](https://github.com/dsd228)
-  [![Email](https://img.shields.io/badge/📧_CORREO-DISPONIBLE-EA4335?style=for-the-badge&labelColor=111111)](mailto:david.diaz.uxdata@gmail.com)
-  
+
+# <img src="https://readme-typing-svg.herokuapp.com?font=Jetbrains+Mono&size=32&duration=3000&pause=500&color=D4AF37&center=true&vCenter=true&width=600&lines=DAVID+SEBASTIÁN+DÍAZ;UX%2FUI+%26+PRODUCT+DESIGNER;TRANSFORMO+VISIÓN+EN+IMPACTO" />
+
+### ⚡ Especialista en Diseño Digital, UX Research y Estrategia de Producto ⚡
+
 </div>
 
 ---
 
-## 🏆 QUIÉN SOY
+<div align="center">
 
-Soy un **profesional de diseño digital** con especialización en **UX/UI Design, Product Strategy y Data Analytics**. 
+## 🎯 DATOS QUE HABLAN
 
-No solo diseño interfaces bonitas. **Diseño soluciones**.
+<table>
+<tr>
+<td align="center" width="25%">
+<div style="padding: 20px; border-radius: 15px; background: linear-gradient(135deg, #D4AF37 0%, #C9A020 100%); color: white;">
 
-✅ **18+ certificaciones profesionales** en UX/UI, Data Analytics y Tech  
-✅ **30+ proyectos completados** con impacto medible  
-✅ **5M+ usuarios** impactados a través de mis proyectos  
-✅ **9.5/10** en validación de portafolio profesional  
+### 30+
+#### Proyectos
+Completados con impacto
 
-**Mi promesa:** Si tienes un problema digital complejo, lo convertiré en una experiencia que tus usuarios amen y que genere valor para tu negocio.
+</div>
+</td>
+<td align="center" width="25%">
+<div style="padding: 20px; border-radius: 15px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
 
----
+### 18+
+#### Certificaciones
+Verificadas Credly
 
-## 💪 ESPECIALIDADES CORE
+</div>
+</td>
+<td align="center" width="25%">
+<div style="padding: 20px; border-radius: 15px; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white;">
 
-### 🎨 DISEÑO & UX
-```
-┌─────────────────────────────────────┐
-│ ✦ User Research & Discovery         │
-│ ✦ Product Strategy & Roadmapping    │
-│ ✦ Information Architecture           │
-│ ✦ Wireframing & Prototyping          │
-│ ✦ Design Systems & Scalability       │
-│ ✦ Usability Testing & Validation     │
-│ ✦ Accesibilidad WCAG (AA/AAA)       │
-│ ✦ Interaction Design & Animations    │
-└─────────────────────────────────────┘
-```
+### 5M+
+#### Usuarios
+Impactados
 
-### 🖌️ VISUAL & INTERFACES
-```
-┌──────────────────────────────────────┐
-│ ✦ Neumorphism (especialista)         │
-│ ✦ Modern UI Design Patterns          │
-│ ✦ Dark Mode & Light Mode             │
-│ ✦ Microinteracciones & Feedback      │
-│ ✦ Glassmorphism & Advanced Effects   │
-│ ✦ Responsive Design (Mobile-First)   │
-│ ✦ Design Tokens & Variables          │
-│ ✦ Figma Mastery (diseño + prototipo) │
-└──────────────────────────────────────┘
-```
+</div>
+</td>
+<td align="center" width="25%">
+<div style="padding: 20px; border-radius: 15px; background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: white;">
 
-### 📊 ANÁLISIS & TECNOLOGÍA
-```
-┌──────────────────────────────────────┐
-│ ✦ Data Analytics & Insights          │
-│ ✦ KPI Definition & Tracking          │
-│ ✦ Python • SQL • Power BI            │
-│ ✦ Google Analytics 4 & BigQuery      │
-│ ✦ HTML5 • CSS3 • JavaScript          │
-│ ✦ Git & Versionamiento               │
-│ ✦ Machine Learning Basics            │
-│ ✦ A/B Testing & Experimentation      │
-└──────────────────────────────────────┘
-```
+### 9.5/10
+#### Portfolio
+Score
+
+</div>
+</td>
+</tr>
+</table>
+
+</div>
 
 ---
 
-## 🎓 CERTIFICACIONES & CREDIBILIDAD
+<div align="center">
 
-**18+ CERTIFICACIONES PROFESIONALES VERIFICADAS**
+[![Portfolio](https://img.shields.io/badge/🌐_PORTFOLIO_LIVE-dsd228.github.io/dsd228-D4AF37?style=for-the-badge&labelColor=1a1a1a&color=D4AF37&logo=globe)](https://dsd228.github.io/dsd228/)
+[![LinkedIn](https://img.shields.io/badge/💼_LINKEDIN-DAVID_DÍAZ-0A66C2?style=for-the-badge&labelColor=1a1a1a&logo=linkedin)](https://linkedin.com/in/david-sebastian-diaz)
+[![GitHub](https://img.shields.io/badge/💻_GITHUB-30_PROYECTOS-181717?style=for-the-badge&labelColor=1a1a1a&logo=github)](https://github.com/dsd228)
+[![Email](https://img.shields.io/badge/📧_CONTACTO-DISPONIBLE-EA4335?style=for-the-badge&labelColor=1a1a1a&logo=gmail)](mailto:david.diaz.uxdata@gmail.com)
 
-| Área | Certificaciones |
-|------|-----------------|
-| **🎨 UX/UI Design** | IBM UI/UX • Google UX Design (v2) • UX Research • Capstone Project |
-| **📊 Data & Analytics** | Google Advanced Analytics • Google BI • Digital Marketing & E-Commerce |
-| **🤖 Technology & AI** | Generative AI Essentials • AI Essentials • RAG Applications • Software Engineering |
-| **⚙️ Agile & Dev** | Scrum & Agile Development • Python 1 & 2 • Cybersecurity |
-
-🔗 **Todas verificadas en:** [Credly Profile](https://www.credly.com/users/david-sebastian-diaz)
+</div>
 
 ---
 
-## 🚀 PROYECTOS CON IMPACTO MEDIBLE
+## 🎨 ESPECIALIDADES
 
-### #1 🏢 NEXUS LOGISTICS — Plataforma SaaS B2B
-**El Problema:** Sistema logístico complejo sin interfaz intuitiva  
-**Mi Solución:** Dashboard intuitivo + Mapa interactivo + Design System completo  
-**El Impacto:**
-- ⬆️ **40% mejora en usabilidad** (métrica SUS)
-- 📈 Implementado en **200+ empresas**
-- 💰 Reducción de 30% en tiempo de capacitación
+<div align="center">
 
-**Rol:** UX/UI Lead • Figma • Design Systems • User Testing  
-→ [Ver Proyecto](https://github.com/dsd228/nexus-logistics-ui) | [Figma Demo](https://www.figma.com/proto/kxmeNODyszHGlBmiOfth0C/Nexus-Logistics)
+| DOMINIO | ESPECIALIDAD | NIVEL |
+|---------|-------------|-------|
+| **UX Research** | User Interviews, Testing, Validation | ⭐⭐⭐⭐⭐ Expert |
+| **Product Strategy** | Roadmaps, Feature Prioritization, Go-to-Market | ⭐⭐⭐⭐⭐ Expert |
+| **UI Design** | Neumorphism, Modern Interfaces, Design Systems | ⭐⭐⭐⭐⭐ Expert |
+| **Data Analytics** | KPIs, Python, SQL, Power BI, Google Analytics | ⭐⭐⭐⭐ Advanced |
+| **Interaction Design** | Microinteractions, Animations, Feedback States | ⭐⭐⭐⭐⭐ Expert |
+| **Accessibility** | WCAG AA/AAA, Inclusive Design | ⭐⭐⭐⭐ Advanced |
+| **Design Systems** | Figma, Tokens, Component Libraries | ⭐⭐⭐⭐⭐ Expert |
+| **Front-end** | HTML5, CSS3, Responsive, JavaScript | ⭐⭐⭐⭐ Advanced |
 
----
-
-### #2 📱 PASEO — Caso de Estudio UX Completo
-**El Problema:** App MVP necesitaba validación de mercado antes de desarrollo  
-**Mi Solución:** Investigación (30+ usuarios) → Prototipo → Testing → Validación  
-**El Impacto:**
-- ✅ **92% satisfacción** en pruebas de usabilidad
-- 🚀 Lanzamiento exitoso basado en datos
-- 📊 Insights que pivotaron estrategia del producto
-
-**Rol:** UX Researcher • Prototyping • User Testing  
-→ [Ver Proyecto](https://github.com/dsd228/dsd228-paseo-ux-case-study)
+</div>
 
 ---
 
-### #3 📊 APPLE INC. 2025 — Análisis UX de Fortune 500
-**El Proyecto:** Benchmarking profesional de estrategia UX/UI de Apple  
-**Mi Enfoque:** UX Analysis + Data Visualization + Strategic Insights  
-**El Impacto:**
-- 👀 **50K+ visualizaciones**
-- 🔄 **5K+ compartidos** en redes profesionales
-- 📈 Referencia en la industria
+## 🏆 PROYECTOS DE ALTO IMPACTO
 
-**Rol:** UX Analyst • Data Science • Python Visualization  
-→ [GitHub Repo](https://github.com/dsd228/-Apple-Inc.-2025-UX-KPIs-Innovation-Strategy) | [Google Colab](https://colab.research.google.com/github/dsd228/-Apple-Inc.-2025-UX-KPIs-Innovation-Strategy/blob/main/notebooks/apple_visuals_generator.ipynb)
+### <img src="https://img.shields.io/badge/CASE_STUDY_01-000?style=flat-square&color=D4AF37" /> **NEXUS LOGISTICS**
 
----
+**Plataforma SaaS B2B • Logística de última milla**
 
-### #4 🛒 FRÁVEGA CHECKOUT — Optimización de Conversión
-**El Problema:** E-commerce líder con **68% abandono en checkout**  
-**Mi Análisis:** Heuristics • User Interviews • Wireframe Redesign  
-**Propuesta de Mejora:**
-- ⬆️ **+35% conversión estimada**
-- 🎯 UX fixes priorizadas por impacto
-- 📋 Roadmap de implementación
+<div style="background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%); padding: 20px; border-radius: 10px; margin: 10px 0;">
 
-**Rol:** UX Analyst • Heuristic Evaluation • Strategy  
-→ [Ver Proyecto](https://github.com/dsd228/ux-portfolio-checkout-fravega)
-
----
-
-### #5 🛡️ FRAUD DETECTION ML — Modelo de Detección
-**El Reto:** 284K transacciones desbalanceadas → Prevención de fraude  
-**Mi Solución:** ML Pipeline • Modelos comparados • Deployment  
+**El Reto:** Arquitectura compleja, interfaz poco intuitiva, usuarios frustrados  
+**Mi Solución:** Dashboard rediseñado + Mapa interactivo + Design System completo  
 **Resultados:**
+- 📈 **+40% en usabilidad** (SUS score)
+- 🏢 Implementado en **200+ empresas**
+- ⏱️ **30% reducción** en tiempo de training
+
+**Stack:** Figma • Design Systems • User Research • Interaction Design
+
+</div>
+
+---
+
+### <img src="https://img.shields.io/badge/CASE_STUDY_02-000?style=flat-square&color=667eea" /> **PASEO — UX CASE STUDY**
+
+**App de Conexión • Marketplace de Servicios**
+
+<div style="background: linear-gradient(135deg, #f09315 0%, #f5576c15 100%); padding: 20px; border-radius: 10px; margin: 10px 0;">
+
+**El Reto:** MVP sin validación de mercado, riesgo alto de pivote  
+**Mi Solución:** Investigación profunda (30+ usuarios) → Prototipo → Testing → Validación  
+**Resultados:**
+- ✅ **92% satisfacción** en usability testing
+- 🚀 Lanzada exitosamente en producción
+- 📊 Insights que definieron product roadmap
+
+**Stack:** UX Research • User Testing • Prototyping • Figma
+
+</div>
+
+---
+
+### <img src="https://img.shields.io/badge/CASE_STUDY_03-000?style=flat-square&color=f093fb" /> **APPLE INC. 2025 — UX KPIs**
+
+**Benchmarking Estratégico • Fortune 500 Analysis**
+
+<div style="background: linear-gradient(135deg, #4facfe15 0%, #00f2fe15 100%); padding: 20px; border-radius: 10px; margin: 10px 0;">
+
+**El Proyecto:** Análisis profesional de estrategia UX/UI + Datos de negocio  
+**Mi Enfoque:** Data Visualization + Strategic Insights + Competitive Analysis  
+**Resultados:**
+- 👀 **50K+ visualizaciones**
+- 🔄 **5K+ compartido** en redes profesionales
+- 📈 Referencia en comunidad tech
+
+**Stack:** Python • Data Science • Visualization • Analytics
+
+</div>
+
+---
+
+### <img src="https://img.shields.io/badge/CASE_STUDY_04-000?style=flat-square&color=00f2fe" /> **FRÁVEGA CHECKOUT**
+
+**E-Commerce • Optimización de Conversión**
+
+<div style="background: linear-gradient(135deg, #D4AF3715 0%, #C9A02015 100%); padding: 20px; border-radius: 10px; margin: 10px 0;">
+
+**El Problema:** **68% tasa de abandono** en checkout  
+**Mi Análisis:** Heuristic evaluation + User interviews + Competitive benchmark  
+**Propuesta:**
+- 🎯 **+35% conversión estimada**
+- 📋 Roadmap priorizado de 12 mejoras UX
+- 💡 Rediseño de flujo checkout
+
+**Stack:** UX Analysis • Heuristics • Wireframing • Strategy
+
+</div>
+
+---
+
+### <img src="https://img.shields.io/badge/CASE_STUDY_05-000?style=flat-square&color=D4AF37" /> **FRAUD DETECTION — ML MODEL**
+
+**Machine Learning • Data Science**
+
+<div style="background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%); padding: 20px; border-radius: 10px; margin: 10px 0;">
+
+**Dataset:** 284K transacciones desbalanceadas  
+**Mi Pipeline:** Preprocessing → 3 modelos comparados → Deployment  
+**Performance:**
 - 🎯 **97% precision** en detección
-- 🚀 **En producción** detectando fraudes reales
-- 📊 Documentación completa
+- 🚀 En producción detectando fraudes reales
+- 📊 Documentación completa en GitHub
 
-**Rol:** Data Scientist • Python • ML Engineering  
-→ [GitHub Repo](https://github.com/dsd228/credit-card-fraud-detection) | [Live Demo](https://dsd228.github.io/credit-card-fraud-detection/)
+**Stack:** Python • Machine Learning • Data Science • Pandas • Scikit-learn
+
+</div>
 
 ---
 
-## 📈 MI PROCESO DE TRABAJO
+## 📚 CERTIFICACIONES PROFESIONALES
+
+<div align="center">
+
+### UX/UI DESIGN
+✅ IBM UI/UX Designer Professional (V2)  
+✅ Google UX Design Professional (v2)  
+✅ UX Research & Information Architecture  
+✅ Capstone: Applying UI/UX in Real World  
+
+### DATA & ANALYTICS
+✅ Google Advanced Data Analytics  
+✅ Google Business Intelligence  
+✅ Digital Marketing & E-Commerce  
+
+### TECHNOLOGY & AI
+✅ Generative AI Essentials  
+✅ AI Essentials (V2)  
+✅ RAG Applications  
+✅ Software Engineering Essentials  
+
+### AGILE & DEVELOPMENT
+✅ Agile Development & Scrum  
+✅ Python Essentials 1 & 2  
+✅ Cybersecurity Introduction  
+
+🎓 **Todas verificables:** [Credly Profile](https://www.credly.com/users/david-sebastian-diaz)
+
+</div>
+
+---
+
+## 💡 PROCESO DE DISEÑO
 
 ```
-🔍 DISCOVERY          🎯 STRATEGY         🎨 DESIGN
-   ↓                    ↓                   ↓
-- User Research     - Architecture      - Wireframes
-- Competitive       - Roadmap           - Prototypes
-- Market Analysis   - KPIs              - Design System
-   ↓                    ↓                   ↓
-🧪 TESTING           🚀 LAUNCH           📊 ITERATE
-   ↓                    ↓                   ↓
-- Usability Test    - Deploy            - Analytics
-- A/B Testing       - Monitor           - Feedback
-- Feedback          - Support           - Optimize
+┌─────────────────────────────────────────────────────────────┐
+│                                                             │
+│  DISCOVERY   →   STRATEGY   →   DESIGN   →   TEST   →      │
+│   RESEARCH      ARCHITECTURE      PROTOTYPE    VALIDATE    │
+│      ↓              ↓                 ↓            ↓        │
+│  • Interviews   • IA            • Wireframes   • Users   │
+│  • Analytics    • Roadmap       • Design       • Metrics  │
+│  • Competitive  • KPIs          • Components   • Feedback │
+│                                                             │
+│                          ↓                                 │
+│                    LAUNCH → ITERATE                        │
+│                    DEPLOY   OPTIMIZE                       │
+│                          ↓                                 │
+│                   MEASURE IMPACT                           │
+│                                                             │
+└─────────────────────────────────────────────────────────────┘
 ```
 
-**Resultado:** Productos que crecen, usuarios satisfechos, métricas en verde.
-
 ---
 
-## 🎨 MI ESTILO DE DISEÑO
+## 🚀 STACK TECNOLÓGICO
 
-- **Neumorphism Expert:** Soft shadows, inset effects, modern elegance
-- **Dark Mode Pioneer:** Experiencias adaptativas y accesibles
-- **Microinteractions Master:** Cada pixel comunica algo
-- **Data-Informed:** Cada decisión tiene métrica detrás
-- **Accessibility First:** WCAG AA minimum, siempre
+<table>
+<tr>
+<td align="center" width="20%">
 
-📌 **Portfolio vivo:** [dsd228.github.io/dsd228](https://dsd228.github.io/dsd228/) — Diseñado con estos principios.
+**DESIGN TOOLS**
+```
+Figma ⭐⭐⭐⭐⭐
+Adobe Suite ⭐⭐⭐⭐
+Framer ⭐⭐⭐⭐
+```
 
----
+</td>
+<td align="center" width="20%">
 
-## 💡 WHAT CLIENTS SAY
+**FRONT-END**
+```
+HTML5 ⭐⭐⭐⭐⭐
+CSS3 ⭐⭐⭐⭐⭐
+JavaScript ⭐⭐⭐⭐
+React ⭐⭐⭐
+```
 
-> "David transformó completamente nuestra plataforma. Su enfoque en research y datos resultó en 45% conversión. Es designer + estratega."  
-— **María González**, CEO SaaS Logistics
+</td>
+<td align="center" width="20%">
 
-> "Trabajar con David fue excepcional. Entiende UX pero también de negocio. Sus análisis llevaron nuestras decisiones de diseño al siguiente nivel."  
-— **Carlos Mendez**, Product Manager E-Commerce
+**DATA & ANALYTICS**
+```
+Python ⭐⭐⭐⭐
+SQL ⭐⭐⭐⭐
+Power BI ⭐⭐⭐⭐
+Google Analytics ⭐⭐⭐⭐⭐
+```
 
-> "Su capacidad de integrar UX Research con Analytics es única. No solo diseña bien, demuestra el impacto de cada decisión."  
-— **Laura Martínez**, Design Director HealthTech
+</td>
+<td align="center" width="20%">
+
+**RESEARCH**
+```
+User Testing ⭐⭐⭐⭐⭐
+Interviews ⭐⭐⭐⭐⭐
+Surveys ⭐⭐⭐⭐
+Heuristics ⭐⭐⭐⭐⭐
+```
+
+</td>
+<td align="center" width="20%">
+
+**COLLABORATION**
+```
+Git/GitHub ⭐⭐⭐⭐⭐
+Jira ⭐⭐⭐⭐
+Miro ⭐⭐⭐⭐
+Notion ⭐⭐⭐⭐
+```
+
+</td>
+</tr>
+</table>
 
 ---
 
 ## 📊 GITHUB STATS
 
 <div align="center">
-  
-  ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=dsd228&show_icons=true&theme=radical&hide_border=true&count_private=true)
-  
-  ![Streak](https://github-readme-streak-stats.herokuapp.com/?user=dsd228&theme=radical&hide_border=true)
-  
-  ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=dsd228&layout=compact&theme=radical&hide_border=true)
+
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=dsd228&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&text_color=D4AF37&title_color=D4AF37&icon_color=D4AF37)
+
+![Streak Stats](https://streak-stats.demolab.com/?user=dsd228&theme=tokyonight&hide_border=true&background=0d1117&stroke=D4AF37&fire=D4AF37&currStreakLabel=D4AF37&sideLabels=D4AF37)
+
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=dsd228&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&text_color=D4AF37&title_color=D4AF37)
 
 </div>
 
 ---
 
-## 🌟 ÚLTIMAS ACTUALIZACIONES
+## 💬 TESTIMONIOS
 
-- 🎨 **Portfolio completo redesignado** — Neumorphism + Dark Mode + Blog de insights
-- 📝 **Blog profesional activo** — 3 artículos sobre UX Research, Data-Driven Design, Design Systems
-- 🏆 **Portfolio 9.5/10** — Validación profesional completada
-- 📚 **18+ certificaciones** — Completadas 2025, todas verificables
-- 💻 **30+ proyectos en GitHub** — Desde UX hasta ML, todos con documentación
+> **"David transformó completamente nuestra plataforma. Su enfoque en research + datos = 45% conversión. Es designer + estratega + data person todo en uno."**  
+— María González, CEO SaaS Logistics
 
----
+> **"Trabajar con David fue excepcional. No solo diseña hermoso, entiende negocio. Sus análisis llevaron nuestras decisiones de diseño a otro nivel."**  
+— Carlos Mendez, Product Manager E-Commerce
 
-## 🔥 DISPONIBILIDAD
-
-Estoy abierto a:
-- 🎯 **Proyectos de alto impacto** — Especialmente con componente de research + datos
-- 📱 **Productos digitales B2B/B2C** — Desde MVP hasta scaling
-- 🏢 **Consultoría UX/Product** — Para equipos sin experiencia en research
-- 🌍 **Colaboraciones remotas** — Especialmente con equipos internacionales
-- 🤝 **Mentoría en UX/UI** — Para juniors quieren aprender "de verdad"
+> **"Su capacidad de integrar UX Research + Analytics es única. Cada decisión tiene métrica, cada cambio se mide. Eso es profesionalismo."**  
+— Laura Martínez, Design Director HealthTech
 
 ---
 
-## 🚀 CONECTAR CONMIGO
+## 📱 DISPONIBILIDAD
+
+<table>
+<tr>
+<td align="center" width="33%">
+
+### 🎯 PROYECTOS
+Productos de alto impacto  
+Transformación digital  
+MVP a scaling
+
+</td>
+<td align="center" width="33%">
+
+### 🏢 EQUIPOS
+Design Leadership  
+Product Strategy  
+UX Mentorship
+
+</td>
+<td align="center" width="33%">
+
+### 🌍 FORMATO
+100% Remoto  
+Timezone: Flexible  
+Horarios: Adaptables
+
+</td>
+</tr>
+</table>
+
+---
+
+## 🔗 CONECTAR
 
 <div align="center">
 
-| Canal | Propósito |
-|-------|----------|
-| 🌐 **[Portfolio](https://dsd228.github.io/dsd228/)** | Ver trabajo en vivo |
-| 💼 **[LinkedIn](https://linkedin.com/in/david-sebastian-diaz)** | Conexión profesional |
-| 📧 **[Email](mailto:david.diaz.uxdata@gmail.com)** | Consultas directas |
-| 🗓️ **[Calendly](https://calendly.com/david-sebastian-diaz)** | 30 min estratégicos |
-| 💻 **[GitHub](https://github.com/dsd228)** | Código & proyectos |
+| CANAL | DESCRIPCIÓN |
+|-------|------------|
+| 🌐 [**Portfolio Live**](https://dsd228.github.io/dsd228/) | Diseño moderno, neumorphism, dark mode, blog de insights |
+| 💼 [**LinkedIn**](https://linkedin.com/in/david-sebastian-diaz) | Conexiones profesionales, updates de industria |
+| 💻 [**GitHub**](https://github.com/dsd228) | 30+ proyectos, código, documentación |
+| 📧 [**Email**](mailto:david.diaz.uxdata@gmail.com) | david.diaz.uxdata@gmail.com |
+| 🗓️ [**Calendly**](https://calendly.com/david-sebastian-diaz) | Agendar 30 min estratégicos |
 
 </div>
 
 ---
 
 <div align="center">
-  
-  ## ⚡ "Diseño productos digitales que generan impacto medible. Desde research hasta deployment." ⚡
-  
-  **¿Tienes un problema de diseño digital? Hablemos.**
-  
-  ![Profile Views](https://komarev.com/ghpvc/?username=dsd228&color=D4AF37&style=flat-square)
-  
+
+### 🎨 FILOSOFÍA
+
+> **"No diseño interfaces bonitas. Diseño soluciones que generan valor, crecen, y dejan impacto medible."**
+
+---
+
+### ⚡ ÚLTIMA ACTUALIZACIÓN
+Portfolio • README • Blog activos • 18+ certificaciones • 30+ proyectos
+
+![Profile Views](https://komarev.com/ghpvc/?username=dsd228&color=D4AF37&style=flat-square)
+
 </div>
