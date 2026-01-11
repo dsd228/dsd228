@@ -687,7 +687,7 @@ section > .container { position: relative; z-index: 2; }
   height: 120px;
   position: relative;
   transform-style: preserve-3d;
-  animation: rotate3D 4s infinite linear;
+  animation: rotate3D 8s infinite linear;
   will-change: transform;
   backface-visibility: visible;
 }
@@ -986,29 +986,17 @@ section > .container { position: relative; z-index: 2; }
   0% {
     transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
   }
-  12.5% {
-    transform: rotateX(30deg) rotateY(45deg) rotateZ(15deg);
-  }
   25% {
-    transform: rotateX(60deg) rotateY(90deg) rotateZ(30deg);
-  }
-  37.5% {
-    transform: rotateX(90deg) rotateY(135deg) rotateZ(45deg);
+    transform: rotateX(45deg) rotateY(45deg) rotateZ(0deg);
   }
   50% {
-    transform: rotateX(120deg) rotateY(180deg) rotateZ(60deg);
-  }
-  62.5% {
-    transform: rotateX(90deg) rotateY(225deg) rotateZ(75deg);
+    transform: rotateX(90deg) rotateY(90deg) rotateZ(45deg);
   }
   75% {
-    transform: rotateX(60deg) rotateY(270deg) rotateZ(90deg);
-  }
-  87.5% {
-    transform: rotateX(30deg) rotateY(315deg) rotateZ(105deg);
+    transform: rotateX(45deg) rotateY(135deg) rotateZ(90deg);
   }
   100% {
-    transform: rotateX(0deg) rotateY(360deg) rotateZ(120deg);
+    transform: rotateX(0deg) rotateY(360deg) rotateZ(360deg);
   }
 }
 
