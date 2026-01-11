@@ -195,158 +195,287 @@ section > .container > .section-title::after {
   max-width: 720px;
 }
 
-/* ================= SECTION THEMES ================= */
+/* ================= SECTION THEMES - NEUMORPHIC LUXURY ================= */
 section { position: relative; }
 section > .container { position: relative; z-index: 2; }
 
-@keyframes patternShift {
-  0% { transform: translate3d(0,0,0) scale(1); }
-  100% { transform: translate3d(0, -20px, 0) scale(1.02); }
-}
-
-/* About: mesh gradient blobs */
+/* About: Embossed premium depth with 3D carved effect */
 #about::before {
   content: '';
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(900px 500px at 10% 0%, rgba(201,160,32,0.10), transparent 60%),
-    radial-gradient(700px 400px at 90% 15%, rgba(32,201,151,0.12), transparent 60%);
-  opacity: 0.6;
+    linear-gradient(180deg, rgba(255,255,255,0.08) 0%, transparent 50%),
+    linear-gradient(0deg, rgba(0,0,0,0.04) 0%, transparent 50%);
+  box-shadow:
+    inset 0 1px 0 0 rgba(255,255,255,0.15),
+    inset 0 -1px 0 0 rgba(0,0,0,0.08),
+    inset -1px 0 0 0 rgba(255,255,255,0.10),
+    inset 1px 0 0 0 rgba(0,0,0,0.06),
+    inset 0 12px 24px rgba(201,160,32,0.06);
   pointer-events: none;
   z-index: 1;
-  animation: patternShift 40s ease-in-out infinite alternate;
 }
 
 [data-theme="dark"] #about::before {
-  background:
-    radial-gradient(900px 500px at 12% 2%, rgba(201,160,32,0.08), transparent 60%),
-    radial-gradient(700px 400px at 88% 16%, rgba(32,201,151,0.10), transparent 60%);
+  box-shadow:
+    inset 0 1px 0 0 rgba(255,255,255,0.08),
+    inset 0 -1px 0 0 rgba(0,0,0,0.15),
+    inset -1px 0 0 0 rgba(255,255,255,0.05),
+    inset 1px 0 0 0 rgba(0,0,0,0.12),
+    inset 0 12px 24px rgba(201,160,32,0.04);
 }
 
-/* Skills: conic accents */
+/* Skills: Multi-layer extreme depth with beveled frame */
 #skills::before {
   content: '';
   position: absolute;
   inset: 0;
   background:
-    conic-gradient(from 0.15turn at 20% 30%, rgba(201,160,32,0.10), transparent 25%),
-    conic-gradient(from 0.65turn at 80% 70%, rgba(32,201,151,0.12), transparent 25%);
-  mask-image: radial-gradient(1200px 800px at 50% 50%, black 40%, transparent 75%);
-  opacity: 0.6;
+    linear-gradient(135deg, rgba(255,255,255,0.06) 0%, transparent 50%),
+    linear-gradient(-135deg, rgba(0,0,0,0.03) 0%, transparent 50%);
+  box-shadow:
+    inset 0 2px 4px 0 rgba(255,255,255,0.16),
+    inset 0 -4px 8px 0 rgba(0,0,0,0.08),
+    inset -2px 0 8px 0 rgba(255,255,255,0.08),
+    inset 2px 0 8px 0 rgba(0,0,0,0.04),
+    inset 0 16px 32px rgba(32,201,151,0.05),
+    inset 0 -8px 20px rgba(0,0,0,0.03);
   pointer-events: none;
   z-index: 1;
-  animation: patternShift 50s ease-in-out infinite alternate;
 }
 
 [data-theme="dark"] #skills::before {
-  background:
-    conic-gradient(from 0.15turn at 20% 30%, rgba(201,160,32,0.08), transparent 25%),
-    conic-gradient(from 0.65turn at 80% 70%, rgba(32,201,151,0.10), transparent 25%);
+  box-shadow:
+    inset 0 2px 4px 0 rgba(255,255,255,0.08),
+    inset 0 -4px 8px 0 rgba(0,0,0,0.16),
+    inset -2px 0 8px 0 rgba(255,255,255,0.04),
+    inset 2px 0 8px 0 rgba(0,0,0,0.10),
+    inset 0 16px 32px rgba(32,201,151,0.03),
+    inset 0 -8px 20px rgba(0,0,0,0.08);
 }
 
-/* Challenges: diagonal stripes */
+/* Challenges: Carved deep recess with accent edge lighting */
 #challenges::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: repeating-linear-gradient(135deg, rgba(201,160,32,0.08) 0 12px, transparent 12px 28px);
-  opacity: 0.6;
+  background:
+    linear-gradient(90deg, rgba(255,255,255,0.05) 0%, transparent 30%, transparent 70%, rgba(0,0,0,0.05) 100%),
+    linear-gradient(180deg, rgba(255,255,255,0.04) 0%, transparent 50%);
+  box-shadow:
+    inset 0 4px 8px rgba(0,0,0,0.06),
+    inset 0 -6px 16px rgba(0,0,0,0.04),
+    inset 0 1px 0 0 rgba(255,255,255,0.12),
+    inset 0 -1px 0 0 rgba(0,0,0,0.10),
+    inset 2px 0 6px rgba(201,160,32,0.08),
+    inset -2px 0 6px rgba(32,201,151,0.06);
   pointer-events: none;
   z-index: 1;
 }
 
 [data-theme="dark"] #challenges::before {
-  background: repeating-linear-gradient(135deg, rgba(201,160,32,0.06) 0 12px, transparent 12px 28px);
+  box-shadow:
+    inset 0 4px 8px rgba(0,0,0,0.12),
+    inset 0 -6px 16px rgba(0,0,0,0.10),
+    inset 0 1px 0 0 rgba(255,255,255,0.06),
+    inset 0 -1px 0 0 rgba(0,0,0,0.16),
+    inset 2px 0 6px rgba(201,160,32,0.06),
+    inset -2px 0 6px rgba(32,201,151,0.04);
 }
 
-/* Process: dotted grid */
+/* Process: Smooth layered embossed platform with radial depth */
 #process::before {
   content: '';
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at 10% 25%, rgba(32,201,151,0.18) 1.2px, transparent 1.2px),
-    radial-gradient(circle at 90% 75%, rgba(201,160,32,0.18) 1.2px, transparent 1.2px);
-  background-size: 22px 22px;
-  opacity: 0.4;
+    radial-gradient(ellipse 800px 600px at 50% 50%, rgba(255,255,255,0.04) 0%, transparent 60%),
+    linear-gradient(180deg, rgba(255,255,255,0.08) 0%, transparent 40%);
+  box-shadow:
+    inset 0 3px 6px 0 rgba(255,255,255,0.14),
+    inset 0 -5px 12px 0 rgba(0,0,0,0.07),
+    inset 0 12px 24px rgba(32,201,151,0.04),
+    inset 0 -6px 16px rgba(0,0,0,0.04);
   pointer-events: none;
   z-index: 1;
 }
 
-/* Certifications: subtle gold ribbon at top */
+[data-theme="dark"] #process::before {
+  box-shadow:
+    inset 0 3px 6px 0 rgba(255,255,255,0.06),
+    inset 0 -5px 12px 0 rgba(0,0,0,0.14),
+    inset 0 12px 24px rgba(32,201,151,0.02),
+    inset 0 -6px 16px rgba(0,0,0,0.10);
+}
+
+/* Certifications: Beveled premium frame with top accent border */
 #certifications::before {
   content: '';
   position: absolute;
-  left: 0; right: 0; top: 0; height: 8px;
-  background: linear-gradient(90deg, rgba(201,160,32,0.35), rgba(32,201,151,0.25));
-  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.1));
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(201,160,32,0.04) 0%, rgba(32,201,151,0.03) 100%),
+    linear-gradient(180deg, rgba(255,255,255,0.06) 0%, transparent 5%);
+  box-shadow:
+    inset 0 1px 2px 0 rgba(255,255,255,0.14),
+    inset 0 -2px 8px 0 rgba(0,0,0,0.05),
+    inset 0 6px 16px rgba(201,160,32,0.05),
+    0 12px 24px rgba(201,160,32,0.08);
+  border-top: 2px solid rgba(201,160,32,0.20);
   pointer-events: none;
   z-index: 1;
 }
 
-/* Blog: soft grid background */
+[data-theme="dark"] #certifications::before {
+  box-shadow:
+    inset 0 1px 2px 0 rgba(255,255,255,0.06),
+    inset 0 -2px 8px 0 rgba(0,0,0,0.12),
+    inset 0 6px 16px rgba(201,160,32,0.03),
+    0 12px 24px rgba(0,0,0,0.20);
+  border-top-color: rgba(201,160,32,0.12);
+}
+
+/* Blog: Cushioned depth with extreme shadow layering */
 #blog::before {
   content: '';
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle, rgba(201,160,32,0.10) 1px, transparent 2px);
-  background-size: 26px 26px;
-  opacity: 0.35;
+    linear-gradient(135deg, rgba(255,255,255,0.06) 0%, transparent 50%),
+    linear-gradient(-45deg, rgba(0,0,0,0.02) 0%, transparent 50%);
+  box-shadow:
+    inset 0 2px 4px rgba(255,255,255,0.12),
+    inset 0 -3px 8px rgba(0,0,0,0.04),
+    inset 0 8px 20px rgba(201,160,32,0.04),
+    inset 0 -6px 16px rgba(0,0,0,0.03),
+    inset -1px 0 4px rgba(255,255,255,0.08),
+    inset 1px 0 4px rgba(0,0,0,0.03);
   pointer-events: none;
   z-index: 1;
 }
 
 [data-theme="dark"] #blog::before {
-  background:
-    radial-gradient(circle, rgba(201,160,32,0.08) 1px, transparent 2px);
+  box-shadow:
+    inset 0 2px 4px rgba(255,255,255,0.06),
+    inset 0 -3px 8px rgba(0,0,0,0.10),
+    inset 0 8px 20px rgba(201,160,32,0.02),
+    inset 0 -6px 16px rgba(0,0,0,0.08),
+    inset -1px 0 4px rgba(255,255,255,0.03),
+    inset 1px 0 4px rgba(0,0,0,0.08);
 }
 
-/* Projects: colorful mesh */
+/* Projects: Premium embossed container with sophisticated layering */
 #projects::before {
   content: '';
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(900px 500px at 0% 50%, rgba(201,160,32,0.10), transparent 60%),
-    radial-gradient(900px 500px at 100% 50%, rgba(32,201,151,0.12), transparent 60%);
-  opacity: 0.6;
+    radial-gradient(ellipse 900px 700px at 50% 40%, rgba(255,255,255,0.05) 0%, transparent 60%),
+    linear-gradient(180deg, rgba(255,255,255,0.07) 0%, transparent 30%);
+  box-shadow:
+    inset 0 3px 8px 0 rgba(255,255,255,0.12),
+    inset 0 -6px 16px 0 rgba(0,0,0,0.06),
+    inset 0 14px 32px rgba(32,201,151,0.05),
+    inset 0 -8px 20px rgba(0,0,0,0.04),
+    inset 1px 0 4px rgba(255,255,255,0.08),
+    inset -1px 0 4px rgba(0,0,0,0.04);
   pointer-events: none;
   z-index: 1;
-  animation: patternShift 45s ease-in-out infinite alternate;
 }
 
-/* Quiz: neon edge on container */
+[data-theme="dark"] #projects::before {
+  box-shadow:
+    inset 0 3px 8px 0 rgba(255,255,255,0.05),
+    inset 0 -6px 16px 0 rgba(0,0,0,0.14),
+    inset 0 14px 32px rgba(32,201,151,0.03),
+    inset 0 -8px 20px rgba(0,0,0,0.10),
+    inset 1px 0 4px rgba(255,255,255,0.03),
+    inset -1px 0 4px rgba(0,0,0,0.12);
+}
+
+/* Quiz: Carved ultra-deep neon frame with 8-layer shadow system */
 #quiz > .container {
-  box-shadow: 0 0 0 2px rgba(201,160,32,0.25), 0 8px 30px rgba(201,160,32,0.15);
-}
-[data-theme="dark"] #quiz > .container {
-  box-shadow: 0 0 0 2px rgba(201,160,32,0.18), 0 8px 30px rgba(201,160,32,0.12);
+  position: relative;
+  background:
+    linear-gradient(135deg, rgba(255,255,255,0.04) 0%, transparent 50%),
+    linear-gradient(-135deg, rgba(0,0,0,0.02) 0%, transparent 50%);
+  box-shadow:
+    inset 0 2px 6px 0 rgba(255,255,255,0.14),
+    inset 0 -4px 12px 0 rgba(0,0,0,0.08),
+    inset -2px 0 8px 0 rgba(255,255,255,0.10),
+    inset 2px 0 8px 0 rgba(0,0,0,0.05),
+    inset 0 0 0 1px rgba(201,160,32,0.30),
+    0 0 0 1px rgba(201,160,32,0.15),
+    0 8px 24px rgba(201,160,32,0.12),
+    0 16px 48px rgba(0,0,0,0.08);
+  border-radius: inherit;
 }
 
-/* Contact: wavy bottom accent */
+[data-theme="dark"] #quiz > .container {
+  box-shadow:
+    inset 0 2px 6px 0 rgba(255,255,255,0.06),
+    inset 0 -4px 12px 0 rgba(0,0,0,0.16),
+    inset -2px 0 8px 0 rgba(255,255,255,0.04),
+    inset 2px 0 8px 0 rgba(0,0,0,0.12),
+    inset 0 0 0 1px rgba(201,160,32,0.18),
+    0 0 0 1px rgba(201,160,32,0.08),
+    0 8px 24px rgba(201,160,32,0.08),
+    0 16px 48px rgba(0,0,0,0.20);
+}
+
+/* Contact: Deep 3D carved recess with layered shadow depth */
 #contact::before {
   content: '';
   position: absolute;
-  left: 0; right: 0; bottom: 0; height: 160px;
+  inset: 0;
   background:
-    radial-gradient(300px 120px at 10% 100%, rgba(201,160,32,0.12), transparent 60%),
-    radial-gradient(300px 120px at 90% 100%, rgba(32,201,151,0.12), transparent 60%);
+    linear-gradient(180deg, rgba(255,255,255,0.04) 0%, transparent 40%),
+    linear-gradient(0deg, rgba(0,0,0,0.04) 0%, transparent 40%);
+  box-shadow:
+    inset 0 4px 12px 0 rgba(255,255,255,0.10),
+    inset 0 -8px 24px 0 rgba(0,0,0,0.07),
+    inset 0 16px 40px rgba(201,160,32,0.06),
+    inset 0 -12px 32px rgba(0,0,0,0.05),
+    inset -2px 0 8px rgba(255,255,255,0.06),
+    inset 2px 0 8px rgba(0,0,0,0.04);
   pointer-events: none;
   z-index: 1;
 }
 
-/* Social proof: subtle band */
+[data-theme="dark"] #contact::before {
+  box-shadow:
+    inset 0 4px 12px 0 rgba(255,255,255,0.04),
+    inset 0 -8px 24px 0 rgba(0,0,0,0.16),
+    inset 0 16px 40px rgba(201,160,32,0.03),
+    inset 0 -12px 32px rgba(0,0,0,0.12),
+    inset -2px 0 8px rgba(255,255,255,0.02),
+    inset 2px 0 8px rgba(0,0,0,0.10);
+}
+
+/* Social proof: Elevated platform with smooth 3D appearance */
 #social-proof::before {
   content: '';
   position: absolute;
-  inset: 0 0 auto 0;
-  height: 140px;
-  background: linear-gradient(90deg, rgba(201,160,32,0.14), rgba(32,201,151,0.10));
-  opacity: 0.35;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.08) 0%, transparent 50%),
+    linear-gradient(0deg, rgba(0,0,0,0.02) 0%, transparent 50%);
+  box-shadow:
+    inset 0 3px 8px 0 rgba(255,255,255,0.12),
+    inset 0 -4px 12px 0 rgba(0,0,0,0.04),
+    inset 0 10px 24px rgba(32,201,151,0.05),
+    inset 0 -6px 16px rgba(0,0,0,0.03);
   pointer-events: none;
   z-index: 1;
+}
+
+[data-theme="dark"] #social-proof::before {
+  box-shadow:
+    inset 0 3px 8px 0 rgba(255,255,255,0.04),
+    inset 0 -4px 12px 0 rgba(0,0,0,0.12),
+    inset 0 10px 24px rgba(32,201,151,0.02),
+    inset 0 -6px 16px rgba(0,0,0,0.08);
 }
 
 /* ================= NAV ================= */
