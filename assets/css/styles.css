@@ -688,6 +688,8 @@ section > .container { position: relative; z-index: 2; }
   position: relative;
   transform-style: preserve-3d;
   animation: rotate3D 4s infinite linear;
+  will-change: transform;
+  backface-visibility: visible;
 }
 
 .shape-3d-face {
@@ -709,6 +711,7 @@ section > .container { position: relative; z-index: 2; }
   font-size: 0.75rem;
   color: var(--accent);
   letter-spacing: 1px;
+  backface-visibility: hidden;
 }
 
 [data-theme="dark"] .shape-3d-face {
