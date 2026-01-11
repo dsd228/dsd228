@@ -667,7 +667,6 @@ section > .container { position: relative; z-index: 2; }
   flex-direction: column;
   align-items: center;
   gap: var(--space-lg);
-  perspective: 1200px;
   margin-top: var(--space-xl);
   animation: fadeInUp 0.8s ease-out 0.2s forwards;
   opacity: 0;
@@ -966,10 +965,10 @@ section > .container { position: relative; z-index: 2; }
 /* 3D Rotation Animation */
 @keyframes rotate3D {
   0% {
-    transform: rotateX(0) rotateY(0) rotateZ(0);
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
   }
   25% {
-    transform: rotateX(45deg) rotateY(90deg) rotateZ(0);
+    transform: rotateX(45deg) rotateY(90deg) rotateZ(0deg);
   }
   50% {
     transform: rotateX(90deg) rotateY(180deg) rotateZ(45deg);
@@ -978,7 +977,7 @@ section > .container { position: relative; z-index: 2; }
     transform: rotateX(45deg) rotateY(270deg) rotateZ(90deg);
   }
   100% {
-    transform: rotateX(0) rotateY(360deg) rotateZ(360deg);
+    transform: rotateX(0deg) rotateY(360deg) rotateZ(360deg);
   }
 }
 
