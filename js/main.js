@@ -76,6 +76,46 @@
   });
 })();
 
+// ================= NAVBAR DROPDOWN MENU =================
+(function() {
+  const dropdownButtons = document.querySelectorAll('.nav-toggle-dropdown');
+
+  dropdownButtons.forEach(button => {
+    button.addEventListener('click', (e) => {
+      const isExpanded = button.getAttribute('aria-expanded') === 'true';
+      
+      // Close all other dropdowns
+      dropdownButtons.forEach(btn => {
+        if (btn !== button) {
+          btn.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      // Toggle current dropdown
+      button.setAttribute('aria-expanded', !isExpanded);
+    });
+  });
+
+  // Close dropdown when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.nav-dropdown') && !e.target.closest('.nav-toggle-dropdown')) {
+      dropdownButtons.forEach(btn => {
+        btn.setAttribute('aria-expanded', 'false');
+      });
+    }
+  });
+
+  // Close dropdown when clicking a link
+  const submenuLinks = document.querySelectorAll('.nav-submenu a');
+  submenuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      dropdownButtons.forEach(btn => {
+        btn.setAttribute('aria-expanded', 'false');
+      });
+    });
+  });
+})();
+
 // ================= PROJECT THUMBS CAROUSEL =================
 (function() {
   const projectCardsWithThumbs = document.querySelectorAll('.project-hover:has(.project-thumbs)');
