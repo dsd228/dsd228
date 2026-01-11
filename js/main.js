@@ -11,6 +11,9 @@
     if (icon) {
       icon.className = theme === 'dark' ? 'ri-sun-line' : 'ri-moon-line';
     }
+    else if (themeToggle) {
+      themeToggle.textContent = theme === 'dark' ? '☀️' : '🌙';
+    }
     if (bannerImg) {
       bannerImg.src = theme === 'dark' ? 'banner2.png' : 'banner.png';
     }

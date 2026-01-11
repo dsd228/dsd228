@@ -5,6 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>David Sebastián Díaz - CV UX/UI Designer</title>
     <style>
+        :root {
+            --cv-page-bg: #f3f4f6;
+            --cv-text: #1f2937;
+            --cv-card-bg: #ffffff;
+            --cv-muted: #374151;
+            --cv-gold: #D4AF37;
+        }
+
+        [data-theme="dark"] {
+            --cv-page-bg: #0b0b0c;
+            --cv-text: #f3f4f6;
+            --cv-card-bg: #121316;
+            --cv-muted: #e5e7eb;
+        }
         * {
             margin: 0;
             padding: 0;
@@ -14,36 +28,38 @@
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            color: #1f2937;
-            background: #f3f4f6;
+            color: var(--cv-text);
+            background: var(--cv-page-bg);
             padding: 20px;
+            transition: background 300ms ease, color 300ms ease;
         }
         
         .cv-container {
             max-width: 900px;
             margin: 0 auto;
-            background: white;
+            background: var(--cv-card-bg);
             padding: 40px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.12);
             border-radius: 8px;
+            transition: background 300ms ease, box-shadow 300ms ease;
         }
         
         .header {
             text-align: center;
             margin-bottom: 30px;
-            border-bottom: 3px solid #D4AF37;
+            border-bottom: 3px solid var(--cv-gold);
             padding-bottom: 20px;
         }
         
         .header h1 {
             font-size: 32px;
-            color: #0b0b0c;
+            color: var(--cv-text);
             margin-bottom: 5px;
         }
         
         .header p {
             font-size: 18px;
-            color: #D4AF37;
+            color: var(--cv-gold);
             font-weight: 600;
             margin-bottom: 10px;
         }
@@ -54,7 +70,7 @@
             gap: 20px;
             flex-wrap: wrap;
             font-size: 13px;
-            color: #6b7280;
+            color: var(--cv-muted);
         }
         
         .section {
@@ -64,10 +80,10 @@
         .section-title {
             font-size: 16px;
             font-weight: 700;
-            color: #0b0b0c;
+            color: var(--cv-text);
             margin-bottom: 15px;
             padding-bottom: 10px;
-            border-bottom: 2px solid #D4AF37;
+            border-bottom: 2px solid var(--cv-gold);
             text-transform: uppercase;
             letter-spacing: 1px;
         }
@@ -75,36 +91,38 @@
         .summary {
             background: #fef3c7;
             padding: 15px;
-            border-left: 4px solid #D4AF37;
+            border-left: 4px solid var(--cv-gold);
             border-radius: 4px;
             font-size: 14px;
             line-height: 1.8;
         }
+        [data-theme="dark"] .summary { background: #3a2e12; }
         
         .project {
             margin-bottom: 20px;
             padding: 15px;
             background: #f9fafb;
-            border-left: 3px solid #D4AF37;
+            border-left: 3px solid var(--cv-gold);
             border-radius: 4px;
         }
+        [data-theme="dark"] .project { background: #1b1c20; }
         
         .project-title {
             font-weight: 700;
-            color: #0b0b0c;
+            color: var(--cv-text);
             font-size: 15px;
             margin-bottom: 5px;
         }
         
         .project-desc {
             font-size: 13px;
-            color: #374151;
+            color: var(--cv-muted);
             margin-bottom: 5px;
         }
         
         .project-result {
             font-size: 12px;
-            color: #D4AF37;
+            color: var(--cv-gold);
             font-weight: 600;
         }
         
@@ -123,7 +141,7 @@
         
         .skill-category h4 {
             font-size: 13px;
-            color: #D4AF37;
+            color: var(--cv-gold);
             margin-bottom: 8px;
             font-weight: 700;
         }
@@ -131,34 +149,34 @@
         .skill-category ul {
             list-style: none;
             font-size: 12px;
-            color: #374151;
+            color: var(--cv-muted);
             line-height: 1.8;
         }
         
         .skill-category li::before {
             content: "✓ ";
-            color: #D4AF37;
+            color: var(--cv-gold);
             font-weight: bold;
         }
         
         .cert {
             font-size: 13px;
             margin-bottom: 8px;
-            color: #374151;
+            color: var(--cv-muted);
             padding-left: 20px;
         }
         
         .cert::before {
             content: "★ ";
-            color: #D4AF37;
+            color: var(--cv-gold);
             position: absolute;
             margin-left: -20px;
         }
         
         .stat-badge {
             display: inline-block;
-            background: #D4AF37;
-            color: #0b0b0c;
+            background: var(--cv-gold);
+            color: var(--cv-text);
             padding: 6px 12px;
             border-radius: 20px;
             font-size: 12px;
@@ -173,8 +191,8 @@
         }
         
         .btn-download {
-            background: #D4AF37;
-            color: #0b0b0c;
+            background: var(--cv-gold);
+            color: var(--cv-text);
             padding: 12px 30px;
             border: none;
             border-radius: 6px;
@@ -224,6 +242,7 @@
     <div class="cv-container">
         <div class="download-button">
             <button class="btn-download" onclick="window.print()">📥 Descargar CV (PDF)</button>
+            <button class="btn-download theme-toggle" style="margin-left: 8px;">🌙</button>
         </div>
         
         <div class="header">
@@ -364,6 +383,7 @@
             </p>
         </div>
     </div>
+    <script src="js/main.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
