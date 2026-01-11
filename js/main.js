@@ -37,29 +37,12 @@
   }
 })();
 
-// ================= 3D SHAPE MORPHING =================
+// ================= 3D SHAPE (CUBE ONLY) =================
 (function() {
   const shape3D = document.querySelector('.shape-3d');
   if (!shape3D) return;
 
-  const shapes = ['cube', 'sphere', 'pyramid', 'cylinder'];
-  let currentShapeIndex = 0;
-
-  function changeShape() {
-    // Remove all shape classes
-    shapes.forEach(shape => shape3D.classList.remove(shape));
-    
-    // Add current shape class
-    shape3D.classList.add(shapes[currentShapeIndex]);
-    
-    // Move to next shape
-    currentShapeIndex = (currentShapeIndex + 1) % shapes.length;
-  }
-
-  // Change shape every 2 seconds
-  setInterval(changeShape, 2000);
-  
-  // Set initial shape to cube
+  // Mostrar solo el cubo; se eliminan cambios de forma
   shape3D.classList.add('cube');
 })();
 
