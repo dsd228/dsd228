@@ -897,6 +897,7 @@
 </footer>
 
 <!-- ================= JS ================= -->
+<script src="js/main.js"></script>
 <script>
   /* ================= NAV MOBILE ================= */
   const navToggle = document.querySelector('.nav-toggle');
@@ -907,26 +908,7 @@
   });
 
   /* ================= DARK MODE ================= */
-  const themeToggle = document.querySelector('.theme-toggle');
-  const html = document.documentElement;
-  const banner = document.getElementById('hero-banner');
-  const icon = themeToggle ? themeToggle.querySelector('i') : null;
-
-  if (themeToggle && icon) {
-    themeToggle.addEventListener('click', () => {
-      const isDark = html.getAttribute('data-theme') === 'dark';
-
-      html.setAttribute('data-theme', isDark ? 'light' : 'dark');
-
-      /* Cambiar banner si existe */
-      if (banner) {
-        banner.src = isDark ? 'banner.png' : 'banner2.png';
-      }
-
-      /* Cambiar icono */
-      icon.className = isDark ? 'ri-moon-line' : 'ri-sun-line';
-    });
-  }
+  // Gestionado por js/main.js
 
   /* ================= SCROLL TO TOP BUTTON ================= */
   const scrollTopBtn = document.getElementById('scroll-to-top');
@@ -1176,7 +1158,7 @@
   document.addEventListener('mouseleave', () => {
     document.body.classList.remove('bg-pressed');
   });
-});</script>
+</script>
 
 </body>
 </html>

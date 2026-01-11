@@ -1,94 +1,35 @@
-// assets/js/main.js
+// js/main.js
+// ================= THEME MANAGEMENT =================
+(function() {
+  const html = document.documentElement;
+  const themeToggle = document.querySelector('.theme-toggle');
+  const icon = themeToggle ? themeToggle.querySelector('i') : null;
+  const bannerImg = document.getElementById('hero-banner');
 
-// ================= NAV TOGGLE =================
-const toggle = document.querySelector('.nav-toggle');
-const navMenu = document.querySelector('.nav-menu');
-
-// Helper function to reset menu icon
-function resetMenuIcon() {
-  if (toggle) {
-    const icon = toggle.querySelector('i');
+  function applyTheme(theme) {
+    html.setAttribute('data-theme', theme);
     if (icon) {
-      icon.className = 'ri-menu-line';
+      icon.className = theme === 'dark' ? 'ri-sun-line' : 'ri-moon-line';
+    }
+    if (bannerImg) {
+      bannerImg.src = theme === 'dark' ? 'banner2.png' : 'banner.png';
     }
   }
-}
 
-// Helper function to close menu
-function closeMenu() {
-  if (navMenu) {
-    navMenu.classList.remove('open');
+  // Initialize from localStorage or system preference
+  const saved = localStorage.getItem('theme');
+  if (saved === 'light' || saved === 'dark') {
+    applyTheme(saved);
+  } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    applyTheme('dark');
   }
-  if (toggle) {
-    toggle.setAttribute('aria-expanded', 'false');
-  }
-  resetMenuIcon();
-}
 
-if (toggle && navMenu) {
-  toggle.addEventListener('click', () => {
-    const expanded = toggle.getAttribute('aria-expanded') === 'true';
-    toggle.setAttribute('aria-expanded', String(!expanded));
-    navMenu.classList.toggle('open');
-    
-    // Change icon
-    const icon = toggle.querySelector('i');
-    if (icon) {
-      if (navMenu.classList.contains('open')) {
-        icon.className = 'ri-close-line';
-      } else {
-        icon.className = 'ri-menu-line';
-      }
-    }
-  });
-}
-
-// Accessibility: close menu when clicking links on mobile
-document.querySelectorAll('.nav-menu a').forEach(a => {
-  a.addEventListener('click', () => {
-    closeMenu();
-  });
-});
-
-// Close menu when clicking outside
-document.addEventListener('click', (e) => {
-  if (navMenu && toggle && navMenu.classList.contains('open')) {
-    if (!navMenu.contains(e.target) && !toggle.contains(e.target)) {
-      closeMenu();
-    }
-  }
-});
-
-// ================= BANNER PARALLAX =================
-const banner = document.querySelector('.banner-wrap');
-if (banner) {
-  const img = banner.querySelector('img');
-  const glow = banner.querySelector('.iridescent-layer');
-  const bubbles = banner.querySelectorAll('.bubble');
-
-  banner.addEventListener('mousemove', (e) => {
-    const rect = banner.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-
-    const centerX = rect.width / 2;
-    const centerY = rect.height / 2;
-
-    const moveX = (x - centerX) / centerX;
-    const moveY = (y - centerY) / centerY;
-
-    img.style.transform = `scale(1.03) translate(${moveX * 10}px, ${moveY * 10}px)`;
-    glow.style.transform = `translate(${moveX * 20}px, ${moveY * 20}px)`;
-
-    bubbles.forEach((bubble, i) => {
-      const factor = (i + 1) * 6;
-      bubble.style.transform = `translate(${moveX * factor}px, ${moveY * factor}px)`;
+  if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+      const isDark = html.getAttribute('data-theme') === 'dark';
+      const next = isDark ? 'light' : 'dark';
+      applyTheme(next);
+      localStorage.setItem('theme', next);
     });
-  });
-
-  banner.addEventListener('mouseleave', () => {
-    img.style.transform = 'scale(1)';
-    glow.style.transform = 'translate(0,0)';
-    bubbles.forEach(b => b.style.transform = 'translate(0,0)');
-  });
-}
+  }
+})();
