@@ -959,27 +959,12 @@ section > .container { position: relative; z-index: 2; }
 [data-theme="dark"] .shape-3d.cylinder .shape-3d-face {
   border-color: rgba(201,160,32,0.15) !important;
 }
-  border-radius: 50%;
-}
 
 /* 3D Rotation Animation */
 @keyframes rotate3D {
   0% {
-    transform: rotateX(0) rotateY(0) rotateZ(0);
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
   }
-  25% {
-    transform: rotateX(45deg) rotateY(90deg) rotateZ(0deg);
-  }
-  50% {
-    transform: rotateX(90deg) rotateY(180deg) rotateZ(45deg);
-  }
-  75% {
-    transform: rotateX(45deg) rotateY(270deg) rotateZ(90deg);
-  }
-  100% {
-    transform: rotateX(0) rotateY(360deg) rotateZ(360deg);
-  }
-}
   25% {
     transform: rotateX(45deg) rotateY(90deg) rotateZ(0deg);
   }
