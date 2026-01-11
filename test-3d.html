@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Test 3D Animation</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f0f0f0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    .shape-3d-wrapper {
+      width: 300px;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      perspective: 1000px;
+      margin: 0 auto 2rem;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .shape-3d {
+      width: 120px;
+      height: 120px;
+      position: relative;
+      transform-style: preserve-3d;
+      animation: rotate3D 6s infinite linear;
+    }
+
+    .shape-3d-face {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      opacity: 0.8;
+      border: 2px solid #333;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    /* Cube faces */
+    .cube-front { 
+      background: rgba(255, 0, 0, 0.7);
+      transform: translateZ(60px);
+    }
+    .cube-back { 
+      background: rgba(0, 255, 0, 0.7);
+      transform: rotateY(180deg) translateZ(60px);
+    }
+    .cube-right { 
+      background: rgba(0, 0, 255, 0.7);
+      transform: rotateY(90deg) translateZ(60px);
+    }
+    .cube-left { 
+      background: rgba(255, 255, 0, 0.7);
+      transform: rotateY(-90deg) translateZ(60px);
+    }
+    .cube-top { 
+      background: rgba(255, 0, 255, 0.7);
+      transform: rotateX(90deg) translateZ(60px);
+    }
+    .cube-bottom { 
+      background: rgba(0, 255, 255, 0.7);
+      transform: rotateX(-90deg) translateZ(60px);
+    }
+
+    @keyframes rotate3D {
+      0% {
+        transform: rotateX(0) rotateY(0) rotateZ(0);
+      }
+      25% {
+        transform: rotateX(45deg) rotateY(90deg) rotateZ(0);
+      }
+      50% {
+        transform: rotateX(90deg) rotateY(180deg) rotateZ(45deg);
+      }
+      75% {
+        transform: rotateX(45deg) rotateY(270deg) rotateZ(90deg);
+      }
+      100% {
+        transform: rotateX(0) rotateY(360deg) rotateZ(360deg);
+      }
+    }
+
+    h1 {
+      color: #333;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      color: #666;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Prueba 3D Animation</h1>
+    <p>Si ves un cubo de colores girando, la animación 3D funciona:</p>
+    
+    <div class="shape-3d-wrapper">
+      <div class="shape-3d">
+        <div class="shape-3d-face cube-front">Front</div>
+        <div class="shape-3d-face cube-back">Back</div>
+        <div class="shape-3d-face cube-right">Right</div>
+        <div class="shape-3d-face cube-left">Left</div>
+        <div class="shape-3d-face cube-top">Top</div>
+        <div class="shape-3d-face cube-bottom">Bottom</div>
+      </div>
+    </div>
+
+    <p style="color: #999; font-size: 12px;">
+      Si el cubo NO gira, tu navegador podría no soportar CSS 3D o hay un problema con la configuración.
+    </p>
+  </div>
+</body>
+</html>
