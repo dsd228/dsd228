@@ -1,4 +1,4 @@
-/* ================= RESET ================= */
+﻿/* ================= RESET ================= */
 * {
   margin: 0;
   padding: 0;
@@ -678,7 +678,7 @@ section > .container { position: relative; z-index: 2; }
   display: flex;
   align-items: center;
   justify-content: center;
-  perspective: 1200px;
+  perspective: 1000px;
 }
 
 .shape-3d {
@@ -871,7 +871,7 @@ section > .container { position: relative; z-index: 2; }
   border: 2px solid rgba(201,160,32,0.30) !important;
 }
 
-/* Para pirámide, necesitamos transforms especiales que se aplicana ADICIONALES */
+/* Para pirÃ¡mide, necesitamos transforms especiales que se aplicana ADICIONALES */
 .shape-3d.pyramid .cube-front {
   background: linear-gradient(180deg, rgba(201,160,32,0.15) 0%, rgba(201,160,32,0.08) 100%) !important;
   box-shadow: inset -4px -4px 12px rgba(0,0,0,0.15), inset 2px 2px 8px rgba(255,255,255,0.10) !important;
@@ -965,8 +965,21 @@ section > .container { position: relative; z-index: 2; }
 /* 3D Rotation Animation */
 @keyframes rotate3D {
   0% {
-    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    transform: rotateX(0) rotateY(0) rotateZ(0);
   }
+  25% {
+    transform: rotateX(45deg) rotateY(90deg) rotateZ(0deg);
+  }
+  50% {
+    transform: rotateX(90deg) rotateY(180deg) rotateZ(45deg);
+  }
+  75% {
+    transform: rotateX(45deg) rotateY(270deg) rotateZ(90deg);
+  }
+  100% {
+    transform: rotateX(0) rotateY(360deg) rotateZ(360deg);
+  }
+}
   25% {
     transform: rotateX(45deg) rotateY(90deg) rotateZ(0deg);
   }
@@ -2007,7 +2020,7 @@ a:focus-visible {
 }
 
 .process-list li::before {
-  content: "•";
+  content: "â€¢";
   color: var(--accent);
   font-weight: bold;
 }
@@ -3166,3 +3179,4 @@ body.bg-pressed {
   box-shadow: inset 0 20px 60px rgba(0, 0, 0, 0.8), 
               inset 0 -20px 60px rgba(255, 255, 255, 0.05);
 }
+
