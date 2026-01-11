@@ -679,9 +679,6 @@ section > .container { position: relative; z-index: 2; }
   display: flex;
   align-items: center;
   justify-content: center;
-  perspective: 800px;
-  animation: rotate3D 8s infinite linear;
-  will-change: transform;
 }
 
 .shape-3d {
@@ -689,6 +686,9 @@ section > .container { position: relative; z-index: 2; }
   height: 120px;
   position: relative;
   transform-style: preserve-3d;
+  perspective: 800px;
+  animation: rotate3D 8s infinite linear;
+  will-change: transform;
   backface-visibility: visible;
 }
 
@@ -838,7 +838,7 @@ section > .container { position: relative; z-index: 2; }
     inset 4px 4px 12px rgba(255,255,255,0.15),
     inset -2px -2px 8px rgba(0,0,0,0.1),
     0 12px 24px rgba(0,0,0,0.15) !important;
-  display: none !important;
+  opacity: 0;
 }
 
 [data-theme="dark"] .shape-3d.sphere .shape-3d-face {
@@ -858,6 +858,18 @@ section > .container { position: relative; z-index: 2; }
   box-shadow:
     inset -8px -8px 16px rgba(0,0,0,0.2),
     inset 4px 4px 12px rgba(255,255,255,0.15),
+    inset -2px -2px 8px rgba(0,0,0,0.1),
+    0 12px 24px rgba(0,0,0,0.15) !important;
+  opacity: 1 !important;
+}
+
+.shape-3d.sphere .cube-back,
+.shape-3d.sphere .cube-right,
+.shape-3d.sphere .cube-left,
+.shape-3d.sphere .cube-top,
+.shape-3d.sphere .cube-bottom {
+  opacity: 0 !important;
+}
     inset -2px -2px 8px rgba(0,0,0,0.1),
     0 12px 24px rgba(0,0,0,0.15) !important;
 }
