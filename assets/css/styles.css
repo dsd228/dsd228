@@ -679,8 +679,7 @@ section > .container { position: relative; z-index: 2; }
   display: flex;
   align-items: center;
   justify-content: center;
-  perspective: 800px;
-  transform-style: preserve-3d;
+  perspective: 1200px;
 }
 
 .shape-3d {
@@ -688,9 +687,7 @@ section > .container { position: relative; z-index: 2; }
   height: 120px;
   position: relative;
   transform-style: preserve-3d;
-  animation: rotate3D 8s infinite linear;
-  will-change: transform;
-  backface-visibility: visible;
+  animation: rotate3D 6s infinite linear;
 }
 
 .shape-3d-face {
@@ -969,19 +966,19 @@ section > .container { position: relative; z-index: 2; }
 /* 3D Rotation Animation */
 @keyframes rotate3D {
   0% {
-    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    transform: rotateX(0) rotateY(0) rotateZ(0);
   }
   25% {
-    transform: rotateX(45deg) rotateY(45deg) rotateZ(0deg);
+    transform: rotateX(45deg) rotateY(90deg) rotateZ(0);
   }
   50% {
-    transform: rotateX(90deg) rotateY(90deg) rotateZ(45deg);
+    transform: rotateX(90deg) rotateY(180deg) rotateZ(45deg);
   }
   75% {
-    transform: rotateX(45deg) rotateY(135deg) rotateZ(90deg);
+    transform: rotateX(45deg) rotateY(270deg) rotateZ(90deg);
   }
   100% {
-    transform: rotateX(0deg) rotateY(360deg) rotateZ(360deg);
+    transform: rotateX(0) rotateY(360deg) rotateZ(360deg);
   }
 }
 
