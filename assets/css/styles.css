@@ -195,6 +195,160 @@ section > .container > .section-title::after {
   max-width: 720px;
 }
 
+/* ================= SECTION THEMES ================= */
+section { position: relative; }
+section > .container { position: relative; z-index: 2; }
+
+@keyframes patternShift {
+  0% { transform: translate3d(0,0,0) scale(1); }
+  100% { transform: translate3d(0, -20px, 0) scale(1.02); }
+}
+
+/* About: mesh gradient blobs */
+#about::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(900px 500px at 10% 0%, rgba(201,160,32,0.10), transparent 60%),
+    radial-gradient(700px 400px at 90% 15%, rgba(32,201,151,0.12), transparent 60%);
+  opacity: 0.6;
+  pointer-events: none;
+  z-index: 1;
+  animation: patternShift 40s ease-in-out infinite alternate;
+}
+
+[data-theme="dark"] #about::before {
+  background:
+    radial-gradient(900px 500px at 12% 2%, rgba(201,160,32,0.08), transparent 60%),
+    radial-gradient(700px 400px at 88% 16%, rgba(32,201,151,0.10), transparent 60%);
+}
+
+/* Skills: conic accents */
+#skills::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    conic-gradient(from 0.15turn at 20% 30%, rgba(201,160,32,0.10), transparent 25%),
+    conic-gradient(from 0.65turn at 80% 70%, rgba(32,201,151,0.12), transparent 25%);
+  mask-image: radial-gradient(1200px 800px at 50% 50%, black 40%, transparent 75%);
+  opacity: 0.6;
+  pointer-events: none;
+  z-index: 1;
+  animation: patternShift 50s ease-in-out infinite alternate;
+}
+
+[data-theme="dark"] #skills::before {
+  background:
+    conic-gradient(from 0.15turn at 20% 30%, rgba(201,160,32,0.08), transparent 25%),
+    conic-gradient(from 0.65turn at 80% 70%, rgba(32,201,151,0.10), transparent 25%);
+}
+
+/* Challenges: diagonal stripes */
+#challenges::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(135deg, rgba(201,160,32,0.08) 0 12px, transparent 12px 28px);
+  opacity: 0.6;
+  pointer-events: none;
+  z-index: 1;
+}
+
+[data-theme="dark"] #challenges::before {
+  background: repeating-linear-gradient(135deg, rgba(201,160,32,0.06) 0 12px, transparent 12px 28px);
+}
+
+/* Process: dotted grid */
+#process::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 10% 25%, rgba(32,201,151,0.18) 1.2px, transparent 1.2px),
+    radial-gradient(circle at 90% 75%, rgba(201,160,32,0.18) 1.2px, transparent 1.2px);
+  background-size: 22px 22px;
+  opacity: 0.4;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Certifications: subtle gold ribbon at top */
+#certifications::before {
+  content: '';
+  position: absolute;
+  left: 0; right: 0; top: 0; height: 8px;
+  background: linear-gradient(90deg, rgba(201,160,32,0.35), rgba(32,201,151,0.25));
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.1));
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Blog: soft grid background */
+#blog::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle, rgba(201,160,32,0.10) 1px, transparent 2px);
+  background-size: 26px 26px;
+  opacity: 0.35;
+  pointer-events: none;
+  z-index: 1;
+}
+
+[data-theme="dark"] #blog::before {
+  background:
+    radial-gradient(circle, rgba(201,160,32,0.08) 1px, transparent 2px);
+}
+
+/* Projects: colorful mesh */
+#projects::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(900px 500px at 0% 50%, rgba(201,160,32,0.10), transparent 60%),
+    radial-gradient(900px 500px at 100% 50%, rgba(32,201,151,0.12), transparent 60%);
+  opacity: 0.6;
+  pointer-events: none;
+  z-index: 1;
+  animation: patternShift 45s ease-in-out infinite alternate;
+}
+
+/* Quiz: neon edge on container */
+#quiz > .container {
+  box-shadow: 0 0 0 2px rgba(201,160,32,0.25), 0 8px 30px rgba(201,160,32,0.15);
+}
+[data-theme="dark"] #quiz > .container {
+  box-shadow: 0 0 0 2px rgba(201,160,32,0.18), 0 8px 30px rgba(201,160,32,0.12);
+}
+
+/* Contact: wavy bottom accent */
+#contact::before {
+  content: '';
+  position: absolute;
+  left: 0; right: 0; bottom: 0; height: 160px;
+  background:
+    radial-gradient(300px 120px at 10% 100%, rgba(201,160,32,0.12), transparent 60%),
+    radial-gradient(300px 120px at 90% 100%, rgba(32,201,151,0.12), transparent 60%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Social proof: subtle band */
+#social-proof::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 140px;
+  background: linear-gradient(90deg, rgba(201,160,32,0.14), rgba(32,201,151,0.10));
+  opacity: 0.35;
+  pointer-events: none;
+  z-index: 1;
+}
+
 /* ================= NAV ================= */
 .navbar {
   position: sticky;
