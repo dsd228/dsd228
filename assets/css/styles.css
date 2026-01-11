@@ -722,44 +722,63 @@ section > .container { position: relative; z-index: 2; }
     0 8px 16px rgba(0,0,0,0.25);
 }
 
-/* Cube faces - Enhanced 3D effect with color variation */
-.shape-3d.cube .cube-front {
+/* Cube faces - base transforms always applied */
+.cube-front {
   transform: translateZ(60px);
+}
+
+.cube-back {
+  transform: translateZ(-60px) rotateY(180deg);
+}
+
+.cube-right {
+  transform: rotateY(90deg) translateZ(60px);
+}
+
+.cube-left {
+  transform: rotateY(-90deg) translateZ(60px);
+}
+
+.cube-top {
+  transform: rotateX(90deg) translateZ(60px);
+}
+
+.cube-bottom {
+  transform: rotateX(-90deg) translateZ(60px);
+}
+
+/* Cube style colors and effects */
+.shape-3d.cube .cube-front {
   background: linear-gradient(135deg, rgba(201,160,32,0.15) 0%, rgba(255,255,255,0.05) 100%) !important;
   border-color: rgba(201,160,32,0.35) !important;
   box-shadow: inset 0 2px 4px 0 rgba(255,255,255,0.15), inset 0 -4px 8px 0 rgba(0,0,0,0.08), inset -2px 0 8px 0 rgba(255,255,255,0.08), inset 2px 0 8px 0 rgba(0,0,0,0.04), 0 8px 16px rgba(0,0,0,0.1) !important;
 }
 
 .shape-3d.cube .cube-back {
-  transform: translateZ(-60px) rotateY(180deg);
   background: linear-gradient(315deg, rgba(201,160,32,0.10) 0%, rgba(0,0,0,0.08) 100%) !important;
   border-color: rgba(201,160,32,0.25) !important;
   box-shadow: inset 0 2px 4px 0 rgba(255,255,255,0.10), inset 0 -4px 8px 0 rgba(0,0,0,0.12), inset -2px 0 8px 0 rgba(255,255,255,0.06), inset 2px 0 8px 0 rgba(0,0,0,0.08), 0 8px 16px rgba(0,0,0,0.15) !important;
 }
 
 .shape-3d.cube .cube-right {
-  transform: rotateY(90deg) translateZ(60px);
   background: linear-gradient(90deg, rgba(255,255,255,0.12) 0%, rgba(201,160,32,0.12) 50%, rgba(0,0,0,0.10) 100%) !important;
   border-color: rgba(201,160,32,0.30) !important;
   box-shadow: inset -2px 0 8px rgba(0,0,0,0.1), inset 2px 0 8px rgba(255,255,255,0.08), 0 8px 16px rgba(0,0,0,0.12) !important;
 }
 
 .shape-3d.cube .cube-left {
-  transform: rotateY(-90deg) translateZ(60px);
   background: linear-gradient(270deg, rgba(255,255,255,0.10) 0%, rgba(201,160,32,0.10) 50%, rgba(0,0,0,0.12) 100%) !important;
   border-color: rgba(201,160,32,0.28) !important;
   box-shadow: inset -2px 0 8px rgba(0,0,0,0.12), inset 2px 0 8px rgba(255,255,255,0.06), 0 8px 16px rgba(0,0,0,0.14) !important;
 }
 
 .shape-3d.cube .cube-top {
-  transform: rotateX(90deg) translateZ(60px);
   background: linear-gradient(180deg, rgba(255,255,255,0.15) 0%, rgba(201,160,32,0.08) 100%) !important;
   border-color: rgba(201,160,32,0.32) !important;
   box-shadow: inset 0 -2px 8px rgba(0,0,0,0.08), inset 0 2px 8px rgba(255,255,255,0.10), 0 8px 16px rgba(0,0,0,0.10) !important;
 }
 
 .shape-3d.cube .cube-bottom {
-  transform: rotateX(-90deg) translateZ(60px);
   background: linear-gradient(0deg, rgba(255,255,255,0.10) 0%, rgba(201,160,32,0.06) 100%) !important;
   border-color: rgba(201,160,32,0.22) !important;
   box-shadow: inset 0 -2px 8px rgba(0,0,0,0.12), inset 0 2px 8px rgba(255,255,255,0.08), 0 8px 16px rgba(0,0,0,0.12) !important;
@@ -859,8 +878,8 @@ section > .container { position: relative; z-index: 2; }
   border: 2px solid rgba(201,160,32,0.30) !important;
 }
 
+/* Para pirámide, necesitamos transforms especiales que se aplicana ADICIONALES */
 .shape-3d.pyramid .cube-front {
-  transform: rotateX(25deg) rotateY(0deg) translateZ(60px);
   background: linear-gradient(180deg, rgba(201,160,32,0.15) 0%, rgba(201,160,32,0.08) 100%) !important;
   box-shadow: inset -4px -4px 12px rgba(0,0,0,0.15), inset 2px 2px 8px rgba(255,255,255,0.10) !important;
 }
@@ -870,19 +889,16 @@ section > .container { position: relative; z-index: 2; }
 }
 
 .shape-3d.pyramid .cube-right {
-  transform: rotateY(120deg) rotateX(25deg) translateZ(60px);
   background: linear-gradient(180deg, rgba(201,160,32,0.12) 0%, rgba(201,160,32,0.06) 100%) !important;
   box-shadow: inset -4px -4px 12px rgba(0,0,0,0.20), inset 2px 2px 8px rgba(255,255,255,0.08) !important;
 }
 
 .shape-3d.pyramid .cube-left {
-  transform: rotateY(-120deg) rotateX(25deg) translateZ(60px);
   background: linear-gradient(180deg, rgba(201,160,32,0.10) 0%, rgba(201,160,32,0.05) 100%) !important;
   box-shadow: inset -4px -4px 12px rgba(0,0,0,0.25), inset 2px 2px 8px rgba(255,255,255,0.06) !important;
 }
 
 .shape-3d.pyramid .cube-top {
-  transform: rotateX(90deg) translateZ(50px);
   clip-path: polygon(50% 50%, 100% 0%, 100% 100%, 0% 100%, 0% 0%) !important;
   background: linear-gradient(180deg, rgba(201,160,32,0.08) 0%, rgba(0,0,0,0.08) 100%) !important;
   box-shadow: inset 0 -4px 12px rgba(0,0,0,0.15) !important;
@@ -908,13 +924,11 @@ section > .container { position: relative; z-index: 2; }
 }
 
 .shape-3d.cylinder .cube-front {
-  transform: rotateY(0deg) translateZ(50px);
   background: linear-gradient(90deg, rgba(0,0,0,0.05) 0%, rgba(201,160,32,0.10) 50%, rgba(0,0,0,0.08) 100%) !important;
   box-shadow: inset -2px 0 8px rgba(0,0,0,0.1), inset 2px 0 8px rgba(255,255,255,0.08) !important;
 }
 
 .shape-3d.cylinder .cube-back {
-  transform: rotateY(180deg) translateZ(50px);
   background: linear-gradient(270deg, rgba(0,0,0,0.08) 0%, rgba(201,160,32,0.08) 50%, rgba(0,0,0,0.06) 100%) !important;
   box-shadow: inset -2px 0 8px rgba(0,0,0,0.12), inset 2px 0 8px rgba(255,255,255,0.06) !important;
 }
@@ -923,7 +937,6 @@ section > .container { position: relative; z-index: 2; }
   width: 100px;
   height: 140px;
   border-radius: 50% / 0% !important;
-  transform: rotateY(90deg) translateZ(50px);
   background: linear-gradient(90deg, rgba(255,255,255,0.15) 0%, rgba(201,160,32,0.12) 50%, rgba(0,0,0,0.12) 100%) !important;
   box-shadow: inset -3px 0 10px rgba(0,0,0,0.15), inset 3px 0 10px rgba(255,255,255,0.10) !important;
   border: 2px solid rgba(201,160,32,0.25) !important;
@@ -933,21 +946,18 @@ section > .container { position: relative; z-index: 2; }
   width: 100px;
   height: 140px;
   border-radius: 50% / 0% !important;
-  transform: rotateY(-90deg) translateZ(50px);
   background: linear-gradient(270deg, rgba(255,255,255,0.12) 0%, rgba(201,160,32,0.10) 50%, rgba(0,0,0,0.15) 100%) !important;
   box-shadow: inset -3px 0 10px rgba(0,0,0,0.18), inset 3px 0 10px rgba(255,255,255,0.08) !important;
   border: 2px solid rgba(201,160,32,0.25) !important;
 }
 
 .shape-3d.cylinder .cube-top {
-  transform: rotateX(90deg) translateZ(70px);
   border-radius: 50% !important;
   background: radial-gradient(circle at 40% 40%, rgba(255,255,255,0.20) 0%, rgba(201,160,32,0.12) 60%, rgba(0,0,0,0.10) 100%) !important;
   box-shadow: inset -4px -4px 12px rgba(0,0,0,0.12), inset 2px 2px 8px rgba(255,255,255,0.12) !important;
 }
 
 .shape-3d.cylinder .cube-bottom {
-  transform: rotateX(-90deg) translateZ(70px);
   border-radius: 50% !important;
   background: radial-gradient(circle at 60% 60%, rgba(0,0,0,0.15) 0%, rgba(201,160,32,0.08) 40%, rgba(255,255,255,0.08) 100%) !important;
   box-shadow: inset -4px -4px 12px rgba(0,0,0,0.15), inset 2px 2px 8px rgba(255,255,255,0.08) !important;
