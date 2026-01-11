@@ -503,6 +503,27 @@ section > .container { position: relative; z-index: 2; }
   font-weight: 700;
   font-size: 1.125rem;
   letter-spacing: -0.5px;
+  color: var(--accent);
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.25rem, 2vw, 1.75rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  background: linear-gradient(135deg, var(--accent), var(--accent-hover));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(2px 2px 4px rgba(201, 160, 32, 0.3)) 
+          drop-shadow(-1px -1px 3px rgba(255, 255, 255, 0.2));
+  transition: all var(--transition-fast);
+  cursor: pointer;
+  text-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 
+               inset 0 -2px 4px rgba(255, 255, 255, 0.1);
+}
+
+.nav-logo:hover {
+  filter: drop-shadow(3px 3px 6px rgba(201, 160, 32, 0.4)) 
+          drop-shadow(-2px -2px 4px rgba(255, 255, 255, 0.3));
+  transform: scale(1.02);
 }
 
 .nav-menu {
