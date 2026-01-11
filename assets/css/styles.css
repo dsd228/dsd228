@@ -753,9 +753,11 @@ section > .container { position: relative; z-index: 2; }
   position: absolute;
   top: var(--space-md);
   right: -16px;
-  display: grid;
-  grid-template-columns: repeat(3, 80px);
-  gap: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 120px;
   padding: 10px;
   background: var(--glass-bg);
   border: 1px solid var(--glass-border);
@@ -766,6 +768,8 @@ section > .container { position: relative; z-index: 2; }
   pointer-events: none;
   transition: all var(--transition-fast);
   z-index: 10;
+  position: relative;
+  overflow: hidden;
 }
 
 .project-hover:hover .project-thumbs {
@@ -774,10 +778,17 @@ section > .container { position: relative; z-index: 2; }
 }
 
 .project-thumbs img {
-  width: 80px;
-  height: 60px;
+  width: 100px;
+  height: 100px;
   object-fit: cover;
   border-radius: 8px;
+  position: absolute;
+  opacity: 0;
+  transition: opacity var(--transition-smooth);
+}
+
+.project-thumbs img.active {
+  opacity: 1;
 }
 
 @media (max-width: 768px) {

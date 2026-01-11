@@ -75,3 +75,48 @@
     if (e.target === body) handlePointerStart();
   });
 })();
+
+// ================= PROJECT THUMBS CAROUSEL =================
+(function() {
+  const projectCardsWithThumbs = document.querySelectorAll('.project-hover:has(.project-thumbs)');
+
+  projectCardsWithThumbs.forEach(card => {
+    const thumbsContainer = card.querySelector('.project-thumbs');
+    const images = thumbsContainer.querySelectorAll('img');
+    
+    if (images.length <= 1) return;
+
+    let currentIndex = 0;
+    let carouselInterval = null;
+
+    // Set first image as active
+    images[0].classList.add('active');
+
+    function showImage(index) {
+      images.forEach((img, i) => {
+        img.classList.toggle('active', i === index);
+      });
+      currentIndex = index;
+    }
+
+    function startCarousel() {
+      if (carouselInterval) return; // Prevent multiple intervals
+      
+      carouselInterval = setInterval(() => {
+        currentIndex = (currentIndex + 1) % images.length;
+        showImage(currentIndex);
+      }, 2500); // Change image every 2.5s
+    }
+
+    function stopCarousel() {
+      if (carouselInterval) {
+        clearInterval(carouselInterval);
+        carouselInterval = null;
+      }
+    }
+
+    // Start carousel on hover
+    card.addEventListener('mouseenter', startCarousel);
+    card.addEventListener('mouseleave', stopCarousel);
+  });
+})();
