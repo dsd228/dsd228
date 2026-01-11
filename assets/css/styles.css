@@ -725,27 +725,27 @@ section > .container { position: relative; z-index: 2; }
 
 /* Cube faces - base transforms always applied */
 .cube-front {
-  transform: translateZ(60px);
+  transform: translateZ(60px) !important;
 }
 
 .cube-back {
-  transform: translateZ(-60px) rotateY(180deg);
+  transform: translateZ(-60px) rotateY(180deg) !important;
 }
 
 .cube-right {
-  transform: rotateY(90deg) translateZ(60px);
+  transform: rotateY(90deg) translateZ(60px) !important;
 }
 
 .cube-left {
-  transform: rotateY(-90deg) translateZ(60px);
+  transform: rotateY(-90deg) translateZ(60px) !important;
 }
 
 .cube-top {
-  transform: rotateX(90deg) translateZ(60px);
+  transform: rotateX(90deg) translateZ(60px) !important;
 }
 
 .cube-bottom {
-  transform: rotateX(-90deg) translateZ(60px);
+  transform: rotateX(-90deg) translateZ(60px) !important;
 }
 
 /* Cube style colors and effects */
