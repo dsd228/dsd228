@@ -1144,20 +1144,6 @@
     images.forEach(img => imageObserver.observe(img));
   });
 
-  // ================= NEUMORPHIC BACKGROUND PRESS EFFECT =================
-  document.addEventListener('mousemove', (e) => {
-    const isOverContent = e.target.closest('section, nav, footer, .container, button, a, input, textarea');
-    
-    if (!isOverContent && e.clientY > 0) {
-      document.body.classList.add('bg-pressed');
-    } else {
-      document.body.classList.remove('bg-pressed');
-    }
-  });
-
-  document.addEventListener('mouseleave', () => {
-    document.body.classList.remove('bg-pressed');
-  });
 </script>
 
 </body>
