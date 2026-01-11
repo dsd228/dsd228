@@ -505,7 +505,9 @@ section > .container { position: relative; z-index: 2; }
 
 .nav-menu {
   display: flex;
-  gap: 2rem;
+  gap: 1.25rem;
+  row-gap: 0.5rem;
+  flex-wrap: wrap;
   list-style: none;
 }
 
@@ -513,7 +515,7 @@ section > .container { position: relative; z-index: 2; }
   color: var(--text);
   text-decoration: none;
   font-weight: 500;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   position: relative;
   transition: color var(--transition-fast);
   white-space: nowrap;
