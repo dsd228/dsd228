@@ -492,9 +492,9 @@ section > .container { position: relative; z-index: 2; }
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: clamp(var(--space-2xl), 6vw, var(--space-4xl));
-  flex-wrap: wrap;
-  padding: clamp(var(--space-2xl), 6vw, var(--space-4xl)) clamp(var(--space-3xl), 8vw, var(--space-4xl));
+  gap: clamp(var(--space-lg), 3vw, var(--space-2xl));
+  flex-wrap: nowrap;
+  padding: clamp(var(--space-md), 3vw, var(--space-lg)) clamp(var(--space-xl), 4vw, var(--space-2xl));
   max-width: 1280px;
   margin: auto;
 }
@@ -507,9 +507,9 @@ section > .container { position: relative; z-index: 2; }
 
 .nav-menu {
   display: flex;
-  gap: clamp(2.25rem, 3vw, 4.5rem);
-  row-gap: clamp(1rem, 2vw, 2rem);
-  flex-wrap: wrap;
+  gap: clamp(1.5rem, 2.5vw, 3rem);
+  row-gap: clamp(0.5rem, 1.5vw, 1.25rem);
+  flex-wrap: nowrap;
   list-style: none;
 }
 
