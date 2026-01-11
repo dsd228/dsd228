@@ -36,3 +36,59 @@
     });
   }
 })();
+
+// ================= 3D SHAPE MORPHING =================
+(function() {
+  const shape3D = document.querySelector('.shape-3d');
+  if (!shape3D) return;
+
+  const shapes = ['cube', 'sphere', 'pyramid', 'cylinder'];
+  let currentShapeIndex = 0;
+
+  function changeShape() {
+    // Remove all shape classes
+    shapes.forEach(shape => shape3D.classList.remove(shape));
+    
+    // Add current shape class
+    shape3D.classList.add(shapes[currentShapeIndex]);
+    
+    // Move to next shape
+    currentShapeIndex = (currentShapeIndex + 1) % shapes.length;
+  }
+
+  // Change shape every 2 seconds
+  setInterval(changeShape, 2000);
+  
+  // Set initial shape to cube
+  shape3D.classList.add('cube');
+})();
+
+// ================= BACKGROUND PRESS EFFECT =================
+(function() {
+  const body = document.body;
+  let pointerActive = false;
+
+  function handlePointerStart() {
+    pointerActive = true;
+    body.classList.add('bg-pressed');
+  }
+
+  function handlePointerEnd() {
+    pointerActive = false;
+    body.classList.remove('bg-pressed');
+  }
+
+  body.addEventListener('pointermove', (e) => {
+    const isOnEmpty = e.target === body || (e.target?.tagName === 'HTML');
+    if (isOnEmpty && !pointerActive) {
+      handlePointerStart();
+    }
+  });
+
+  body.addEventListener('pointerleave', handlePointerEnd);
+  body.addEventListener('pointerup', handlePointerEnd);
+  body.addEventListener('touchend', handlePointerEnd);
+  body.addEventListener('touchstart', (e) => {
+    if (e.target === body) handlePointerStart();
+  });
+})();

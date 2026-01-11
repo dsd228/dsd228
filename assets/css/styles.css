@@ -747,6 +747,100 @@ section > .container { position: relative; z-index: 2; }
   transform: rotateX(-90deg) translateZ(60px);
 }
 
+/* Sphere faces (multiple small faces to approximate sphere) */
+.shape-3d.sphere .shape-3d-face {
+  border-radius: 50%;
+  opacity: 0.3;
+  transform: scale(1.5) !important;
+}
+
+.shape-3d.sphere .cube-front {
+  transform: translateZ(0) scale(1.5) !important;
+  opacity: 0.8;
+}
+
+/* Pyramid - 4 triangular faces */
+.shape-3d.pyramid {
+  width: 100px;
+  height: 100px;
+}
+
+.shape-3d.pyramid .shape-3d-face {
+  clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+  border-radius: 0;
+}
+
+.shape-3d.pyramid .cube-front {
+  transform: rotateX(35deg) translateZ(50px);
+}
+
+.shape-3d.pyramid .cube-back {
+  display: none;
+}
+
+.shape-3d.pyramid .cube-right {
+  transform: rotateY(90deg) rotateX(35deg) translateZ(50px);
+}
+
+.shape-3d.pyramid .cube-left {
+  transform: rotateY(-90deg) rotateX(35deg) translateZ(50px);
+}
+
+.shape-3d.pyramid .cube-top {
+  transform: rotateX(90deg) translateZ(50px);
+  clip-path: polygon(50% 50%, 100% 0%, 100% 100%, 0% 100%, 0% 0%);
+}
+
+.shape-3d.pyramid .cube-bottom {
+  display: none;
+}
+
+/* Cylinder - circular top/bottom and sides */
+.shape-3d.cylinder {
+  width: 120px;
+  height: 120px;
+}
+
+.shape-3d.cylinder .shape-3d-face {
+  border-radius: 0;
+}
+
+.shape-3d.cylinder .cube-front {
+  transform: rotateY(0deg) translateZ(60px);
+  clip-path: inset(0);
+}
+
+.shape-3d.cylinder .cube-back {
+  transform: rotateY(180deg) translateZ(60px);
+  clip-path: inset(0);
+}
+
+.shape-3d.cylinder .cube-right {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  transform: rotateY(90deg) translateZ(60px);
+  background: linear-gradient(135deg, rgba(201,160,32,0.12) 0%, rgba(255,255,255,0.04) 100%);
+}
+
+.shape-3d.cylinder .cube-left {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  transform: rotateY(-90deg) translateZ(60px);
+  background: linear-gradient(135deg, rgba(201,160,32,0.12) 0%, rgba(255,255,255,0.04) 100%);
+}
+
+.shape-3d.cylinder .cube-top {
+  transform: rotateX(90deg) translateZ(60px);
+  border-radius: 50%;
+}
+
+.shape-3d.cylinder .cube-bottom {
+  transform: rotateX(-90deg) translateZ(60px);
+  border-radius: 50%;
+}
+
 /* 3D Rotation Animation */
 @keyframes rotate3D {
   0% {
