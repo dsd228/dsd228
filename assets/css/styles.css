@@ -687,6 +687,7 @@ section > .container { position: relative; z-index: 2; }
   height: 120px;
   position: relative;
   transform-style: preserve-3d;
+  animation: rotate3D 4s infinite linear;
 }
 
 .shape-3d-face {
@@ -708,7 +709,6 @@ section > .container { position: relative; z-index: 2; }
   font-size: 0.75rem;
   color: var(--accent);
   letter-spacing: 1px;
-  animation: rotate3D 8s infinite linear;
 }
 
 [data-theme="dark"] .shape-3d-face {
@@ -983,17 +983,29 @@ section > .container { position: relative; z-index: 2; }
   0% {
     transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
   }
+  12.5% {
+    transform: rotateX(0deg) rotateY(45deg) rotateZ(0deg);
+  }
   25% {
-    transform: rotateX(45deg) rotateY(45deg) rotateZ(0deg);
+    transform: rotateX(0deg) rotateY(90deg) rotateZ(0deg);
+  }
+  37.5% {
+    transform: rotateX(0deg) rotateY(135deg) rotateZ(0deg);
   }
   50% {
-    transform: rotateX(90deg) rotateY(90deg) rotateZ(45deg);
+    transform: rotateX(0deg) rotateY(180deg) rotateZ(0deg);
+  }
+  62.5% {
+    transform: rotateX(0deg) rotateY(225deg) rotateZ(0deg);
   }
   75% {
-    transform: rotateX(45deg) rotateY(135deg) rotateZ(90deg);
+    transform: rotateX(0deg) rotateY(270deg) rotateZ(0deg);
+  }
+  87.5% {
+    transform: rotateX(0deg) rotateY(315deg) rotateZ(0deg);
   }
   100% {
-    transform: rotateX(0deg) rotateY(360deg) rotateZ(360deg);
+    transform: rotateX(0deg) rotateY(360deg) rotateZ(0deg);
   }
 }
 
