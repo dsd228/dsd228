@@ -492,8 +492,10 @@ section > .container { position: relative; z-index: 2; }
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: var(--space-md) var(--space-2xl);
-  max-width: 1200px;
+  gap: clamp(var(--space-2xl), 6vw, var(--space-4xl));
+  flex-wrap: wrap;
+  padding: clamp(var(--space-2xl), 6vw, var(--space-4xl)) clamp(var(--space-3xl), 8vw, var(--space-4xl));
+  max-width: 1280px;
   margin: auto;
 }
 
@@ -505,8 +507,8 @@ section > .container { position: relative; z-index: 2; }
 
 .nav-menu {
   display: flex;
-  gap: 1.25rem;
-  row-gap: 0.5rem;
+  gap: clamp(2.25rem, 3vw, 4.5rem);
+  row-gap: clamp(1rem, 2vw, 2rem);
   flex-wrap: wrap;
   list-style: none;
 }
@@ -515,11 +517,13 @@ section > .container { position: relative; z-index: 2; }
   color: var(--text);
   text-decoration: none;
   font-weight: 500;
-  font-size: 0.9rem;
+  font-size: 1rem;
   position: relative;
   transition: color var(--transition-fast);
   white-space: nowrap;
-  padding: 0.5rem 0;
+  padding: 0.65rem 0;
+  letter-spacing: 0.02em;
+  line-height: 1.6;
 }
 
 .nav-menu a::after {
@@ -570,8 +574,28 @@ section > .container { position: relative; z-index: 2; }
 
 /* ================= HERO ================= */
 .hero {
-  padding-top: var(--space-3xl);
-  padding-bottom: var(--space-3xl);
+  padding-top: clamp(var(--space-3xl), 8vw, var(--space-4xl));
+  padding-bottom: clamp(var(--space-3xl), 8vw, var(--space-4xl));
+}
+
+.role-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  box-shadow: 8px 8px 16px var(--dark), -8px -8px 16px var(--light);
+  color: var(--text);
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+  margin-bottom: var(--space-lg);
+}
+
+.role-badge i {
+  color: var(--accent);
 }
 
 .hero-subtitle {
@@ -580,6 +604,35 @@ section > .container { position: relative; z-index: 2; }
   max-width: 480px;
   margin-bottom: var(--space-2xl);
   line-height: 1.8;
+}
+
+.hero-subtagline {
+  font-size: 1rem;
+  color: var(--muted);
+  margin-bottom: var(--space-xl);
+}
+
+.hero-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--space-2xl) 0;
+  display: grid;
+  gap: var(--space-sm);
+  color: var(--text-secondary);
+  font-size: 0.98rem;
+}
+
+.hero-bullets li {
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.hero-bullets li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: 700;
 }
 
 .hero-actions {
@@ -661,6 +714,104 @@ section > .container { position: relative; z-index: 2; }
   letter-spacing: 0.5px;
   animation: slideInLeft 0.6s ease-out 1.8s forwards;
   opacity: 0;
+}
+
+/* ================= PAW TRAILS ================= */
+.paw-trails {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.paw {
+  position: absolute;
+  width: 52px;
+  height: 52px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><circle cx='20' cy='18' r='8' fill='%23c9a020'/><circle cx='44' cy='18' r='8' fill='%23c9a020'/><circle cx='16' cy='36' r='8' fill='%23c9a020'/><circle cx='48' cy='36' r='8' fill='%23c9a020'/><ellipse cx='32' cy='46' rx='14' ry='10' fill='%23c9a020'/></svg>");
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0;
+  filter: drop-shadow(0 6px 12px rgba(0,0,0,0.08));
+  animation: pawWalk 8s linear infinite;
+  mix-blend-mode: soft-light;
+}
+
+.paw-1 { top: 65%; left: 6%; animation-delay: 0s; }
+.paw-2 { top: 75%; left: 18%; animation-delay: 1s; }
+.paw-3 { top: 62%; left: 36%; animation-delay: 2s; }
+.paw-4 { top: 78%; left: 58%; animation-delay: 3s; }
+.paw-5 { top: 70%; left: 78%; animation-delay: 4s; }
+
+@keyframes pawWalk {
+  0%   { opacity: 0; transform: translate3d(0, 0, 0) scale(0.9) rotate(-6deg); }
+  10%  { opacity: 0.55; }
+  40%  { opacity: 0.85; }
+  100% { opacity: 0; transform: translate3d(220px, -240px, 0) scale(1.05) rotate(6deg); }
+}
+
+/* ================= SERVICES ================= */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--space-3xl);
+  margin-top: var(--space-3xl);
+}
+
+.service-card .service-icon {
+  font-size: 1.75rem;
+  color: var(--accent);
+  margin-bottom: var(--space-md);
+}
+
+.service-card h3 {
+  margin-bottom: var(--space-sm);
+}
+
+.service-card p {
+  font-size: 0.95rem;
+}
+
+/* ================= PROJECT THUMB HOVER ================= */
+.project-hover {
+  position: relative;
+  overflow: visible; /* permite que las miniaturas sobresalgan del card */
+}
+
+.project-thumbs {
+  position: absolute;
+  top: var(--space-md);
+  right: -16px;
+  display: grid;
+  grid-template-columns: repeat(3, 80px);
+  gap: 8px;
+  padding: 10px;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 14px;
+  box-shadow: 12px 12px 24px var(--dark), -8px -8px 20px var(--light);
+  opacity: 0;
+  transform: translateY(8px);
+  pointer-events: none;
+  transition: all var(--transition-fast);
+  z-index: 10;
+}
+
+.project-hover:hover .project-thumbs {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.project-thumbs img {
+  width: 80px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .project-thumbs { display: none; }
 }
 
 /* ================= 3D NEUMORPHIC SHAPES ================= */
@@ -1381,6 +1532,15 @@ section > .container { position: relative; z-index: 2; }
     display: block;
   }
 
+  .nav-container {
+    padding: var(--space-xl) var(--space-2xl);
+    gap: var(--space-xl);
+  }
+
+  .nav-actions {
+    gap: var(--space-xl);
+  }
+
   .nav-menu {
     position: absolute;
     top: 100%;
@@ -1394,8 +1554,9 @@ section > .container { position: relative; z-index: 2; }
     pointer-events: none;
     transform: translateY(12px);
     transition: all var(--transition-fast);
-    gap: var(--space-md);
-    min-width: 200px;
+    gap: var(--space-lg);
+    row-gap: var(--space-lg);
+    min-width: 240px;
   }
 
   .nav-menu.active {
@@ -2407,14 +2568,14 @@ a:focus-visible {
 .nav-actions {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: clamp(2rem, 3vw, 3.25rem);
 }
 
 .nav-cv-button {
   display: flex;
   align-items: center;
-  gap: 6px;
-  padding: 10px 16px;
+  gap: 12px;
+  padding: 14px 22px;
   background: var(--accent);
   color: #0b0b0c;
   border-radius: 12px;
