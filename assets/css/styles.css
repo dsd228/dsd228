@@ -680,6 +680,8 @@ section > .container { position: relative; z-index: 2; }
   align-items: center;
   justify-content: center;
   perspective: 800px;
+  animation: rotate3D 8s infinite linear;
+  will-change: transform;
 }
 
 .shape-3d {
@@ -687,8 +689,6 @@ section > .container { position: relative; z-index: 2; }
   height: 120px;
   position: relative;
   transform-style: preserve-3d;
-  animation: rotate3D 8s infinite linear;
-  will-change: transform;
   backface-visibility: visible;
 }
 
