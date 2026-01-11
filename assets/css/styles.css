@@ -679,7 +679,7 @@ section > .container { position: relative; z-index: 2; }
   display: flex;
   align-items: center;
   justify-content: center;
-  perspective: 1200px;
+  perspective: 1800px;
 }
 
 .shape-3d {
@@ -722,56 +722,147 @@ section > .container { position: relative; z-index: 2; }
     0 8px 16px rgba(0,0,0,0.25);
 }
 
-/* Cube faces */
-.cube-front {
+/* Cube faces - Enhanced 3D effect with color variation */
+.shape-3d.cube .cube-front {
   transform: translateZ(60px);
+  background: linear-gradient(135deg, rgba(201,160,32,0.15) 0%, rgba(255,255,255,0.05) 100%) !important;
+  border-color: rgba(201,160,32,0.35) !important;
+  box-shadow: inset 0 2px 4px 0 rgba(255,255,255,0.15), inset 0 -4px 8px 0 rgba(0,0,0,0.08), inset -2px 0 8px 0 rgba(255,255,255,0.08), inset 2px 0 8px 0 rgba(0,0,0,0.04), 0 8px 16px rgba(0,0,0,0.1) !important;
 }
 
-.cube-back {
+.shape-3d.cube .cube-back {
   transform: translateZ(-60px) rotateY(180deg);
+  background: linear-gradient(315deg, rgba(201,160,32,0.10) 0%, rgba(0,0,0,0.08) 100%) !important;
+  border-color: rgba(201,160,32,0.25) !important;
+  box-shadow: inset 0 2px 4px 0 rgba(255,255,255,0.10), inset 0 -4px 8px 0 rgba(0,0,0,0.12), inset -2px 0 8px 0 rgba(255,255,255,0.06), inset 2px 0 8px 0 rgba(0,0,0,0.08), 0 8px 16px rgba(0,0,0,0.15) !important;
 }
 
-.cube-right {
+.shape-3d.cube .cube-right {
   transform: rotateY(90deg) translateZ(60px);
+  background: linear-gradient(90deg, rgba(255,255,255,0.12) 0%, rgba(201,160,32,0.12) 50%, rgba(0,0,0,0.10) 100%) !important;
+  border-color: rgba(201,160,32,0.30) !important;
+  box-shadow: inset -2px 0 8px rgba(0,0,0,0.1), inset 2px 0 8px rgba(255,255,255,0.08), 0 8px 16px rgba(0,0,0,0.12) !important;
 }
 
-.cube-left {
+.shape-3d.cube .cube-left {
   transform: rotateY(-90deg) translateZ(60px);
+  background: linear-gradient(270deg, rgba(255,255,255,0.10) 0%, rgba(201,160,32,0.10) 50%, rgba(0,0,0,0.12) 100%) !important;
+  border-color: rgba(201,160,32,0.28) !important;
+  box-shadow: inset -2px 0 8px rgba(0,0,0,0.12), inset 2px 0 8px rgba(255,255,255,0.06), 0 8px 16px rgba(0,0,0,0.14) !important;
 }
 
-.cube-top {
+.shape-3d.cube .cube-top {
   transform: rotateX(90deg) translateZ(60px);
+  background: linear-gradient(180deg, rgba(255,255,255,0.15) 0%, rgba(201,160,32,0.08) 100%) !important;
+  border-color: rgba(201,160,32,0.32) !important;
+  box-shadow: inset 0 -2px 8px rgba(0,0,0,0.08), inset 0 2px 8px rgba(255,255,255,0.10), 0 8px 16px rgba(0,0,0,0.10) !important;
 }
 
-.cube-bottom {
+.shape-3d.cube .cube-bottom {
   transform: rotateX(-90deg) translateZ(60px);
+  background: linear-gradient(0deg, rgba(255,255,255,0.10) 0%, rgba(201,160,32,0.06) 100%) !important;
+  border-color: rgba(201,160,32,0.22) !important;
+  box-shadow: inset 0 -2px 8px rgba(0,0,0,0.12), inset 0 2px 8px rgba(255,255,255,0.08), 0 8px 16px rgba(0,0,0,0.12) !important;
 }
 
-/* Sphere faces (multiple small faces to approximate sphere) */
+[data-theme="dark"] .shape-3d.cube .cube-front {
+  background: linear-gradient(135deg, rgba(201,160,32,0.08) 0%, rgba(255,255,255,0.02) 100%) !important;
+  border-color: rgba(201,160,32,0.20) !important;
+  box-shadow: inset 0 2px 4px 0 rgba(255,255,255,0.06), inset 0 -4px 8px 0 rgba(0,0,0,0.16), inset -2px 0 8px 0 rgba(255,255,255,0.03), inset 2px 0 8px 0 rgba(0,0,0,0.12), 0 8px 16px rgba(0,0,0,0.25) !important;
+}
+
+[data-theme="dark"] .shape-3d.cube .cube-back {
+  background: linear-gradient(315deg, rgba(201,160,32,0.06) 0%, rgba(0,0,0,0.15) 100%) !important;
+  border-color: rgba(201,160,32,0.15) !important;
+  box-shadow: inset 0 2px 4px 0 rgba(255,255,255,0.03), inset 0 -4px 8px 0 rgba(0,0,0,0.20), inset -2px 0 8px 0 rgba(255,255,255,0.02), inset 2px 0 8px 0 rgba(0,0,0,0.16), 0 8px 16px rgba(0,0,0,0.30) !important;
+}
+
+[data-theme="dark"] .shape-3d.cube .cube-right {
+  background: linear-gradient(90deg, rgba(255,255,255,0.05) 0%, rgba(201,160,32,0.06) 50%, rgba(0,0,0,0.18) 100%) !important;
+  border-color: rgba(201,160,32,0.16) !important;
+  box-shadow: inset -2px 0 8px rgba(0,0,0,0.20), inset 2px 0 8px rgba(255,255,255,0.03), 0 8px 16px rgba(0,0,0,0.28) !important;
+}
+
+[data-theme="dark"] .shape-3d.cube .cube-left {
+  background: linear-gradient(270deg, rgba(255,255,255,0.04) 0%, rgba(201,160,32,0.05) 50%, rgba(0,0,0,0.20) 100%) !important;
+  border-color: rgba(201,160,32,0.14) !important;
+  box-shadow: inset -2px 0 8px rgba(0,0,0,0.22), inset 2px 0 8px rgba(255,255,255,0.02), 0 8px 16px rgba(0,0,0,0.32) !important;
+}
+
+[data-theme="dark"] .shape-3d.cube .cube-top {
+  background: linear-gradient(180deg, rgba(255,255,255,0.06) 0%, rgba(201,160,32,0.04) 100%) !important;
+  border-color: rgba(201,160,32,0.18) !important;
+  box-shadow: inset 0 -2px 8px rgba(0,0,0,0.16), inset 0 2px 8px rgba(255,255,255,0.04), 0 8px 16px rgba(0,0,0,0.26) !important;
+}
+
+[data-theme="dark"] .shape-3d.cube .cube-bottom {
+  background: linear-gradient(0deg, rgba(255,255,255,0.04) 0%, rgba(201,160,32,0.03) 100%) !important;
+  border-color: rgba(201,160,32,0.12) !important;
+  box-shadow: inset 0 -2px 8px rgba(0,0,0,0.18), inset 0 2px 8px rgba(255,255,255,0.02), 0 8px 16px rgba(0,0,0,0.30) !important;
+}
+
+/* Sphere - Ultra realistic 3D sphere with layered depth */
+.shape-3d.sphere {
+  width: 140px;
+  height: 140px;
+}
+
 .shape-3d.sphere .shape-3d-face {
+  border-radius: 50% !important;
+  border: 3px solid rgba(201,160,32,0.35) !important;
+  background: radial-gradient(circle at 35% 35%, rgba(255,255,255,0.25) 0%, rgba(201,160,32,0.10) 40%, rgba(0,0,0,0.15) 100%) !important;
+  box-shadow:
+    inset -8px -8px 16px rgba(0,0,0,0.2),
+    inset 4px 4px 12px rgba(255,255,255,0.15),
+    inset -2px -2px 8px rgba(0,0,0,0.1),
+    0 12px 24px rgba(0,0,0,0.15) !important;
+}
+
+[data-theme="dark"] .shape-3d.sphere .shape-3d-face {
+  background: radial-gradient(circle at 35% 35%, rgba(255,255,255,0.10) 0%, rgba(201,160,32,0.05) 40%, rgba(0,0,0,0.30) 100%) !important;
+  box-shadow:
+    inset -8px -8px 16px rgba(0,0,0,0.4),
+    inset 4px 4px 12px rgba(255,255,255,0.08),
+    inset -2px -2px 8px rgba(0,0,0,0.25),
+    0 12px 24px rgba(0,0,0,0.30) !important;
+}
+
+.shape-3d.sphere .cube-front,
+.shape-3d.sphere .cube-back,
+.shape-3d.sphere .cube-right,
+.shape-3d.sphere .cube-left,
+.shape-3d.sphere .cube-top,
+.shape-3d.sphere .cube-bottom {
+  display: none !important;
+}
+
+.shape-3d.sphere::before {
+  content: '';
+  position: absolute;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
-  opacity: 0.3;
-  transform: scale(1.5) !important;
+  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.2) 0%, transparent 50%);
+  top: 0;
+  left: 0;
+  pointer-events: none;
 }
 
-.shape-3d.sphere .cube-front {
-  transform: translateZ(0) scale(1.5) !important;
-  opacity: 0.8;
-}
-
-/* Pyramid - 4 triangular faces */
+/* Pyramid - 4 true triangular faces */
 .shape-3d.pyramid {
   width: 100px;
   height: 100px;
 }
 
 .shape-3d.pyramid .shape-3d-face {
-  clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
-  border-radius: 0;
+  clip-path: polygon(50% 0%, 100% 100%, 0% 100%) !important;
+  border: 2px solid rgba(201,160,32,0.30) !important;
 }
 
 .shape-3d.pyramid .cube-front {
-  transform: rotateX(35deg) translateZ(50px);
+  transform: rotateX(25deg) rotateY(0deg) translateZ(60px);
+  background: linear-gradient(180deg, rgba(201,160,32,0.15) 0%, rgba(201,160,32,0.08) 100%) !important;
+  box-shadow: inset -4px -4px 12px rgba(0,0,0,0.15), inset 2px 2px 8px rgba(255,255,255,0.10) !important;
 }
 
 .shape-3d.pyramid .cube-back {
@@ -779,65 +870,92 @@ section > .container { position: relative; z-index: 2; }
 }
 
 .shape-3d.pyramid .cube-right {
-  transform: rotateY(90deg) rotateX(35deg) translateZ(50px);
+  transform: rotateY(120deg) rotateX(25deg) translateZ(60px);
+  background: linear-gradient(180deg, rgba(201,160,32,0.12) 0%, rgba(201,160,32,0.06) 100%) !important;
+  box-shadow: inset -4px -4px 12px rgba(0,0,0,0.20), inset 2px 2px 8px rgba(255,255,255,0.08) !important;
 }
 
 .shape-3d.pyramid .cube-left {
-  transform: rotateY(-90deg) rotateX(35deg) translateZ(50px);
+  transform: rotateY(-120deg) rotateX(25deg) translateZ(60px);
+  background: linear-gradient(180deg, rgba(201,160,32,0.10) 0%, rgba(201,160,32,0.05) 100%) !important;
+  box-shadow: inset -4px -4px 12px rgba(0,0,0,0.25), inset 2px 2px 8px rgba(255,255,255,0.06) !important;
 }
 
 .shape-3d.pyramid .cube-top {
   transform: rotateX(90deg) translateZ(50px);
-  clip-path: polygon(50% 50%, 100% 0%, 100% 100%, 0% 100%, 0% 0%);
+  clip-path: polygon(50% 50%, 100% 0%, 100% 100%, 0% 100%, 0% 0%) !important;
+  background: linear-gradient(180deg, rgba(201,160,32,0.08) 0%, rgba(0,0,0,0.08) 100%) !important;
+  box-shadow: inset 0 -4px 12px rgba(0,0,0,0.15) !important;
 }
 
 .shape-3d.pyramid .cube-bottom {
   display: none;
 }
 
-/* Cylinder - circular top/bottom and sides */
+[data-theme="dark"] .shape-3d.pyramid .shape-3d-face {
+  border-color: rgba(201,160,32,0.18) !important;
+}
+
+/* Cylinder - Circular top/bottom with realistic sides */
 .shape-3d.cylinder {
   width: 120px;
-  height: 120px;
+  height: 140px;
 }
 
 .shape-3d.cylinder .shape-3d-face {
   border-radius: 0;
+  border: 2px solid rgba(201,160,32,0.25) !important;
 }
 
 .shape-3d.cylinder .cube-front {
-  transform: rotateY(0deg) translateZ(60px);
-  clip-path: inset(0);
+  transform: rotateY(0deg) translateZ(50px);
+  background: linear-gradient(90deg, rgba(0,0,0,0.05) 0%, rgba(201,160,32,0.10) 50%, rgba(0,0,0,0.08) 100%) !important;
+  box-shadow: inset -2px 0 8px rgba(0,0,0,0.1), inset 2px 0 8px rgba(255,255,255,0.08) !important;
 }
 
 .shape-3d.cylinder .cube-back {
-  transform: rotateY(180deg) translateZ(60px);
-  clip-path: inset(0);
+  transform: rotateY(180deg) translateZ(50px);
+  background: linear-gradient(270deg, rgba(0,0,0,0.08) 0%, rgba(201,160,32,0.08) 50%, rgba(0,0,0,0.06) 100%) !important;
+  box-shadow: inset -2px 0 8px rgba(0,0,0,0.12), inset 2px 0 8px rgba(255,255,255,0.06) !important;
 }
 
 .shape-3d.cylinder .cube-right {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  transform: rotateY(90deg) translateZ(60px);
-  background: linear-gradient(135deg, rgba(201,160,32,0.12) 0%, rgba(255,255,255,0.04) 100%);
+  width: 100px;
+  height: 140px;
+  border-radius: 50% / 0% !important;
+  transform: rotateY(90deg) translateZ(50px);
+  background: linear-gradient(90deg, rgba(255,255,255,0.15) 0%, rgba(201,160,32,0.12) 50%, rgba(0,0,0,0.12) 100%) !important;
+  box-shadow: inset -3px 0 10px rgba(0,0,0,0.15), inset 3px 0 10px rgba(255,255,255,0.10) !important;
+  border: 2px solid rgba(201,160,32,0.25) !important;
 }
 
 .shape-3d.cylinder .cube-left {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  transform: rotateY(-90deg) translateZ(60px);
-  background: linear-gradient(135deg, rgba(201,160,32,0.12) 0%, rgba(255,255,255,0.04) 100%);
+  width: 100px;
+  height: 140px;
+  border-radius: 50% / 0% !important;
+  transform: rotateY(-90deg) translateZ(50px);
+  background: linear-gradient(270deg, rgba(255,255,255,0.12) 0%, rgba(201,160,32,0.10) 50%, rgba(0,0,0,0.15) 100%) !important;
+  box-shadow: inset -3px 0 10px rgba(0,0,0,0.18), inset 3px 0 10px rgba(255,255,255,0.08) !important;
+  border: 2px solid rgba(201,160,32,0.25) !important;
 }
 
 .shape-3d.cylinder .cube-top {
-  transform: rotateX(90deg) translateZ(60px);
-  border-radius: 50%;
+  transform: rotateX(90deg) translateZ(70px);
+  border-radius: 50% !important;
+  background: radial-gradient(circle at 40% 40%, rgba(255,255,255,0.20) 0%, rgba(201,160,32,0.12) 60%, rgba(0,0,0,0.10) 100%) !important;
+  box-shadow: inset -4px -4px 12px rgba(0,0,0,0.12), inset 2px 2px 8px rgba(255,255,255,0.12) !important;
 }
 
 .shape-3d.cylinder .cube-bottom {
-  transform: rotateX(-90deg) translateZ(60px);
+  transform: rotateX(-90deg) translateZ(70px);
+  border-radius: 50% !important;
+  background: radial-gradient(circle at 60% 60%, rgba(0,0,0,0.15) 0%, rgba(201,160,32,0.08) 40%, rgba(255,255,255,0.08) 100%) !important;
+  box-shadow: inset -4px -4px 12px rgba(0,0,0,0.15), inset 2px 2px 8px rgba(255,255,255,0.08) !important;
+}
+
+[data-theme="dark"] .shape-3d.cylinder .shape-3d-face {
+  border-color: rgba(201,160,32,0.15) !important;
+}
   border-radius: 50%;
 }
 
