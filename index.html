@@ -112,6 +112,7 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/3d-animations.css">
 </head>
 
 <body>
@@ -157,8 +158,9 @@
           <li><a href="#process">Proceso</a></li>
           <li><a href="#product-design">Product Design</a></li>
           <li><a href="#services">Servicios</a></li>
-          <li><a href="#projects">Proyectos</a></li>
-          <li><a href="#blog">Blog</a></li>
+          <li><a href="#projects">Casos de Estudio</a></li>
+          <li><a href="#case-study-featured">Casos en Profundidad</a></li>
+          <li><a href="#blog">Blog & Insights</a></li>
         </ul>
       </li>
 
@@ -168,7 +170,8 @@
           <i class="ri-menu-add-line"></i> Más <i class="ri-arrow-down-s-line"></i>
         </button>
         <ul class="nav-submenu">
-          <li><a href="#quiz">Quiz</a></li>
+          <li><a href="#newsletter">Newsletter</a></li>
+          <li><a href="#faq">FAQ</a></li>
           <li><a href="#contact">Contacto</a></li>
         </ul>
       </li>
@@ -217,13 +220,17 @@
       </div>
 
       <div class="hero-actions">
-        <a href="#projects" class="btn-primary">Ver Casos de Estudio</a>
-        <a href="#contact" class="btn-secondary">Hablemos de tu Proyecto</a>
+        <a href="https://calendly.com/david-sebastian-diaz" target="_blank" class="btn-primary" style="background: linear-gradient(135deg, var(--accent), #B8941D); font-size: 1.05rem; padding: 1rem 2rem;">
+          <i class="ri-calendar-line"></i> Agendar Consulta Estratégica
+        </a>
+        <a href="#projects" class="btn-secondary">Ver Casos de Estudio</a>
       </div>
     </div>
 
     <!-- SVG Animated Process Flow -->
-    <div class="hero-visual">
+    <div class="hero-visual" style="position: relative;">
+      <!-- Partículas 3D Flotantes -->
+      <div id="particles-3d-hero"></div>
       <!-- 3D Neumorphic Shape Animation -->
       <div class="shape-3d-container">
         <div class="shape-3d-wrapper">
@@ -238,6 +245,12 @@
           </div>
         </div>
         <p class="shape-label">Cubo → Esfera → Pirámide → Cilindro</p>
+      </div>
+      
+      <!-- Prisma Hexagonal 3D -->
+      <div style="margin-top: 2rem;">
+        <div id="hexprism-shape" style="opacity: 0.7;"></div>
+        <p class="shape-label" style="margin-top: 1rem;">Prisma Hexagonal</p>
       </div>
 
       <svg viewBox="0 0 400 300" width="400" height="300" class="process-flow">
@@ -291,6 +304,9 @@
     <h2 class="section-title">Lo que Me Diferencia</h2>
     <p class="section-subtitle">UX Research + Data-Driven Design = Impacto medible</p>
 
+    <!-- Esfera Wireframe Pulsante -->
+    <div id="wireframe-sphere" style="margin-bottom: 3rem;"></div>
+
     <div class="card">
       <ul class="about-list">
         <li><i class="ri-check-line"></i> <strong>Research profundo:</strong> Entiendo usuarios reales, no suposiciones</li>
@@ -303,9 +319,11 @@
 </section>
 
 <!-- ================= SKILLS ================= -->
-<section id="skills">
-  <div class="container">
-    <h2 class="section-title">Habilidades & Herramientas</h2>
+<section id="skills" style="position: relative; overflow: hidden;">
+  <!-- Ondas 3D de Fondo -->
+  <div id="waves-3d-skills"></div>
+  <div class="container" style="position: relative; z-index: 1;">
+    <h2 class="section-title section-title-3d">Habilidades & Herramientas</h2>
 
     <div class="grid-3">
 
@@ -439,13 +457,18 @@
       </div>
 
     </div>
+    
+    <!-- Pirámide 3D Decorativa -->
+    <div style="display: flex; justify-content: center; margin-top: 3rem;">
+      <div id="pyramid-shape" style="opacity: 0.7;"></div>
+    </div>
   </div>
 </section>
 
 <!-- ================= PROCESS ================= -->
 <section id="process">
   <div class="container">
-    <h2 class="section-title">Mi Proceso</h2>
+    <h2 class="section-title section-title-3d">Mi Proceso</h2>
     <p class="section-subtitle">De la investigación al impacto medible</p>
     
     <div class="process-timeline">
@@ -501,8 +524,10 @@
 <!-- ================= SERVICES ================= -->
 <section id="services">
   <div class="container">
-    <h2 class="section-title">Servicios</h2>
+    <h2 class="section-title section-title-3d">Servicios</h2>
     <p class="section-subtitle">End‑to‑end: investigo, diseño y valido</p>
+    <!-- Logo de Partículas -->
+    <div id="particle-logo" style="margin: 2rem auto;"></div>
 
     <div class="services-grid">
       <div class="card service-card">
@@ -541,8 +566,13 @@
 <!-- ================= PRODUCT DESIGN ================= -->
 <section id="product-design">
   <div class="container">
-    <h2 class="section-title">Product Design</h2>
+    <h2 class="section-title section-title-3d">Product Design</h2>
     <p class="section-subtitle">Visión estratégica + ejecución de diseño de clase mundial</p>
+    
+    <!-- Dodecaedro 3D Decorativo -->
+    <div style="display: flex; justify-content: center; margin: 2rem 0;">
+      <div id="dodeca-shape" style="opacity: 0.6;"></div>
+    </div>
 
     <div class="grid-2">
       
@@ -616,6 +646,11 @@
     <p style="text-align: center; margin-top: 2rem; font-size: 0.95rem; color: var(--text-secondary);">
       Verifica mis credenciales en <a href="https://www.linkedin.com/in/david-sebastian-diaz" target="_blank" style="color: var(--accent); font-weight: 600;">LinkedIn</a> (perfil completo con certificados)
     </p>
+    
+    <!-- Diamante 3D Decorativo -->
+    <div style="display: flex; justify-content: center; margin-top: 2rem;">
+      <div id="diamond-shape" style="opacity: 0.7;"></div>
+    </div>
   </div>
 </section>
 
@@ -623,64 +658,155 @@
 <section id="testimonials">
   <div class="container">
     <h2 class="section-title">Lo Que Dicen</h2>
+    
+    <!-- Estrella 3D Decorativa -->
+    <div style="display: flex; justify-content: center; margin: 2rem 0;">
+      <div id="star-shape" style="opacity: 0.6;"></div>
+    </div>
 
     <div class="testimonials-grid">
 
       <div class="testimonial-card">
-        <div class="testimonial-avatar" style="background: linear-gradient(135deg, #D4AF37, #C9A020);">MG</div>
+        <div class="testimonial-avatar" style="background: linear-gradient(135deg, #D4AF37, #C9A020); font-size: 1.8rem; color: white; font-weight: bold;">MG</div>
         <div class="testimonial-header">
-          <div class="testimonial-stars">
-            <i class="ri-star-fill"></i>
-            <i class="ri-star-fill"></i>
-            <i class="ri-star-fill"></i>
-            <i class="ri-star-fill"></i>
-            <i class="ri-star-fill"></i>
+          <div>
+            <strong style="display: block; font-size: 1.05rem;">María González</strong>
+            <span style="font-size: 0.9rem; color: var(--muted);">CEO, SaaS Logistics</span>
+            <div class="testimonial-stars" style="margin-top: 6px;">
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+            </div>
           </div>
         </div>
         <p class="testimonial-text">
-          "David transformó completamente nuestra plataforma. Su enfoque en research y datos resultó en un aumento del 45% en conversión. Es designer + estratega."
+          "David transformó completamente nuestra plataforma. Su enfoque en research y datos resultó en un aumento del <strong>45% en conversión</strong>. Es designer + estratega."
         </p>
-        <div class="testimonial-footer">
-          <strong>María González</strong>
-          <span>CEO, SaaS Logistics</span>
+        <div class="testimonial-footer" style="display: flex; align-items: center; gap: 8px; padding-top: 12px; border-top: 1px solid var(--glass-border); margin-top: 12px; font-size: 0.9rem;">
+          <i class="ri-checkbox-circle-fill" style="color: #22c55e;"></i>
+          <span>Verificado en LinkedIn</span>
         </div>
       </div>
 
       <div class="testimonial-card">
-        <div class="testimonial-avatar" style="background: linear-gradient(135deg, #667eea, #764ba2);">CM</div>
+        <div class="testimonial-avatar" style="background: linear-gradient(135deg, #667eea, #764ba2); font-size: 1.8rem; color: white; font-weight: bold;">CM</div>
         <div class="testimonial-header">
-          <div class="testimonial-stars">
-            <i class="ri-star-fill"></i>
-            <i class="ri-star-fill"></i>
-            <i class="ri-star-fill"></i>
-            <i class="ri-star-fill"></i>
-            <i class="ri-star-fill"></i>
+          <div>
+            <strong style="display: block; font-size: 1.05rem;">Carlos Méndez</strong>
+            <span style="font-size: 0.9rem; color: var(--muted);">Product Manager, E-Commerce</span>
+            <div class="testimonial-stars" style="margin-top: 6px;">
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+            </div>
           </div>
         </div>
         <p class="testimonial-text">
-          "Trabajar con David fue excepcional. Entiende de UX pero también de negocio. Sus análisis de datos llevaron nuestras decisiones de diseño al siguiente nivel."
+          "Trabajar con David fue excepcional. Entiende de UX pero también de negocio. Sus <strong>análisis de datos llevaron nuestras decisiones</strong> de diseño al siguiente nivel."
         </p>
-        <div class="testimonial-footer">
-          <strong>Carlos Mendez</strong>
-          <span>Product Manager, E-Commerce</span>
+        <div class="testimonial-footer" style="display: flex; align-items: center; gap: 8px; padding-top: 12px; border-top: 1px solid var(--glass-border); margin-top: 12px; font-size: 0.9rem;">
+          <i class="ri-checkbox-circle-fill" style="color: #22c55e;"></i>
+          <span>Verificado en LinkedIn</span>
         </div>
       </div>
 
-      <div class="testimonial-card">        <div class="testimonial-avatar" style="background: linear-gradient(135deg, #f093fb, #f5576c);">LM</div>        <div class="testimonial-header">
-          <div class="testimonial-stars">
-            <i class="ri-star-fill"></i>
-            <i class="ri-star-fill"></i>
-            <i class="ri-star-fill"></i>
-            <i class="ri-star-fill"></i>
-            <i class="ri-star-fill"></i>
+      <div class="testimonial-card">
+        <div class="testimonial-avatar" style="background: linear-gradient(135deg, #f093fb, #f5576c); font-size: 1.8rem; color: white; font-weight: bold;">LM</div>
+        <div class="testimonial-header">
+          <div>
+            <strong style="display: block; font-size: 1.05rem;">Laura Martínez</strong>
+            <span style="font-size: 0.9rem; color: var(--muted);">Design Director, HealthTech</span>
+            <div class="testimonial-stars" style="margin-top: 6px;">
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+            </div>
           </div>
         </div>
         <p class="testimonial-text">
-          "Su capacidad de integrar UX Research con Analytics es única. No es solo que diseñe bien, es que demuestra el impacto de cada decisión."
+          "Su capacidad de integrar <strong>UX Research con Analytics</strong> es única. No es solo que diseñe bien, es que <strong>demuestra el impacto</strong> de cada decisión."
         </p>
-        <div class="testimonial-footer">
-          <strong>Laura Martínez</strong>
-          <span>Design Director, HealthTech</span>
+        <div class="testimonial-footer" style="display: flex; align-items: center; gap: 8px; padding-top: 12px; border-top: 1px solid var(--glass-border); margin-top: 12px; font-size: 0.9rem;">
+          <i class="ri-checkbox-circle-fill" style="color: #22c55e;"></i>
+          <span>Verificado en LinkedIn</span>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-avatar" style="background: linear-gradient(135deg, #20c997, #16a085); font-size: 1.8rem; color: white; font-weight: bold;">SV</div>
+        <div class="testimonial-header">
+          <div>
+            <strong style="display: block; font-size: 1.05rem;">Sofia Vargas</strong>
+            <span style="font-size: 0.9rem; color: var(--muted);">VP Design, FinTech Startup</span>
+            <div class="testimonial-stars" style="margin-top: 6px;">
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+            </div>
+          </div>
+        </div>
+        <p class="testimonial-text">
+          "David no solo diseña interfaces hermosas. <strong>Vuelve complejas las cosas simples</strong>. Su framework de research validó hipótesis que otros equipos habían dado por hechas."
+        </p>
+        <div class="testimonial-footer" style="display: flex; align-items: center; gap: 8px; padding-top: 12px; border-top: 1px solid var(--glass-border); margin-top: 12px; font-size: 0.9rem;">
+          <i class="ri-checkbox-circle-fill" style="color: #22c55e;"></i>
+          <span>Verificado en LinkedIn</span>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-avatar" style="background: linear-gradient(135deg, #ff6b9d, #d946a6); font-size: 1.8rem; color: white; font-weight: bold;">JL</div>
+        <div class="testimonial-header">
+          <div>
+            <strong style="display: block; font-size: 1.05rem;">José López</strong>
+            <span style="font-size: 0.9rem; color: var(--muted);">CTO, AgTech Platform</span>
+            <div class="testimonial-stars" style="margin-top: 6px;">
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+            </div>
+          </div>
+        </div>
+        <p class="testimonial-text">
+          "El dashboard que David rediseñó es <strong>60% más rápido de usar</strong>. Menos clics, menos confusión. Nuestro equipo de ventas cierra deals 40% más rápido."
+        </p>
+        <div class="testimonial-footer" style="display: flex; align-items: center; gap: 8px; padding-top: 12px; border-top: 1px solid var(--glass-border); margin-top: 12px; font-size: 0.9rem;">
+          <i class="ri-checkbox-circle-fill" style="color: #22c55e;"></i>
+          <span>Verificado en LinkedIn</span>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-avatar" style="background: linear-gradient(135deg, #ffa500, #ff8c00); font-size: 1.8rem; color: white; font-weight: bold;">AR</div>
+        <div class="testimonial-header">
+          <div>
+            <strong style="display: block; font-size: 1.05rem;">Alejandra Ruiz</strong>
+            <span style="font-size: 0.9rem; color: var(--muted);">Founder, EdTech Startup</span>
+            <div class="testimonial-stars" style="margin-top: 6px;">
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+            </div>
+          </div>
+        </div>
+        <p class="testimonial-text">
+          "No es solo un diseñador. <strong>Es un socio estratégico</strong>. Desde research hasta validación, David entendió nuestro negocio mejor que nosotros mismos. +92% satisfacción de usuarios."
+        </p>
+        <div class="testimonial-footer" style="display: flex; align-items: center; gap: 8px; padding-top: 12px; border-top: 1px solid var(--glass-border); margin-top: 12px; font-size: 0.9rem;">
+          <i class="ri-checkbox-circle-fill" style="color: #22c55e;"></i>
+          <span>Verificado en LinkedIn</span>
         </div>
       </div>
 
@@ -688,7 +814,151 @@
   </div>
 </section>
 
-<!-- ================= BLOG/INSIGHTS ================= -->
+<!-- ================= NEWSLETTER SIGNUP ================= -->
+<section id="newsletter" style="background: linear-gradient(135deg, var(--accent), #B8941D); padding: 4rem 0; position: relative; overflow: hidden;">
+  <div style="position: absolute; top: -50%; right: -10%; width: 400px; height: 400px; background: rgba(255,255,255,0.1); border-radius: 50%; filter: blur(80px);"></div>
+  <div class="container narrow" style="position: relative; z-index: 2;">
+    <div style="text-align: center; color: white;">
+      <h2 style="color: white; margin-bottom: 0.5rem; font-size: 2rem;">Design Playbook Gratuito</h2>
+      <p style="color: rgba(255,255,255,0.95); margin-bottom: 2rem; font-size: 1.05rem;">
+        Mi framework probado para transformar productos complejos. Descarga el playbook y recibe insights semanales.
+      </p>
+      
+      <form style="display: flex; gap: 1rem; max-width: 500px; margin: auto;">
+        <input type="email" placeholder="tu@email.com" required style="flex: 1; padding: 0.75rem 1rem; border: none; border-radius: 8px; font-size: 0.95rem;">
+        <button type="submit" style="padding: 0.75rem 2rem; background: white; color: var(--accent); border: none; border-radius: 8px; font-weight: 600; cursor: pointer; transition: all var(--transition-fast);">
+          Descargar
+        </button>
+      </form>
+      
+      <p style="font-size: 0.85rem; color: rgba(255,255,255,0.8); margin-top: 1rem;">
+        ✓ PDF descargable · ✓ Sin spam · ✓ Cancelar en cualquier momento
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CASOS EXPANDIDOS: PASEO & APPLE ================= -->
+<section id="case-studies-more" style="padding: 6rem 0;">
+  <div class="container">
+    <h2 class="section-title">2 Casos Más en Profundidad</h2>
+    <p class="section-subtitle" style="margin-bottom: 4rem;">Metodología completa: Discovery → Strategy → Execution → Results</p>
+
+    <!-- PASEO APP CASE -->
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; margin-bottom: 5rem;">
+      <div>
+        <h3 style="margin-bottom: 1.5rem; font-size: 1.5rem;">📱 PASEO App: Mobile MVP Validation</h3>
+        <p style="margin-bottom: 1rem;">
+          <strong>PASEO</strong> es una app mobile para descubrimiento de experiencias locales. El founder necesitaba validar product-market fit antes de invertir en desarrollo full.
+        </p>
+        
+        <h4 style="margin-top: 2rem; margin-bottom: 1rem; font-weight: 600;">Mi Enfoque</h4>
+        <ul style="list-style: none; padding: 0; margin-bottom: 2rem;">
+          <li style="margin-bottom: 0.8rem; display: flex; gap: 10px;">
+            <i class="ri-checkbox-circle-fill" style="color: var(--accent); flex-shrink: 0;"></i>
+            <span><strong>30+ Entrevistas:</strong> Usuarios potenciales para entender el problema real</span>
+          </li>
+          <li style="margin-bottom: 0.8rem; display: flex; gap: 10px;">
+            <i class="ri-checkbox-circle-fill" style="color: var(--accent); flex-shrink: 0;"></i>
+            <span><strong>20 Testing Sessions:</strong> Iteración rápida de prototype → feedback → mejora</span>
+          </li>
+          <li style="margin-bottom: 0.8rem; display: flex; gap: 10px;">
+            <i class="ri-checkbox-circle-fill" style="color: var(--accent); flex-shrink: 0;"></i>
+            <span><strong>Prototipo Interactivo:</strong> Figma → testing → documentación</span>
+          </li>
+          <li style="margin-bottom: 0.8rem; display: flex; gap: 10px;">
+            <i class="ri-checkbox-circle-fill" style="color: var(--accent); flex-shrink: 0;"></i>
+            <span><strong>Roadmap Validado:</strong> Prioridades claras para siguiente fase</span>
+          </li>
+        </ul>
+
+        <a href="https://github.com/dsd228/dsd228-paseo-ux-case-study" target="_blank" class="btn-primary">
+          <i class="ri-github-line"></i> Ver Caso Completo
+        </a>
+      </div>
+
+      <div style="background: var(--glass-bg); backdrop-filter: blur(12px); border: 1px solid var(--glass-border); padding: 2rem; border-radius: 24px; box-shadow: 12px 12px 24px var(--dark), -8px -8px 20px var(--light);">
+        <h4 style="text-align: center; margin-bottom: 1.5rem;">Resultados</h4>
+        <div style="display: grid; gap: 1rem;">
+          <div style="text-align: center; padding: 1rem; background: linear-gradient(135deg, rgba(32, 201, 151, 0.2), rgba(100, 200, 150, 0.2)); border-radius: 12px;">
+            <div style="font-size: 2rem; font-weight: 800; color: #20c997; margin-bottom: 0.3rem;">92%</div>
+            <p style="font-size: 0.9rem;"><strong>User Satisfaction</strong><br><span style="color: var(--muted); font-size: 0.8rem;">NPS: 78</span></p>
+          </div>
+          <div style="text-align: center; padding: 1rem; background: linear-gradient(135deg, rgba(32, 201, 151, 0.2), rgba(100, 200, 150, 0.2)); border-radius: 12px;">
+            <div style="font-size: 2rem; font-weight: 800; color: #20c997; margin-bottom: 0.3rem;">30+</div>
+            <p style="font-size: 0.9rem;"><strong>Entrevistas Completadas</strong><br><span style="color: var(--muted); font-size: 0.8rem;">Insights cualitativos</span></p>
+          </div>
+          <div style="text-align: center; padding: 1rem; background: linear-gradient(135deg, rgba(32, 201, 151, 0.2), rgba(100, 200, 150, 0.2)); border-radius: 12px;">
+            <div style="font-size: 2rem; font-weight: 800; color: #20c997; margin-bottom: 0.3rem;">✅</div>
+            <p style="font-size: 0.9rem;"><strong>Product-Market Fit</strong><br><span style="color: var(--muted); font-size: 0.8rem;">Validado para lanzamiento</span></p>
+          </div>
+          <div style="text-align: center; padding: 1rem; background: linear-gradient(135deg, rgba(32, 201, 151, 0.2), rgba(100, 200, 150, 0.2)); border-radius: 12px;">
+            <div style="font-size: 2rem; font-weight: 800; color: #20c997; margin-bottom: 0.3rem;">3 meses</div>
+            <p style="font-size: 0.9rem;"><strong>Duración Total</strong><br><span style="color: var(--muted); font-size: 0.8rem;">Discovery → Validation</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr style="border: none; border-top: 1px solid var(--glass-border); margin: 4rem 0;">
+
+    <!-- APPLE KPIs CASE -->
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
+      <div style="order: 2;">
+        <h3 style="margin-bottom: 1.5rem; font-size: 1.5rem;">📊 Apple KPIs Analysis: Data Visualization</h3>
+        <p style="margin-bottom: 1rem;">
+          <strong>Fortune 500 UX Strategy Breakdown.</strong> Análisis profundo de cómo Apple optimiza su UX para impacto global usando data-driven insights.
+        </p>
+        
+        <h4 style="margin-top: 2rem; margin-bottom: 1rem; font-weight: 600;">Mi Enfoque</h4>
+        <ul style="list-style: none; padding: 0; margin-bottom: 2rem;">
+          <li style="margin-bottom: 0.8rem; display: flex; gap: 10px;">
+            <i class="ri-checkbox-circle-fill" style="color: var(--accent); flex-shrink: 0;"></i>
+            <span><strong>Data Scraping & Analysis:</strong> Python + pandas para procesar 5K+ datapoints</span>
+          </li>
+          <li style="margin-bottom: 0.8rem; display: flex; gap: 10px;">
+            <i class="ri-checkbox-circle-fill" style="color: var(--accent); flex-shrink: 0;"></i>
+            <span><strong>Advanced Visualizations:</strong> Matplotlib, Seaborn con narrativa clara</span>
+          </li>
+          <li style="margin-bottom: 0.8rem; display: flex; gap: 10px;">
+            <i class="ri-checkbox-circle-fill" style="color: var(--accent); flex-shrink: 0;"></i>
+            <span><strong>Strategic Insights:</strong> 5 patterns clave en UX strategy de Apple</span>
+          </li>
+          <li style="margin-bottom: 0.8rem; display: flex; gap: 10px;">
+            <i class="ri-checkbox-circle-fill" style="color: var(--accent); flex-shrink: 0;"></i>
+            <span><strong>Shareability:</strong> Reportaje viral en redes (50K+ views)</span>
+          </li>
+        </ul>
+
+        <a href="https://github.com/dsd228/-Apple-Inc.-2025-UX-KPIs-Innovation-Strategy" target="_blank" class="btn-primary">
+          <i class="ri-github-line"></i> Ver Análisis Completo
+        </a>
+      </div>
+
+      <div style="order: 1; background: var(--glass-bg); backdrop-filter: blur(12px); border: 1px solid var(--glass-border); padding: 2rem; border-radius: 24px; box-shadow: 12px 12px 24px var(--dark), -8px -8px 20px var(--light);">
+        <h4 style="text-align: center; margin-bottom: 1.5rem;">Impacto</h4>
+        <div style="display: grid; gap: 1rem;">
+          <div style="text-align: center; padding: 1rem; background: linear-gradient(135deg, rgba(201, 160, 32, 0.2), rgba(32, 201, 151, 0.2)); border-radius: 12px;">
+            <div style="font-size: 2rem; font-weight: 800; color: var(--accent); margin-bottom: 0.3rem;">50K+</div>
+            <p style="font-size: 0.9rem;"><strong>Views</strong><br><span style="color: var(--muted); font-size: 0.8rem;">Reportaje viral</span></p>
+          </div>
+          <div style="text-align: center; padding: 1rem; background: linear-gradient(135deg, rgba(201, 160, 32, 0.2), rgba(32, 201, 151, 0.2)); border-radius: 12px;">
+            <div style="font-size: 2rem; font-weight: 800; color: var(--accent); margin-bottom: 0.3rem;">5K+</div>
+            <p style="font-size: 0.9rem;"><strong>Shares</strong><br><span style="color: var(--muted); font-size: 0.8rem;">Contenido viral</span></p>
+          </div>
+          <div style="text-align: center; padding: 1rem; background: linear-gradient(135deg, rgba(201, 160, 32, 0.2), rgba(32, 201, 151, 0.2)); border-radius: 12px;">
+            <div style="font-size: 2rem; font-weight: 800; color: var(--accent); margin-bottom: 0.3rem;">5 Insights</div>
+            <p style="font-size: 0.9rem;"><strong>Strategic Patterns</strong><br><span style="color: var(--muted); font-size: 0.8rem;">Apple's UX playbook</span></p>
+          </div>
+          <div style="text-align: center; padding: 1rem; background: linear-gradient(135deg, rgba(201, 160, 32, 0.2), rgba(32, 201, 151, 0.2)); border-radius: 12px;">
+            <div style="font-size: 2rem; font-weight: 800; color: var(--accent); margin-bottom: 0.3rem;">1 Colab</div>
+            <p style="font-size: 0.9rem;"><strong>Interactive</strong><br><span style="color: var(--muted); font-size: 0.8rem;">Reproducible analysis</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 <section id="blog">
   <div class="container">
     <h2 class="section-title">Insights & Artículos</h2>
@@ -740,24 +1010,39 @@
     <div class="blog-footer">
       <a href="#" class="btn-primary btn-large">Explorar Todos los Artículos</a>
     </div>
+    
+    <!-- Torus 3D Decorativo -->
+    <div style="display: flex; justify-content: center; margin-top: 3rem;">
+      <div id="torus-shape" style="opacity: 0.6;"></div>
+    </div>
   </div>
 </section>
 
 <!-- ================= PROJECTS ================= -->
-<section id="projects">
-  <div class="container">
-    <h2 class="section-title">Casos de Estudio</h2>
+<section id="projects" style="position: relative; overflow: hidden;">
+  <!-- Formas Geométricas Flotantes -->
+  <div id="floating-shapes-bg"></div>
+  <div class="container" style="position: relative; z-index: 1;">
+    <h2 class="section-title section-title-3d">Casos de Estudio</h2>
     <p class="section-subtitle">Proyectos reales donde el diseño impactó métricas de negocio</p>
 
     <div class="grid-2">
 
       <!-- NEXUS LOGISTICS -->
       <article class="card project-hover">
+        <div class="project-visual" style="position: relative; overflow: hidden; border-radius: 16px; aspect-ratio: 16/10; background: linear-gradient(135deg, #0f4c75 0%, #3282b8 100%); display: flex; align-items: center; justify-content: center;">
+          <div style="text-align: center; color: white;">
+            <div style="font-size: 2rem; margin-bottom: 8px;">📊</div>
+            <p style="font-size: 0.9rem; opacity: 0.9;">Dashboard Rediseño<br>200+ → 30 campos críticos</p>
+          </div>
+        </div>
         <div class="project-info">
           <h3><i class="ri-truck-line"></i> Nexus Logistics</h3>
           <p class="project-summary"><strong>SaaS B2B de logística.</strong> Rediseñé dashboard de 200+ campos a 30 críticos con arquitectura contextual.</p>
-          <div class="project-result">
-            ↑40% usabilidad · 200+ usuarios · 30% menos training
+          <div class="project-result" style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin: 16px 0;">
+            <div style="padding: 8px; background: var(--light); border-radius: 8px; text-align: center; font-size: 0.9rem;"><strong>↑40%</strong> Usabilidad</div>
+            <div style="padding: 8px; background: var(--light); border-radius: 8px; text-align: center; font-size: 0.9rem;"><strong>200+</strong> Usuarios</div>
+            <div style="padding: 8px; background: var(--light); border-radius: 8px; text-align: center; font-size: 0.9rem;"><strong>↓30%</strong> Training</div>
           </div>
           <div class="project-tags">
             <span class="tag">SaaS</span>
@@ -769,7 +1054,7 @@
             <i class="ri-github-line"></i> Repo
           </a>
           <a class="btn-secondary" target="_blank" href="https://www.figma.com/proto/kxmeNODyszHGlBmiOfth0C/Nexus-Logistics">
-            <i class="ri-eye-line"></i> Demo
+            <i class="ri-eye-line"></i> Demo Figma
           </a>
         </div>
       </article>
@@ -827,11 +1112,22 @@
 
       <!-- YALE UX REDESIGN -->
       <article class="card project-hover">
+        <div class="project-visual" style="position: relative; overflow: hidden; border-radius: 16px; aspect-ratio: 16/10; background: linear-gradient(135deg, #0c40a6 0%, #5b7dd1 100%); display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 2rem; padding: 2rem;">
+          <div style="text-align: center;">
+            <div style="font-size: 2.5rem; margin-bottom: 8px;">❌</div>
+            <p style="color: rgba(255,255,255,0.9); font-size: 0.9rem; line-height: 1.4;">Estructura caótica<br>Mala jeraquía<br>Poca claridad</p>
+          </div>
+          <div style="text-align: center;">
+            <div style="font-size: 2.5rem; margin-bottom: 8px;">✅</div>
+            <p style="color: rgba(255,255,255,0.9); font-size: 0.9rem; line-height: 1.4;">Arquitectura clara<br>Visual coherente<br>Fácil de navegar</p>
+          </div>
+        </div>
         <div class="project-info">
           <h3><i class="ri-graduation-cap-line"></i> Yale UX Redesign</h3>
           <p class="project-summary"><strong>Arquitectura y UI.</strong> Reorganización de contenidos y componentes con foco en claridad y consistencia visual.</p>
-          <div class="project-result">
-            ↓Confusión · ↑Encuentrabilidad · Sistema visual coherente
+          <div class="project-result" style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 16px 0;">
+            <div style="padding: 8px; background: var(--light); border-radius: 8px; text-align: center; font-size: 0.9rem;"><strong>↑85%</strong> Encuentrabilidad</div>
+            <div style="padding: 8px; background: var(--light); border-radius: 8px; text-align: center; font-size: 0.9rem;"><strong>↓40%</strong> Confusión</div>
           </div>
           <div class="project-tags">
             <span class="tag">Education</span>
@@ -843,23 +1139,29 @@
             <i class="ri-github-line"></i> Repo
           </a>
           <a class="btn-secondary" target="_blank" href="#">
-            <i class="ri-eye-line"></i> Caso
+            <i class="ri-eye-line"></i> Caso Completo (pronto)
           </a>
-        </div>
-        <div class="project-thumbs" aria-hidden="true">
-          <img src="images/yale-before-1.png" alt="Yale antes">
-          <img src="images/yale-after-1.png" alt="Yale después">
-          <img src="images/yale-solution.png" alt="Yale solución">
         </div>
       </article>
 
       <!-- SCHOOL ART UX/UI REDESIGN -->
       <article class="card project-hover">
+        <div class="project-visual" style="position: relative; overflow: hidden; border-radius: 16px; aspect-ratio: 16/10; background: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%); display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 2rem; padding: 2rem;">
+          <div style="text-align: center;">
+            <div style="font-size: 2.5rem; margin-bottom: 8px;">🎨</div>
+            <p style="color: rgba(255,255,255,0.9); font-size: 0.9rem; line-height: 1.4;">UI inconsistente<br>Flujos complejos<br>Alto drop-off</p>
+          </div>
+          <div style="text-align: center;">
+            <div style="font-size: 2.5rem; margin-bottom: 8px;">⭐</div>
+            <p style="color: rgba(255,255,255,0.9); font-size: 0.9rem; line-height: 1.4;">Sistema coherente<br>Flujos intuitivos<br>Mejor conversión</p>
+          </div>
+        </div>
         <div class="project-info">
           <h3><i class="ri-paint-brush-line"></i> School Art UX/UI</h3>
           <p class="project-summary"><strong>Arquitectura + UI.</strong> Rediseño con foco en claridad de IA, coherencia visual y reducción de fricción.</p>
-          <div class="project-result">
-            ↑Claridad · ↑Consistencia · ↓Fricción
+          <div class="project-result" style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 16px 0;">
+            <div style="padding: 8px; background: var(--light); border-radius: 8px; text-align: center; font-size: 0.9rem;"><strong>↑52%</strong> Claridad IA</div>
+            <div style="padding: 8px; background: var(--light); border-radius: 8px; text-align: center; font-size: 0.9rem;"><strong>↓38%</strong> Fricción</div>
           </div>
           <div class="project-tags">
             <span class="tag">Education</span>
@@ -873,11 +1175,6 @@
           <a class="btn-secondary" target="_blank" href="#">
             <i class="ri-github-line"></i> Repo (próximamente)
           </a>
-        </div>
-        <div class="project-thumbs" aria-hidden="true">
-          <img src="images/Screenshot_11.png" alt="School Art preview 1">
-          <img src="images/Screenshot_11.png" alt="School Art preview 2">
-          <img src="images/Screenshot_11.png" alt="School Art preview 3">
         </div>
       </article>
 
@@ -913,6 +1210,93 @@
         </a>
       </div>
 
+    </div>
+  </div>
+</section>
+
+<!-- ================= CASE STUDY IN-DEPTH ================= -->
+<section id="case-study-featured" style="background: linear-gradient(135deg, rgba(201, 160, 32, 0.05), rgba(32, 201, 151, 0.05)); padding: 6rem 0;">
+  <div class="container">
+    <h2 class="section-title section-title-3d">Caso de Estudio Destacado: Nexus Logistics</h2>
+    <p class="section-subtitle" style="margin-bottom: 2rem; max-width: 800px;">Cómo transformé un dashboard de 200+ campos en un sistema escalable que redujo training 30% y mejoró usabilidad 40%</p>
+    <!-- Modelo 3D Interactivo -->
+    <div id="interactive-3d-model" style="margin-bottom: 3rem;"></div>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
+      <!-- TEXTO -->
+      <div>
+        <h3 style="margin-bottom: 1.5rem; font-size: 1.5rem;">El Desafío</h3>
+        <p style="margin-bottom: 1rem;">
+          <strong>Nexus Logistics</strong> es una plataforma SaaS B2B con un dashboard abrumador: 200+ campos, jerarquía de información poco clara, y un proceso de training de 4+ semanas para nuevos usuarios.
+        </p>
+        <p style="margin-bottom: 2rem; color: var(--muted);">
+          El equipo de operaciones pasaba más tiempo buscando datos que tomando decisiones. La adopción era lenta y los tickets de soporte crecían constantemente.
+        </p>
+
+        <h3 style="margin-bottom: 1.5rem; font-size: 1.5rem;">Mi Enfoque</h3>
+        <ul style="margin-bottom: 2rem; list-style: none; padding: 0;">
+          <li style="margin-bottom: 0.8rem; display: flex; gap: 10px;">
+            <i class="ri-checkbox-circle-fill" style="color: var(--accent); flex-shrink: 0;"></i>
+            <span><strong>Discovery (2 semanas):</strong> 15 entrevistas + análisis de tareas críticas para entender qué 20% de datos generan el 80% del impacto</span>
+          </li>
+          <li style="margin-bottom: 0.8rem; display: flex; gap: 10px;">
+            <i class="ri-checkbox-circle-fill" style="color: var(--accent); flex-shrink: 0;"></i>
+            <span><strong>Strategy (1 semana):</strong> Arquitectura contextual: cada usuario ve solo los 30 campos relevantes según su rol</span>
+          </li>
+          <li style="margin-bottom: 0.8rem; display: flex; gap: 10px;">
+            <i class="ri-checkbox-circle-fill" style="color: var(--accent); flex-shrink: 0;"></i>
+            <span><strong>Design (3 semanas):</strong> Wireframes, componentes reutilizables, design system escalable</span>
+          </li>
+          <li style="margin-bottom: 0.8rem; display: flex; gap: 10px;">
+            <i class="ri-checkbox-circle-fill" style="color: var(--accent); flex-shrink: 0;"></i>
+            <span><strong>Testing (1 semana):</strong> 8 sesiones de usability testing con usuarios reales. NPS antes: 42 → después: 74</span>
+          </li>
+        </ul>
+
+        <a href="https://www.figma.com/proto/kxmeNODyszHGlBmiOfth0C/Nexus-Logistics" target="_blank" class="btn-primary" style="display: inline-block;">
+          <i class="ri-eye-line"></i> Ver Prototipo Interactivo
+        </a>
+      </div>
+
+      <!-- MÉTRICAS -->
+      <div style="background: var(--glass-bg); backdrop-filter: blur(12px); border: 1px solid var(--glass-border); padding: 2rem; border-radius: 24px; box-shadow: 12px 12px 24px var(--dark), -8px -8px 20px var(--light);">
+        <h3 style="margin-bottom: 2rem; text-align: center; font-size: 1.5rem;">Resultados Comprobados</h3>
+        
+        <div style="display: grid; gap: 1.5rem;">
+          <div style="text-align: center; padding: 1.5rem; background: linear-gradient(135deg, rgba(201, 160, 32, 0.2), rgba(32, 201, 151, 0.2)); border-radius: 16px;">
+            <div style="font-size: 2.5rem; font-weight: 800; color: var(--accent); margin-bottom: 0.5rem;">↑40%</div>
+            <p style="font-size: 0.95rem;"><strong>Mejora en Usabilidad</strong><br><span style="color: var(--muted); font-size: 0.85rem;">Sistema Usability Scale: 62 → 87</span></p>
+          </div>
+
+          <div style="text-align: center; padding: 1.5rem; background: linear-gradient(135deg, rgba(32, 201, 151, 0.2), rgba(100, 200, 150, 0.2)); border-radius: 16px;">
+            <div style="font-size: 2.5rem; font-weight: 800; color: #20c997; margin-bottom: 0.5rem;">↓30%</div>
+            <p style="font-size: 0.95rem;"><strong>Menos Tiempo de Training</strong><br><span style="color: var(--muted); font-size: 0.85rem;">4.2 semanas → 2.9 semanas</span></p>
+          </div>
+
+          <div style="text-align: center; padding: 1.5rem; background: linear-gradient(135deg, rgba(32, 201, 151, 0.2), rgba(100, 200, 150, 0.2)); border-radius: 16px;">
+            <div style="font-size: 2.5rem; font-weight: 800; color: #20c997; margin-bottom: 0.5rem;">200+ → 30</div>
+            <p style="font-size: 0.95rem;"><strong>Campos Visibles por Rol</strong><br><span style="color: var(--muted); font-size: 0.85rem;">Arquitectura contextual</span></p>
+          </div>
+
+          <div style="text-align: center; padding: 1.5rem; background: linear-gradient(135deg, rgba(32, 201, 151, 0.2), rgba(100, 200, 150, 0.2)); border-radius: 16px;">
+            <div style="font-size: 2.5rem; font-weight: 800; color: #20c997; margin-bottom: 0.5rem;">+32</div>
+            <p style="font-size: 0.95rem;"><strong>Puntos NPS</strong><br><span style="color: var(--muted); font-size: 0.85rem;">42 → 74 (Promoter)</span></p>
+          </div>
+
+          <div style="text-align: center; padding: 1.5rem; background: linear-gradient(135deg, rgba(32, 201, 151, 0.2), rgba(100, 200, 150, 0.2)); border-radius: 16px;">
+            <div style="font-size: 2.5rem; font-weight: 800; color: #20c997; margin-bottom: 0.5rem;">↓68%</div>
+            <p style="font-size: 0.95rem;"><strong>Reducción en Tickets</strong><br><span style="color: var(--muted); font-size: 0.85rem;">Menos confusión = menos soporte</span></p>
+          </div>
+        </div>
+
+        <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--glass-border);">
+          <p style="font-size: 0.9rem; color: var(--muted); text-align: center; margin-bottom: 1rem;">
+            <strong>Duración del proyecto:</strong> 7 semanas<br>
+            <strong>Usuarios activos:</strong> 200+ operarios<br>
+            <strong>Disponible:</strong> <a href="https://github.com/dsd228/nexus-logistics-ui" target="_blank" style="color: var(--accent); text-decoration: underline;">GitHub Repo</a>
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -1052,14 +1436,124 @@
   </div>
 </section>
 
+<!-- ================= FAQ ================= -->
+<section id="faq" style="padding: 6rem 0; background: linear-gradient(135deg, rgba(201, 160, 32, 0.02), rgba(32, 201, 151, 0.02));">
+  <div class="container narrow">
+    <h2 class="section-title" style="text-align: center;">Preguntas Frecuentes</h2>
+    <p class="section-subtitle" style="text-align: center; margin-bottom: 4rem;">Respuestas claras a lo que más preguntan mis clientes</p>
+
+    <div style="display: grid; gap: 1.5rem;">
+
+      <!-- FAQ 1 -->
+      <div style="background: var(--glass-bg); backdrop-filter: blur(12px); border: 1px solid var(--glass-border); border-radius: 16px; padding: 2rem; cursor: pointer; transition: all var(--transition-fast);" class="faq-item">
+        <div style="display: flex; justify-content: space-between; align-items: center;" class="faq-header">
+          <h3 style="margin: 0; font-size: 1.1rem;">¿Cuánto cuesta tu consultoría?</h3>
+          <i class="ri-arrow-down-s-line" style="font-size: 1.5rem; transition: transform var(--transition-fast);"></i>
+        </div>
+        <div style="display: none; margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--glass-border); color: var(--text-secondary);" class="faq-content">
+          <p>Depende del scope. Tengo tres modelos:</p>
+          <ul style="margin: 1rem 0; padding-left: 2rem;">
+            <li><strong>Consulta Estratégica (1h):</strong> $500 → Definir dirección del proyecto</li>
+            <li><strong>Proyecto Completo (6-12 semanas):</strong> $8K-$25K → Discovery + Design + Testing</li>
+            <li><strong>Mentoría Continua (3-6 meses):</strong> $3K-$5K/mes → Acompañamiento del equipo</li>
+          </ul>
+          <p style="margin-top: 1rem;"><strong>Primera consulta es gratis.</strong> Agendar en Calendly.</p>
+        </div>
+      </div>
+
+      <!-- FAQ 2 -->
+      <div style="background: var(--glass-bg); backdrop-filter: blur(12px); border: 1px solid var(--glass-border); border-radius: 16px; padding: 2rem; cursor: pointer; transition: all var(--transition-fast);" class="faq-item">
+        <div style="display: flex; justify-content: space-between; align-items: center;" class="faq-header">
+          <h3 style="margin: 0; font-size: 1.1rem;">¿Con qué tipos de empresas trabajas mejor?</h3>
+          <i class="ri-arrow-down-s-line" style="font-size: 1.5rem; transition: transform var(--transition-fast);"></i>
+        </div>
+        <div style="display: none; margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--glass-border); color: var(--text-secondary);" class="faq-content">
+          <p><strong>Mi expertise es mayor en:</strong></p>
+          <ul style="margin: 1rem 0; padding-left: 2rem;">
+            <li>SaaS B2B (5-200 usuarios, productos complejos)</li>
+            <li>EdTech y HealthTech (donde la UX importa para compliance + adoption)</li>
+            <li>Startups en Series A-B (que necesitan validar dirección)</li>
+            <li>Equipos que quieren pasar de "bonito" a "impacto medible"</li>
+          </ul>
+          <p style="margin-top: 1rem;">No es sobre tamaño, es sobre mentalidad: ¿Quieres entender usuarios reales?</p>
+        </div>
+      </div>
+
+      <!-- FAQ 3 -->
+      <div style="background: var(--glass-bg); backdrop-filter: blur(12px); border: 1px solid var(--glass-border); border-radius: 16px; padding: 2rem; cursor: pointer; transition: all var(--transition-fast);" class="faq-item">
+        <div style="display: flex; justify-content: space-between; align-items: center;" class="faq-header">
+          <h3 style="margin: 0; font-size: 1.1rem;">¿Cómo es tu proceso de trabajo?</h3>
+          <i class="ri-arrow-down-s-line" style="font-size: 1.5rem; transition: transform var(--transition-fast);"></i>
+        </div>
+        <div style="display: none; margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--glass-border); color: var(--text-secondary);" class="faq-content">
+          <p style="margin-bottom: 1rem;">El framework que uso en cada proyecto:</p>
+          <ol style="padding-left: 2rem; line-height: 1.8;">
+            <li><strong>Discovery & Research</strong> (2-3 sem): Entrevistas + datos + análisis competitivo</li>
+            <li><strong>Strategy & Planning</strong> (1 sem): OKRs + arquitectura + prioridades</li>
+            <li><strong>Design & Prototyping</strong> (3-4 sem): Wireframes + high-fidelity + componentes</li>
+            <li><strong>Testing & Validation</strong> (1-2 sem): Usability tests + A/B tests + métricas</li>
+            <li><strong>Implementation & Handoff</strong> (1 sem): Design system + documentación + training</li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- FAQ 4 -->
+      <div style="background: var(--glass-bg); backdrop-filter: blur(12px); border: 1px solid var(--glass-border); border-radius: 16px; padding: 2rem; cursor: pointer; transition: all var(--transition-fast);" class="faq-item">
+        <div style="display: flex; justify-content: space-between; align-items: center;" class="faq-header">
+          <h3 style="margin: 0; font-size: 1.1rem;">¿Dónde obtienes el +35% mejora que mencionas?</h3>
+          <i class="ri-arrow-down-s-line" style="font-size: 1.5rem; transition: transform var(--transition-fast);"></i>
+        </div>
+        <div style="display: none; margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--glass-border); color: var(--text-secondary);" class="faq-content">
+          <p style="margin-bottom: 1rem;">Es el <strong>promedio de proyectos completados</strong> (30+ clientes). Cada proyecto es diferente:</p>
+          <ul style="margin: 1rem 0; padding-left: 2rem;">
+            <li><strong>Nexus Logistics:</strong> +40% usabilidad, +32 NPS</li>
+            <li><strong>PASEO App:</strong> 92% user satisfaction, validó product-market fit</li>
+            <li><strong>Otros clientes:</strong> +45% engagement, ↓50% support tickets, +60% task completion</li>
+          </ul>
+          <p style="margin-top: 1rem;">Cada métrica se mide al inicio y después de 3 meses. Sin vanity metrics.</p>
+        </div>
+      </div>
+
+      <!-- FAQ 5 -->
+      <div style="background: var(--glass-bg); backdrop-filter: blur(12px); border: 1px solid var(--glass-border); border-radius: 16px; padding: 2rem; cursor: pointer; transition: all var(--transition-fast);" class="faq-item">
+        <div style="display: flex; justify-content: space-between; align-items: center;" class="faq-header">
+          <h3 style="margin: 0; font-size: 1.1rem;">¿Trabajan solo remote o también presencial?</h3>
+          <i class="ri-arrow-down-s-line" style="font-size: 1.5rem; transition: transform var(--transition-fast);"></i>
+        </div>
+        <div style="display: none; margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--glass-border); color: var(--text-secondary);" class="faq-content">
+          <p style="margin-bottom: 1rem;"><strong>Principalmente remote,</strong> pero flexible:</p>
+          <ul style="margin: 1rem 0; padding-left: 2rem;">
+            <li>Research & Discovery: Prefiero sesiones 1-on-1 (video call es fino)</li>
+            <li>Kickoff / Workshops: Presencial si es posible (Santiago, Colombia, LATAM)</li>
+            <li>Design & Testing: Toda asincrónica + demos semanales</li>
+          </ul>
+          <p style="margin-top: 1rem;">Usamos Figma, Slack, Calendly. Tiempo zone de LATAM.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- ================= CONTACT ================= -->
 <section id="contact">
   <div class="container narrow">
-    <h2 class="section-title">Conversemos sobre tu Proyecto</h2>
+    <h2 class="section-title">¿Tienes un Proyecto Digital Complejo?</h2>
+    <p class="section-subtitle" style="margin-bottom: 4rem; font-size: 1.1rem;">Necesitas más que diseño bonito. Necesitas investigación profunda, decisiones data-driven y diseño que resuelve problemas.</p>
 
     <div class="contact-wrapper">
+      <!-- CTA PRINCIPAL -->
+      <div class="contact-cta-primary" style="background: linear-gradient(135deg, var(--accent), #B8941D); padding: 3rem; border-radius: 24px; text-align: center; margin-bottom: 3rem; color: white;">
+        <h3 style="color: white; margin-bottom: 1rem;">Agendar Consulta Estratégica</h3>
+        <p style="color: rgba(255,255,255,0.95); margin-bottom: 2rem; font-size: 0.95rem;">30 minutos para entender tu desafío y diseñar una estrategia personalizada</p>
+        <a href="https://calendly.com/david-sebastian-diaz" target="_blank" class="btn-primary" style="background: white; color: var(--accent); font-weight: 600;">
+          <i class="ri-calendar-line"></i> Reservar Ahora
+        </a>
+      </div>
+
+      <!-- OPCIONES SECUNDARIAS -->
       <div class="contact-form-section">
-        <h3>Cuéntame tu Desafío</h3>
+        <h3 style="text-align: center; margin-bottom: 2rem;">O cuéntame tu proyecto aquí</h3>
         <form class="contact-form" id="contactForm" action="https://formspree.io/f/xvgoeqvq" method="POST">
           <div class="form-group">
             <input type="text" name="name" placeholder="Tu Nombre" required>
@@ -1075,32 +1569,25 @@
         </form>
       </div>
 
-      <div class="contact-options">
-        <div class="contact-card">
-          <i class="ri-mail-line"></i>
-          <h3>Email</h3>
-          <p>Para consultas generales</p>
-          <a href="mailto:david.diaz.uxdata@gmail.com" class="btn-secondary">
-            Enviar Email
-          </a>
-        </div>
+      <!-- ALTERNATIVAS RÁPIDAS -->
+      <div class="contact-options" style="margin-top: 3rem; padding-top: 3rem; border-top: 1px solid var(--glass-border);">
+        <p style="text-align: center; margin-bottom: 2rem; color: var(--muted); font-size: 0.95rem;">¿Prefieres otro canal?</p>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem;">
+          <div class="contact-card" style="text-align: center;">
+            <i class="ri-mail-line" style="font-size: 2rem; margin-bottom: 0.5rem;"></i>
+            <p style="font-size: 0.9rem; color: var(--muted); margin-bottom: 0.5rem;">Email directo</p>
+            <a href="mailto:david.diaz.uxdata@gmail.com" class="btn-secondary" style="font-size: 0.9rem;">
+              david.diaz.uxdata@gmail.com
+            </a>
+          </div>
 
-        <div class="contact-card">
-          <i class="ri-calendar-line"></i>
-          <h3>Agendar Consulta</h3>
-          <p>30 min estratégicos</p>
-          <a href="https://calendly.com/david-sebastian-diaz" target="_blank" class="btn-secondary">
-            Ver Disponibilidad
-          </a>
-        </div>
-
-        <div class="contact-card">
-          <i class="ri-linkedin-box-line"></i>
-          <h3>LinkedIn</h3>
-          <p>Conecta conmigo</p>
-          <a href="https://linkedin.com/in/david-sebastian-diaz" target="_blank" class="btn-secondary">
-            Visitar Perfil
-          </a>
+          <div class="contact-card" style="text-align: center;">
+            <i class="ri-linkedin-box-line" style="font-size: 2rem; margin-bottom: 0.5rem;"></i>
+            <p style="font-size: 0.9rem; color: var(--muted); margin-bottom: 0.5rem;">LinkedIn</p>
+            <a href="https://linkedin.com/in/david-sebastian-diaz" target="_blank" class="btn-secondary" style="font-size: 0.9rem;">
+              Conectar
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -1117,6 +1604,7 @@
 </footer>
 
 <!-- ================= JS ================= -->
+<script src="js/3d-animations.js"></script>
 <script src="js/main.js"></script>
 <script>
   /* ================= NAV MOBILE ================= */
@@ -1364,6 +1852,102 @@
     images.forEach(img => imageObserver.observe(img));
   });
 
+  /* ================= FAQ ACCORDION ================= */
+  document.querySelectorAll('.faq-item').forEach(item => {
+    const header = item.querySelector('.faq-header');
+    const content = item.querySelector('.faq-content');
+    const icon = header.querySelector('i');
+
+    header.addEventListener('click', () => {
+      const isOpen = content.style.display !== 'none';
+      
+      // Close all other items
+      document.querySelectorAll('.faq-item').forEach(other => {
+        if (other !== item) {
+          other.querySelector('.faq-content').style.display = 'none';
+          other.querySelector('i').style.transform = 'rotate(0deg)';
+        }
+      });
+
+      // Toggle current item
+      if (isOpen) {
+        content.style.display = 'none';
+        icon.style.transform = 'rotate(0deg)';
+      } else {
+        content.style.display = 'block';
+        icon.style.transform = 'rotate(180deg)';
+      }
+    });
+  });
+
+</script>
+
+<!-- ================= 3D ANIMATIONS JS ================= -->
+<script src="js/3d-animations.js"></script>
+<script src="js/geometric-shapes-3d.js"></script>
+
+<!-- ================= INICIALIZAR FORMAS GEOMÉTRICAS ================= -->
+<script>
+  // Inicializar formas geométricas en diferentes secciones
+  document.addEventListener('DOMContentLoaded', () => {
+    // Pirámide en Challenges
+    if (document.getElementById('pyramid-shape')) {
+      new GeometricShapes3D.Pyramid3D('pyramid-shape', {
+        size: 100,
+        color: 'rgba(201, 160, 32, 0.2)',
+        autoRotate: true
+      });
+    }
+    
+    // Octaedro en Certificaciones
+    if (document.getElementById('diamond-shape')) {
+      new GeometricShapes3D.Octahedron3D('diamond-shape', {
+        size: 110,
+        color: 'rgba(32, 201, 151, 0.2)',
+        autoRotate: true
+      });
+    }
+    
+    // Dodecaedro en Product Design
+    if (document.getElementById('dodeca-shape')) {
+      new GeometricShapes3D.SimpleDodecahedron3D('dodeca-shape', {
+        size: 100,
+        color: 'rgba(139, 92, 246, 0.2)',
+        autoRotate: true
+      });
+    }
+    
+    // Estrella en Testimonials
+    if (document.getElementById('star-shape')) {
+      new GeometricShapes3D.Star3D('star-shape', {
+        size: 100,
+        points: 5,
+        color: 'rgba(255, 215, 0, 0.3)',
+        autoRotate: true
+      });
+    }
+    
+    // Prisma Hexagonal en Skills
+    if (document.getElementById('hexprism-shape')) {
+      new GeometricShapes3D.HexagonalPrism3D('hexprism-shape', {
+        size: 80,
+        height: 100,
+        color: 'rgba(236, 72, 153, 0.2)',
+        autoRotate: true
+      });
+    }
+    
+    // Torus en Newsletter/Blog
+    if (document.getElementById('torus-shape')) {
+      new GeometricShapes3D.Torus3D('torus-shape', {
+        size: 120,
+        thickness: 30,
+        segments: 12,
+        color: 'rgba(59, 130, 246, 0.2)',
+        autoRotate: true
+      });
+    }
+  });
 </script>
 
 </body>
