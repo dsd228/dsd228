@@ -1,421 +1,105 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>David Sebastián Díaz - CV UX/UI Designer</title>
-    <style>
-        :root {
-            --cv-page-bg: #f3f4f6;
-            --cv-text: #1f2937;
-            --cv-card-bg: #ffffff;
-            --cv-muted: #374151;
-            --cv-gold: #D4AF37;
-        }
-
-        [data-theme="dark"] {
-            --cv-page-bg: #0b0b0c;
-            --cv-text: #f3f4f6;
-            --cv-card-bg: #121316;
-            --cv-muted: #e5e7eb;
-        }
-
-        /* Fondo "hundimiento" */
-        body.bg-pressed {
-            background: #e4e6eb;
-            box-shadow: inset 0 20px 60px rgba(0,0,0,0.12), inset 0 -20px 60px rgba(255,255,255,0.25);
-        }
-        [data-theme="dark"] body.bg-pressed {
-            background: #0a0a0c;
-            box-shadow: inset 0 20px 60px rgba(0,0,0,0.8), inset 0 -20px 60px rgba(255,255,255,0.05);
-        }
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: var(--cv-text);
-            background: var(--cv-page-bg);
-            padding: 20px;
-            transition: background 300ms ease, color 300ms ease;
-        }
-        
-        .cv-container {
-            max-width: 900px;
-            margin: 0 auto;
-            background: var(--cv-card-bg);
-            padding: 40px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.12);
-            border-radius: 8px;
-            transition: background 300ms ease, box-shadow 300ms ease;
-        }
-        
-        .header {
-            text-align: center;
-            margin-bottom: 30px;
-            border-bottom: 3px solid var(--cv-gold);
-            padding-bottom: 20px;
-        }
-        
-        .header h1 {
-            font-size: 32px;
-            color: var(--cv-text);
-            margin-bottom: 5px;
-        }
-        
-        .header p {
-            font-size: 18px;
-            color: var(--cv-gold);
-            font-weight: 600;
-            margin-bottom: 10px;
-        }
-        
-        .contact-info {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-            font-size: 13px;
-            color: var(--cv-muted);
-        }
-        
-        .section {
-            margin-bottom: 25px;
-        }
-        
-        .section-title {
-            font-size: 16px;
-            font-weight: 700;
-            color: var(--cv-text);
-            margin-bottom: 15px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid var(--cv-gold);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        
-        .summary {
-            background: #fef3c7;
-            padding: 15px;
-            border-left: 4px solid var(--cv-gold);
-            border-radius: 4px;
-            font-size: 14px;
-            line-height: 1.8;
-        }
-        [data-theme="dark"] .summary { background: #3a2e12; }
-        
-        .project {
-            margin-bottom: 20px;
-            padding: 15px;
-            background: #f9fafb;
-            border-left: 3px solid var(--cv-gold);
-            border-radius: 4px;
-        }
-        [data-theme="dark"] .project { background: #1b1c20; }
-        
-        .project-title {
-            font-weight: 700;
-            color: var(--cv-text);
-            font-size: 15px;
-            margin-bottom: 5px;
-        }
-        
-        .project-desc {
-            font-size: 13px;
-            color: var(--cv-muted);
-            margin-bottom: 5px;
-        }
-        
-        .project-result {
-            font-size: 12px;
-            color: var(--cv-gold);
-            font-weight: 600;
-        }
-        
-        .skills-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 15px;
-            margin-bottom: 15px;
-        }
-        
-        .skill-category {
-            background: #f3f4f6;
-            padding: 12px;
-            border-radius: 4px;
-        }
-        
-        .skill-category h4 {
-            font-size: 13px;
-            color: var(--cv-gold);
-            margin-bottom: 8px;
-            font-weight: 700;
-        }
-        
-        .skill-category ul {
-            list-style: none;
-            font-size: 12px;
-            color: var(--cv-muted);
-            line-height: 1.8;
-        }
-        
-        .skill-category li::before {
-            content: "✓ ";
-            color: var(--cv-gold);
-            font-weight: bold;
-        }
-        
-        .cert {
-            font-size: 13px;
-            margin-bottom: 8px;
-            color: var(--cv-muted);
-            padding-left: 20px;
-        }
-        
-        .cert::before {
-            content: "★ ";
-            color: var(--cv-gold);
-            position: absolute;
-            margin-left: -20px;
-        }
-        
-        .stat-badge {
-            display: inline-block;
-            background: var(--cv-gold);
-            color: var(--cv-text);
-            padding: 6px 12px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: 700;
-            margin-right: 10px;
-            margin-bottom: 10px;
-        }
-        
-        .download-button {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        
-        .btn-download {
-            background: var(--cv-gold);
-            color: var(--cv-text);
-            padding: 12px 30px;
-            border: none;
-            border-radius: 6px;
-            font-weight: 700;
-            cursor: pointer;
-            font-size: 14px;
-            transition: background 0.3s;
-        }
-        
-        .btn-download:hover {
-            background: #C9A020;
-        }
-        
-        @media (max-width: 768px) {
-            .cv-container {
-                padding: 20px;
-            }
-            
-            .skills-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-            
-            .contact-info {
-                flex-direction: column;
-                gap: 5px;
-            }
-        }
-        
-        @media print {
-            body {
-                background: white;
-                padding: 0;
-            }
-            
-            .cv-container {
-                box-shadow: none;
-                border-radius: 0;
-            }
-            
-            .download-button {
-                display: none;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>David Sebastián Díaz | UX/UI Designer</title>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #f3f4f6;
+      color: #1f2937;
+      padding: 24px;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: #ffffff;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.08);
+    }
+    h1 { font-size: 32px; }
+    h2 { margin-top: 32px; font-size: 18px; border-bottom: 2px solid #e5e7eb; padding-bottom: 6px;}
+    p { line-height: 1.7; font-size: 14px; }
+    ul { font-size: 14px; line-height: 1.7; }
+    .muted { color: #6b7280; }
+    .project { margin-top: 20px; }
+  </style>
 </head>
+
 <body>
-    <div class="cv-container">
-        <div class="download-button">
-            <button class="btn-download" onclick="window.print()">📥 Descargar CV (PDF)</button>
-            <button class="btn-download theme-toggle" style="margin-left: 8px;">🌙</button>
-        </div>
-        
-        <div class="header">
-            <h1>DAVID SEBASTIÁN DÍAZ</h1>
-            <p>UX/UI & Product Designer | Data Analytics | Strategic Design</p>
-            <div class="contact-info">
-                <span>📧 david.diaz.uxdata@gmail.com</span>
-                <span>💼 linkedin.com/in/david-sebastian-diaz</span>
-                <span>💻 github.com/dsd228</span>
-            </div>
-        </div>
-        
-        <div class="section">
-            <div class="section-title">Resumen Profesional</div>
-            <div class="summary">
-                Diseñador UX/UI multidisciplinario con expertise en investigación de usuarios, análisis de datos 
-                y estrategia de producto. Integro design thinking, data analytics y business intelligence para crear 
-                experiencias escalables que generan impacto real.
-                <div style="margin-top: 10px;">
-                    <span class="stat-badge">30+ Proyectos</span>
-                    <span class="stat-badge">5M+ Usuarios</span>
-                    <span class="stat-badge">18+ Certificaciones</span>
-                </div>
-            </div>
-        </div>
-        
-        <div class="section">
-            <div class="section-title">Proyectos Destacados</div>
-            
-            <div class="project">
-                <div class="project-title">🎯 NEXUS LOGISTICS - SaaS B2B Dashboard (7 semanas)</div>
-                <div class="project-desc"><strong>Desafío:</strong> Dashboard abrumador con 200+ campos. <strong>Solución:</strong> Arquitectura contextual: 30 campos críticos por rol. <strong>Impacto:</strong> ↑40% usabilidad, ↓30% training, +32 NPS, ↓68% tickets.</div>
-                <div class="project-result">200+ usuarios activos | SUS: 62→87 | Repo: github.com/dsd228/nexus-logistics-ui</div>
-            </div>
-            
-            <div class="project">
-                <div class="project-title">📱 PASEO App - Mobile MVP Validation (3 meses)</div>
-                <div class="project-desc"><strong>Desafío:</strong> Validar product-market fit antes de inversión. <strong>Solución:</strong> 30+ entrevistas + 20 testing sessions. <strong>Resultado:</strong> 92% satisfacción, NPS 78, PMF validado.</div>
-                <div class="project-result">92% user satisfaction | Roadmap validado | Lanzamiento exitoso</div>
-            </div>
+  <main class="container">
 
-            <div class="project">
-                <div class="project-title">📊 Apple Inc. 2025 UX KPIs Analysis - Data Visualization</div>
-                <div class="project-desc"><strong>Desafío:</strong> Benchmarking Fortune 500 UX strategy. <strong>Técnica:</strong> Python + data scraping + visualizaciones avanzadas. <strong>Impacto:</strong> Contenido viral, 5 insights estratégicos.</div>
-                <div class="project-result">50K+ views | 5K+ shares | 5 Strategic insights | Interactive Colab</div>
-            </div>
-            
-            <div class="project">
-                <div class="project-title">🎨 Yale UX Redesign - Architecture & UI</div>
-                <div class="project-desc"><strong>Desafío:</strong> Estructura caótica, baja encuentrabilidad. <strong>Solución:</strong> Reorganización de contenidos + sistema visual coherente. <strong>Resultado:</strong> ↑85% encuentrabilidad, ↓40% confusión.</div>
-                <div class="project-result">Arquitectura clara | Sistema visual coherente | Repo disponible</div>
-            </div>
+    <header>
+      <h1>David Sebastián Díaz</h1>
+      <p class="muted">UX/UI Designer Junior · Product Thinking · Figma</p>
+      <p class="muted">
+        Argentina · Remoto · 
+        <a href="https://www.linkedin.com/in/david-sebastian-diaz">LinkedIn</a> · 
+        <a href="https://dsd228.github.io/NeoProdUx-Product-UX-Portfolio/">Portfolio</a>
+      </p>
+    </header>
 
-            <div class="project">
-                <div class="project-title">🎭 School Art UX/UI - Education Redesign</div>
-                <div class="project-desc"><strong>Desafío:</strong> UI inconsistente, flujos complejos. <strong>Solución:</strong> Simplificación de flujos + claridad de IA. <strong>Resultado:</strong> ↑52% claridad IA, ↓38% fricción.</div>
-                <div class="project-result">↑ Claridad · ↑ Consistencia · ↓ Fricción | Behance portfolio</div>
-            </div>
+    <section>
+      <h2>Resumen</h2>
+      <p>
+        Diseñador UX/UI junior enfocado en diseño centrado en el usuario y pensamiento de producto.
+        Trabajo en proyectos conceptuales y de práctica real donde aplico research, arquitectura de la información,
+        wireframes y prototipos en Figma. Busco sumar experiencia colaborando con equipos reales
+        y seguir creciendo profesionalmente.
+      </p>
+    </section>
 
-            <div class="project">
-                <div class="project-title">🛡️ Fraud Detection ML - Data Science Pipeline</div>
-                <div class="project-desc"><strong>Dataset:</strong> 284K transacciones desbalanceado. <strong>Modelos:</strong> Logistic Regression, Random Forest, XGBoost. <strong>Deployado:</strong> En producción con dashboard interactivo.</div>
-                <div class="project-result">97% precision | Production-ready | Interactive dashboard</div>
-            </div>
-        </div>
-        
-        <div class="section">
-            <div class="section-title">Lo que Dicen mis Clientes</div>
-            
-            <div class="project" style="background: #fef3c7; border-left-color: var(--cv-gold);">
-                <div class="project-title" style="color: #D4AF37;">María González — CEO, SaaS Logistics</div>
-                <div class="project-desc">"David transformó completamente nuestra plataforma. Su enfoque en research y datos resultó en un aumento del 45% en conversión. Es designer + estratega."</div>
-            </div>
+    <section>
+      <h2>Proyectos UX/UI</h2>
 
-            <div class="project" style="background: #f3f4f6; border-left-color: #667eea;">
-                <div class="project-title" style="color: #667eea;">Carlos Méndez — Product Manager, E-Commerce</div>
-                <div class="project-desc">"Trabajar con David fue excepcional. Entiende de UX pero también de negocio. Sus análisis de datos llevaron nuestras decisiones de diseño al siguiente nivel."</div>
-            </div>
+      <div class="project">
+        <strong>Rediseño UX – Home Cerveza Antares (conceptual)</strong>
+        <p class="muted">
+          Análisis heurístico del sitio actual y rediseño conceptual de la home.
+          Enfoque en jerarquía visual, claridad del mensaje y experiencia de marca.
+        </p>
+      </div>
 
-            <div class="project" style="background: #f3f4f6; border-left-color: #20c997;">
-                <div class="project-title" style="color: #20c997;">Sofia Vargas — VP Design, FinTech Startup</div>
-                <div class="project-desc">"David no solo diseña interfaces hermosas. Vuelve complejas las cosas simples. Su framework de research validó hipótesis que otros equipos habían dado por hechas."</div>
-            </div>
-        </div>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h4>UX & PRODUCTO</h4>
-                    <ul>
-                        <li>UX Research & Testing</li>
-                        <li>Product Strategy</li>
-                        <li>Design Systems</li>
-                        <li>Data-Informed Design</li>
-                        <li>Usability Testing</li>
-                    </ul>
-                </div>
-                
-                <div class="skill-category">
-                    <h4>UI & VISUAL</h4>
-                    <ul>
-                        <li>Neumorphism</li>
-                        <li>Glassmorphism</li>
-                        <li>Interaction Design</li>
-                        <li>Accesibilidad WCAG</li>
-                        <li>Microinteracciones</li>
-                    </ul>
-                </div>
-                
-                <div class="skill-category">
-                    <h4>TECH & ANALYTICS</h4>
-                    <ul>
-                        <li>Figma (Expert)</li>
-                        <li>HTML/CSS (Expert)</li>
-                        <li>Python (Advanced)</li>
-                        <li>Data Analytics</li>
-                        <li>SQL & BI Tools</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        
-        <div class="section">
-            <div class="section-title">Certificaciones Profesionales</div>
-            
-            <h4 style="font-size: 12px; color: #D4AF37; margin-top: 10px; margin-bottom: 8px;">GOOGLE CERTIFIED</h4>
-            <div class="cert">Google UX Design Professional Certificate (May 2025)</div>
-            <div class="cert">Google Advanced Data Analytics Certificate (Jul 2025)</div>
-            <div class="cert">Google Business Intelligence Certificate (May 2025)</div>
-            <div class="cert">Google Digital Marketing & E-Commerce (May 2025)</div>
-            
-            <h4 style="font-size: 12px; color: #D4AF37; margin-top: 15px; margin-bottom: 8px;">IBM & COURSERA CERTIFIED</h4>
-            <div class="cert">IBM UI/UX Designer Professional Certificate V2 (Nov 2025)</div>
-            <div class="cert">Capstone: Applying UI/UX Design in the Real World (Nov 2025)</div>
-            <div class="cert">UX Research and Information Architecture (Nov 2025)</div>
-            
-            <h4 style="font-size: 12px; color: #D4AF37; margin-top: 15px; margin-bottom: 8px;">TECHNOLOGY & INNOVATION</h4>
-            <div class="cert">Generative AI Essentials (Jul 2025)</div>
-            <div class="cert">Artificial Intelligence Essentials V2 (Jul 2025)</div>
-            <div class="cert">Software Engineering Essentials (Jul 2025)</div>
-            <div class="cert">Introduction to Agile Development and Scrum (Nov 2025)</div>
-            
-            <h4 style="font-size: 12px; color: #D4AF37; margin-top: 15px; margin-bottom: 8px;">CISCO NETWORKING & SECURITY</h4>
-            <div class="cert">Introduction to Cybersecurity (Mar 2025)</div>
-            <div class="cert">Networking Basics (Mar 2025)</div>
-            <div class="cert">Python Essentials 1 & 2 (Mar 2025)</div>
-        </div>
-        
-        <div class="section">
-            <div class="section-title">Metodología de Trabajo</div>
-            <p style="font-size: 13px; margin-bottom: 10px;">
-                <strong>1. DISCOVERY & RESEARCH:</strong> User interviews, competitive analysis, data-driven personas
-            </p>
-            <p style="font-size: 13px; margin-bottom: 10px;">
-                <strong>2. STRATEGY & DESIGN:</strong> Information architecture, wireframing, design systems
-            </p>
-            <p style="font-size: 13px; margin-bottom: 10px;">
-                <strong>3. TESTING & VALIDATION:</strong> Usability testing, A/B testing, analytics
-            </p>
-            <p style="font-size: 13px;">
-                <strong>4. LAUNCH & OPTIMIZE:</strong> Launch strategy, performance monitoring, KPIs
-            </p>
-        </div>
-    </div>
-    <script src="js/main.js"></script>
-    <script src="js/main.js"></script>
+      <div class="project">
+        <strong>Product Page UX – Proyecto personal</strong>
+        <p class="muted">
+          Diseño de página de producto aplicando principios de usabilidad,
+          escaneabilidad visual y llamados a la acción claros.
+        </p>
+      </div>
+
+      <div class="project">
+        <strong>Arquitectura de la Información – Caso educativo</strong>
+        <p class="muted">
+          Reorganización de contenidos y flujos para mejorar encontrabilidad
+          y reducir fricción en navegación.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Habilidades</h2>
+      <ul>
+        <li>UX Research básico</li>
+        <li>User Flows</li>
+        <li>Wireframes y Prototipos</li>
+        <li>Figma</li>
+        <li>Arquitectura de la Información</li>
+        <li>Principios de Usabilidad</li>
+        <li>UI Design</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Formación</h2>
+      <p class="muted">
+        Formación autodidacta en UX/UI Design y Product Design.
+        Práctica constante con proyectos reales y conceptuales.
+      </p>
+    </section>
+
+  </main>
 </body>
 </html>
