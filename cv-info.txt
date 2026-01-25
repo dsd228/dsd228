@@ -1,56 +1,38 @@
-David Sebastián Díaz – Product & UX Designer
-Phone: +54 3525 300076
-Email: david.diaz.uxdata@gmail.com
-LinkedIn: linkedin.com/in/david-sebastian-diaz
-Portfolio: dsd228.github.io/NeoProdUx-Product-UX-Portfolio/
-Professional Summary
-Product & UX Designer focused on creating data-informed digital experiences that solve real user problems and support measurable business outcomes. Experienced in simplifying complex flows, improving UI clarity, and reducing friction to help users complete tasks more easily and with fewer errors. Skilled in research, prototyping, usability testing, and product optimization within fast-paced, user-centered environments.
-Professional Experience
-UX/Product Designer — Freelance / Self-Employed (2023 – Present)
-•	Led end-to-end UX research and product design across web and mobile interfaces.
-•	Simplified key user flows and improved UI clarity, reducing friction and supporting higher task completion rates with fewer user errors.
-•	Created wireframes, prototypes, and high-fidelity designs validated through usability testing.
-•	Collaborated with stakeholders to define goals, KPIs, and product priorities.
-•	Developed scalable, accessible design systems aligned with WCAG standards.
-Cooperativa Puerto Deseado — Administrative & Customer Service (Dec 2019 – Mar 2022)
-•	Improved administrative workflows, reducing processing times and minimizing documentation errors.
-•	Delivered customer support and resolved inquiries with high satisfaction.
-•	Collaborated with cross-functional teams to enhance operational efficiency.
-Skills
-UX & Product Skills:
-•	User research, interviews, and usability testing
-•	User journey mapping, information architecture
-•	Wireframing, prototyping, UI/UX design
-•	Product thinking, KPI definition, A/B testing
-•	Design systems, accessibility (WCAG)
-Technical Skills:
-•	Figma, HTML, CSS, JavaScript (intermediate)
-•	Python for analytics, SQL
-•	Git, responsive design
-Soft Skills:
-•	Effective communication and teamwork
-•	Task management and organization
-•	Fast learning and adaptability
-Key Achievements
-•	Delivered 30+ UX/product projects with measurable improvements in usability and task efficiency.
-•	Successfully integrated UX methods with data analytics to optimize user flows and reduce friction.
-•	Developed maintainable design systems and improved clarity across multiple interfaces.
-Education & Training
-•	Training in UX Design, Product Design, Data Analytics, Digital Marketing, and Virtual Assistance.
-•	Self-directed learning in human-centered design and digital tools.
+Nombre: David Sebastián Díaz
+Rol: Diseñador UX/UI Junior / Product Designer
+Ubicación: Argentina
+Modalidad: Remoto
 
+LinkedIn: https://www.linkedin.com/in/david-sebastian-diaz
+Portfolio: https://dsd228.github.io/NeoProdUx-Product-UX-Portfolio/
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+RESUMEN PROFESIONAL
+Diseñador UX/UI junior enfocado en diseño centrado en el usuario y pensamiento de producto. 
+Experiencia en análisis heurístico, arquitectura de la información y creación de wireframes, mockups y prototipos en Figma. 
+Interesado en colaborar con equipos reales para mejorar experiencias digitales claras, accesibles y orientadas a objetivos de negocio.
 
-CONTACTO & ENLACES
+HABILIDADES
+UX Research
+User Flows
+Wireframes
+Prototipado
+Figma
+Heurísticas de Nielsen
+Arquitectura de la Información
+Design Systems básicos
+Accesibilidad
+Pensamiento de Producto
+UI Design
+Análisis UX/UI
 
-🔗 Portfolio: dsd228.github.io
-📧 Email: david.diaz.uxdata@gmail.com
-💼 LinkedIn: linkedin.com/in/david-sebastian-diaz
-💻 GitHub: github.com/dsd228
-🏆 Credly: credly.com/users/david-sebastian-diaz
+EXPERIENCIA RELEVANTE
+Diseñador UX/UI – Proyectos conceptuales
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+- Análisis UX/UI de sitios web reales identificando oportunidades de mejora en navegación, jerarquía visual y claridad del mensaje.
+- Rediseño conceptual de páginas home con foco en experiencia de usuario, identidad de marca y conversión.
+- Creación de wireframes, mockups y prototipos funcionales en Figma.
+- Justificación de decisiones de diseño basadas en principios UX y buenas prácticas de usabilidad.
 
-Disponible para consultas, proyectos y colaboraciones.
-Enfoque: Diseño centrado en usuario + impacto de negocio medible.
+EDUCACIÓN Y FORMACIÓN
+Formación autodidacta en UX/UI Design y Product Design.
+Cursos, práctica constante y desarrollo de proyectos reales para portfolio.
