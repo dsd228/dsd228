@@ -1,396 +1,44 @@
-DAVID SEBASTIÁN DÍAZ
-UX/UI & Product Designer | Data Analytics | Strategic Design
+David Sebastián Díaz – Product & UX Designer
+Phone: +54 3525 300076
+Email: david.diaz.uxdata@gmail.com
+LinkedIn: linkedin.com/in/david-sebastian-diaz
+Portfolio: dsd228.github.io/NeoProdUx-Product-UX-Portfolio/
+Professional Summary
+Product & UX Designer focused on creating data-informed digital experiences that solve real user problems and support measurable business outcomes. Experienced in simplifying complex flows, improving UI clarity, and reducing friction to help users complete tasks more easily and with fewer errors. Skilled in research, prototyping, usability testing, and product optimization within fast-paced, user-centered environments.
+Professional Experience
+UX/Product Designer — Freelance / Self-Employed (2023 – Present)
+•	Led end-to-end UX research and product design across web and mobile interfaces.
+•	Simplified key user flows and improved UI clarity, reducing friction and supporting higher task completion rates with fewer user errors.
+•	Created wireframes, prototypes, and high-fidelity designs validated through usability testing.
+•	Collaborated with stakeholders to define goals, KPIs, and product priorities.
+•	Developed scalable, accessible design systems aligned with WCAG standards.
+Cooperativa Puerto Deseado — Administrative & Customer Service (Dec 2019 – Mar 2022)
+•	Improved administrative workflows, reducing processing times and minimizing documentation errors.
+•	Delivered customer support and resolved inquiries with high satisfaction.
+•	Collaborated with cross-functional teams to enhance operational efficiency.
+Skills
+UX & Product Skills:
+•	User research, interviews, and usability testing
+•	User journey mapping, information architecture
+•	Wireframing, prototyping, UI/UX design
+•	Product thinking, KPI definition, A/B testing
+•	Design systems, accessibility (WCAG)
+Technical Skills:
+•	Figma, HTML, CSS, JavaScript (intermediate)
+•	Python for analytics, SQL
+•	Git, responsive design
+Soft Skills:
+•	Effective communication and teamwork
+•	Task management and organization
+•	Fast learning and adaptability
+Key Achievements
+•	Delivered 30+ UX/product projects with measurable improvements in usability and task efficiency.
+•	Successfully integrated UX methods with data analytics to optimize user flows and reduce friction.
+•	Developed maintainable design systems and improved clarity across multiple interfaces.
+Education & Training
+•	Training in UX Design, Product Design, Data Analytics, Digital Marketing, and Virtual Assistance.
+•	Self-directed learning in human-centered design and digital tools.
 
-📍 Colonia Caroya, Argentina
-📧 david.diaz.uxdata@gmail.com
-🔗 linkedin.com/in/david-sebastian-diaz
-💻 github.com/dsd228
-🏆 credly.com/users/david-sebastian-diaz
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-RESUMEN PROFESIONAL
-
-Diseñador UX/UI multidisciplinario con expertise en investigación de usuarios, 
-análisis de datos y estrategia de producto. Integro design thinking, data analytics 
-y business intelligence para crear experiencias escalables que generan impacto real.
-
-Especialidad: Transformar productos complejos en soluciones claras, data-driven.
-
-ESTADÍSTICAS CLAVE
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-30+ Proyectos completados
-5M+ Usuarios impactados  
-18+ Certificaciones profesionales
-+35% Mejora promedio en conversión
-6 Testimonios verificados en LinkedIn
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-EXPERIENCIA DESTACADA - PROYECTOS EN PROFUNDIDAD
-
-🎯 NEXUS LOGISTICS - SaaS B2B (7 SEMANAS)
-   Desafío: Dashboard caótico con 200+ campos, 4+ semanas training, baja adopción
-   Solución: Arquitectura contextual (30 campos críticos por rol), design system
-   
-   Mi Proceso:
-   ├─ Discovery (2 sem): 15 entrevistas + análisis de tareas críticas
-   ├─ Strategy (1 sem): Arquitectura + prioridades
-   ├─ Design (3 sem): Wireframes + high-fidelity + componentes
-   └─ Testing (1 sem): 8 sesiones usability testing
-   
-   Impacto Comprobado:
-   ✓ ↑ 40% Usabilidad (SUS: 62 → 87)
-   ✓ ↓ 30% Tiempo de training (4.2 → 2.9 semanas)
-   ✓ +32 Puntos NPS (42 → 74)
-   ✓ ↓ 68% Reducción en tickets de soporte
-   ✓ 200+ usuarios activos operando diariamente
-   
-   Tech: Figma, Design System, HTML/CSS
-   Links: github.com/dsd228/nexus-logistics-ui | Demo Figma disponible
-
-🎯 PASEO APP - MOBILE MVP VALIDATION (3 MESES)
-   Desafío: Validar product-market fit antes de inversión en desarrollo full
-   Solución: 30+ entrevistas + 20 testing sessions + iteración rápida
-   
-   Mi Proceso:
-   ├─ Discovery (4 sem): Entrevistas + pain point analysis
-   ├─ Prototipado: Figma + interactive prototype
-   ├─ Testing (5 sem): 20 sesiones con usuarios reales
-   └─ Roadmap: Prioridades validadas para próxima fase
-   
-   Impacto Comprobado:
-   ✓ 92% User Satisfaction (Testing)
-   ✓ NPS 78 (Promoter)
-   ✓ Product-Market Fit VALIDADO
-   ✓ Lanzamiento exitoso con usuarios beta
-   
-   Tech: Figma, UX Research, User Testing
-   Links: github.com/dsd228/dsd228-paseo-ux-case-study
-
-🎯 APPLE INC. 2025 UX KPIs ANALYSIS - DATA VISUALIZATION
-   Desafío: Benchmarking Fortune 500 UX strategy con data-driven insights
-   Solución: Python scraping + visualizaciones avanzadas + strategic analysis
-   
-   Mi Proceso:
-   ├─ Data Collection: Web scraping + 5K+ datapoints
-   ├─ Analysis: Pandas + statistical insights
-   ├─ Visualization: Matplotlib, Seaborn, Plotly
-   └─ Strategy: 5 Key patterns en Apple's UX playbook
-   
-   Impacto:
-   ✓ 50K+ Views (Viral)
-   ✓ 5K+ Shares (Content engagement)
-   ✓ 5 Strategic Insights extraídos
-   ✓ Reproducible Colab notebook
-   
-   Tech: Python, Data Analysis, Visualization, Analytics
-   Links: github.com/dsd228/-Apple-Inc.-2025-UX-KPIs-Innovation-Strategy
-
-🎯 YALE UX REDESIGN - ARCHITECTURE & UI
-   Desafío: Estructura caótica, baja encuentrabilidad, poco clarity visual
-   Solución: Reorganización completa + sistema visual coherente
-   
-   Resultados:
-   ✓ ↑ 85% Encuentrabilidad
-   ✓ ↓ 40% Confusión
-   ✓ Sistema visual coherente
-   
-   Tech: Figma, Architecture, UI Design
-   Links: github.com/dsd22/yale-ux-redesign
-
-🎯 SCHOOL ART UX/UI REDESIGN - EDUCATION
-   Desafío: UI inconsistente, flujos complejos, alto drop-off
-   Solución: Simplificación de flujos + claridad de IA
-   
-   Resultados:
-   ✓ ↑ 52% Claridad IA
-   ✓ ↓ 38% Fricción
-   ✓ Flujos intuitivos
-   
-   Tech: Figma, UI Design, Interaction Design
-   Links: behance.net/gallery/240418895/School-Art-UXUI-Redesign
-
-🎯 FRAUD DETECTION ML - DATA SCIENCE PIPELINE
-   Dataset: 284K transacciones (desbalanceado)
-   Modelos: Logistic Regression, Random Forest, XGBoost
-   
-   Resultados:
-   ✓ 97% Precision
-   ✓ Production-ready
-   ✓ Interactive dashboard deployado
-   
-   Tech: Python, Scikit-learn, XGBoost, Pandas, Plotly
-   Links: github.com/dsd228/credit-card-fraud-detection
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-EXPERTISE & HABILIDADES
-
-UX & PRODUCT DESIGN
-✓ UX Research & Discovery (Expert)
-✓ Product Strategy & Vision (Expert)
-✓ Design Systems (Expert)
-✓ Usability Testing & Validation (Expert)
-✓ Journey Mapping & Roadmaps (Advanced)
-✓ Data-Informed Decision Making (Advanced)
-
-UI & VISUAL DESIGN
-✓ Neumorphism (Signature Style) — Expert
-✓ Glassmorphism (Advanced)
-✓ Interaction Design (Expert)
-✓ Accessibility WCAG (Advanced)
-✓ Microinteracciones (Advanced)
-
-TECHNOLOGY & ANALYTICS
-✓ Figma (Expert) | HTML/CSS (Expert)
-✓ Python (Advanced) | Data Analytics (Advanced)
-✓ SQL & BI Tools (Advanced)
-✓ Git & Responsive Development (Advanced)
-✓ Adobe Creative Suite (Intermediate)
-✓ JavaScript (Intermediate)
-
-HERRAMIENTAS PRIMARIAS
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-DESIGN: Figma, Adobe XD, Sketch
-DATA: Python, Pandas, SQL, Tableau, Power BI
-CODE: HTML5, CSS3, JavaScript, Git
-AI-ASSISTED: ChatGPT, Cursor, Claude para analysis & ideation
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-CERTIFICACIONES PROFESIONALES (18+ en Credly)
-
-GOOGLE CERTIFIED
-✓ Google UX Design Professional Certificate (May 2025)
-✓ Google Advanced Data Analytics Certificate (Jul 2025)
-✓ Google Business Intelligence Certificate (May 2025)
-✓ Google Digital Marketing & E-Commerce (May 2025)
-
-IBM & COURSERA CERTIFIED
-✓ IBM UI/UX Designer Professional Certificate V2 (Nov 2025)
-✓ Capstone: Applying UI/UX Design in the Real World (Nov 2025)
-✓ UX Research and Information Architecture (Nov 2025)
-
-TECHNOLOGY & INNOVATION
-✓ Generative AI Essentials (Jul 2025)
-✓ Artificial Intelligence Essentials V2 (Jul 2025)
-✓ Software Engineering Essentials (Jul 2025)
-✓ Introduction to Agile Development and Scrum (Nov 2025)
-
-NETWORKING & SECURITY (CISCO)
-✓ Introduction to Cybersecurity (Mar 2025)
-✓ Networking Basics (Mar 2025)
-✓ Python Essentials 1 & 2 (Mar 2025)
-
-MARKETING & ANALYTICS
-✓ Advanced Google Analytics (Tracking & Measurement)
-✓ Funnel Analysis & Customer Journey Optimization
-
-TOTAL: 18+ Certificaciones verificadas en credly.com/users/david-sebastian-diaz
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-LO QUE DICEN MIS CLIENTES
-
-"David transformó completamente nuestra plataforma. Su enfoque en research y datos 
-resultó en un aumento del 45% en conversión. Es designer + estratega."
-— María González, CEO SaaS Logistics
-
-"Trabajar con David fue excepcional. Entiende de UX pero también de negocio. 
-Sus análisis de datos llevaron nuestras decisiones de diseño al siguiente nivel."
-— Carlos Méndez, Product Manager E-Commerce
-
-"Su capacidad de integrar UX Research con Analytics es única. No es solo que diseñe 
-bien, es que demuestra el impacto de cada decisión."
-— Laura Martínez, Design Director HealthTech
-
-"David no solo diseña interfaces hermosas. Vuelve complejas las cosas simples. 
-Su framework de research validó hipótesis que otros equipos habían dado por hechas."
-— Sofia Vargas, VP Design FinTech Startup
-
-"El dashboard que David rediseñó es 60% más rápido de usar. Menos clics, menos 
-confusión. Nuestro equipo de ventas cierra deals 40% más rápido."
-— José López, CTO AgTech Platform
-
-"No es solo un diseñador. Es un socio estratégico. Desde research hasta validación, 
-David entendió nuestro negocio mejor que nosotros mismos. +92% satisfacción."
-— Alejandra Ruiz, Founder EdTech Startup
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-METODOLOGÍA DE TRABAJO
-
-Aplico un framework de 4 fases en cada proyecto, adaptado al contexto:
-
-1️⃣ DISCOVERY & RESEARCH (2-3 SEMANAS)
-   └─ User interviews (15-30 sesiones)
-   └─ Competitive analysis & benchmarking
-   └─ Data exploration & metrics baseline
-   └─ Insights consolidation & personas
-
-2️⃣ STRATEGY & DESIGN (1-3 SEMANAS)
-   └─ Information architecture & wireframing
-   └─ Design system creation & components
-   └─ Prototyping & iteración basada en feedback
-   └─ Documentación completa
-
-3️⃣ TESTING & VALIDATION (1-2 SEMANAS)
-   └─ Usability testing sessions (8-12 usuarios)
-   └─ A/B testing setup & analysis
-   └─ Analytics integration & KPI tracking
-   └─ Iterative improvements
-
-4️⃣ LAUNCH & OPTIMIZE (ONGOING)
-   └─ Launch strategy & rollout plan
-   └─ Performance monitoring
-   └─ User feedback loop
-   └─ Continuous improvement cycle
-
-FILOSOFÍA: "Datos + Empatía + Escalabilidad"
-No diseño solo interfaces bonitas. Diseño soluciones que crecen con el negocio.
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-SERVICIOS OFERECIDOS
-
-✓ DISCOVERY RESEARCH (2-3 semanas)
-  → Entrevistas + análisis competitivo + estudios para definir problemas
-
-✓ PRODUCT STRATEGY (1 semana)
-  → OKRs + métricas + roadmap + propuesta de valor
-
-✓ UX/UI DESIGN (3-4 semanas)
-  → Flujos + IA + wireframes + visual design + microinteracciones
-
-✓ DESIGN SYSTEM (2-3 semanas)
-  → Componentes + tokens + guías + escalabilidad
-
-✓ VALIDACIÓN & TESTING (1-2 semanas)
-  → Prototipos + usability tests + A/B testing + análisis
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-CONTACTO & ENLACES
-
-🔗 PORTAFOLIO: dsd228.github.io/dsd228
-   → 7 casos de estudio en profundidad
-   → 6 testimonios verificados
-   → FAQ interactivo
-   → Newsletter con Design Playbook
-
-📧 EMAIL: david.diaz.uxdata@gmail.com
-   → Para consultas generales
-   → Respuesta dentro de 24h
-
-💼 LINKEDIN: linkedin.com/in/david-sebastian-diaz
-   → 500+ conexiones
-   → Recomendaciones de clientes
-   → Contenido sobre UX & Product Design
-
-💻 GITHUB: github.com/dsd228
-   → 30+ proyectos públicos
-   → Código + documentación
-   → Active contributions
-
-🏆 CREDLY: credly.com/users/david-sebastian-diaz
-   → 18+ certificaciones verificadas
-   → Badges de Google, IBM, Cisco
-
-📅 AGENDAR: calendly.com/david-sebastian-diaz
-   → Consulta estratégica 30 min (Gratis)
-   → Calendarios flexible LATAM
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-DISPONIBILIDAD
-
-✓ Proyectos: Disponible para nuevos engagements
-✓ Consultoría: 1-on-1 strategic calls
-✓ Mentoría: Acompañamiento de equipos de diseño
-✓ Formato: Remote (preferido) + Presencial (LATAM)
-✓ Horario: Flexible, time zone LATAM
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-ACTUALIZADO: ENERO 2026
-
-Diseño centrado en usuario. Impacto de negocio medible.
-
-
-
-UX & PRODUCT
-✓ UX Research & User Testing
-✓ Product Strategy & Thinking
-✓ Design Systems & Scaling
-✓ Data-Informed Decision Making
-✓ Usability Testing & Validation
-
-UI & VISUAL DESIGN
-✓ Neumorphism (Signature Style)
-✓ Glassmorphism & Modern Design
-✓ Interaction Design & Microinteractions
-✓ Accessibility (WCAG Compliance)
-✓ Responsive Design & Animation
-
-TECHNOLOGY & ANALYTICS
-✓ Figma (Expert) | HTML/CSS (Expert)
-✓ Python (Advanced) | Data Analytics (Advanced)
-✓ SQL | Business Intelligence Tools
-✓ Git | Responsive Development
-✓ Adobe Creative Suite
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-CERTIFICACIONES PROFESIONALES
-
-GOOGLE CERTIFIED
-→ Google UX Design Professional Certificate (May 2025)
-→ Google Advanced Data Analytics Certificate (Jul 2025)
-→ Google Business Intelligence Certificate (May 2025)
-→ Google Digital Marketing & E-Commerce (May 2025)
-
-IBM & COURSERA CERTIFIED
-→ IBM UI/UX Designer Professional Certificate V2 (Nov 2025)
-→ Capstone: Applying UI/UX Design in the Real World (Nov 2025)
-→ UX Research and Information Architecture (Nov 2025)
-
-TECHNOLOGY & INNOVATION
-→ Generative AI Essentials (Jul 2025)
-→ Artificial Intelligence Essentials V2 (Jul 2025)
-→ Software Engineering Essentials (Jul 2025)
-→ Introduction to Agile Development and Scrum (Nov 2025)
-
-NETWORKING & SECURITY (CISCO)
-→ Introduction to Cybersecurity (Mar 2025)
-→ Networking Basics (Mar 2025)
-→ Python Essentials 1 & 2 (Mar 2025)
-
-+ 18 certificaciones totales en Credly
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-METODOLOGÍA DE TRABAJO
-
-1️⃣ DISCOVERY & RESEARCH
-   - User interviews & competitive analysis
-   - Data-driven insights & personas
-   - Problem validation
-
-2️⃣ STRATEGY & DESIGN
-   - Information architecture & wireframing
-   - Design systems & component library
-   - Interactive prototyping
-
-3️⃣ TESTING & VALIDATION
-   - Usability testing sessions
-   - A/B testing & analytics
-   - Iterative improvements
-
-4️⃣ LAUNCH & OPTIMIZE
-   - Launch strategy & rollout
-   - Performance monitoring
-   - Continuous improvement based on KPIs
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
