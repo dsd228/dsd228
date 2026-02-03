@@ -3,186 +3,712 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-  <title>David Sebastián Díaz — UX/UI · Product Designer</title>
-    <meta name="description"
-      content="UX/UI · Product Designer que investiga, diseña y valida productos digitales end‑to‑end con impacto medible.">
+  
+  <title>David Sebastián Díaz — UX/UI & Product Designer</title>
+  <meta name="description" content="Diseñador de Producto UX/UI con enfoque estratégico, investigación profunda y diseño basado en datos.">
   
   <!-- SEO Meta Tags -->
-  <meta name="keywords" content="UX/UI Designer, Product Designer, UX Research, Data Analytics, Portfolio">
+  <meta name="keywords" content="UX Designer, Product Designer, UX Research, Data-Driven Design">
   <meta name="author" content="David Sebastián Díaz">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta property="og:title" content="David Sebastián Díaz — UX/UI · Product Designer">
-  <meta property="og:description" content="UX/UI · Product Designer que investiga, diseña y valida productos con impacto medible.">
+  <meta property="og:title" content="David Sebastián Díaz — UX/UI & Product Designer">
+  <meta property="og:description" content="Diseñador de Producto con enfoque estratégico, investigación profunda y diseño basado en datos.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://dsd228.github.io">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="David Sebastián Díaz — UX/UI · Product Designer">
-  <meta name="twitter:description" content="UX/UI · Product Designer: investigo, diseño y valido productos end‑to‑end.">
   
-  <!-- Schema Markup - Person & Professional -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "David Sebastián Díaz",
-    "url": "https://dsd228.github.io",
-    "jobTitle": "UX/UI · Product Designer",
-    "description": "UX/UI · Product Designer que investiga, diseña y valida productos digitales end‑to‑end con impacto medible",
-    "email": "david.diaz.uxdata@gmail.com",
-    "sameAs": [
-      "https://linkedin.com/in/david-sebastian-diaz",
-      "https://github.com/dsd228",
-      "https://www.credly.com/users/david-sebastian-diaz"
-    ],
-    "knowsAbout": ["UX Research", "Product Strategy", "Data Analytics", "Design Systems", "UI Design", "User Testing"]
-  }
-  </script>
-
-  <!-- Schema Markup - Portfolio/Professional Service -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "David Sebastián Díaz Portfolio",
-    "description": "UX/UI · Product Designer: portfolio profesional con enfoque end‑to‑end (investigar, diseñar y validar) y 30+ proyectos completados",
-    "url": "https://dsd228.github.io",
-    "serviceType": "UX/UI · Product Design, Product Strategy, User Research",
-    "areaServed": "Global",
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Servicios de UX/UI · Product Design",
-      "itemListElement": [
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Discovery Research",
-            "description": "Entrevistas, análisis competitivo y estudios para definir problemas y oportunidades."
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Product Strategy",
-            "description": "Definición de objetivos, métricas, roadmap y propuesta de valor."
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "UX/UI Design",
-            "description": "Flujos, IA, wireframes, diseño visual y micro‑interacciones con accesibilidad."
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Design System",
-            "description": "Componentes, tokens y guías para escala y coherencia."
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Validación & Testing",
-            "description": "Prototipos, tests de usabilidad y A/B para reducir riesgo y mejorar conversión."
-          }
-        }
-      ]
-    }
-  }
-  </script>
-
-  <!-- Performance Optimization -->
+  <!-- Fonts estilo Velasca -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
-  <link rel="preload" as="style" href="assets/css/styles.css">
-
-  <!-- Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
   <!-- Icons -->
   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="assets/css/styles.css">
-  <link rel="stylesheet" href="assets/css/3d-animations.css">
+  
+  <!-- CSS estilo Velasca -->
+  <style>
+    /* ================= RESET & VARIABLES ================= */
+    :root {
+      --white: #ffffff;
+      --black: #000000;
+      --beige: #F5F3EF;
+      --dark-beige: #E8E4DC;
+      --gray: #4A4A4A;
+      --light-gray: #9A9A9A;
+      --accent: #8B7355; /* Oro/beige oscuro estilo Velasca */
+      --accent-dark: #6B5A45;
+      --border: rgba(0,0,0,0.08);
+      --shadow: 0 4px 20px rgba(0,0,0,0.05);
+      
+      --font-serif: 'Playfair Display', serif;
+      --font-sans: 'Inter', sans-serif;
+      
+      --container: 1200px;
+      --spacing-xs: 8px;
+      --spacing-sm: 16px;
+      --spacing-md: 32px;
+      --spacing-lg: 64px;
+      --spacing-xl: 96px;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    body {
+      font-family: var(--font-sans);
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--gray);
+      background: var(--white);
+      overflow-x: hidden;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+      font-family: var(--font-serif);
+      font-weight: 500;
+      line-height: 1.2;
+      color: var(--black);
+      letter-spacing: -0.5px;
+    }
+    
+    h1 {
+      font-size: 3.5rem;
+      font-weight: 500;
+      letter-spacing: -1px;
+    }
+    
+    h2 {
+      font-size: 2.5rem;
+      font-weight: 500;
+      margin-bottom: var(--spacing-md);
+    }
+    
+    h3 {
+      font-size: 1.5rem;
+      font-weight: 500;
+      margin-bottom: var(--spacing-sm);
+    }
+    
+    p {
+      margin-bottom: var(--spacing-sm);
+      color: var(--gray);
+      line-height: 1.7;
+    }
+    
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    
+    ul {
+      list-style: none;
+    }
+    
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+    
+    .container {
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 0 var(--spacing-md);
+    }
+    
+    .section-padding {
+      padding: var(--spacing-xl) 0;
+    }
+    
+    /* ================= NAVIGATION ================= */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: var(--white);
+      z-index: 1000;
+      border-bottom: 1px solid var(--border);
+      padding: 20px 0;
+      backdrop-filter: blur(10px);
+    }
+    
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .nav-logo {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      font-weight: 500;
+      color: var(--black);
+      letter-spacing: -0.5px;
+    }
+    
+    .nav-menu {
+      display: flex;
+      gap: var(--spacing-lg);
+    }
+    
+    .nav-link {
+      font-family: var(--font-sans);
+      font-size: 0.9rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--gray);
+      position: relative;
+      padding: 8px 0;
+    }
+    
+    .nav-link:hover {
+      color: var(--accent);
+    }
+    
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: var(--accent);
+      transition: width 0.3s ease;
+    }
+    
+    .nav-link:hover::after {
+      width: 100%;
+    }
+    
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-sm);
+    }
+    
+    .theme-toggle {
+      background: none;
+      border: none;
+      font-size: 1.2rem;
+      cursor: pointer;
+      color: var(--gray);
+      padding: 8px;
+    }
+    
+    .nav-toggle {
+      display: none;
+    }
+    
+    /* ================= HERO ================= */
+    .hero {
+      padding: 180px 0 120px;
+      background: var(--beige);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero-content {
+      max-width: 700px;
+    }
+    
+    .hero-subtitle {
+      font-size: 1.2rem;
+      font-weight: 300;
+      color: var(--gray);
+      margin: var(--spacing-md) 0;
+      max-width: 500px;
+    }
+    
+    .hero-stats {
+      display: flex;
+      gap: var(--spacing-lg);
+      margin: var(--spacing-lg) 0;
+      padding-top: var(--spacing-md);
+      border-top: 1px solid var(--border);
+    }
+    
+    .stat {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .stat-number {
+      font-family: var(--font-serif);
+      font-size: 2rem;
+      font-weight: 500;
+      color: var(--accent);
+    }
+    
+    .stat-label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--light-gray);
+      margin-top: 4px;
+    }
+    
+    .hero-buttons {
+      display: flex;
+      gap: var(--spacing-sm);
+      margin-top: var(--spacing-lg);
+    }
+    
+    /* ================= BUTTONS ================= */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px 32px;
+      font-family: var(--font-sans);
+      font-size: 0.9rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border: 1px solid var(--black);
+      background: var(--black);
+      color: var(--white);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      gap: 8px;
+    }
+    
+    .btn:hover {
+      background: var(--accent);
+      border-color: var(--accent);
+      transform: translateY(-2px);
+    }
+    
+    .btn-outline {
+      background: transparent;
+      color: var(--black);
+    }
+    
+    .btn-outline:hover {
+      background: var(--black);
+      color: var(--white);
+    }
+    
+    /* ================= SECTIONS ================= */
+    .section-header {
+      text-align: center;
+      margin-bottom: var(--spacing-xl);
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .section-subtitle {
+      font-size: 1rem;
+      color: var(--light-gray);
+      margin-top: var(--spacing-sm);
+    }
+    
+    /* ================= ABOUT ================= */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--spacing-xl);
+      align-items: center;
+    }
+    
+    .about-image {
+      position: relative;
+    }
+    
+    .about-image img {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+    }
+    
+    .about-content {
+      padding: var(--spacing-lg);
+    }
+    
+    .about-list {
+      margin: var(--spacing-md) 0;
+    }
+    
+    .about-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 16px;
+      font-size: 1rem;
+    }
+    
+    .about-list i {
+      color: var(--accent);
+      font-size: 1.2rem;
+      margin-top: 2px;
+    }
+    
+    /* ================= SERVICES ================= */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: var(--spacing-md);
+      margin-top: var(--spacing-lg);
+    }
+    
+    .service-card {
+      padding: var(--spacing-md);
+      border: 1px solid var(--border);
+      transition: all 0.3s ease;
+    }
+    
+    .service-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-8px);
+    }
+    
+    .service-icon {
+      font-size: 2rem;
+      color: var(--accent);
+      margin-bottom: var(--spacing-sm);
+    }
+    
+    /* ================= PROJECTS ================= */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: var(--spacing-md);
+      margin-top: var(--spacing-lg);
+    }
+    
+    .project-card {
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .project-image {
+      height: 300px;
+      overflow: hidden;
+    }
+    
+    .project-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+    
+    .project-card:hover .project-image img {
+      transform: scale(1.05);
+    }
+    
+    .project-info {
+      padding: var(--spacing-md);
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-top: none;
+    }
+    
+    .project-tags {
+      display: flex;
+      gap: 8px;
+      margin: var(--spacing-sm) 0;
+      flex-wrap: wrap;
+    }
+    
+    .tag {
+      font-size: 0.7rem;
+      padding: 4px 12px;
+      background: var(--beige);
+      color: var(--accent-dark);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    .project-metrics {
+      display: flex;
+      gap: var(--spacing-md);
+      margin-top: var(--spacing-sm);
+      padding-top: var(--spacing-sm);
+      border-top: 1px solid var(--border);
+    }
+    
+    .metric {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .metric-value {
+      font-family: var(--font-serif);
+      font-size: 1.2rem;
+      color: var(--accent);
+    }
+    
+    .metric-label {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--light-gray);
+    }
+    
+    /* ================= TESTIMONIALS ================= */
+    .testimonials {
+      background: var(--beige);
+      padding: var(--spacing-xl) 0;
+    }
+    
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: var(--spacing-md);
+      margin-top: var(--spacing-lg);
+    }
+    
+    .testimonial-card {
+      padding: var(--spacing-lg);
+      background: var(--white);
+      border: 1px solid var(--border);
+    }
+    
+    .testimonial-text {
+      font-style: italic;
+      color: var(--gray);
+      margin-bottom: var(--spacing-md);
+    }
+    
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-sm);
+    }
+    
+    .testimonial-avatar {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 500;
+    }
+    
+    .testimonial-name {
+      font-weight: 500;
+      color: var(--black);
+    }
+    
+    .testimonial-role {
+      font-size: 0.8rem;
+      color: var(--light-gray);
+    }
+    
+    /* ================= PROCESS ================= */
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: var(--spacing-md);
+      margin-top: var(--spacing-lg);
+    }
+    
+    .process-step {
+      text-align: center;
+      padding: var(--spacing-md);
+    }
+    
+    .step-number {
+      width: 60px;
+      height: 60px;
+      border: 1px solid var(--accent);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto var(--spacing-md);
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      color: var(--accent);
+    }
+    
+    /* ================= CONTACT ================= */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--spacing-xl);
+      margin-top: var(--spacing-lg);
+    }
+    
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-md);
+    }
+    
+    .form-group {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .form-group input,
+    .form-group textarea {
+      padding: 16px;
+      border: 1px solid var(--border);
+      font-family: var(--font-sans);
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+    
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--accent);
+    }
+    
+    .contact-info {
+      padding: var(--spacing-lg);
+      background: var(--beige);
+    }
+    
+    .contact-methods {
+      margin-top: var(--spacing-lg);
+    }
+    
+    .contact-method {
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-sm);
+      margin-bottom: var(--spacing-md);
+    }
+    
+    .contact-method i {
+      color: var(--accent);
+      font-size: 1.2rem;
+    }
+    
+    /* ================= FOOTER ================= */
+    .footer {
+      padding: var(--spacing-lg) 0;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      color: var(--light-gray);
+      font-size: 0.9rem;
+    }
+    
+    /* ================= RESPONSIVE ================= */
+    @media (max-width: 992px) {
+      h1 {
+        font-size: 2.5rem;
+      }
+      
+      h2 {
+        font-size: 2rem;
+      }
+      
+      .hero {
+        padding: 140px 0 80px;
+      }
+      
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+      }
+      
+      .nav-menu {
+        display: none;
+      }
+      
+      .nav-toggle {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: var(--black);
+      }
+      
+      .nav-menu.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--white);
+        padding: var(--spacing-md);
+        border-top: 1px solid var(--border);
+      }
+    }
+    
+    @media (max-width: 768px) {
+      :root {
+        --spacing-lg: 48px;
+        --spacing-xl: 64px;
+      }
+      
+      .section-padding {
+        padding: var(--spacing-lg) 0;
+      }
+      
+      .hero-buttons {
+        flex-direction: column;
+      }
+      
+      .hero-stats {
+        flex-direction: column;
+        gap: var(--spacing-md);
+      }
+      
+      .services-grid,
+      .projects-grid,
+      .testimonials-grid,
+      .process-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 2rem;
+      }
+      
+      h2 {
+        font-size: 1.5rem;
+      }
+      
+      .container {
+        padding: 0 var(--spacing-sm);
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<!-- ================= SVG FILTERS ================= -->
-<svg style="display: none;">
-  <defs>
-    <filter id="liquidFilter">
-      <feTurbulence type="fractalNoise" baseFrequency="0.01" numOctaves="1" result="noise" seed="2" />
-      <feDisplacementMap in="SourceGraphic" in2="noise" scale="1.5" xChannelSelector="R" yChannelSelector="G" />
-    </filter>
-  </defs>
-</svg>
-
-<!-- ================= NAV ================= -->
-<nav class="navbar" role="navigation">
-  <div class="nav-container">
-    <span class="nav-logo">David Sebastián Díaz</span>
-
-    <button class="nav-toggle" aria-label="Abrir menú">
+<!-- ================= NAVIGATION ================= -->
+<nav class="navbar">
+  <div class="container nav-container">
+    <a href="#" class="nav-logo">David Sebastián Díaz</a>
+    
+    <button class="nav-toggle" id="navToggle">
       <i class="ri-menu-line"></i>
     </button>
-
-    <ul class="nav-menu">
-      <!-- About Me Category -->
-      <li class="nav-item nav-dropdown">
-        <button class="nav-toggle-dropdown" aria-expanded="false">
-          <i class="ri-user-line"></i> Sobre mí <i class="ri-arrow-down-s-line"></i>
-        </button>
-        <ul class="nav-submenu">
-          <li><a href="#about">Mi Perfil</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#certifications">Certificaciones</a></li>
-        </ul>
-      </li>
-
-      <!-- My Work Category -->
-      <li class="nav-item nav-dropdown">
-        <button class="nav-toggle-dropdown" aria-expanded="false">
-          <i class="ri-briefcase-line"></i> Mi Trabajo <i class="ri-arrow-down-s-line"></i>
-        </button>
-        <ul class="nav-submenu">
-          <li><a href="#process">Proceso</a></li>
-          <li><a href="#product-design">Product Design</a></li>
-          <li><a href="#services">Servicios</a></li>
-          <li><a href="#projects">Casos de Estudio</a></li>
-          <li><a href="#case-study-featured">Casos en Profundidad</a></li>
-          <li><a href="#blog">Blog & Insights</a></li>
-        </ul>
-      </li>
-
-      <!-- More Category -->
-      <li class="nav-item nav-dropdown">
-        <button class="nav-toggle-dropdown" aria-expanded="false">
-          <i class="ri-menu-add-line"></i> Más <i class="ri-arrow-down-s-line"></i>
-        </button>
-        <ul class="nav-submenu">
-          <li><a href="#newsletter">Newsletter</a></li>
-          <li><a href="#faq">FAQ</a></li>
-          <li><a href="#contact">Contacto</a></li>
-        </ul>
-      </li>
+    
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="#about" class="nav-link">Sobre mí</a></li>
+      <li><a href="#services" class="nav-link">Servicios</a></li>
+      <li><a href="#projects" class="nav-link">Proyectos</a></li>
+      <li><a href="#process" class="nav-link">Proceso</a></li>
+      <li><a href="#contact" class="nav-link">Contacto</a></li>
     </ul>
-
+    
     <div class="nav-actions">
-      <a href="cv.html" target="_blank" class="nav-cv-button" aria-label="Descargar CV">
-        <i class="ri-download-line"></i> CV
-      </a>
-      <button class="theme-toggle" aria-label="Cambiar tema">
-        <i class="ri-moon-line"></i>
+      <button class="theme-toggle" id="themeToggle">
+        <i class="ri-sun-line"></i>
       </button>
     </div>
   </div>
@@ -190,20 +716,11 @@
 
 <!-- ================= HERO ================= -->
 <header class="hero">
-  <div class="container hero-layout">
-
-    <div class="hero-text">
-      <span class="role-badge"><i class="ri-briefcase-line"></i> UX/UI & Product Designer</span>
-      <h1>Transformo problemas complejos en productos que crecen.</h1>
-      <p class="hero-subtitle">Soy Product Designer que combina investigación profunda, análisis de datos y diseño estratégico para crear experiencias digitales con impacto medible.</p>
-      <p class="hero-subtagline">Investigo, diseño y valido productos end‑to‑end.</p>
-      <ul class="hero-bullets">
-        <li><strong>Estrategia primero:</strong> cada decisión parte de entender el por qué.</li>
-        <li><strong>Data + Research:</strong> decisiones respaldadas por métricas y usuarios reales.</li>
-        <li><strong>Impacto comprobado:</strong> +35% en conversión y +45% en engagement promedio.</li>
-        <li><strong>Escalabilidad:</strong> diseño sistemas que evolucionan junto al negocio.</li>
-      </ul>
-
+  <div class="container">
+    <div class="hero-content">
+      <h1>Diseñador de Producto UX/UI con enfoque estratégico</h1>
+      <p class="hero-subtitle">Transformo problemas complejos en experiencias digitales elegantes y funcionales, combinando investigación profunda, diseño intuitivo y análisis de datos.</p>
+      
       <div class="hero-stats">
         <div class="stat">
           <span class="stat-number">30+</span>
@@ -215,347 +732,93 @@
         </div>
         <div class="stat">
           <span class="stat-number">5M+</span>
-          <span class="stat-label">Usuarios Impactados</span>
+          <span class="stat-label">Usuarios</span>
         </div>
-      </div>
-
-      <div class="hero-actions">
-        <a href="https://calendly.com/david-sebastian-diaz" target="_blank" class="btn-primary" style="background: linear-gradient(135deg, var(--accent), #B8941D); font-size: 1.05rem; padding: 1rem 2rem;">
-          <i class="ri-calendar-line"></i> Agendar Consulta Estratégica
-        </a>
-        <a href="#projects" class="btn-secondary">Ver Casos de Estudio</a>
-      </div>
-    </div>
-
-    <!-- SVG Animated Process Flow -->
-    <div class="hero-visual" style="position: relative;">
-      <!-- Partículas 3D Flotantes -->
-      <div id="particles-3d-hero"></div>
-      <!-- 3D Neumorphic Shape Animation -->
-      <div class="shape-3d-container">
-        <div class="shape-3d-wrapper">
-          <div class="shape-3d">
-            <!-- Cube -->
-            <div class="shape-3d-face cube-front"></div>
-            <div class="shape-3d-face cube-back"></div>
-            <div class="shape-3d-face cube-right"></div>
-            <div class="shape-3d-face cube-left"></div>
-            <div class="shape-3d-face cube-top"></div>
-            <div class="shape-3d-face cube-bottom"></div>
-          </div>
-        </div>
-        <p class="shape-label">Cubo → Esfera → Pirámide → Cilindro</p>
       </div>
       
-      <!-- Prisma Hexagonal 3D -->
-      <div style="margin-top: 2rem;">
-        <div id="hexprism-shape" style="opacity: 0.7;"></div>
-        <p class="shape-label" style="margin-top: 1rem;">Prisma Hexagonal</p>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn">
+          <i class="ri-calendar-line"></i>Agendar consulta
+        </a>
+        <a href="#projects" class="btn btn-outline">Ver proyectos</a>
       </div>
-
-      <svg viewBox="0 0 400 300" width="400" height="300" class="process-flow">
-        <!-- Circles (steps) -->
-        <circle cx="50" cy="150" r="35" class="flow-circle flow-1" fill="none" stroke="var(--accent-secondary)" stroke-width="2" />
-        <text x="50" y="155" text-anchor="middle" class="flow-label" fill="var(--accent-secondary)">Escucha</text>
-        
-        <circle cx="150" cy="150" r="35" class="flow-circle flow-2" fill="none" stroke="var(--accent)" stroke-width="2" />
-        <text x="150" y="155" text-anchor="middle" class="flow-label" fill="var(--accent)">Analiza</text>
-        
-        <circle cx="250" cy="150" r="35" class="flow-circle flow-3" fill="none" stroke="var(--accent-secondary)" stroke-width="2" />
-        <text x="250" y="155" text-anchor="middle" class="flow-label" fill="var(--accent-secondary)">Diseña</text>
-        
-        <circle cx="350" cy="150" r="35" class="flow-circle flow-4" fill="none" stroke="var(--accent)" stroke-width="2" />
-        <text x="350" y="155" text-anchor="middle" class="flow-label" fill="var(--accent)">Valida</text>
-        
-        <!-- Connecting lines (animated) -->
-        <line x1="85" y1="150" x2="115" y2="150" class="flow-line flow-line-1" stroke="var(--accent-secondary)" stroke-width="2" stroke-dasharray="30" stroke-dashoffset="30" />
-        <line x1="185" y1="150" x2="215" y2="150" class="flow-line flow-line-2" stroke="var(--accent)" stroke-width="2" stroke-dasharray="30" stroke-dashoffset="30" />
-        <line x1="285" y1="150" x2="315" y2="150" class="flow-line flow-line-3" stroke="var(--accent-secondary)" stroke-width="2" stroke-dasharray="30" stroke-dashoffset="30" />
-      </svg>
-      <p class="hero-visual-text">Tu desafío → Mi metodología → Tu solución</p>
     </div>
-
   </div>
 </header>
 
-<!-- ================= SOCIAL PROOF ================= -->
-<section id="social-proof">
-  <div class="container">
-    <div class="proof-badges">
-      <a href="https://www.credly.com/users/david-sebastian-diaz" target="_blank" rel="noopener noreferrer" class="proof-badge">
-        <i class="ri-shield-check-line"></i>
-        <span>18+ Certificaciones Verificadas</span>
-      </a>
-      <a href="https://github.com/dsd228" target="_blank" rel="noopener noreferrer" class="proof-badge">
-        <i class="ri-git-repository-line"></i>
-        <span>30+ Proyectos en GitHub</span>
-      </a>
-      <a href="https://linkedin.com/in/david-sebastian-diaz" target="_blank" rel="noopener noreferrer" class="proof-badge">
-        <i class="ri-linkedin-box-line"></i>
-        <span>Conectado con 500+ profesionales</span>
-      </a>
-    </div>
-  </div>
-</section>
-
 <!-- ================= ABOUT ================= -->
-<section id="about">
-  <div class="container narrow">
-    <h2 class="section-title">Lo que Me Diferencia</h2>
-    <p class="section-subtitle">UX Research + Data-Driven Design = Impacto medible</p>
-
-    <!-- Esfera Wireframe Pulsante -->
-    <div id="wireframe-sphere" style="margin-bottom: 3rem;"></div>
-
-    <div class="card">
-      <ul class="about-list">
-        <li><i class="ri-check-line"></i> <strong>Research profundo:</strong> Entiendo usuarios reales, no suposiciones</li>
-        <li><i class="ri-check-line"></i> <strong>Data-Driven:</strong> Cada decisión respaldada por métricas</li>
-        <li><i class="ri-check-line"></i> <strong>Design Systems:</strong> Escalabilidad desde día 1</li>
-        <li><i class="ri-check-line"></i> <strong>Impacto medible:</strong> +35% mejora promedio en conversión</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- ================= SKILLS ================= -->
-<section id="skills" style="position: relative; overflow: hidden;">
-  <!-- Ondas 3D de Fondo -->
-  <div id="waves-3d-skills"></div>
-  <div class="container" style="position: relative; z-index: 1;">
-    <h2 class="section-title section-title-3d">Habilidades & Herramientas</h2>
-
-    <div class="grid-3">
-
-      <div class="card">
-        <h3><i class="ri-compasses-2-line"></i> UX & Product Design</h3>
-        <ul>
-          <li><span class="proficiency expert">Expert</span> Product Strategy & Vision</li>
-          <li><span class="proficiency expert">Expert</span> UX Research & Discovery</li>
-          <li><span class="proficiency expert">Expert</span> User Testing & Validation</li>
-          <li><span class="proficiency advanced">Advanced</span> Journey Mapping & Roadmaps</li>
-          <li><span class="proficiency advanced">Advanced</span> Data-informed Decision Making</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h3><i class="ri-palette-line"></i> UI & Visual</h3>
-        <ul>
-          <li><span class="proficiency expert">Expert</span> Neumorphism & Design Systems</li>
-          <li><span class="proficiency expert">Expert</span> Interaction Design</li>
-          <li><span class="proficiency advanced">Advanced</span> Glassmorphism</li>
-          <li><span class="proficiency advanced">Advanced</span> Accesibilidad (WCAG)</li>
-          <li><span class="proficiency advanced">Advanced</span> Microinteracciones</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h3><i class="ri-tools-line"></i> Herramientas & Tech</h3>
-        <ul>
-          <li><span class="proficiency expert">Expert</span> Figma, HTML/CSS</li>
-          <li><span class="proficiency advanced">Advanced</span> Python, Data Analytics</li>
-          <li><span class="proficiency advanced">Advanced</span> Git, Responsive Design</li>
-          <li><span class="proficiency intermediate">Intermediate</span> Adobe Suite, JavaScript</li>
-          <li><span class="proficiency intermediate">Intermediate</span> SQL, BI Tools</li>
-        </ul>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ================= CHALLENGES VISUAL ================= -->
-<section id="challenges" class="challenges-section">
+<section id="about" class="section-padding">
   <div class="container">
-    <h2 class="section-title">Desafíos Resueltos</h2>
-    
-    <div class="challenges-grid">
+    <div class="about-grid">
+      <div class="about-image">
+        <!-- Placeholder para imagen -->
+        <div style="width:100%; height:500px; background:var(--dark-beige);"></div>
+      </div>
       
-      <div class="challenge-card">
-        <div class="challenge-header">
-          <i class="ri-layout-2-line"></i>
-          <h3>Arquitectura Compleja</h3>
-        </div>
-        <div class="challenge-comparison">
-          <div class="comparison-block before">
-            <p class="comparison-label">Antes</p>
-            <div class="comparison-visual">
-              <div style="height: 80px; background: #f0f0f0; border-radius: 8px; opacity: 0.5;"></div>
-              <p style="font-size: 0.8rem; color: #999; text-align: center; margin-top: 8px;">Estructura caótica</p>
-            </div>
-          </div>
-          <i class="ri-arrow-right-line" style="color: var(--accent);"></i>
-          <div class="comparison-block after">
-            <p class="comparison-label">Después</p>
-            <div class="comparison-visual">
-              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4px;">
-                <div style="height: 35px; background: var(--accent); border-radius: 6px;"></div>
-                <div style="height: 35px; background: var(--accent); border-radius: 6px;"></div>
-                <div style="height: 35px; background: var(--accent-secondary); border-radius: 6px;"></div>
-                <div style="height: 35px; background: var(--accent-secondary); border-radius: 6px;"></div>
-              </div>
-              <p style="font-size: 0.8rem; color: var(--accent-text); text-align: center; margin-top: 8px;">Sistema coherente</p>
-            </div>
-          </div>
-        </div>
+      <div class="about-content">
+        <h2>Sobre mí</h2>
+        <p>Como diseñador de producto, mi enfoque combina la elegancia visual italiana con la precisión del diseño centrado en datos. Creo experiencias que no solo son hermosas, sino también medibles y escalables.</p>
+        
+        <ul class="about-list">
+          <li>
+            <i class="ri-check-line"></i>
+            <span><strong>Research profundo:</strong> Entiendo usuarios reales, no suposiciones</span>
+          </li>
+          <li>
+            <i class="ri-check-line"></i>
+            <span><strong>Data-Driven:</strong> Cada decisión respaldada por métricas</span>
+          </li>
+          <li>
+            <i class="ri-check-line"></i>
+            <span><strong>Design Systems:</strong> Escalabilidad desde día 1</span>
+          </li>
+          <li>
+            <i class="ri-check-line"></i>
+            <span><strong>Impacto medible:</strong> +35% mejora promedio en conversión</span>
+          </li>
+        </ul>
       </div>
-
-      <div class="challenge-card">
-        <div class="challenge-header">
-          <i class="ri-eye-line"></i>
-          <h3>Experiencia Confusa</h3>
-        </div>
-        <div class="challenge-comparison">
-          <div class="comparison-block before">
-            <p class="comparison-label">Antes</p>
-            <div class="comparison-visual">
-              <div style="height: 16px; background: #ddd; border-radius: 3px; margin-bottom: 8px;"></div>
-              <div style="height: 16px; background: #ddd; border-radius: 3px; width: 80%;"></div>
-            </div>
-          </div>
-          <i class="ri-arrow-right-line" style="color: var(--accent);"></i>
-          <div class="comparison-block after">
-            <p class="comparison-label">Después</p>
-            <div class="comparison-visual">
-              <div style="height: 20px; background: var(--accent); border-radius: 4px; margin-bottom: 8px;"></div>
-              <div style="height: 16px; background: var(--accent-secondary); border-radius: 3px;"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="challenge-card">
-        <div class="challenge-header">
-          <i class="ri-pulse-line"></i>
-          <h3>Engagement Bajo</h3>
-        </div>
-        <div class="challenge-comparison">
-          <div class="comparison-block before">
-            <p class="comparison-label">Antes</p>
-            <div class="comparison-visual">
-              <div style="display: flex; gap: 4px; justify-content: center;">
-                <div style="width: 20px; height: 40px; background: #eee; border-radius: 3px;"></div>
-                <div style="width: 20px; height: 20px; background: #eee; border-radius: 3px;"></div>
-                <div style="width: 20px; height: 35px; background: #eee; border-radius: 3px;"></div>
-              </div>
-              <p style="font-size: 0.8rem; color: #999; text-align: center; margin-top: 8px;">Bajo impacto</p>
-            </div>
-          </div>
-          <i class="ri-arrow-right-line" style="color: var(--accent);"></i>
-          <div class="comparison-block after">
-            <p class="comparison-label">Después</p>
-            <div class="comparison-visual">
-              <div style="display: flex; gap: 4px; justify-content: center;">
-                <div style="width: 20px; height: 60px; background: var(--accent); border-radius: 3px;"></div>
-                <div style="width: 20px; height: 50px; background: var(--accent-secondary); border-radius: 3px;"></div>
-                <div style="width: 20px; height: 55px; background: var(--accent); border-radius: 3px;"></div>
-              </div>
-              <p style="font-size: 0.8rem; color: var(--accent-text); text-align: center; margin-top: 8px;">+45% engagement</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-    
-    <!-- Pirámide 3D Decorativa -->
-    <div style="display: flex; justify-content: center; margin-top: 3rem;">
-      <div id="pyramid-shape" style="opacity: 0.7;"></div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= PROCESS ================= -->
-<section id="process">
-  <div class="container">
-    <h2 class="section-title section-title-3d">Mi Proceso</h2>
-    <p class="section-subtitle">De la investigación al impacto medible</p>
-    
-    <div class="process-timeline">
-      
-      <div class="process-step">
-        <div class="step-icon">
-          <i class="ri-search-eye-line"></i>
-        </div>
-        <h3>Discovery & Research</h3>
-        <p>Entrevistas, análisis competitivo y datos reales para entender el problema.</p>
-      </div>
-
-      <div class="process-divider">
-        <i class="ri-arrow-right-line"></i>
-      </div>
-
-      <div class="process-step">
-        <div class="step-icon">
-          <i class="ri-pencil-ruler-line"></i>
-        </div>
-        <h3>Strategy & Design</h3>
-        <p>Arquitectura, wireframes y componentes basados en insights y necesidades reales.</p>
-      </div>
-
-      <div class="process-divider">
-        <i class="ri-arrow-right-line"></i>
-      </div>
-
-      <div class="process-step">
-        <div class="step-icon">
-          <i class="ri-test-tube-line"></i>
-        </div>
-        <h3>Testing & Validation</h3>
-        <p>Usability testing, A/B tests y métricas de impacto real con usuarios.</p>
-      </div>
-
-      <div class="process-divider">
-        <i class="ri-arrow-right-line"></i>
-      </div>
-
-      <div class="process-step">
-        <div class="step-icon">
-          <i class="ri-rocket-line"></i>
-        </div>
-        <h3>Launch & Iterate</h3>
-        <p>Deployment y monitoreo continuo basado en feedback real y KPIs.</p>
-      </div>
-
     </div>
   </div>
 </section>
 
 <!-- ================= SERVICES ================= -->
-<section id="services">
+<section id="services" class="section-padding">
   <div class="container">
-    <h2 class="section-title section-title-3d">Servicios</h2>
-    <p class="section-subtitle">End‑to‑end: investigo, diseño y valido</p>
-    <!-- Logo de Partículas -->
-    <div id="particle-logo" style="margin: 2rem auto;"></div>
-
+    <div class="section-header">
+      <h2>Servicios</h2>
+      <p class="section-subtitle">End‑to‑end: investigo, diseño y valido</p>
+    </div>
+    
     <div class="services-grid">
-      <div class="card service-card">
-        <div class="service-icon"><i class="ri-search-eye-line"></i></div>
+      <div class="service-card">
+        <div class="service-icon">
+          <i class="ri-search-eye-line"></i>
+        </div>
         <h3>Discovery Research</h3>
         <p>Entrevistas, análisis competitivo y estudios para definir problemas y oportunidades.</p>
       </div>
-
-      <div class="card service-card">
-        <div class="service-icon"><i class="ri-compasses-2-line"></i></div>
+      
+      <div class="service-card">
+        <div class="service-icon">
+          <i class="ri-compasses-2-line"></i>
+        </div>
         <h3>Product Strategy</h3>
         <p>Objetivos, métricas, roadmap y propuesta de valor orientada a impacto.</p>
       </div>
-
-      <div class="card service-card">
-        <div class="service-icon"><i class="ri-pencil-ruler-line"></i></div>
+      
+      <div class="service-card">
+        <div class="service-icon">
+          <i class="ri-pencil-ruler-line"></i>
+        </div>
         <h3>UX/UI Design</h3>
         <p>Flujos, IA, wireframes y visual design con accesibilidad y micro‑interacciones.</p>
       </div>
-
-      <div class="card service-card">
-        <div class="service-icon"><i class="ri-pantone-line"></i></div>
-        <h3>Design System</h3>
-        <p>Componentes, tokens y guías para escala, coherencia y velocidad de entrega.</p>
-      </div>
-
-      <div class="card service-card">
-        <div class="service-icon"><i class="ri-test-tube-line"></i></div>
+      
+      <div class="service-card">
+        <div class="service-icon">
+          <i class="ri-test-tube-line"></i>
+        </div>
         <h3>Validación & Testing</h3>
         <p>Prototipos, tests de usabilidad y A/B para reducir riesgo y mejorar conversión.</p>
       </div>
@@ -563,1030 +826,245 @@
   </div>
 </section>
 
-<!-- ================= PRODUCT DESIGN ================= -->
-<section id="product-design">
+<!-- ================= PROJECTS ================= -->
+<section id="projects" class="section-padding">
   <div class="container">
-    <h2 class="section-title section-title-3d">Product Design</h2>
-    <p class="section-subtitle">Visión estratégica + ejecución de diseño de clase mundial</p>
+    <div class="section-header">
+      <h2>Proyectos Destacados</h2>
+      <p class="section-subtitle">Casos de estudio donde el diseño impactó métricas de negocio</p>
+    </div>
     
-    <!-- Dodecaedro 3D Decorativo -->
-    <div style="display: flex; justify-content: center; margin: 2rem 0;">
-      <div id="dodeca-shape" style="opacity: 0.6;"></div>
-    </div>
-
-    <div class="grid-2">
+    <div class="projects-grid">
       
-      <div class="card">
-        <h3><i class="ri-lightbulb-line"></i> Mi Visión de Product Design</h3>
-        <p>Creo que el product design va más allá de interfaces bonitas. Es el puente entre la estrategia empresarial y la experiencia del usuario, donde cada decisión debe estar fundamentada en datos, investigación y empatía.</p>
-        <ul style="margin-top: 1.5rem;">
-          <li><strong>Estrategia primero:</strong> Entender el "por qué" antes del "qué"</li>
-          <li><strong>Datos + Intuición:</strong> Decisiones informadas por métricas y user research</li>
-          <li><strong>End-to-end:</strong> Visualizo todo el journey del usuario, no solo screens aislados</li>
-          <li><strong>Iteración constante:</strong> Hipótesis, test, aprendizaje, mejora</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h3><i class="ri-settings-3-line"></i> Metodología & Herramientas</h3>
-        <ul>
-          <li><span class="proficiency expert">Expert</span> Product Roadmaps & OKRs</li>
-          <li><span class="proficiency expert">Expert</span> User Research & Validation</li>
-          <li><span class="proficiency advanced">Advanced</span> Jobs to be Done (JTBD)</li>
-          <li><span class="proficiency advanced">Advanced</span> Design Systems & Scalability</li>
-          <li><span class="proficiency advanced">Advanced</span> Metrics & Analytics Integration</li>
-          <li style="margin-top: 0.5rem; padding-top: 0.5rem; border-top: 1px solid var(--border-color);"><strong>Con soporte de IA:</strong> Análisis de datos, ideación y prototipado acelerado</li>
-        </ul>
-      </div>
-
-    </div>
-
-    <div style="margin-top: 3rem; padding: 2rem; background: linear-gradient(135deg, rgba(201,160,32,0.05) 0%, rgba(255,255,255,0.02) 100%); border-radius: 12px; border: 1px solid var(--border-color);">
-      <div style="display: flex; align-items: start; gap: 1rem;">
-        <i class="ri-robot-2-line" style="font-size: 1.5rem; color: var(--accent); flex-shrink: 0; margin-top: 0.25rem;"></i>
-        <div>
-          <h4 style="margin-bottom: 0.5rem;">Trabajos potenciados por IA</h4>
-          <p style="color: var(--text-secondary); margin: 0;">Todos mis proyectos recientes han sido apoyados con inteligencia artificial para acelerar análisis, ideación y prototipado. Esto me permite enfocarse en lo que importa: tomar decisiones estratégicas basadas en insights humanos y datos reales.</p>
+      <!-- Proyecto 1 -->
+      <article class="project-card">
+        <div class="project-image">
+          <!-- Placeholder -->
+          <div style="width:100%; height:300px; background:linear-gradient(135deg, #0f4c75 0%, #3282b8 100%);"></div>
         </div>
-      </div>
+        <div class="project-info">
+          <h3>Nexus Logistics</h3>
+          <p>Rediseño de dashboard SaaS B2B que mejoró la usabilidad en un 40%</p>
+          
+          <div class="project-tags">
+            <span class="tag">SaaS</span>
+            <span class="tag">Dashboard</span>
+            <span class="tag">B2B</span>
+          </div>
+          
+          <div class="project-metrics">
+            <div class="metric">
+              <span class="metric-value">+40%</span>
+              <span class="metric-label">Usabilidad</span>
+            </div>
+            <div class="metric">
+              <span class="metric-value">-30%</span>
+              <span class="metric-label">Training</span>
+            </div>
+          </div>
+        </div>
+      </article>
+      
+      <!-- Proyecto 2 -->
+      <article class="project-card">
+        <div class="project-image">
+          <!-- Placeholder -->
+          <div style="width:100%; height:300px; background:linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%);"></div>
+        </div>
+        <div class="project-info">
+          <h3>School Art UX/UI</h3>
+          <p>Rediseño completo de plataforma educativa con foco en claridad y usabilidad</p>
+          
+          <div class="project-tags">
+            <span class="tag">EdTech</span>
+            <span class="tag">Redesign</span>
+            <span class="tag">UI/UX</span>
+          </div>
+          
+          <div class="project-metrics">
+            <div class="metric">
+              <span class="metric-value">+52%</span>
+              <span class="metric-label">Claridad IA</span>
+            </div>
+            <div class="metric">
+              <span class="metric-value">-38%</span>
+              <span class="metric-label">Fricción</span>
+            </div>
+          </div>
+        </div>
+      </article>
+      
+      <!-- Proyecto 3 -->
+      <article class="project-card">
+        <div class="project-image">
+          <!-- Placeholder -->
+          <div style="width:100%; height:300px; background:linear-gradient(135deg, #0c40a6 0%, #5b7dd1 100%);"></div>
+        </div>
+        <div class="project-info">
+          <h3>Yale UX Redesign</h3>
+          <p>Reorganización de arquitectura de información y componentes visuales</p>
+          
+          <div class="project-tags">
+            <span class="tag">Education</span>
+            <span class="tag">IA/UX</span>
+            <span class="tag">Design System</span>
+          </div>
+          
+          <div class="project-metrics">
+            <div class="metric">
+              <span class="metric-value">+85%</span>
+              <span class="metric-label">Encuentrabilidad</span>
+            </div>
+            <div class="metric">
+              <span class="metric-value">-40%</span>
+              <span class="metric-label">Confusión</span>
+            </div>
+          </div>
+        </div>
+      </article>
+      
     </div>
-
   </div>
 </section>
 
-<!-- ================= CERTIFICATIONS ================= -->
-<section id="certifications">
+<!-- ================= PROCESS ================= -->
+<section id="process" class="section-padding">
   <div class="container">
-    <h2 class="section-title">Certificaciones</h2>
-    <p class="section-subtitle">18+ certificaciones en UX, Data Analytics, y Tecnología</p>
-
-    <div class="certs-badges">
-      <div class="cert-badge">
-        <i class="ri-palette-line"></i>
-        <strong>4 UX/UI</strong>
-        <p>IBM, Google Certs</p>
-      </div>
-      <div class="cert-badge">
-        <i class="ri-bar-chart-line"></i>
-        <strong>3 Data</strong>
-        <p>Analytics, BI, Marketing</p>
-      </div>
-      <div class="cert-badge">
-        <i class="ri-cpu-line"></i>
-        <strong>4 Tech</strong>
-        <p>AI, Agile, Python, Security</p>
-      </div>
-      <div class="cert-badge">
-        <i class="ri-award-line"></i>
-        <strong>7+ Cursos</strong>
-        <p>Google, IBM, Coursera</p>
-      </div>
+    <div class="section-header">
+      <h2>Mi Proceso</h2>
+      <p class="section-subtitle">De la investigación al impacto medible</p>
     </div>
-
-    <p style="text-align: center; margin-top: 2rem; font-size: 0.95rem; color: var(--text-secondary);">
-      Verifica mis credenciales en <a href="https://www.linkedin.com/in/david-sebastian-diaz" target="_blank" style="color: var(--accent); font-weight: 600;">LinkedIn</a> (perfil completo con certificados)
-    </p>
     
-    <!-- Diamante 3D Decorativo -->
-    <div style="display: flex; justify-content: center; margin-top: 2rem;">
-      <div id="diamond-shape" style="opacity: 0.7;"></div>
+    <div class="process-grid">
+      <div class="process-step">
+        <div class="step-number">01</div>
+        <h3>Discovery & Research</h3>
+        <p>Entrevistas, análisis competitivo y datos reales para entender el problema.</p>
+      </div>
+      
+      <div class="process-step">
+        <div class="step-number">02</div>
+        <h3>Strategy & Design</h3>
+        <p>Arquitectura, wireframes y componentes basados en insights y necesidades reales.</p>
+      </div>
+      
+      <div class="process-step">
+        <div class="step-number">03</div>
+        <h3>Testing & Validation</h3>
+        <p>Usability testing, A/B tests y métricas de impacto real con usuarios.</p>
+      </div>
+      
+      <div class="process-step">
+        <div class="step-number">04</div>
+        <h3>Launch & Iterate</h3>
+        <p>Deployment y monitoreo continuo basado en feedback real y KPIs.</p>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- ================= TESTIMONIALS ================= -->
-<section id="testimonials">
+<section class="testimonials section-padding">
   <div class="container">
-    <h2 class="section-title">Lo Que Dicen</h2>
-    
-    <!-- Estrella 3D Decorativa -->
-    <div style="display: flex; justify-content: center; margin: 2rem 0;">
-      <div id="star-shape" style="opacity: 0.6;"></div>
+    <div class="section-header">
+      <h2>Testimonios</h2>
+      <p class="section-subtitle">Lo que dicen mis clientes y colaboradores</p>
     </div>
-
+    
     <div class="testimonials-grid">
-
       <div class="testimonial-card">
-        <div class="testimonial-avatar" style="background: linear-gradient(135deg, #D4AF37, #C9A020); font-size: 1.8rem; color: white; font-weight: bold;">MG</div>
-        <div class="testimonial-header">
+        <p class="testimonial-text">
+          "David transformó completamente nuestra plataforma. Su enfoque en research y datos resultó en un aumento del 45% en conversión. Es designer + estratega."
+        </p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">MG</div>
           <div>
-            <strong style="display: block; font-size: 1.05rem;">María González</strong>
-            <span style="font-size: 0.9rem; color: var(--muted);">CEO, SaaS Logistics</span>
-            <div class="testimonial-stars" style="margin-top: 6px;">
-              <i class="ri-star-fill"></i>
-              <i class="ri-star-fill"></i>
-              <i class="ri-star-fill"></i>
-              <i class="ri-star-fill"></i>
-              <i class="ri-star-fill"></i>
-            </div>
+            <div class="testimonial-name">María González</div>
+            <div class="testimonial-role">CEO, SaaS Logistics</div>
           </div>
         </div>
-        <p class="testimonial-text">
-          "David transformó completamente nuestra plataforma. Su enfoque en research y datos resultó en un aumento del <strong>45% en conversión</strong>. Es designer + estratega."
-        </p>
-        <div class="testimonial-footer" style="display: flex; align-items: center; gap: 8px; padding-top: 12px; border-top: 1px solid var(--glass-border); margin-top: 12px; font-size: 0.9rem;">
-          <i class="ri-checkbox-circle-fill" style="color: #22c55e;"></i>
-          <span>Verificado en LinkedIn</span>
-        </div>
       </div>
-
-      <div class="testimonial-card">
-        <div class="testimonial-avatar" style="background: linear-gradient(135deg, #667eea, #764ba2); font-size: 1.8rem; color: white; font-weight: bold;">CM</div>
-        <div class="testimonial-header">
-          <div>
-            <strong style="display: block; font-size: 1.05rem;">Carlos Méndez</strong>
-            <span style="font-size: 0.9rem; color: var(--muted);">Product Manager, E-Commerce</span>
-            <div class="testimonial-stars" style="margin-top: 6px;">
-              <i class="ri-star-fill"></i>
-              <i class="ri-star-fill"></i>
-              <i class="ri-star-fill"></i>
-              <i class="ri-star-fill"></i>
-              <i class="ri-star-fill"></i>
-            </div>
-          </div>
-        </div>
-        <p class="testimonial-text">
-          "Trabajar con David fue excepcional. Entiende de UX pero también de negocio. Sus <strong>análisis de datos llevaron nuestras decisiones</strong> de diseño al siguiente nivel."
-        </p>
-        <div class="testimonial-footer" style="display: flex; align-items: center; gap: 8px; padding-top: 12px; border-top: 1px solid var(--glass-border); margin-top: 12px; font-size: 0.9rem;">
-          <i class="ri-checkbox-circle-fill" style="color: #22c55e;"></i>
-          <span>Verificado en LinkedIn</span>
-        </div>
-      </div>
-
-      <div class="testimonial-card">
-        <div class="testimonial-avatar" style="background: linear-gradient(135deg, #f093fb, #f5576c); font-size: 1.8rem; color: white; font-weight: bold;">LM</div>
-        <div class="testimonial-header">
-          <div>
-            <strong style="display: block; font-size: 1.05rem;">Laura Martínez</strong>
-            <span style="font-size: 0.9rem; color: var(--muted);">Design Director, HealthTech</span>
-            <div class="testimonial-stars" style="margin-top: 6px;">
-              <i class="ri-star-fill"></i>
-              <i class="ri-star-fill"></i>
-              <i class="ri-star-fill"></i>
-              <i class="ri-star-fill"></i>
-              <i class="ri-star-fill"></i>
-            </div>
-          </div>
-        </div>
-        <p class="testimonial-text">
-          "Su capacidad de integrar <strong>UX Research con Analytics</strong> es única. No es solo que diseñe bien, es que <strong>demuestra el impacto</strong> de cada decisión."
-        </p>
-        <div class="testimonial-footer" style="display: flex; align-items: center; gap: 8px; padding-top: 12px; border-top: 1px solid var(--glass-border); margin-top: 12px; font-size: 0.9rem;">
-          <i class="ri-checkbox-circle-fill" style="color: #22c55e;"></i>
-          <span>Verificado en LinkedIn</span>
-        </div>
-      </div>
-
-      <div class="testimonial-card">
-        <div class="testimonial-avatar" style="background: linear-gradient(135deg, #20c997, #16a085); font-size: 1.8rem; color: white; font-weight: bold;">SV</div>
-        <div class="testimonial-header">
-          <div>
-            <strong style="display: block; font-size: 1.05rem;">Sofia Vargas</strong>
-            <span style="font-size: 0.9rem; color: var(--muted);">VP Design, FinTech Startup</span>
-            <div class="testimonial-stars" style="margin-top: 6px;">
-              <i class="ri-star-fill"></i>
-              <i class="ri-star-fill"></i>
-              <i class="ri-star-fill"></i>
-              <i class="ri-star-fill"></i>
-              <i class="ri-star-fill"></i>
-            </div>
-          </div>
-        </div>
-        <p class="testimonial-text">
-          "David no solo diseña interfaces hermosas. <strong>Vuelve complejas las cosas simples</strong>. Su framework de research validó hipótesis que otros equipos habían dado por hechas."
-        </p>
-        <div class="testimonial-footer" style="display: flex; align-items: center; gap: 8px; padding-top: 12px; border-top: 1px solid var(--glass-border); margin-top: 12px; font-size: 0.9rem;">
-          <i class="ri-checkbox-circle-fill" style="color: #22c55e;"></i>
-          <span>Verificado en LinkedIn</span>
-        </div>
-      </div>
-
-      <div class="testimonial-card">
-        <div class="testimonial-avatar" style="background: linear-gradient(135deg, #ff6b9d, #d946a6); font-size: 1.8rem; color: white; font-weight: bold;">JL</div>
-        <div class="testimonial-header">
-          <div>
-            <strong style="display: block; font-size: 1.05rem;">José López</strong>
-            <span style="font-size: 0.9rem; color: var(--muted);">CTO, AgTech Platform</span>
-            <div class="testimonial-stars" style="margin-top: 6px;">
-              <i class="ri-star-fill"></i>
-              <i class="ri-star-fill"></i>
-              <i class="ri-star-fill"></i>
-              <i class="ri-star-fill"></i>
-              <i class="ri-star-fill"></i>
-            </div>
-          </div>
-        </div>
-        <p class="testimonial-text">
-          "El dashboard que David rediseñó es <strong>60% más rápido de usar</strong>. Menos clics, menos confusión. Nuestro equipo de ventas cierra deals 40% más rápido."
-        </p>
-        <div class="testimonial-footer" style="display: flex; align-items: center; gap: 8px; padding-top: 12px; border-top: 1px solid var(--glass-border); margin-top: 12px; font-size: 0.9rem;">
-          <i class="ri-checkbox-circle-fill" style="color: #22c55e;"></i>
-          <span>Verificado en LinkedIn</span>
-        </div>
-      </div>
-
-      <div class="testimonial-card">
-        <div class="testimonial-avatar" style="background: linear-gradient(135deg, #ffa500, #ff8c00); font-size: 1.8rem; color: white; font-weight: bold;">AR</div>
-        <div class="testimonial-header">
-          <div>
-            <strong style="display: block; font-size: 1.05rem;">Alejandra Ruiz</strong>
-            <span style="font-size: 0.9rem; color: var(--muted);">Founder, EdTech Startup</span>
-            <div class="testimonial-stars" style="margin-top: 6px;">
-              <i class="ri-star-fill"></i>
-              <i class="ri-star-fill"></i>
-              <i class="ri-star-fill"></i>
-              <i class="ri-star-fill"></i>
-              <i class="ri-star-fill"></i>
-            </div>
-          </div>
-        </div>
-        <p class="testimonial-text">
-          "No es solo un diseñador. <strong>Es un socio estratégico</strong>. Desde research hasta validación, David entendió nuestro negocio mejor que nosotros mismos. +92% satisfacción de usuarios."
-        </p>
-        <div class="testimonial-footer" style="display: flex; align-items: center; gap: 8px; padding-top: 12px; border-top: 1px solid var(--glass-border); margin-top: 12px; font-size: 0.9rem;">
-          <i class="ri-checkbox-circle-fill" style="color: #22c55e;"></i>
-          <span>Verificado en LinkedIn</span>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ================= NEWSLETTER SIGNUP ================= -->
-<section id="newsletter" style="background: linear-gradient(135deg, var(--accent), #B8941D); padding: 4rem 0; position: relative; overflow: hidden;">
-  <div style="position: absolute; top: -50%; right: -10%; width: 400px; height: 400px; background: rgba(255,255,255,0.1); border-radius: 50%; filter: blur(80px);"></div>
-  <div class="container narrow" style="position: relative; z-index: 2;">
-    <div style="text-align: center; color: white;">
-      <h2 style="color: white; margin-bottom: 0.5rem; font-size: 2rem;">Design Playbook Gratuito</h2>
-      <p style="color: rgba(255,255,255,0.95); margin-bottom: 2rem; font-size: 1.05rem;">
-        Mi framework probado para transformar productos complejos. Descarga el playbook y recibe insights semanales.
-      </p>
       
-      <form style="display: flex; gap: 1rem; max-width: 500px; margin: auto;">
-        <input type="email" placeholder="tu@email.com" required style="flex: 1; padding: 0.75rem 1rem; border: none; border-radius: 8px; font-size: 0.95rem;">
-        <button type="submit" style="padding: 0.75rem 2rem; background: white; color: var(--accent); border: none; border-radius: 8px; font-weight: 600; cursor: pointer; transition: all var(--transition-fast);">
-          Descargar
-        </button>
-      </form>
+      <div class="testimonial-card">
+        <p class="testimonial-text">
+          "No es solo un diseñador. Es un socio estratégico. Desde research hasta validación, David entendió nuestro negocio mejor que nosotros mismos."
+        </p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">AR</div>
+          <div>
+            <div class="testimonial-name">Alejandra Ruiz</div>
+            <div class="testimonial-role">Founder, EdTech Startup</div>
+          </div>
+        </div>
+      </div>
       
-      <p style="font-size: 0.85rem; color: rgba(255,255,255,0.8); margin-top: 1rem;">
-        ✓ PDF descargable · ✓ Sin spam · ✓ Cancelar en cualquier momento
-      </p>
-    </div>
-  </div>
-</section>
-
-<!-- ================= CASOS EXPANDIDOS: PASEO & APPLE ================= -->
-<section id="case-studies-more" style="padding: 6rem 0;">
-  <div class="container">
-    <h2 class="section-title">2 Casos Más en Profundidad</h2>
-    <p class="section-subtitle" style="margin-bottom: 4rem;">Metodología completa: Discovery → Strategy → Execution → Results</p>
-
-    <!-- PASEO APP CASE -->
-    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; margin-bottom: 5rem;">
-      <div>
-        <h3 style="margin-bottom: 1.5rem; font-size: 1.5rem;">📱 PASEO App: Mobile MVP Validation</h3>
-        <p style="margin-bottom: 1rem;">
-          <strong>PASEO</strong> es una app mobile para descubrimiento de experiencias locales. El founder necesitaba validar product-market fit antes de invertir en desarrollo full.
+      <div class="testimonial-card">
+        <p class="testimonial-text">
+          "Trabajar con David fue excepcional. Entiende de UX pero también de negocio. Sus análisis de datos llevaron nuestras decisiones de diseño al siguiente nivel."
         </p>
-        
-        <h4 style="margin-top: 2rem; margin-bottom: 1rem; font-weight: 600;">Mi Enfoque</h4>
-        <ul style="list-style: none; padding: 0; margin-bottom: 2rem;">
-          <li style="margin-bottom: 0.8rem; display: flex; gap: 10px;">
-            <i class="ri-checkbox-circle-fill" style="color: var(--accent); flex-shrink: 0;"></i>
-            <span><strong>30+ Entrevistas:</strong> Usuarios potenciales para entender el problema real</span>
-          </li>
-          <li style="margin-bottom: 0.8rem; display: flex; gap: 10px;">
-            <i class="ri-checkbox-circle-fill" style="color: var(--accent); flex-shrink: 0;"></i>
-            <span><strong>20 Testing Sessions:</strong> Iteración rápida de prototype → feedback → mejora</span>
-          </li>
-          <li style="margin-bottom: 0.8rem; display: flex; gap: 10px;">
-            <i class="ri-checkbox-circle-fill" style="color: var(--accent); flex-shrink: 0;"></i>
-            <span><strong>Prototipo Interactivo:</strong> Figma → testing → documentación</span>
-          </li>
-          <li style="margin-bottom: 0.8rem; display: flex; gap: 10px;">
-            <i class="ri-checkbox-circle-fill" style="color: var(--accent); flex-shrink: 0;"></i>
-            <span><strong>Roadmap Validado:</strong> Prioridades claras para siguiente fase</span>
-          </li>
-        </ul>
-
-        <a href="https://github.com/dsd228/dsd228-paseo-ux-case-study" target="_blank" class="btn-primary">
-          <i class="ri-github-line"></i> Ver Caso Completo
-        </a>
-      </div>
-
-      <div style="background: var(--glass-bg); backdrop-filter: blur(12px); border: 1px solid var(--glass-border); padding: 2rem; border-radius: 24px; box-shadow: 12px 12px 24px var(--dark), -8px -8px 20px var(--light);">
-        <h4 style="text-align: center; margin-bottom: 1.5rem;">Resultados</h4>
-        <div style="display: grid; gap: 1rem;">
-          <div style="text-align: center; padding: 1rem; background: linear-gradient(135deg, rgba(32, 201, 151, 0.2), rgba(100, 200, 150, 0.2)); border-radius: 12px;">
-            <div style="font-size: 2rem; font-weight: 800; color: #20c997; margin-bottom: 0.3rem;">92%</div>
-            <p style="font-size: 0.9rem;"><strong>User Satisfaction</strong><br><span style="color: var(--muted); font-size: 0.8rem;">NPS: 78</span></p>
-          </div>
-          <div style="text-align: center; padding: 1rem; background: linear-gradient(135deg, rgba(32, 201, 151, 0.2), rgba(100, 200, 150, 0.2)); border-radius: 12px;">
-            <div style="font-size: 2rem; font-weight: 800; color: #20c997; margin-bottom: 0.3rem;">30+</div>
-            <p style="font-size: 0.9rem;"><strong>Entrevistas Completadas</strong><br><span style="color: var(--muted); font-size: 0.8rem;">Insights cualitativos</span></p>
-          </div>
-          <div style="text-align: center; padding: 1rem; background: linear-gradient(135deg, rgba(32, 201, 151, 0.2), rgba(100, 200, 150, 0.2)); border-radius: 12px;">
-            <div style="font-size: 2rem; font-weight: 800; color: #20c997; margin-bottom: 0.3rem;">✅</div>
-            <p style="font-size: 0.9rem;"><strong>Product-Market Fit</strong><br><span style="color: var(--muted); font-size: 0.8rem;">Validado para lanzamiento</span></p>
-          </div>
-          <div style="text-align: center; padding: 1rem; background: linear-gradient(135deg, rgba(32, 201, 151, 0.2), rgba(100, 200, 150, 0.2)); border-radius: 12px;">
-            <div style="font-size: 2rem; font-weight: 800; color: #20c997; margin-bottom: 0.3rem;">3 meses</div>
-            <p style="font-size: 0.9rem;"><strong>Duración Total</strong><br><span style="color: var(--muted); font-size: 0.8rem;">Discovery → Validation</span></p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">CM</div>
+          <div>
+            <div class="testimonial-name">Carlos Méndez</div>
+            <div class="testimonial-role">Product Manager</div>
           </div>
         </div>
       </div>
-    </div>
-
-    <hr style="border: none; border-top: 1px solid var(--glass-border); margin: 4rem 0;">
-
-    <!-- APPLE KPIs CASE -->
-    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
-      <div style="order: 2;">
-        <h3 style="margin-bottom: 1.5rem; font-size: 1.5rem;">📊 Apple KPIs Analysis: Data Visualization</h3>
-        <p style="margin-bottom: 1rem;">
-          <strong>Fortune 500 UX Strategy Breakdown.</strong> Análisis profundo de cómo Apple optimiza su UX para impacto global usando data-driven insights.
-        </p>
-        
-        <h4 style="margin-top: 2rem; margin-bottom: 1rem; font-weight: 600;">Mi Enfoque</h4>
-        <ul style="list-style: none; padding: 0; margin-bottom: 2rem;">
-          <li style="margin-bottom: 0.8rem; display: flex; gap: 10px;">
-            <i class="ri-checkbox-circle-fill" style="color: var(--accent); flex-shrink: 0;"></i>
-            <span><strong>Data Scraping & Analysis:</strong> Python + pandas para procesar 5K+ datapoints</span>
-          </li>
-          <li style="margin-bottom: 0.8rem; display: flex; gap: 10px;">
-            <i class="ri-checkbox-circle-fill" style="color: var(--accent); flex-shrink: 0;"></i>
-            <span><strong>Advanced Visualizations:</strong> Matplotlib, Seaborn con narrativa clara</span>
-          </li>
-          <li style="margin-bottom: 0.8rem; display: flex; gap: 10px;">
-            <i class="ri-checkbox-circle-fill" style="color: var(--accent); flex-shrink: 0;"></i>
-            <span><strong>Strategic Insights:</strong> 5 patterns clave en UX strategy de Apple</span>
-          </li>
-          <li style="margin-bottom: 0.8rem; display: flex; gap: 10px;">
-            <i class="ri-checkbox-circle-fill" style="color: var(--accent); flex-shrink: 0;"></i>
-            <span><strong>Shareability:</strong> Reportaje viral en redes (50K+ views)</span>
-          </li>
-        </ul>
-
-        <a href="https://github.com/dsd228/-Apple-Inc.-2025-UX-KPIs-Innovation-Strategy" target="_blank" class="btn-primary">
-          <i class="ri-github-line"></i> Ver Análisis Completo
-        </a>
-      </div>
-
-      <div style="order: 1; background: var(--glass-bg); backdrop-filter: blur(12px); border: 1px solid var(--glass-border); padding: 2rem; border-radius: 24px; box-shadow: 12px 12px 24px var(--dark), -8px -8px 20px var(--light);">
-        <h4 style="text-align: center; margin-bottom: 1.5rem;">Impacto</h4>
-        <div style="display: grid; gap: 1rem;">
-          <div style="text-align: center; padding: 1rem; background: linear-gradient(135deg, rgba(201, 160, 32, 0.2), rgba(32, 201, 151, 0.2)); border-radius: 12px;">
-            <div style="font-size: 2rem; font-weight: 800; color: var(--accent); margin-bottom: 0.3rem;">50K+</div>
-            <p style="font-size: 0.9rem;"><strong>Views</strong><br><span style="color: var(--muted); font-size: 0.8rem;">Reportaje viral</span></p>
-          </div>
-          <div style="text-align: center; padding: 1rem; background: linear-gradient(135deg, rgba(201, 160, 32, 0.2), rgba(32, 201, 151, 0.2)); border-radius: 12px;">
-            <div style="font-size: 2rem; font-weight: 800; color: var(--accent); margin-bottom: 0.3rem;">5K+</div>
-            <p style="font-size: 0.9rem;"><strong>Shares</strong><br><span style="color: var(--muted); font-size: 0.8rem;">Contenido viral</span></p>
-          </div>
-          <div style="text-align: center; padding: 1rem; background: linear-gradient(135deg, rgba(201, 160, 32, 0.2), rgba(32, 201, 151, 0.2)); border-radius: 12px;">
-            <div style="font-size: 2rem; font-weight: 800; color: var(--accent); margin-bottom: 0.3rem;">5 Insights</div>
-            <p style="font-size: 0.9rem;"><strong>Strategic Patterns</strong><br><span style="color: var(--muted); font-size: 0.8rem;">Apple's UX playbook</span></p>
-          </div>
-          <div style="text-align: center; padding: 1rem; background: linear-gradient(135deg, rgba(201, 160, 32, 0.2), rgba(32, 201, 151, 0.2)); border-radius: 12px;">
-            <div style="font-size: 2rem; font-weight: 800; color: var(--accent); margin-bottom: 0.3rem;">1 Colab</div>
-            <p style="font-size: 0.9rem;"><strong>Interactive</strong><br><span style="color: var(--muted); font-size: 0.8rem;">Reproducible analysis</span></p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section id="blog">
-  <div class="container">
-    <h2 class="section-title">Insights & Artículos</h2>
-    <p class="section-subtitle">Ideas accionables sobre UX, Data y Product Design</p>
-
-    <div class="blog-grid">
-
-      <article class="blog-card">
-        <div class="blog-meta">
-          <span class="blog-category">UX Research</span>
-          <span class="blog-date">9 Ene</span>
-        </div>
-        <h3>5 Errores en UX Research que Destruyen Productos</h3>
-        <p class="blog-preview">Tras 150+ sesiones encontré el patrón: muestras sesgadas, preguntas guiadas, interpretación selectiva. Cómo evitarlos y aumentar validación.</p>
-        <div class="blog-highlight">
-          <strong>Caso Real:</strong> Cliente redujo churn 45% → 28% en 2 meses aplicando 3 correcciones clave.
-        </div>
-        <a href="#" class="read-more">Leer Artículo <i class="ri-arrow-right-line"></i></a>
-      </article>
-
-      <article class="blog-card">
-        <div class="blog-meta">
-          <span class="blog-category">Data & Analytics</span>
-          <span class="blog-date">5 Ene</span>
-        </div>
-        <h3>Data-Driven Design: De Métricas a Decisiones</h3>
-        <p class="blog-preview">No optimices vanity metrics. El framework correcto: métrica de negocio → comportamiento → medición. Conecta datos con impacto real.</p>
-        <div class="blog-highlight">
-          <strong>Resultado:</strong> SaaS aumentó conversión 37% cambiando focus de "engagement time" a "decisión clara".
-        </div>
-        <a href="#" class="read-more">Leer Artículo <i class="ri-arrow-right-line"></i></a>
-      </article>
-
-      <article class="blog-card">
-        <div class="blog-meta">
-          <span class="blog-category">Design Systems</span>
-          <span class="blog-date">1 Ene</span>
-        </div>
-        <h3>Design Systems: Escalando sin Caos</h3>
-        <p class="blog-preview">Un design system no es overengineering. Es el opuesto: consistencia × velocidad. Audita, consolida, documenta, entrena.</p>
-        <div class="blog-highlight">
-          <strong>Impacto:</strong> 60% menos tiempo en diseño, 40% menos CSS, 3x menos bugs visuales.
-        </div>
-        <a href="#" class="read-more">Leer Artículo <i class="ri-arrow-right-line"></i></a>
-      </article>
-
-    </div>
-
-    <div class="blog-footer">
-      <a href="#" class="btn-primary btn-large">Explorar Todos los Artículos</a>
-    </div>
-    
-    <!-- Torus 3D Decorativo -->
-    <div style="display: flex; justify-content: center; margin-top: 3rem;">
-      <div id="torus-shape" style="opacity: 0.6;"></div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= PROJECTS ================= -->
-<section id="projects" style="position: relative; overflow: hidden;">
-  <!-- Formas Geométricas Flotantes -->
-  <div id="floating-shapes-bg"></div>
-  <div class="container" style="position: relative; z-index: 1;">
-    <h2 class="section-title section-title-3d">Casos de Estudio</h2>
-    <p class="section-subtitle">Proyectos reales donde el diseño impactó métricas de negocio</p>
-
-    <div class="grid-2">
-
-      <!-- NEXUS LOGISTICS -->
-      <article class="card project-hover">
-        <div class="project-visual" style="position: relative; overflow: hidden; border-radius: 16px; aspect-ratio: 16/10; background: linear-gradient(135deg, #0f4c75 0%, #3282b8 100%); display: flex; align-items: center; justify-content: center;">
-          <div style="text-align: center; color: white;">
-            <div style="font-size: 2rem; margin-bottom: 8px;">📊</div>
-            <p style="font-size: 0.9rem; opacity: 0.9;">Dashboard Rediseño<br>200+ → 30 campos críticos</p>
-          </div>
-        </div>
-        <div class="project-info">
-          <h3><i class="ri-truck-line"></i> Nexus Logistics</h3>
-          <p class="project-summary"><strong>SaaS B2B de logística.</strong> Rediseñé dashboard de 200+ campos a 30 críticos con arquitectura contextual.</p>
-          <div class="project-result" style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin: 16px 0;">
-            <div style="padding: 8px; background: var(--light); border-radius: 8px; text-align: center; font-size: 0.9rem;"><strong>↑40%</strong> Usabilidad</div>
-            <div style="padding: 8px; background: var(--light); border-radius: 8px; text-align: center; font-size: 0.9rem;"><strong>200+</strong> Usuarios</div>
-            <div style="padding: 8px; background: var(--light); border-radius: 8px; text-align: center; font-size: 0.9rem;"><strong>↓30%</strong> Training</div>
-          </div>
-          <div class="project-tags">
-            <span class="tag">SaaS</span>
-            <span class="tag">Design System</span>
-          </div>
-        </div>
-        <div class="project-actions">
-          <a class="btn-secondary" target="_blank" href="https://github.com/dsd228/nexus-logistics-ui">
-            <i class="ri-github-line"></i> Repo
-          </a>
-          <a class="btn-secondary" target="_blank" href="https://www.figma.com/proto/kxmeNODyszHGlBmiOfth0C/Nexus-Logistics">
-            <i class="ri-eye-line"></i> Demo Figma
-          </a>
-        </div>
-      </article>
-
-      <!-- PASEO UX CASE STUDY -->
-      <article class="card project-hover">
-        <div class="project-info">
-          <h3><i class="ri-user-heart-line"></i> PASEO App</h3>
-          <p class="project-summary"><strong>Mobile MVP Validation.</strong> 30+ entrevistas + 20 testing sessions confirmaron product-market fit antes del lanzamiento.</p>
-          <div class="project-result">
-            92% satisfacción · Roadmap validado · Lanzamiento exitoso
-          </div>
-          <div class="project-tags">
-            <span class="tag">Mobile</span>
-            <span class="tag">UX Research</span>
-          </div>
-        </div>
-        <div class="project-actions">
-          <a class="btn-secondary" target="_blank" href="https://github.com/dsd228/dsd228-paseo-ux-case-study">
-            <i class="ri-github-line"></i> Repo
-          </a>
-          <a class="btn-secondary" target="_blank" href="https://github.com/dsd228/dsd228-paseo-ux-case-study">
-            <i class="ri-external-link-line"></i> Caso Completo
-          </a>
-        </div>
-        <div class="project-thumbs" aria-hidden="true">
-          <img src="images/paseo-1.png" alt="PASEO App preview 1">
-          <img src="images/paseo-2.png" alt="PASEO App preview 2">
-          <img src="images/paseo-3.png" alt="PASEO App preview 3">
-        </div>
-      </article>
-
-      <!-- APPLE ANALYSIS -->
-      <article class="card project-hover">
-        <div class="project-info">
-          <h3><i class="ri-line-chart-line"></i> Apple KPIs Analysis</h3>
-          <p class="project-summary"><strong>Data Visualization + Strategy.</strong> Análisis de UX strategy Fortune 500 con visualizaciones avanzadas en Python.</p>
-          <div class="project-result">
-            50K+ views · 5K+ shares · Reportaje viral
-          </div>
-          <div class="project-tags">
-            <span class="tag">Data Viz</span>
-            <span class="tag">Python</span>
-          </div>
-        </div>
-        <div class="project-actions">
-          <a class="btn-secondary" target="_blank" href="https://github.com/dsd228/-Apple-Inc.-2025-UX-KPIs-Innovation-Strategy">
-            <i class="ri-github-line"></i> Repo
-          </a>
-          <a class="btn-secondary" target="_blank" href="https://colab.research.google.com/github/dsd228/-Apple-Inc.-2025-UX-KPIs-Innovation-Strategy/blob/main/notebooks/apple_visuals_generator.ipynb">
-            <i class="ri-play-circle-line"></i> Colab
-          </a>
-        </div>
-      </article>
-
-      <!-- YALE UX REDESIGN -->
-      <article class="card project-hover">
-        <div class="project-visual" style="position: relative; overflow: hidden; border-radius: 16px; aspect-ratio: 16/10; background: linear-gradient(135deg, #0c40a6 0%, #5b7dd1 100%); display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 2rem; padding: 2rem;">
-          <div style="text-align: center;">
-            <div style="font-size: 2.5rem; margin-bottom: 8px;">❌</div>
-            <p style="color: rgba(255,255,255,0.9); font-size: 0.9rem; line-height: 1.4;">Estructura caótica<br>Mala jeraquía<br>Poca claridad</p>
-          </div>
-          <div style="text-align: center;">
-            <div style="font-size: 2.5rem; margin-bottom: 8px;">✅</div>
-            <p style="color: rgba(255,255,255,0.9); font-size: 0.9rem; line-height: 1.4;">Arquitectura clara<br>Visual coherente<br>Fácil de navegar</p>
-          </div>
-        </div>
-        <div class="project-info">
-          <h3><i class="ri-graduation-cap-line"></i> Yale UX Redesign</h3>
-          <p class="project-summary"><strong>Arquitectura y UI.</strong> Reorganización de contenidos y componentes con foco en claridad y consistencia visual.</p>
-          <div class="project-result" style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 16px 0;">
-            <div style="padding: 8px; background: var(--light); border-radius: 8px; text-align: center; font-size: 0.9rem;"><strong>↑85%</strong> Encuentrabilidad</div>
-            <div style="padding: 8px; background: var(--light); border-radius: 8px; text-align: center; font-size: 0.9rem;"><strong>↓40%</strong> Confusión</div>
-          </div>
-          <div class="project-tags">
-            <span class="tag">Education</span>
-            <span class="tag">UX Redesign</span>
-          </div>
-        </div>
-        <div class="project-actions">
-          <a class="btn-secondary" target="_blank" href="https://github.com/dsd22/yale-ux-redesign">
-            <i class="ri-github-line"></i> Repo
-          </a>
-          <a class="btn-secondary" target="_blank" href="#">
-            <i class="ri-eye-line"></i> Caso Completo (pronto)
-          </a>
-        </div>
-      </article>
-
-      <!-- SCHOOL ART UX/UI REDESIGN -->
-      <article class="card project-hover">
-        <div class="project-visual" style="position: relative; overflow: hidden; border-radius: 16px; aspect-ratio: 16/10; background: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%); display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 2rem; padding: 2rem;">
-          <div style="text-align: center;">
-            <div style="font-size: 2.5rem; margin-bottom: 8px;">🎨</div>
-            <p style="color: rgba(255,255,255,0.9); font-size: 0.9rem; line-height: 1.4;">UI inconsistente<br>Flujos complejos<br>Alto drop-off</p>
-          </div>
-          <div style="text-align: center;">
-            <div style="font-size: 2.5rem; margin-bottom: 8px;">⭐</div>
-            <p style="color: rgba(255,255,255,0.9); font-size: 0.9rem; line-height: 1.4;">Sistema coherente<br>Flujos intuitivos<br>Mejor conversión</p>
-          </div>
-        </div>
-        <div class="project-info">
-          <h3><i class="ri-paint-brush-line"></i> School Art UX/UI</h3>
-          <p class="project-summary"><strong>Arquitectura + UI.</strong> Rediseño con foco en claridad de IA, coherencia visual y reducción de fricción.</p>
-          <div class="project-result" style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 16px 0;">
-            <div style="padding: 8px; background: var(--light); border-radius: 8px; text-align: center; font-size: 0.9rem;"><strong>↑52%</strong> Claridad IA</div>
-            <div style="padding: 8px; background: var(--light); border-radius: 8px; text-align: center; font-size: 0.9rem;"><strong>↓38%</strong> Fricción</div>
-          </div>
-          <div class="project-tags">
-            <span class="tag">Education</span>
-            <span class="tag">Redesign</span>
-          </div>
-        </div>
-        <div class="project-actions">
-          <a class="btn-secondary" target="_blank" href="https://www.behance.net/gallery/240418895/School-Art-UXUI-Redesign">
-            <i class="ri-external-link-line"></i> Behance
-          </a>
-          <a class="btn-secondary" target="_blank" href="#">
-            <i class="ri-github-line"></i> Repo (próximamente)
-          </a>
-        </div>
-      </article>
-
-      <!-- FRAUD DETECTION ML -->
-      <article class="card project-hover">
-        <div class="project-info">
-          <h3><i class="ri-shield-check-line"></i> Fraud Detection ML</h3>
-          <p class="project-summary"><strong>Data Science.</strong> Pipeline ML con XGBoost en dataset de 284K transacciones desbalanceado.</p>
-          <div class="project-result">
-            97% precision · Production-ready · Dashboard interactivo
-          </div>
-          <div class="project-tags">
-            <span class="tag">ML</span>
-            <span class="tag">Python</span>
-          </div>
-        </div>
-        <div class="project-actions">
-          <a class="btn-secondary" target="_blank" href="https://github.com/dsd228/credit-card-fraud-detection">
-            <i class="ri-github-line"></i> Repo
-          </a>
-          <a class="btn-secondary" target="_blank" href="https://dsd228.github.io/credit-card-fraud-detection/">
-            <i class="ri-external-link-line"></i> Demo
-          </a>
-        </div>
-      </article>
-
-      <!-- TODOS TUS PROYECTOS -->
-      <div class="card project-showcase">
-        <h3><i class="ri-folder-open-line"></i> 30+ Proyectos Más</h3>
-        <p>Diseño UX/UI, data analytics, ML, desarrollo web. Todos optimizados por datos y métricas reales.</p>
-        <a class="btn-primary" target="_blank" href="https://github.com/dsd228">
-          <i class="ri-github-line"></i> Explorar GitHub
-        </a>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ================= CASE STUDY IN-DEPTH ================= -->
-<section id="case-study-featured" style="background: linear-gradient(135deg, rgba(201, 160, 32, 0.05), rgba(32, 201, 151, 0.05)); padding: 6rem 0;">
-  <div class="container">
-    <h2 class="section-title section-title-3d">Caso de Estudio Destacado: Nexus Logistics</h2>
-    <p class="section-subtitle" style="margin-bottom: 2rem; max-width: 800px;">Cómo transformé un dashboard de 200+ campos en un sistema escalable que redujo training 30% y mejoró usabilidad 40%</p>
-    <!-- Modelo 3D Interactivo -->
-    <div id="interactive-3d-model" style="margin-bottom: 3rem;"></div>
-
-    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
-      <!-- TEXTO -->
-      <div>
-        <h3 style="margin-bottom: 1.5rem; font-size: 1.5rem;">El Desafío</h3>
-        <p style="margin-bottom: 1rem;">
-          <strong>Nexus Logistics</strong> es una plataforma SaaS B2B con un dashboard abrumador: 200+ campos, jerarquía de información poco clara, y un proceso de training de 4+ semanas para nuevos usuarios.
-        </p>
-        <p style="margin-bottom: 2rem; color: var(--muted);">
-          El equipo de operaciones pasaba más tiempo buscando datos que tomando decisiones. La adopción era lenta y los tickets de soporte crecían constantemente.
-        </p>
-
-        <h3 style="margin-bottom: 1.5rem; font-size: 1.5rem;">Mi Enfoque</h3>
-        <ul style="margin-bottom: 2rem; list-style: none; padding: 0;">
-          <li style="margin-bottom: 0.8rem; display: flex; gap: 10px;">
-            <i class="ri-checkbox-circle-fill" style="color: var(--accent); flex-shrink: 0;"></i>
-            <span><strong>Discovery (2 semanas):</strong> 15 entrevistas + análisis de tareas críticas para entender qué 20% de datos generan el 80% del impacto</span>
-          </li>
-          <li style="margin-bottom: 0.8rem; display: flex; gap: 10px;">
-            <i class="ri-checkbox-circle-fill" style="color: var(--accent); flex-shrink: 0;"></i>
-            <span><strong>Strategy (1 semana):</strong> Arquitectura contextual: cada usuario ve solo los 30 campos relevantes según su rol</span>
-          </li>
-          <li style="margin-bottom: 0.8rem; display: flex; gap: 10px;">
-            <i class="ri-checkbox-circle-fill" style="color: var(--accent); flex-shrink: 0;"></i>
-            <span><strong>Design (3 semanas):</strong> Wireframes, componentes reutilizables, design system escalable</span>
-          </li>
-          <li style="margin-bottom: 0.8rem; display: flex; gap: 10px;">
-            <i class="ri-checkbox-circle-fill" style="color: var(--accent); flex-shrink: 0;"></i>
-            <span><strong>Testing (1 semana):</strong> 8 sesiones de usability testing con usuarios reales. NPS antes: 42 → después: 74</span>
-          </li>
-        </ul>
-
-        <a href="https://www.figma.com/proto/kxmeNODyszHGlBmiOfth0C/Nexus-Logistics" target="_blank" class="btn-primary" style="display: inline-block;">
-          <i class="ri-eye-line"></i> Ver Prototipo Interactivo
-        </a>
-      </div>
-
-      <!-- MÉTRICAS -->
-      <div style="background: var(--glass-bg); backdrop-filter: blur(12px); border: 1px solid var(--glass-border); padding: 2rem; border-radius: 24px; box-shadow: 12px 12px 24px var(--dark), -8px -8px 20px var(--light);">
-        <h3 style="margin-bottom: 2rem; text-align: center; font-size: 1.5rem;">Resultados Comprobados</h3>
-        
-        <div style="display: grid; gap: 1.5rem;">
-          <div style="text-align: center; padding: 1.5rem; background: linear-gradient(135deg, rgba(201, 160, 32, 0.2), rgba(32, 201, 151, 0.2)); border-radius: 16px;">
-            <div style="font-size: 2.5rem; font-weight: 800; color: var(--accent); margin-bottom: 0.5rem;">↑40%</div>
-            <p style="font-size: 0.95rem;"><strong>Mejora en Usabilidad</strong><br><span style="color: var(--muted); font-size: 0.85rem;">Sistema Usability Scale: 62 → 87</span></p>
-          </div>
-
-          <div style="text-align: center; padding: 1.5rem; background: linear-gradient(135deg, rgba(32, 201, 151, 0.2), rgba(100, 200, 150, 0.2)); border-radius: 16px;">
-            <div style="font-size: 2.5rem; font-weight: 800; color: #20c997; margin-bottom: 0.5rem;">↓30%</div>
-            <p style="font-size: 0.95rem;"><strong>Menos Tiempo de Training</strong><br><span style="color: var(--muted); font-size: 0.85rem;">4.2 semanas → 2.9 semanas</span></p>
-          </div>
-
-          <div style="text-align: center; padding: 1.5rem; background: linear-gradient(135deg, rgba(32, 201, 151, 0.2), rgba(100, 200, 150, 0.2)); border-radius: 16px;">
-            <div style="font-size: 2.5rem; font-weight: 800; color: #20c997; margin-bottom: 0.5rem;">200+ → 30</div>
-            <p style="font-size: 0.95rem;"><strong>Campos Visibles por Rol</strong><br><span style="color: var(--muted); font-size: 0.85rem;">Arquitectura contextual</span></p>
-          </div>
-
-          <div style="text-align: center; padding: 1.5rem; background: linear-gradient(135deg, rgba(32, 201, 151, 0.2), rgba(100, 200, 150, 0.2)); border-radius: 16px;">
-            <div style="font-size: 2.5rem; font-weight: 800; color: #20c997; margin-bottom: 0.5rem;">+32</div>
-            <p style="font-size: 0.95rem;"><strong>Puntos NPS</strong><br><span style="color: var(--muted); font-size: 0.85rem;">42 → 74 (Promoter)</span></p>
-          </div>
-
-          <div style="text-align: center; padding: 1.5rem; background: linear-gradient(135deg, rgba(32, 201, 151, 0.2), rgba(100, 200, 150, 0.2)); border-radius: 16px;">
-            <div style="font-size: 2.5rem; font-weight: 800; color: #20c997; margin-bottom: 0.5rem;">↓68%</div>
-            <p style="font-size: 0.95rem;"><strong>Reducción en Tickets</strong><br><span style="color: var(--muted); font-size: 0.85rem;">Menos confusión = menos soporte</span></p>
-          </div>
-        </div>
-
-        <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--glass-border);">
-          <p style="font-size: 0.9rem; color: var(--muted); text-align: center; margin-bottom: 1rem;">
-            <strong>Duración del proyecto:</strong> 7 semanas<br>
-            <strong>Usuarios activos:</strong> 200+ operarios<br>
-            <strong>Disponible:</strong> <a href="https://github.com/dsd228/nexus-logistics-ui" target="_blank" style="color: var(--accent); text-decoration: underline;">GitHub Repo</a>
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= SKILLS CHART SECTION ================= -->
-<section id="skills-chart">
-  <div class="container">
-    <h2 class="section-title">Mi Expertise en Detalle</h2>
-
-    <div class="skills-chart-grid">
-      
-      <div class="skill-chart-card">
-        <h3>UX Research & Discovery</h3>
-        <div class="skill-bar">
-          <div class="skill-progress" style="width: 95%"></div>
-        </div>
-        <span class="skill-label">Expert</span>
-      </div>
-
-      <div class="skill-chart-card">
-        <h3>Product Strategy</h3>
-        <div class="skill-bar">
-          <div class="skill-progress" style="width: 90%"></div>
-        </div>
-        <span class="skill-label">Advanced</span>
-      </div>
-
-      <div class="skill-chart-card">
-        <h3>UI Design & Neumorphism</h3>
-        <div class="skill-bar">
-          <div class="skill-progress" style="width: 98%"></div>
-        </div>
-        <span class="skill-label">Expert</span>
-      </div>
-
-      <div class="skill-chart-card">
-        <h3>Data Analytics</h3>
-        <div class="skill-bar">
-          <div class="skill-progress" style="width: 88%"></div>
-        </div>
-        <span class="skill-label">Advanced</span>
-      </div>
-
-      <div class="skill-chart-card">
-        <h3>Design Systems</h3>
-        <div class="skill-bar">
-          <div class="skill-progress" style="width: 92%"></div>
-        </div>
-        <span class="skill-label">Expert</span>
-      </div>
-
-      <div class="skill-chart-card">
-        <h3>Usability Testing</h3>
-        <div class="skill-bar">
-          <div class="skill-progress" style="width: 93%"></div>
-        </div>
-        <span class="skill-label">Expert</span>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ================= INTERACTIVE QUIZ ================= -->
-<section id="quiz">
-  <div class="container narrow">
-    <h2 class="section-title">¿Qué tipo de UX Designer soy?</h2>
-
-    <div class="quiz-card">
-      <p class="quiz-intro">Responde 3 preguntas rápidas para descubrir tu "tipo de UX designer"</p>
-      
-      <div id="quiz-content" class="quiz-content">
-        <div class="quiz-question" data-question="1">
-          <h4>¿Qué te apasiona más?</h4>
-          <div class="quiz-options">
-            <button class="quiz-option" onclick="selectAnswer('user')">👥 Entender usuarios</button>
-            <button class="quiz-option" onclick="selectAnswer('data')">📊 Analizar datos</button>
-            <button class="quiz-option" onclick="selectAnswer('visual')">🎨 Crear interfaces bellas</button>
-          </div>
-        </div>
-
-        <div class="quiz-question" data-question="2" style="display: none;">
-          <h4>¿Cómo defines el éxito?</h4>
-          <div class="quiz-options">
-            <button class="quiz-option" onclick="selectAnswer('satisfaction')">😊 Satisfacción del usuario</button>
-            <button class="quiz-option" onclick="selectAnswer('metrics')">📈 Métricas y KPIs</button>
-            <button class="quiz-option" onclick="selectAnswer('aesthetic')">✨ Diseño impeccable</button>
-          </div>
-        </div>
-
-        <div class="quiz-question" data-question="3" style="display: none;">
-          <h4>Tu fortaleza principal:</h4>
-          <div class="quiz-options">
-            <button class="quiz-option" onclick="selectAnswer('research')">🔍 Research profundo</button>
-            <button class="quiz-option" onclick="selectAnswer('technical')">⚙️ Habilidades técnicas</button>
-            <button class="quiz-option" onclick="selectAnswer('craft')">🖌️ Craft y detalles</button>
-          </div>
-        </div>
-
-        <div id="quiz-result" style="display: none;" class="quiz-result">
-          <h3>Tu tipo de UX Designer:</h3>
-          <div id="result-content"></div>
-        </div>
-      </div>
-
-      <div class="quiz-navigation">
-        <button id="quiz-reset" onclick="resetQuiz()" class="btn-secondary" style="display: none;">
-          Responder de Nuevo
-        </button>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= CTA SECTION ================= -->
-<section id="cta" style="background: linear-gradient(135deg, rgba(201, 160, 32, 0.08), rgba(184, 148, 29, 0.12)); padding: 6rem 0;">
-  <div class="container narrow">
-    <div class="card" style="text-align: center; padding: 4rem 3rem;">
-      <h2 style="margin-bottom: 1.5rem; font-size: 2rem;">¿Tienes un Producto Digital que Necesita Claridad de UX?</h2>
-      <p style="font-size: 1.125rem; color: var(--text-secondary); margin-bottom: 2.5rem; max-width: 600px; margin-left: auto; margin-right: auto;">
-        Si estás construyendo un producto complejo, necesitas más que diseño bonito. 
-        Necesitas <strong>investigación profunda</strong>, <strong>decisiones basadas en datos</strong> y 
-        <strong>diseño que resuelve problemas de negocio</strong>.
-      </p>
-      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-        <a href="#contact" class="btn-primary" style="font-size: 1.125rem; padding: 1rem 2rem;">
-          Hablemos de tu Proyecto
-        </a>
-        <a href="#projects" class="btn-secondary" style="font-size: 1.125rem; padding: 1rem 2rem;">
-          Ver Casos de Estudio
-        </a>
-      </div>
-      <p style="margin-top: 2rem; font-size: 0.95rem; color: var(--muted);">
-        💡 Mejora promedio de +35% en conversión · Research profundo · Diseño que escala
-      </p>
-    </div>
-  </div>
-</section>
-
-<!-- ================= FAQ ================= -->
-<section id="faq" style="padding: 6rem 0; background: linear-gradient(135deg, rgba(201, 160, 32, 0.02), rgba(32, 201, 151, 0.02));">
-  <div class="container narrow">
-    <h2 class="section-title" style="text-align: center;">Preguntas Frecuentes</h2>
-    <p class="section-subtitle" style="text-align: center; margin-bottom: 4rem;">Respuestas claras a lo que más preguntan mis clientes</p>
-
-    <div style="display: grid; gap: 1.5rem;">
-
-      <!-- FAQ 1 -->
-      <div style="background: var(--glass-bg); backdrop-filter: blur(12px); border: 1px solid var(--glass-border); border-radius: 16px; padding: 2rem; cursor: pointer; transition: all var(--transition-fast);" class="faq-item">
-        <div style="display: flex; justify-content: space-between; align-items: center;" class="faq-header">
-          <h3 style="margin: 0; font-size: 1.1rem;">¿Cuánto cuesta tu consultoría?</h3>
-          <i class="ri-arrow-down-s-line" style="font-size: 1.5rem; transition: transform var(--transition-fast);"></i>
-        </div>
-        <div style="display: none; margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--glass-border); color: var(--text-secondary);" class="faq-content">
-          <p>Depende del scope. Tengo tres modelos:</p>
-          <ul style="margin: 1rem 0; padding-left: 2rem;">
-            <li><strong>Consulta Estratégica (1h):</strong> $500 → Definir dirección del proyecto</li>
-            <li><strong>Proyecto Completo (6-12 semanas):</strong> $8K-$25K → Discovery + Design + Testing</li>
-            <li><strong>Mentoría Continua (3-6 meses):</strong> $3K-$5K/mes → Acompañamiento del equipo</li>
-          </ul>
-          <p style="margin-top: 1rem;"><strong>Primera consulta es gratis.</strong> Agendar en Calendly.</p>
-        </div>
-      </div>
-
-      <!-- FAQ 2 -->
-      <div style="background: var(--glass-bg); backdrop-filter: blur(12px); border: 1px solid var(--glass-border); border-radius: 16px; padding: 2rem; cursor: pointer; transition: all var(--transition-fast);" class="faq-item">
-        <div style="display: flex; justify-content: space-between; align-items: center;" class="faq-header">
-          <h3 style="margin: 0; font-size: 1.1rem;">¿Con qué tipos de empresas trabajas mejor?</h3>
-          <i class="ri-arrow-down-s-line" style="font-size: 1.5rem; transition: transform var(--transition-fast);"></i>
-        </div>
-        <div style="display: none; margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--glass-border); color: var(--text-secondary);" class="faq-content">
-          <p><strong>Mi expertise es mayor en:</strong></p>
-          <ul style="margin: 1rem 0; padding-left: 2rem;">
-            <li>SaaS B2B (5-200 usuarios, productos complejos)</li>
-            <li>EdTech y HealthTech (donde la UX importa para compliance + adoption)</li>
-            <li>Startups en Series A-B (que necesitan validar dirección)</li>
-            <li>Equipos que quieren pasar de "bonito" a "impacto medible"</li>
-          </ul>
-          <p style="margin-top: 1rem;">No es sobre tamaño, es sobre mentalidad: ¿Quieres entender usuarios reales?</p>
-        </div>
-      </div>
-
-      <!-- FAQ 3 -->
-      <div style="background: var(--glass-bg); backdrop-filter: blur(12px); border: 1px solid var(--glass-border); border-radius: 16px; padding: 2rem; cursor: pointer; transition: all var(--transition-fast);" class="faq-item">
-        <div style="display: flex; justify-content: space-between; align-items: center;" class="faq-header">
-          <h3 style="margin: 0; font-size: 1.1rem;">¿Cómo es tu proceso de trabajo?</h3>
-          <i class="ri-arrow-down-s-line" style="font-size: 1.5rem; transition: transform var(--transition-fast);"></i>
-        </div>
-        <div style="display: none; margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--glass-border); color: var(--text-secondary);" class="faq-content">
-          <p style="margin-bottom: 1rem;">El framework que uso en cada proyecto:</p>
-          <ol style="padding-left: 2rem; line-height: 1.8;">
-            <li><strong>Discovery & Research</strong> (2-3 sem): Entrevistas + datos + análisis competitivo</li>
-            <li><strong>Strategy & Planning</strong> (1 sem): OKRs + arquitectura + prioridades</li>
-            <li><strong>Design & Prototyping</strong> (3-4 sem): Wireframes + high-fidelity + componentes</li>
-            <li><strong>Testing & Validation</strong> (1-2 sem): Usability tests + A/B tests + métricas</li>
-            <li><strong>Implementation & Handoff</strong> (1 sem): Design system + documentación + training</li>
-          </ol>
-        </div>
-      </div>
-
-      <!-- FAQ 4 -->
-      <div style="background: var(--glass-bg); backdrop-filter: blur(12px); border: 1px solid var(--glass-border); border-radius: 16px; padding: 2rem; cursor: pointer; transition: all var(--transition-fast);" class="faq-item">
-        <div style="display: flex; justify-content: space-between; align-items: center;" class="faq-header">
-          <h3 style="margin: 0; font-size: 1.1rem;">¿Dónde obtienes el +35% mejora que mencionas?</h3>
-          <i class="ri-arrow-down-s-line" style="font-size: 1.5rem; transition: transform var(--transition-fast);"></i>
-        </div>
-        <div style="display: none; margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--glass-border); color: var(--text-secondary);" class="faq-content">
-          <p style="margin-bottom: 1rem;">Es el <strong>promedio de proyectos completados</strong> (30+ clientes). Cada proyecto es diferente:</p>
-          <ul style="margin: 1rem 0; padding-left: 2rem;">
-            <li><strong>Nexus Logistics:</strong> +40% usabilidad, +32 NPS</li>
-            <li><strong>PASEO App:</strong> 92% user satisfaction, validó product-market fit</li>
-            <li><strong>Otros clientes:</strong> +45% engagement, ↓50% support tickets, +60% task completion</li>
-          </ul>
-          <p style="margin-top: 1rem;">Cada métrica se mide al inicio y después de 3 meses. Sin vanity metrics.</p>
-        </div>
-      </div>
-
-      <!-- FAQ 5 -->
-      <div style="background: var(--glass-bg); backdrop-filter: blur(12px); border: 1px solid var(--glass-border); border-radius: 16px; padding: 2rem; cursor: pointer; transition: all var(--transition-fast);" class="faq-item">
-        <div style="display: flex; justify-content: space-between; align-items: center;" class="faq-header">
-          <h3 style="margin: 0; font-size: 1.1rem;">¿Trabajan solo remote o también presencial?</h3>
-          <i class="ri-arrow-down-s-line" style="font-size: 1.5rem; transition: transform var(--transition-fast);"></i>
-        </div>
-        <div style="display: none; margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--glass-border); color: var(--text-secondary);" class="faq-content">
-          <p style="margin-bottom: 1rem;"><strong>Principalmente remote,</strong> pero flexible:</p>
-          <ul style="margin: 1rem 0; padding-left: 2rem;">
-            <li>Research & Discovery: Prefiero sesiones 1-on-1 (video call es fino)</li>
-            <li>Kickoff / Workshops: Presencial si es posible (Santiago, Colombia, LATAM)</li>
-            <li>Design & Testing: Toda asincrónica + demos semanales</li>
-          </ul>
-          <p style="margin-top: 1rem;">Usamos Figma, Slack, Calendly. Tiempo zone de LATAM.</p>
-        </div>
-      </div>
-
     </div>
   </div>
 </section>
 
 <!-- ================= CONTACT ================= -->
-<section id="contact">
-  <div class="container narrow">
-    <h2 class="section-title">¿Tienes un Proyecto Digital Complejo?</h2>
-    <p class="section-subtitle" style="margin-bottom: 4rem; font-size: 1.1rem;">Necesitas más que diseño bonito. Necesitas investigación profunda, decisiones data-driven y diseño que resuelve problemas.</p>
-
-    <div class="contact-wrapper">
-      <!-- CTA PRINCIPAL -->
-      <div class="contact-cta-primary" style="background: linear-gradient(135deg, var(--accent), #B8941D); padding: 3rem; border-radius: 24px; text-align: center; margin-bottom: 3rem; color: white;">
-        <h3 style="color: white; margin-bottom: 1rem;">Agendar Consulta Estratégica</h3>
-        <p style="color: rgba(255,255,255,0.95); margin-bottom: 2rem; font-size: 0.95rem;">30 minutos para entender tu desafío y diseñar una estrategia personalizada</p>
-        <a href="https://calendly.com/david-sebastian-diaz" target="_blank" class="btn-primary" style="background: white; color: var(--accent); font-weight: 600;">
-          <i class="ri-calendar-line"></i> Reservar Ahora
-        </a>
-      </div>
-
-      <!-- OPCIONES SECUNDARIAS -->
-      <div class="contact-form-section">
-        <h3 style="text-align: center; margin-bottom: 2rem;">O cuéntame tu proyecto aquí</h3>
-        <form class="contact-form" id="contactForm" action="https://formspree.io/f/xvgoeqvq" method="POST">
+<section id="contact" class="section-padding">
+  <div class="container">
+    <div class="section-header">
+      <h2>Contacto</h2>
+      <p class="section-subtitle">¿Tienes un proyecto digital complejo que necesita claridad de UX?</p>
+    </div>
+    
+    <div class="contact-grid">
+      <div class="contact-form">
+        <form id="contactForm">
           <div class="form-group">
-            <input type="text" name="name" placeholder="Tu Nombre" required>
+            <input type="text" name="name" placeholder="Nombre" required>
           </div>
           <div class="form-group">
-            <input type="email" name="email" placeholder="tu@email.com" required>
+            <input type="email" name="email" placeholder="Email" required>
           </div>
           <div class="form-group">
-            <textarea name="message" placeholder="Cuéntame sobre tu proyecto..." rows="5" required></textarea>
+            <textarea name="message" placeholder="Cuéntame sobre tu proyecto" rows="5" required></textarea>
           </div>
-          <button type="submit" class="btn-primary">Enviar Mensaje</button>
-          <span class="form-note" id="formStatus"></span>
+          <button type="submit" class="btn">Enviar mensaje</button>
         </form>
       </div>
-
-      <!-- ALTERNATIVAS RÁPIDAS -->
-      <div class="contact-options" style="margin-top: 3rem; padding-top: 3rem; border-top: 1px solid var(--glass-border);">
-        <p style="text-align: center; margin-bottom: 2rem; color: var(--muted); font-size: 0.95rem;">¿Prefieres otro canal?</p>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem;">
-          <div class="contact-card" style="text-align: center;">
-            <i class="ri-mail-line" style="font-size: 2rem; margin-bottom: 0.5rem;"></i>
-            <p style="font-size: 0.9rem; color: var(--muted); margin-bottom: 0.5rem;">Email directo</p>
-            <a href="mailto:david.diaz.uxdata@gmail.com" class="btn-secondary" style="font-size: 0.9rem;">
-              david.diaz.uxdata@gmail.com
-            </a>
+      
+      <div class="contact-info">
+        <h3>Información de contacto</h3>
+        <p>Agenda una consulta estratégica de 30 minutos para definir la dirección de tu proyecto.</p>
+        
+        <div class="contact-methods">
+          <div class="contact-method">
+            <i class="ri-mail-line"></i>
+            <div>
+              <div>Email</div>
+              <div>david.diaz.uxdata@gmail.com</div>
+            </div>
           </div>
-
-          <div class="contact-card" style="text-align: center;">
-            <i class="ri-linkedin-box-line" style="font-size: 2rem; margin-bottom: 0.5rem;"></i>
-            <p style="font-size: 0.9rem; color: var(--muted); margin-bottom: 0.5rem;">LinkedIn</p>
-            <a href="https://linkedin.com/in/david-sebastian-diaz" target="_blank" class="btn-secondary" style="font-size: 0.9rem;">
-              Conectar
-            </a>
+          
+          <div class="contact-method">
+            <i class="ri-linkedin-box-line"></i>
+            <div>
+              <div>LinkedIn</div>
+              <div>linkedin.com/in/david-sebastian-diaz</div>
+            </div>
+          </div>
+          
+          <div class="contact-method">
+            <i class="ri-github-line"></i>
+            <div>
+              <div>GitHub</div>
+              <div>github.com/dsd228</div>
+            </div>
           </div>
         </div>
       </div>
@@ -1594,359 +1072,111 @@
   </div>
 </section>
 
-<!-- ================= SCROLL TO TOP BUTTON ================= -->
-<button id="scroll-to-top" class="scroll-to-top" aria-label="Volver al inicio">
-  <i class="ri-arrow-up-line"></i>
-</button>
-
+<!-- ================= FOOTER ================= -->
 <footer class="footer">
-  © 2026 — David Sebastián Díaz · UX / Product Designer
+  <div class="container">
+    <p>© 2026 — David Sebastián Díaz · UX / Product Designer</p>
+    <p style="margin-top: 8px; font-size: 0.8rem;">Diseñado con elegancia y precisión</p>
+  </div>
 </footer>
 
-<!-- ================= JS ================= -->
-<script src="js/3d-animations.js"></script>
-<script src="js/main.js"></script>
+<!-- ================= JAVASCRIPT ================= -->
 <script>
-  /* ================= NAV MOBILE ================= */
-  const navToggle = document.querySelector('.nav-toggle');
-  const navMenu = document.querySelector('.nav-menu');
-
+  // Navegación móvil
+  const navToggle = document.getElementById('navToggle');
+  const navMenu = document.getElementById('navMenu');
+  
   navToggle.addEventListener('click', () => {
     navMenu.classList.toggle('active');
   });
-
-  /* ================= DARK MODE ================= */
-  // Gestionado por js/main.js
-
-  /* ================= SCROLL TO TOP BUTTON ================= */
-  const scrollTopBtn = document.getElementById('scroll-to-top');
-  const scrollThreshold = 0;
-
-  const updateScrollBtn = () => {
-    if (window.scrollY >= scrollThreshold) {
-      scrollTopBtn.classList.add('show');
-    } else {
-      scrollTopBtn.classList.remove('show');
-    }
-  };
-
-  window.addEventListener('scroll', updateScrollBtn);
-  document.addEventListener('DOMContentLoaded', updateScrollBtn);
   
-  scrollTopBtn.addEventListener('click', () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
+  // Cerrar menú al hacer clic en enlace
+  document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      navMenu.classList.remove('active');
     });
   });
-
-  /* ================= PARALLAX EFFECT ================= */
-  const heroVisual = document.querySelector('.hero-visual');
   
-  window.addEventListener('scroll', () => {
-    if (heroVisual) {
-      const scrollPosition = window.scrollY;
-      heroVisual.style.transform = `translateY(${scrollPosition * 0.3}px)`;
-    }
-  });
-
-  /* ================= SCROLL ANIMATIONS ================= */
-  const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -100px 0px'
-  };
-
-  const observer = new IntersectionObserver(function(entries) {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('in-view');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, observerOptions);
-
-  // Animar sections
-  document.querySelectorAll('section').forEach(section => {
-    observer.observe(section);
-  });
-
-  // Animar cards
-  document.querySelectorAll('.card, .process-step, .testimonial-card, .challenge-card').forEach(card => {
-    card.setAttribute('data-scroll-animate', '');
-    observer.observe(card);
-  });
-
-  /* ================= PARALLAX EN CHALLENGE CARDS ================= */
-  const challengeCards = document.querySelectorAll('.challenge-card');
+  // Tema oscuro/claro
+  const themeToggle = document.getElementById('themeToggle');
+  const themeIcon = themeToggle.querySelector('i');
   
-  challengeCards.forEach((card, index) => {
-    window.addEventListener('scroll', () => {
-      const scrollPosition = window.scrollY;
-      const offset = (index + 1) * 0.1;
-      card.style.transform = `translateY(${scrollPosition * offset * 0.2}px) scale(1)`;
-    });
+  themeToggle.addEventListener('click', () => {
+    document.body.dataset.theme = document.body.dataset.theme === 'dark' ? 'light' : 'dark';
+    
+    if (document.body.dataset.theme === 'dark') {
+      themeIcon.className = 'ri-moon-line';
+      document.body.style.backgroundColor = '#1a1a1a';
+      document.body.style.color = '#f5f5f5';
+    } else {
+      themeIcon.className = 'ri-sun-line';
+      document.body.style.backgroundColor = '';
+      document.body.style.color = '';
+    }
   });
-
-  /* ================= INTERACTIVE QUIZ ================= */
-  let quizAnswers = {};
-  let currentQuestion = 1;
-
-  window.selectAnswer = function(answer) {
-    quizAnswers[`q${currentQuestion}`] = answer;
-    
-    document.querySelector(`[data-question="${currentQuestion}"]`).style.display = 'none';
-    
-    if (currentQuestion < 3) {
-      currentQuestion++;
-      document.querySelector(`[data-question="${currentQuestion}"]`).style.display = 'block';
-    } else {
-      showQuizResult();
-    }
-  };
-
-  window.resetQuiz = function() {
-    quizAnswers = {};
-    currentQuestion = 1;
-    document.querySelectorAll('.quiz-question').forEach(q => q.style.display = 'none');
-    document.querySelector('[data-question="1"]').style.display = 'block';
-    document.getElementById('quiz-result').style.display = 'none';
-    document.getElementById('quiz-reset').style.display = 'none';
-  };
-
-  function showQuizResult() {
-    const q1 = quizAnswers.q1;
-    const q2 = quizAnswers.q2;
-    const q3 = quizAnswers.q3;
-
-    let designerType = '';
-    let description = '';
-    let icon = '';
-
-    if (q1 === 'user' && q2 === 'satisfaction') {
-      designerType = '🎯 UX Researcher / User-Centric Designer';
-      description = '<h4>Tu Perfil</h4><p>Eres un diseñador profundamente centrado en el usuario. Tu superpoder es entender qué necesitan realmente las personas y traducir eso en experiencias que resuelven problemas reales.</p><p><strong>Tu Fortaleza:</strong> UX Research, User Testing, Empathy</p><p><strong>Ideal Para:</strong> SaaS, HealthTech, Plataformas con usuarios complejos</p>';
-    } else if (q1 === 'data' && q2 === 'metrics') {
-      designerType = '📊 Data-Driven Designer / Product Strategist';
-      description = '<h4>Tu Perfil</h4><p>Eres un designer híbrido que une arte con análisis. Tomas decisiones basadas en datos, implementas A/B tests y mides cada impacto. La ciencia detrás del diseño te fascina.</p><p><strong>Tu Fortaleza:</strong> Analytics, Product Strategy, KPIs</p><p><strong>Ideal Para:</strong> E-commerce, Startups, Growth Hacking</p>';
-    } else if (q1 === 'visual' && q2 === 'aesthetic') {
-      designerType = '🎨 Craftsman Designer / Visual Specialist';
-      description = '<h4>Tu Perfil</h4><p>Eres un perfeccionista del detalle. Tu pasión está en crear interfaces hermosas, sistemas de diseño escalables y experiencias visualmente cautivadoras que dejan una marca.</p><p><strong>Tu Fortaleza:</strong> UI Design, Design Systems, Visual Consistency</p><p><strong>Ideal Para:</strong> Startups premium, Aplicaciones de consumo, Branding</p>';
-    } else if ((q1 === 'user' || q1 === 'data') && q2 === 'metrics') {
-      designerType = '🚀 Strategic UX/UI Designer';
-      description = '<h4>Tu Perfil</h4><p>Eres un designer versátil que combina investigación, estrategia y diseño. Entiendes usuarios pero también el negocio. Puedes diseñar hermoso Y medible.</p><p><strong>Tu Fortaleza:</strong> Todo - eres el designer del futuro</p><p><strong>Ideal Para:</strong> Cualquier proyecto ambicioso</p>';
-    } else if (q3 === 'research' || q3 === 'technical') {
-      designerType = '⚙️ Product UX Designer';
-      description = '<h4>Tu Perfil</h4><p>Eres un designer que entiende tanto los usuarios como la tecnología. Puedes comunicarte con ingenieros, traducir research en features y optimizar la experiencia técnica.</p><p><strong>Tu Fortaleza:</strong> Product Thinking, Technical UX, Collaboration</p><p><strong>Ideal Para:</strong> Plataformas tech, Herramientas B2B, Startups de software</p>';
-    } else {
-      designerType = '✨ Designer Integral';
-      description = '<h4>Tu Perfil</h4><p>Eres un designer híbrido que combina passion por usuarios, datos y craft visual. Eres el tipo de designer que puede llevar un proyecto desde ideación hasta impacto medido.</p><p><strong>Tu Fortaleza:</strong> Versatilidad y pensamiento holístico</p><p><strong>Ideal Para:</strong> Agencias, Product Teams, Startups en crecimiento</p>';
-    }
-
-    document.getElementById('result-content').innerHTML = `
-      <h4>${designerType}</h4>
-      ${description}
-    `;
-    
-    document.getElementById('quiz-result').style.display = 'block';
-    document.getElementById('quiz-reset').style.display = 'inline-block';
-  }
-
-  /* ================= CONTACT FORM ENHANCEMENT ================= */
+  
+  // Formulario de contacto
   const contactForm = document.getElementById('contactForm');
-  const formStatus = document.getElementById('formStatus');
-
+  
   if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
       e.preventDefault();
       
-      const formData = new FormData(contactForm);
+      // Simulación de envío
+      const submitBtn = this.querySelector('button[type="submit"]');
+      const originalText = submitBtn.innerHTML;
       
-      fetch(contactForm.action, {
-        method: 'POST',
-        body: formData,
-        headers: {
-          'Accept': 'application/json'
-        }
-      }).then(response => {
-        if (response.ok) {
-          formStatus.textContent = '✅ ¡Mensaje enviado exitosamente!';
-          formStatus.classList.add('success');
-          contactForm.reset();
-          
-          setTimeout(() => {
-            formStatus.textContent = '';
-            formStatus.classList.remove('success');
-          }, 5000);
-        } else {
-          throw new Error('Error en envío');
-        }
-      }).catch(error => {
-        formStatus.textContent = '❌ Error al enviar. Intenta de nuevo.';
-        formStatus.classList.add('error');
-        
-        setTimeout(() => {
-          formStatus.textContent = '';
-          formStatus.classList.remove('error');
-        }, 5000);
-      });
+      submitBtn.innerHTML = 'Enviando...';
+      submitBtn.disabled = true;
+      
+      setTimeout(() => {
+        alert('¡Mensaje enviado! Me pondré en contacto contigo pronto.');
+        contactForm.reset();
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
+      }, 1500);
     });
   }
-
-  /* ================= COUNTER ANIMATION ================= */
-  const observer2 = new IntersectionObserver((entries) => {
+  
+  // Animación de scroll suave
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      
+      const targetId = this.getAttribute('href');
+      if (targetId === '#') return;
+      
+      const targetElement = document.querySelector(targetId);
+      if (targetElement) {
+        window.scrollTo({
+          top: targetElement.offsetTop - 80,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+  
+  // Efecto de aparición al hacer scroll
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+  
+  const observer = new IntersectionObserver(function(entries) {
     entries.forEach(entry => {
-      if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
-        entry.target.classList.add('animated');
-        
-        const target = parseInt(entry.target.textContent);
-        let current = 0;
-        const increment = target / 50;
-        
-        const timer = setInterval(() => {
-          current += increment;
-          if (current >= target) {
-            entry.target.textContent = target + '+';
-            clearInterval(timer);
-          } else {
-            entry.target.textContent = Math.floor(current) + '+';
-          }
-        }, 30);
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
       }
     });
-  }, { threshold: 0.5 });
-
-  document.querySelectorAll('.stat-number').forEach(stat => {
-    observer2.observe(stat);
-  });
-
-  /* ================= PERFORMANCE MONITORING ================= */
-  // Track Core Web Vitals
-  if ('web-vital' in window) {
-    const vitals = {
-      LCP: 0,  // Largest Contentful Paint
-      FID: 0,  // First Input Delay
-      CLS: 0   // Cumulative Layout Shift
-    };
-    
-    // Log when page is fully interactive
-    window.addEventListener('load', () => {
-      console.log('✅ Portfolio cargado completamente');
-    });
-  }
-
-  // Lazy load external resources
-  document.addEventListener('DOMContentLoaded', () => {
-    // Preload images on scroll
-    const images = document.querySelectorAll('img[data-lazy]');
-    const imageObserver = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const img = entry.target;
-          img.src = img.dataset.lazy;
-          img.removeAttribute('data-lazy');
-          observer.unobserve(img);
-        }
-      });
-    });
-    
-    images.forEach(img => imageObserver.observe(img));
-  });
-
-  /* ================= FAQ ACCORDION ================= */
-  document.querySelectorAll('.faq-item').forEach(item => {
-    const header = item.querySelector('.faq-header');
-    const content = item.querySelector('.faq-content');
-    const icon = header.querySelector('i');
-
-    header.addEventListener('click', () => {
-      const isOpen = content.style.display !== 'none';
-      
-      // Close all other items
-      document.querySelectorAll('.faq-item').forEach(other => {
-        if (other !== item) {
-          other.querySelector('.faq-content').style.display = 'none';
-          other.querySelector('i').style.transform = 'rotate(0deg)';
-        }
-      });
-
-      // Toggle current item
-      if (isOpen) {
-        content.style.display = 'none';
-        icon.style.transform = 'rotate(0deg)';
-      } else {
-        content.style.display = 'block';
-        icon.style.transform = 'rotate(180deg)';
-      }
-    });
-  });
-
-</script>
-
-<!-- ================= 3D ANIMATIONS JS ================= -->
-<script src="js/3d-animations.js"></script>
-<script src="js/geometric-shapes-3d.js"></script>
-
-<!-- ================= INICIALIZAR FORMAS GEOMÉTRICAS ================= -->
-<script>
-  // Inicializar formas geométricas en diferentes secciones
-  document.addEventListener('DOMContentLoaded', () => {
-    // Pirámide en Challenges
-    if (document.getElementById('pyramid-shape')) {
-      new GeometricShapes3D.Pyramid3D('pyramid-shape', {
-        size: 100,
-        color: 'rgba(201, 160, 32, 0.2)',
-        autoRotate: true
-      });
-    }
-    
-    // Octaedro en Certificaciones
-    if (document.getElementById('diamond-shape')) {
-      new GeometricShapes3D.Octahedron3D('diamond-shape', {
-        size: 110,
-        color: 'rgba(32, 201, 151, 0.2)',
-        autoRotate: true
-      });
-    }
-    
-    // Dodecaedro en Product Design
-    if (document.getElementById('dodeca-shape')) {
-      new GeometricShapes3D.SimpleDodecahedron3D('dodeca-shape', {
-        size: 100,
-        color: 'rgba(139, 92, 246, 0.2)',
-        autoRotate: true
-      });
-    }
-    
-    // Estrella en Testimonials
-    if (document.getElementById('star-shape')) {
-      new GeometricShapes3D.Star3D('star-shape', {
-        size: 100,
-        points: 5,
-        color: 'rgba(255, 215, 0, 0.3)',
-        autoRotate: true
-      });
-    }
-    
-    // Prisma Hexagonal en Skills
-    if (document.getElementById('hexprism-shape')) {
-      new GeometricShapes3D.HexagonalPrism3D('hexprism-shape', {
-        size: 80,
-        height: 100,
-        color: 'rgba(236, 72, 153, 0.2)',
-        autoRotate: true
-      });
-    }
-    
-    // Torus en Newsletter/Blog
-    if (document.getElementById('torus-shape')) {
-      new GeometricShapes3D.Torus3D('torus-shape', {
-        size: 120,
-        thickness: 30,
-        segments: 12,
-        color: 'rgba(59, 130, 246, 0.2)',
-        autoRotate: true
-      });
-    }
+  }, observerOptions);
+  
+  // Aplicar animación a elementos
+  document.querySelectorAll('.service-card, .project-card, .process-step, .testimonial-card').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    observer.observe(el);
   });
 </script>
 
