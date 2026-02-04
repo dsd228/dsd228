@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  
   <title>David Sebastián Díaz — UX/UI & Product Designer</title>
   <meta name="description" content="Diseñador de Producto UX/UI con enfoque estratégico, investigación profunda y diseño basado en datos.">
   
@@ -22,10 +21,11 @@
   <!-- Icons -->
   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
   
-  <!-- CSS estilo Velasca -->
+  <!-- CSS estilo Velasca Premium -->
   <style>
-    /* ================= RESET & VARIABLES ================= */
+    /* ================= RESET & VARIABLES VELASCA ================= */
     :root {
+      /* Paleta de colores Velasca - Elegante y sofisticado */
       --white: #ffffff;
       --black: #000000;
       --beige: #F5F3EF;
@@ -34,20 +34,45 @@
       --light-gray: #9A9A9A;
       --accent: #8B7355; /* Oro/beige oscuro estilo Velasca */
       --accent-dark: #6B5A45;
+      --accent-light: #C9A020;
       --border: rgba(0,0,0,0.08);
-      --shadow: 0 4px 20px rgba(0,0,0,0.05);
+      --shadow: 0 8px 40px rgba(0,0,0,0.05);
+      --shadow-hover: 0 16px 48px rgba(0,0,0,0.08);
       
+      /* Tipografía Velasca */
       --font-serif: 'Playfair Display', serif;
       --font-sans: 'Inter', sans-serif;
       
-      --container: 1200px;
-      --spacing-xs: 8px;
-      --spacing-sm: 16px;
-      --spacing-md: 32px;
-      --spacing-lg: 64px;
-      --spacing-xl: 96px;
+      /* Espaciado elegante */
+      --spacing-xs: 12px;
+      --spacing-sm: 24px;
+      --spacing-md: 48px;
+      --spacing-lg: 96px;
+      --spacing-xl: 144px;
+      
+      /* Container widths */
+      --container-sm: 100%;
+      --container-md: 720px;
+      --container-lg: 1200px;
+      --container-xl: 1440px;
     }
     
+    /* Dark mode variables */
+    [data-theme="dark"] {
+      --white: #0a0a0a;
+      --black: #ffffff;
+      --beige: #1a1a1a;
+      --dark-beige: #2a2a2a;
+      --gray: #e0e0e0;
+      --light-gray: #888888;
+      --accent: #C9A020;
+      --accent-dark: #D4AF37;
+      --border: rgba(255,255,255,0.08);
+      --shadow: 0 8px 40px rgba(0,0,0,0.3);
+      --shadow-hover: 0 16px 48px rgba(0,0,0,0.4);
+    }
+    
+    /* ================= RESET ================= */
     * {
       margin: 0;
       padding: 0;
@@ -56,18 +81,21 @@
     
     html {
       scroll-behavior: smooth;
+      font-size: 16px;
     }
     
     body {
       font-family: var(--font-sans);
       font-weight: 400;
-      font-size: 16px;
+      font-size: 1rem;
       line-height: 1.6;
       color: var(--gray);
       background: var(--white);
       overflow-x: hidden;
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
     
+    /* ================= TYPOGRAPHY VELASCA ================= */
     h1, h2, h3, h4, h5, h6 {
       font-family: var(--font-serif);
       font-weight: 500;
@@ -77,27 +105,47 @@
     }
     
     h1 {
-      font-size: 3.5rem;
+      font-size: clamp(2.5rem, 5vw, 4rem);
       font-weight: 500;
       letter-spacing: -1px;
+      margin-bottom: var(--spacing-sm);
     }
     
     h2 {
-      font-size: 2.5rem;
+      font-size: clamp(2rem, 4vw, 3rem);
       font-weight: 500;
       margin-bottom: var(--spacing-md);
     }
     
     h3 {
-      font-size: 1.5rem;
+      font-size: clamp(1.25rem, 3vw, 1.75rem);
       font-weight: 500;
       margin-bottom: var(--spacing-sm);
+    }
+    
+    h4 {
+      font-size: 1.25rem;
+      font-weight: 500;
+      margin-bottom: var(--spacing-xs);
     }
     
     p {
       margin-bottom: var(--spacing-sm);
       color: var(--gray);
       line-height: 1.7;
+      font-size: 1.125rem;
+    }
+    
+    .text-lead {
+      font-size: 1.25rem;
+      line-height: 1.6;
+      color: var(--light-gray);
+    }
+    
+    .text-small {
+      font-size: 0.875rem;
+      line-height: 1.5;
+      color: var(--light-gray);
     }
     
     a {
@@ -116,17 +164,27 @@
       display: block;
     }
     
+    /* ================= LAYOUT ================= */
     .container {
-      max-width: var(--container);
+      width: 100%;
+      max-width: var(--container-lg);
       margin: 0 auto;
       padding: 0 var(--spacing-md);
     }
     
-    .section-padding {
+    .container-sm {
+      max-width: var(--container-md);
+    }
+    
+    .section {
       padding: var(--spacing-xl) 0;
     }
     
-    /* ================= NAVIGATION ================= */
+    .section-sm {
+      padding: var(--spacing-lg) 0;
+    }
+    
+    /* ================= NAVIGATION VELASCA ================= */
     .navbar {
       position: fixed;
       top: 0;
@@ -135,8 +193,19 @@
       background: var(--white);
       z-index: 1000;
       border-bottom: 1px solid var(--border);
-      padding: 20px 0;
-      backdrop-filter: blur(10px);
+      padding: 24px 0;
+      backdrop-filter: blur(20px);
+      background: rgba(255, 255, 255, 0.95);
+      transition: all 0.3s ease;
+    }
+    
+    [data-theme="dark"] .navbar {
+      background: rgba(10, 10, 10, 0.95);
+    }
+    
+    .navbar.scrolled {
+      padding: 16px 0;
+      box-shadow: var(--shadow);
     }
     
     .nav-container {
@@ -151,19 +220,26 @@
       font-weight: 500;
       color: var(--black);
       letter-spacing: -0.5px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .nav-logo i {
+      color: var(--accent);
     }
     
     .nav-menu {
       display: flex;
-      gap: var(--spacing-lg);
+      gap: var(--spacing-md);
     }
     
     .nav-link {
       font-family: var(--font-sans);
-      font-size: 0.9rem;
+      font-size: 0.875rem;
       font-weight: 400;
       text-transform: uppercase;
-      letter-spacing: 0.5px;
+      letter-spacing: 1px;
       color: var(--gray);
       position: relative;
       padding: 8px 0;
@@ -201,13 +277,43 @@
       cursor: pointer;
       color: var(--gray);
       padding: 8px;
+      transition: color 0.3s ease;
+    }
+    
+    .theme-toggle:hover {
+      color: var(--accent);
+    }
+    
+    .nav-cv-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      background: var(--black);
+      color: var(--white);
+      border: 1px solid var(--black);
+      font-size: 0.875rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: all 0.3s ease;
+    }
+    
+    .nav-cv-button:hover {
+      background: var(--accent);
+      border-color: var(--accent);
     }
     
     .nav-toggle {
       display: none;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: var(--black);
     }
     
-    /* ================= HERO ================= */
+    /* ================= HERO VELASCA ================= */
     .hero {
       padding: 180px 0 120px;
       background: var(--beige);
@@ -216,15 +322,18 @@
     }
     
     .hero-content {
-      max-width: 700px;
+      max-width: 800px;
+      position: relative;
+      z-index: 2;
     }
     
     .hero-subtitle {
-      font-size: 1.2rem;
+      font-size: 1.25rem;
       font-weight: 300;
       color: var(--gray);
       margin: var(--spacing-md) 0;
-      max-width: 500px;
+      max-width: 600px;
+      line-height: 1.6;
     }
     
     .hero-stats {
@@ -242,17 +351,18 @@
     
     .stat-number {
       font-family: var(--font-serif);
-      font-size: 2rem;
+      font-size: 2.5rem;
       font-weight: 500;
       color: var(--accent);
+      line-height: 1;
     }
     
     .stat-label {
-      font-size: 0.8rem;
+      font-size: 0.75rem;
       text-transform: uppercase;
       letter-spacing: 1px;
       color: var(--light-gray);
-      margin-top: 4px;
+      margin-top: 8px;
     }
     
     .hero-buttons {
@@ -261,14 +371,14 @@
       margin-top: var(--spacing-lg);
     }
     
-    /* ================= BUTTONS ================= */
+    /* ================= BUTTONS VELASCA ================= */
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
       padding: 16px 32px;
       font-family: var(--font-sans);
-      font-size: 0.9rem;
+      font-size: 0.875rem;
       font-weight: 400;
       text-transform: uppercase;
       letter-spacing: 1px;
@@ -284,6 +394,7 @@
       background: var(--accent);
       border-color: var(--accent);
       transform: translateY(-2px);
+      box-shadow: var(--shadow-hover);
     }
     
     .btn-outline {
@@ -296,10 +407,15 @@
       color: var(--white);
     }
     
-    /* ================= SECTIONS ================= */
+    .btn-large {
+      padding: 20px 40px;
+      font-size: 1rem;
+    }
+    
+    /* ================= SECTIONS VELASCA ================= */
     .section-header {
       text-align: center;
-      margin-bottom: var(--spacing-xl);
+      margin-bottom: var(--spacing-lg);
       max-width: 600px;
       margin-left: auto;
       margin-right: auto;
@@ -311,22 +427,29 @@
       margin-top: var(--spacing-sm);
     }
     
-    /* ================= ABOUT ================= */
+    /* ================= ABOUT VELASCA ================= */
     .about-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: var(--spacing-xl);
+      gap: var(--spacing-lg);
       align-items: center;
     }
     
     .about-image {
       position: relative;
+      overflow: hidden;
+      border-radius: 4px;
     }
     
     .about-image img {
       width: 100%;
       height: 500px;
       object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+    
+    .about-image:hover img {
+      transform: scale(1.05);
     }
     
     .about-content {
@@ -351,7 +474,7 @@
       margin-top: 2px;
     }
     
-    /* ================= SERVICES ================= */
+    /* ================= SERVICES VELASCA ================= */
     .services-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -363,11 +486,13 @@
       padding: var(--spacing-md);
       border: 1px solid var(--border);
       transition: all 0.3s ease;
+      background: var(--white);
     }
     
     .service-card:hover {
       border-color: var(--accent);
       transform: translateY(-8px);
+      box-shadow: var(--shadow-hover);
     }
     
     .service-icon {
@@ -376,10 +501,10 @@
       margin-bottom: var(--spacing-sm);
     }
     
-    /* ================= PROJECTS ================= */
+    /* ================= PROJECTS VELASCA ================= */
     .projects-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: var(--spacing-md);
       margin-top: var(--spacing-lg);
     }
@@ -454,60 +579,7 @@
       color: var(--light-gray);
     }
     
-    /* ================= TESTIMONIALS ================= */
-    .testimonials {
-      background: var(--beige);
-      padding: var(--spacing-xl) 0;
-    }
-    
-    .testimonials-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: var(--spacing-md);
-      margin-top: var(--spacing-lg);
-    }
-    
-    .testimonial-card {
-      padding: var(--spacing-lg);
-      background: var(--white);
-      border: 1px solid var(--border);
-    }
-    
-    .testimonial-text {
-      font-style: italic;
-      color: var(--gray);
-      margin-bottom: var(--spacing-md);
-    }
-    
-    .testimonial-author {
-      display: flex;
-      align-items: center;
-      gap: var(--spacing-sm);
-    }
-    
-    .testimonial-avatar {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      background: var(--accent);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-weight: 500;
-    }
-    
-    .testimonial-name {
-      font-weight: 500;
-      color: var(--black);
-    }
-    
-    .testimonial-role {
-      font-size: 0.8rem;
-      color: var(--light-gray);
-    }
-    
-    /* ================= PROCESS ================= */
+    /* ================= PROCESS VELASCA ================= */
     .process-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -534,11 +606,66 @@
       color: var(--accent);
     }
     
-    /* ================= CONTACT ================= */
+    /* ================= TESTIMONIALS VELASCA ================= */
+    .testimonials {
+      background: var(--beige);
+      padding: var(--spacing-xl) 0;
+    }
+    
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: var(--spacing-md);
+      margin-top: var(--spacing-lg);
+    }
+    
+    .testimonial-card {
+      padding: var(--spacing-lg);
+      background: var(--white);
+      border: 1px solid var(--border);
+    }
+    
+    .testimonial-text {
+      font-style: italic;
+      color: var(--gray);
+      margin-bottom: var(--spacing-md);
+      line-height: 1.6;
+    }
+    
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-sm);
+    }
+    
+    .testimonial-avatar {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 500;
+      font-size: 1.25rem;
+    }
+    
+    .testimonial-name {
+      font-weight: 500;
+      color: var(--black);
+    }
+    
+    .testimonial-role {
+      font-size: 0.8rem;
+      color: var(--light-gray);
+    }
+    
+    /* ================= CONTACT VELASCA ================= */
     .contact-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: var(--spacing-xl);
+      gap: var(--spacing-lg);
       margin-top: var(--spacing-lg);
     }
     
@@ -553,6 +680,13 @@
       flex-direction: column;
     }
     
+    .form-group label {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--gray);
+      margin-bottom: 8px;
+    }
+    
     .form-group input,
     .form-group textarea {
       padding: 16px;
@@ -560,12 +694,15 @@
       font-family: var(--font-sans);
       font-size: 1rem;
       transition: all 0.3s ease;
+      background: var(--white);
+      color: var(--gray);
     }
     
     .form-group input:focus,
     .form-group textarea:focus {
       outline: none;
       border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(139, 115, 85, 0.1);
     }
     
     .contact-info {
@@ -589,16 +726,86 @@
       font-size: 1.2rem;
     }
     
-    /* ================= FOOTER ================= */
+    /* ================= FOOTER VELASCA ================= */
     .footer {
       padding: var(--spacing-lg) 0;
       border-top: 1px solid var(--border);
       text-align: center;
       color: var(--light-gray);
-      font-size: 0.9rem;
+      font-size: 0.875rem;
     }
     
-    /* ================= RESPONSIVE ================= */
+    /* ================= CV SECTION ================= */
+    .cv-section {
+      padding: var(--spacing-xl) 0;
+      background: var(--beige);
+    }
+    
+    .cv-download {
+      text-align: center;
+      padding: var(--spacing-lg);
+    }
+    
+    .cv-download .btn {
+      margin-top: var(--spacing-md);
+    }
+    
+    /* ================= 3D ANIMATIONS SIMPLIFIED ================= */
+    .shape-3d-container {
+      position: relative;
+      width: 100%;
+      height: 400px;
+      margin: var(--spacing-lg) 0;
+    }
+    
+    .shape-3d {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      border: 1px solid var(--accent);
+      border-radius: 50%;
+      background: linear-gradient(135deg, 
+        rgba(139, 115, 85, 0.1) 0%, 
+        rgba(201, 160, 32, 0.05) 100%);
+      animation: float3d 6s ease-in-out infinite;
+    }
+    
+    .shape-3d:nth-child(1) {
+      top: 20%;
+      left: 10%;
+      animation-delay: 0s;
+    }
+    
+    .shape-3d:nth-child(2) {
+      top: 40%;
+      right: 15%;
+      animation-delay: -2s;
+    }
+    
+    .shape-3d:nth-child(3) {
+      bottom: 20%;
+      left: 20%;
+      animation-delay: -4s;
+    }
+    
+    @keyframes float3d {
+      0%, 100% {
+        transform: translateY(0) rotate(0deg);
+      }
+      50% {
+        transform: translateY(-20px) rotate(180deg);
+      }
+    }
+    
+    /* ================= RESPONSIVE VELASCA ================= */
+    @media (max-width: 1200px) {
+      :root {
+        --spacing-xl: 96px;
+        --spacing-lg: 64px;
+        --spacing-md: 32px;
+      }
+    }
+    
     @media (max-width: 992px) {
       h1 {
         font-size: 2.5rem;
@@ -624,11 +831,6 @@
       
       .nav-toggle {
         display: block;
-        background: none;
-        border: none;
-        font-size: 1.5rem;
-        cursor: pointer;
-        color: var(--black);
       }
       
       .nav-menu.active {
@@ -641,6 +843,16 @@
         background: var(--white);
         padding: var(--spacing-md);
         border-top: 1px solid var(--border);
+        box-shadow: var(--shadow);
+      }
+      
+      .hero-stats {
+        flex-direction: column;
+        gap: var(--spacing-md);
+      }
+      
+      .hero-buttons {
+        flex-direction: column;
       }
     }
     
@@ -650,17 +862,8 @@
         --spacing-xl: 64px;
       }
       
-      .section-padding {
+      .section {
         padding: var(--spacing-lg) 0;
-      }
-      
-      .hero-buttons {
-        flex-direction: column;
-      }
-      
-      .hero-stats {
-        flex-direction: column;
-        gap: var(--spacing-md);
       }
       
       .services-grid,
@@ -668,6 +871,10 @@
       .testimonials-grid,
       .process-grid {
         grid-template-columns: 1fr;
+      }
+      
+      .container {
+        padding: 0 var(--spacing-sm);
       }
     }
     
@@ -680,9 +887,52 @@
         font-size: 1.5rem;
       }
       
-      .container {
-        padding: 0 var(--spacing-sm);
+      .nav-cv-button {
+        display: none;
       }
+      
+      .stat-number {
+        font-size: 2rem;
+      }
+      
+      .btn {
+        width: 100%;
+        justify-content: center;
+      }
+      
+      .hero-buttons .btn {
+        width: 100%;
+      }
+    }
+    
+    /* ================= ANIMATIONS ================= */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .fade-in {
+      animation: fadeIn 0.6s ease-out forwards;
+    }
+    
+    /* ================= ACCESSIBILITY ================= */
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+    
+    :focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
     }
   </style>
 </head>
@@ -692,7 +942,10 @@
 <!-- ================= NAVIGATION ================= -->
 <nav class="navbar">
   <div class="container nav-container">
-    <a href="#" class="nav-logo">David Sebastián Díaz</a>
+    <a href="#" class="nav-logo">
+      <i class="ri-palette-line"></i>
+      David Sebastián Díaz
+    </a>
     
     <button class="nav-toggle" id="navToggle">
       <i class="ri-menu-line"></i>
@@ -703,10 +956,17 @@
       <li><a href="#services" class="nav-link">Servicios</a></li>
       <li><a href="#projects" class="nav-link">Proyectos</a></li>
       <li><a href="#process" class="nav-link">Proceso</a></li>
+      <li><a href="#testimonials" class="nav-link">Testimonios</a></li>
       <li><a href="#contact" class="nav-link">Contacto</a></li>
+      <li><a href="CV_David_Sebastian_Diaz.pdf" class="nav-link" target="_blank" download>
+        <i class="ri-download-line"></i> CV
+      </a></li>
     </ul>
     
     <div class="nav-actions">
+      <a href="CV_David_Sebastian_Diaz.pdf" class="nav-cv-button" target="_blank" download>
+        <i class="ri-download-line"></i> Descargar CV
+      </a>
       <button class="theme-toggle" id="themeToggle">
         <i class="ri-sun-line"></i>
       </button>
@@ -718,10 +978,10 @@
 <header class="hero">
   <div class="container">
     <div class="hero-content">
-      <h1>Diseñador de Producto UX/UI con enfoque estratégico</h1>
-      <p class="hero-subtitle">Transformo problemas complejos en experiencias digitales elegantes y funcionales, combinando investigación profunda, diseño intuitivo y análisis de datos.</p>
+      <h1 class="fade-in">Diseñador de Producto UX/UI con enfoque estratégico</h1>
+      <p class="hero-subtitle fade-in">Transformo problemas complejos en experiencias digitales elegantes y funcionales, combinando investigación profunda, diseño intuitivo y análisis de datos.</p>
       
-      <div class="hero-stats">
+      <div class="hero-stats fade-in">
         <div class="stat">
           <span class="stat-number">30+</span>
           <span class="stat-label">Proyectos</span>
@@ -737,27 +997,39 @@
       </div>
       
       <div class="hero-buttons">
-        <a href="#contact" class="btn">
+        <a href="#contact" class="btn btn-large">
           <i class="ri-calendar-line"></i>Agendar consulta
         </a>
-        <a href="#projects" class="btn btn-outline">Ver proyectos</a>
+        <a href="#projects" class="btn btn-outline btn-large">Ver proyectos</a>
+        <a href="CV_David_Sebastian_Diaz.pdf" class="btn btn-outline btn-large" target="_blank" download>
+          <i class="ri-download-line"></i>Ver CV
+        </a>
       </div>
     </div>
+  </div>
+  
+  <!-- Simple 3D shapes -->
+  <div class="shape-3d-container">
+    <div class="shape-3d"></div>
+    <div class="shape-3d"></div>
+    <div class="shape-3d"></div>
   </div>
 </header>
 
 <!-- ================= ABOUT ================= -->
-<section id="about" class="section-padding">
+<section id="about" class="section">
   <div class="container">
     <div class="about-grid">
       <div class="about-image">
         <!-- Placeholder para imagen -->
-        <div style="width:100%; height:500px; background:var(--dark-beige);"></div>
+        <div style="width:100%; height:500px; background:var(--dark-beige); display:flex; align-items:center; justify-content:center;">
+          <i class="ri-user-line" style="font-size: 4rem; color: var(--accent);"></i>
+        </div>
       </div>
       
       <div class="about-content">
         <h2>Sobre mí</h2>
-        <p>Como diseñador de producto, mi enfoque combina la elegancia visual italiana con la precisión del diseño centrado en datos. Creo experiencias que no solo son hermosas, sino también medibles y escalables.</p>
+        <p class="text-lead">Como diseñador de producto, mi enfoque combina la elegancia visual italiana con la precisión del diseño centrado en datos. Creo experiencias que no solo son hermosas, sino también medibles y escalables.</p>
         
         <ul class="about-list">
           <li>
@@ -777,13 +1049,19 @@
             <span><strong>Impacto medible:</strong> +35% mejora promedio en conversión</span>
           </li>
         </ul>
+        
+        <div style="margin-top: var(--spacing-md);">
+          <a href="CV_David_Sebastian_Diaz.pdf" class="btn" target="_blank" download>
+            <i class="ri-download-line"></i>Descargar CV completo
+          </a>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ================= SERVICES ================= -->
-<section id="services" class="section-padding">
+<section id="services" class="section">
   <div class="container">
     <div class="section-header">
       <h2>Servicios</h2>
@@ -791,7 +1069,7 @@
     </div>
     
     <div class="services-grid">
-      <div class="service-card">
+      <div class="service-card fade-in">
         <div class="service-icon">
           <i class="ri-search-eye-line"></i>
         </div>
@@ -799,7 +1077,7 @@
         <p>Entrevistas, análisis competitivo y estudios para definir problemas y oportunidades.</p>
       </div>
       
-      <div class="service-card">
+      <div class="service-card fade-in">
         <div class="service-icon">
           <i class="ri-compasses-2-line"></i>
         </div>
@@ -807,7 +1085,7 @@
         <p>Objetivos, métricas, roadmap y propuesta de valor orientada a impacto.</p>
       </div>
       
-      <div class="service-card">
+      <div class="service-card fade-in">
         <div class="service-icon">
           <i class="ri-pencil-ruler-line"></i>
         </div>
@@ -815,7 +1093,7 @@
         <p>Flujos, IA, wireframes y visual design con accesibilidad y micro‑interacciones.</p>
       </div>
       
-      <div class="service-card">
+      <div class="service-card fade-in">
         <div class="service-icon">
           <i class="ri-test-tube-line"></i>
         </div>
@@ -827,7 +1105,7 @@
 </section>
 
 <!-- ================= PROJECTS ================= -->
-<section id="projects" class="section-padding">
+<section id="projects" class="section">
   <div class="container">
     <div class="section-header">
       <h2>Proyectos Destacados</h2>
@@ -837,10 +1115,12 @@
     <div class="projects-grid">
       
       <!-- Proyecto 1 -->
-      <article class="project-card">
+      <article class="project-card fade-in">
         <div class="project-image">
           <!-- Placeholder -->
-          <div style="width:100%; height:300px; background:linear-gradient(135deg, #0f4c75 0%, #3282b8 100%);"></div>
+          <div style="width:100%; height:300px; background:linear-gradient(135deg, #0f4c75 0%, #3282b8 100%); display:flex; align-items:center; justify-content:center;">
+            <i class="ri-dashboard-line" style="font-size: 3rem; color: white;"></i>
+          </div>
         </div>
         <div class="project-info">
           <h3>Nexus Logistics</h3>
@@ -866,10 +1146,12 @@
       </article>
       
       <!-- Proyecto 2 -->
-      <article class="project-card">
+      <article class="project-card fade-in">
         <div class="project-image">
           <!-- Placeholder -->
-          <div style="width:100%; height:300px; background:linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%);"></div>
+          <div style="width:100%; height:300px; background:linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%); display:flex; align-items:center; justify-content:center;">
+            <i class="ri-book-line" style="font-size: 3rem; color: white;"></i>
+          </div>
         </div>
         <div class="project-info">
           <h3>School Art UX/UI</h3>
@@ -895,10 +1177,12 @@
       </article>
       
       <!-- Proyecto 3 -->
-      <article class="project-card">
+      <article class="project-card fade-in">
         <div class="project-image">
           <!-- Placeholder -->
-          <div style="width:100%; height:300px; background:linear-gradient(135deg, #0c40a6 0%, #5b7dd1 100%);"></div>
+          <div style="width:100%; height:300px; background:linear-gradient(135deg, #0c40a6 0%, #5b7dd1 100%); display:flex; align-items:center; justify-content:center;">
+            <i class="ri-building-line" style="font-size: 3rem; color: white;"></i>
+          </div>
         </div>
         <div class="project-info">
           <h3>Yale UX Redesign</h3>
@@ -928,33 +1212,33 @@
 </section>
 
 <!-- ================= PROCESS ================= -->
-<section id="process" class="section-padding">
-  <div class="container">
+<section id="process" class="section">
+  <div class="container container-sm">
     <div class="section-header">
       <h2>Mi Proceso</h2>
       <p class="section-subtitle">De la investigación al impacto medible</p>
     </div>
     
     <div class="process-grid">
-      <div class="process-step">
+      <div class="process-step fade-in">
         <div class="step-number">01</div>
         <h3>Discovery & Research</h3>
         <p>Entrevistas, análisis competitivo y datos reales para entender el problema.</p>
       </div>
       
-      <div class="process-step">
+      <div class="process-step fade-in">
         <div class="step-number">02</div>
         <h3>Strategy & Design</h3>
         <p>Arquitectura, wireframes y componentes basados en insights y necesidades reales.</p>
       </div>
       
-      <div class="process-step">
+      <div class="process-step fade-in">
         <div class="step-number">03</div>
         <h3>Testing & Validation</h3>
         <p>Usability testing, A/B tests y métricas de impacto real con usuarios.</p>
       </div>
       
-      <div class="process-step">
+      <div class="process-step fade-in">
         <div class="step-number">04</div>
         <h3>Launch & Iterate</h3>
         <p>Deployment y monitoreo continuo basado en feedback real y KPIs.</p>
@@ -964,7 +1248,7 @@
 </section>
 
 <!-- ================= TESTIMONIALS ================= -->
-<section class="testimonials section-padding">
+<section id="testimonials" class="testimonials section">
   <div class="container">
     <div class="section-header">
       <h2>Testimonios</h2>
@@ -972,7 +1256,7 @@
     </div>
     
     <div class="testimonials-grid">
-      <div class="testimonial-card">
+      <div class="testimonial-card fade-in">
         <p class="testimonial-text">
           "David transformó completamente nuestra plataforma. Su enfoque en research y datos resultó en un aumento del 45% en conversión. Es designer + estratega."
         </p>
@@ -985,7 +1269,7 @@
         </div>
       </div>
       
-      <div class="testimonial-card">
+      <div class="testimonial-card fade-in">
         <p class="testimonial-text">
           "No es solo un diseñador. Es un socio estratégico. Desde research hasta validación, David entendió nuestro negocio mejor que nosotros mismos."
         </p>
@@ -998,7 +1282,7 @@
         </div>
       </div>
       
-      <div class="testimonial-card">
+      <div class="testimonial-card fade-in">
         <p class="testimonial-text">
           "Trabajar con David fue excepcional. Entiende de UX pero también de negocio. Sus análisis de datos llevaron nuestras decisiones de diseño al siguiente nivel."
         </p>
@@ -1014,8 +1298,54 @@
   </div>
 </section>
 
+<!-- ================= CV DOWNLOAD SECTION ================= -->
+<section id="cv" class="cv-section section">
+  <div class="container container-sm">
+    <div class="cv-download">
+      <h2>Curriculum Vitae</h2>
+      <p class="section-subtitle">Descarga mi CV completo con experiencia detallada, certificaciones y habilidades</p>
+      
+      <div class="hero-stats" style="max-width: 400px; margin: var(--spacing-md) auto;">
+        <div class="stat">
+          <span class="stat-number">8+</span>
+          <span class="stat-label">Años Exp.</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">18</span>
+          <span class="stat-label">Certificaciones</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">30+</span>
+          <span class="stat-label">Proyectos</span>
+        </div>
+      </div>
+      
+      <a href="CV_David_Sebastian_Diaz.pdf" class="btn btn-large" target="_blank" download>
+        <i class="ri-download-line"></i>Descargar CV (PDF)
+      </a>
+      
+      <div class="contact-methods" style="margin-top: var(--spacing-lg);">
+        <div class="contact-method">
+          <i class="ri-mail-line"></i>
+          <div>
+            <div><strong>Email</strong></div>
+            <div>david.diaz.uxdata@gmail.com</div>
+          </div>
+        </div>
+        <div class="contact-method">
+          <i class="ri-linkedin-box-line"></i>
+          <div>
+            <div><strong>LinkedIn</strong></div>
+            <div>linkedin.com/in/david-sebastian-diaz</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ================= CONTACT ================= -->
-<section id="contact" class="section-padding">
+<section id="contact" class="section">
   <div class="container">
     <div class="section-header">
       <h2>Contacto</h2>
@@ -1026,13 +1356,16 @@
       <div class="contact-form">
         <form id="contactForm">
           <div class="form-group">
-            <input type="text" name="name" placeholder="Nombre" required>
+            <label for="name">Nombre</label>
+            <input type="text" id="name" name="name" placeholder="Tu nombre" required>
           </div>
           <div class="form-group">
-            <input type="email" name="email" placeholder="Email" required>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="tu@email.com" required>
           </div>
           <div class="form-group">
-            <textarea name="message" placeholder="Cuéntame sobre tu proyecto" rows="5" required></textarea>
+            <label for="message">Mensaje</label>
+            <textarea id="message" name="message" placeholder="Cuéntame sobre tu proyecto" rows="5" required></textarea>
           </div>
           <button type="submit" class="btn">Enviar mensaje</button>
         </form>
@@ -1046,7 +1379,7 @@
           <div class="contact-method">
             <i class="ri-mail-line"></i>
             <div>
-              <div>Email</div>
+              <div><strong>Email</strong></div>
               <div>david.diaz.uxdata@gmail.com</div>
             </div>
           </div>
@@ -1054,7 +1387,7 @@
           <div class="contact-method">
             <i class="ri-linkedin-box-line"></i>
             <div>
-              <div>LinkedIn</div>
+              <div><strong>LinkedIn</strong></div>
               <div>linkedin.com/in/david-sebastian-diaz</div>
             </div>
           </div>
@@ -1062,8 +1395,20 @@
           <div class="contact-method">
             <i class="ri-github-line"></i>
             <div>
-              <div>GitHub</div>
+              <div><strong>GitHub</strong></div>
               <div>github.com/dsd228</div>
+            </div>
+          </div>
+          
+          <div class="contact-method">
+            <i class="ri-file-text-line"></i>
+            <div>
+              <div><strong>Curriculum Vitae</strong></div>
+              <div>
+                <a href="CV_David_Sebastian_Diaz.pdf" style="color: var(--accent); text-decoration: underline;" target="_blank" download>
+                  Descargar PDF
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -1076,7 +1421,7 @@
 <footer class="footer">
   <div class="container">
     <p>© 2026 — David Sebastián Díaz · UX / Product Designer</p>
-    <p style="margin-top: 8px; font-size: 0.8rem;">Diseñado con elegancia y precisión</p>
+    <p style="margin-top: 8px; font-size: 0.875rem;">Diseñado con elegancia y precisión</p>
   </div>
 </footer>
 
@@ -1102,18 +1447,20 @@
   const themeIcon = themeToggle.querySelector('i');
   
   themeToggle.addEventListener('click', () => {
-    document.body.dataset.theme = document.body.dataset.theme === 'dark' ? 'light' : 'dark';
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
     
-    if (document.body.dataset.theme === 'dark') {
-      themeIcon.className = 'ri-moon-line';
-      document.body.style.backgroundColor = '#1a1a1a';
-      document.body.style.color = '#f5f5f5';
-    } else {
-      themeIcon.className = 'ri-sun-line';
-      document.body.style.backgroundColor = '';
-      document.body.style.color = '';
-    }
+    document.documentElement.setAttribute('data-theme', newTheme);
+    themeIcon.className = newTheme === 'dark' ? 'ri-moon-line' : 'ri-sun-line';
+    
+    // Guardar preferencia
+    localStorage.setItem('theme', newTheme);
   });
+  
+  // Cargar tema guardado
+  const savedTheme = localStorage.getItem('theme') || 'light';
+  document.documentElement.setAttribute('data-theme', savedTheme);
+  themeIcon.className = savedTheme === 'dark' ? 'ri-moon-line' : 'ri-sun-line';
   
   // Formulario de contacto
   const contactForm = document.getElementById('contactForm');
@@ -1122,15 +1469,15 @@
     contactForm.addEventListener('submit', function(e) {
       e.preventDefault();
       
-      // Simulación de envío
       const submitBtn = this.querySelector('button[type="submit"]');
       const originalText = submitBtn.innerHTML;
       
-      submitBtn.innerHTML = 'Enviando...';
+      submitBtn.innerHTML = '<i class="ri-loader-4-line"></i> Enviando...';
       submitBtn.disabled = true;
       
+      // Simulación de envío
       setTimeout(() => {
-        alert('¡Mensaje enviado! Me pondré en contacto contigo pronto.');
+        alert('¡Mensaje enviado con éxito! Me pondré en contacto contigo pronto.');
         contactForm.reset();
         submitBtn.innerHTML = originalText;
         submitBtn.disabled = false;
@@ -1156,7 +1503,17 @@
     });
   });
   
-  // Efecto de aparición al hacer scroll
+  // Scroll effect en navbar
+  window.addEventListener('scroll', () => {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 50) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
+  
+  // Intersection Observer para animaciones
   const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
@@ -1172,11 +1529,19 @@
   }, observerOptions);
   
   // Aplicar animación a elementos
-  document.querySelectorAll('.service-card, .project-card, .process-step, .testimonial-card').forEach(el => {
+  document.querySelectorAll('.fade-in, .service-card, .project-card, .process-step, .testimonial-card').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(20px)';
     el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
     observer.observe(el);
+  });
+  
+  // Inicializar animaciones
+  window.addEventListener('DOMContentLoaded', () => {
+    // Forzar reflow para animaciones
+    document.querySelectorAll('.fade-in').forEach(el => {
+      el.offsetHeight;
+    });
   });
 </script>
 
