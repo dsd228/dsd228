@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>David Sebastián Díaz — UX/UI & Product Designer</title>
-  <meta name="description" content="Diseñador de Producto UX/UI con enfoque estratégico, investigación profunda y diseño basado en datos.">
+  <title>David Sebastián Díaz — Product Designer con enfoque en Research + Data</title>
+  <meta name="description" content="Product Designer que combina UX research, análisis de datos y diseño de sistemas. 150+ horas de research, +166% conversión en Amara, portfolio técnico verificable.">
   
   <!-- SEO Meta Tags -->
-  <meta name="keywords" content="UX Designer, Product Designer, UX Research, Data-Driven Design">
+  <meta name="keywords" content="UX Designer, Product Designer, UX Research, Data-Driven Design, CRO, Evaluación Heurística">
   <meta name="author" content="David Sebastián Díaz">
-  <meta property="og:title" content="David Sebastián Díaz — UX/UI & Product Designer">
-  <meta property="og:description" content="Diseñador de Producto con enfoque estratégico, investigación profunda y diseño basado en datos.">
+  <meta property="og:title" content="David Sebastián Díaz — Product Designer con enfoque en Research + Data">
+  <meta property="og:description" content="Product Designer que combina UX research, análisis de datos y diseño de sistemas para crear experiencias validadas.">
   <meta property="og:type" content="website">
   
-  <!-- Fonts estilo Velasca -->
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -21,43 +21,38 @@
   <!-- Icons -->
   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
   
-  <!-- CSS estilo Velasca Premium -->
+  <!-- CSS -->
   <style>
-    /* ================= RESET & VARIABLES VELASCA ================= */
+    /* ================= RESET & VARIABLES ================= */
     :root {
-      /* Paleta de colores Velasca - Elegante y sofisticado */
       --white: #ffffff;
       --black: #000000;
       --beige: #F5F3EF;
       --dark-beige: #E8E4DC;
       --gray: #4A4A4A;
       --light-gray: #9A9A9A;
-      --accent: #8B7355; /* Oro/beige oscuro estilo Velasca */
+      --accent: #8B7355;
       --accent-dark: #6B5A45;
       --accent-light: #C9A020;
       --border: rgba(0,0,0,0.08);
       --shadow: 0 8px 40px rgba(0,0,0,0.05);
       --shadow-hover: 0 16px 48px rgba(0,0,0,0.08);
       
-      /* Tipografía Velasca */
       --font-serif: 'Playfair Display', serif;
       --font-sans: 'Inter', sans-serif;
       
-      /* Espaciado elegante */
       --spacing-xs: 12px;
       --spacing-sm: 24px;
       --spacing-md: 48px;
       --spacing-lg: 96px;
       --spacing-xl: 144px;
       
-      /* Container widths */
       --container-sm: 100%;
       --container-md: 720px;
       --container-lg: 1200px;
       --container-xl: 1440px;
     }
     
-    /* Dark mode variables */
     [data-theme="dark"] {
       --white: #0a0a0a;
       --black: #ffffff;
@@ -72,7 +67,6 @@
       --shadow-hover: 0 16px 48px rgba(0,0,0,0.4);
     }
     
-    /* ================= RESET ================= */
     * {
       margin: 0;
       padding: 0;
@@ -95,7 +89,7 @@
       transition: background-color 0.3s ease, color 0.3s ease;
     }
     
-    /* ================= TYPOGRAPHY VELASCA ================= */
+    /* ================= TYPOGRAPHY ================= */
     h1, h2, h3, h4, h5, h6 {
       font-family: var(--font-serif);
       font-weight: 500;
@@ -184,7 +178,7 @@
       padding: var(--spacing-lg) 0;
     }
     
-    /* ================= NAVIGATION VELASCA ================= */
+    /* ================= NAVIGATION ================= */
     .navbar {
       position: fixed;
       top: 0;
@@ -220,18 +214,12 @@
       font-weight: 500;
       color: var(--black);
       letter-spacing: -0.5px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    
-    .nav-logo i {
-      color: var(--accent);
     }
     
     .nav-menu {
       display: flex;
       gap: var(--spacing-md);
+      align-items: center;
     }
     
     .nav-link {
@@ -264,795 +252,773 @@
       width: 100%;
     }
     
-    .nav-actions {
-      display: flex;
-      align-items: center;
-      gap: var(--spacing-sm);
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--black);
+      font-size: 1.5rem;
+      cursor: pointer;
     }
     
     .theme-toggle {
       background: none;
       border: none;
-      font-size: 1.2rem;
+      color: var(--black);
+      font-size: 1.25rem;
       cursor: pointer;
-      color: var(--gray);
       padding: 8px;
-      transition: color 0.3s ease;
-    }
-    
-    .theme-toggle:hover {
-      color: var(--accent);
-    }
-    
-    .nav-cv-button {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 12px 24px;
-      background: var(--black);
-      color: var(--white);
-      border: 1px solid var(--black);
-      font-size: 0.875rem;
-      font-weight: 400;
-      text-transform: uppercase;
-      letter-spacing: 1px;
+      border-radius: 50%;
       transition: all 0.3s ease;
     }
     
-    .nav-cv-button:hover {
-      background: var(--accent);
-      border-color: var(--accent);
-    }
-    
-    .nav-toggle {
-      display: none;
-      background: none;
-      border: none;
-      font-size: 1.5rem;
-      cursor: pointer;
-      color: var(--black);
-    }
-    
-    /* ================= HERO VELASCA ================= */
-    .hero {
-      padding: 180px 0 120px;
+    .theme-toggle:hover {
       background: var(--beige);
-      position: relative;
-      overflow: hidden;
+    }
+    
+    /* ================= HERO ================= */
+    .hero {
+      padding: calc(80px + var(--spacing-xl)) 0 var(--spacing-xl);
+      background: linear-gradient(180deg, var(--beige) 0%, var(--white) 100%);
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
     }
     
     .hero-content {
       max-width: 800px;
-      position: relative;
-      z-index: 2;
+    }
+    
+    .hero-badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--accent);
+      background: var(--white);
+      padding: 8px 16px;
+      border-radius: 100px;
+      margin-bottom: var(--spacing-sm);
+      border: 1px solid var(--border);
+    }
+    
+    .hero-title {
+      max-width: 900px;
+    }
+    
+    .hero-title .highlight {
+      color: var(--accent);
+      font-style: italic;
     }
     
     .hero-subtitle {
       font-size: 1.25rem;
-      font-weight: 300;
-      color: var(--gray);
-      margin: var(--spacing-md) 0;
-      max-width: 600px;
-      line-height: 1.6;
+      color: var(--light-gray);
+      max-width: 700px;
+      margin-bottom: var(--spacing-md);
+      line-height: 1.7;
     }
     
     .hero-stats {
-      display: flex;
-      gap: var(--spacing-lg);
-      margin: var(--spacing-lg) 0;
-      padding-top: var(--spacing-md);
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: var(--spacing-md);
+      margin: var(--spacing-md) 0;
+      padding: var(--spacing-md) 0;
       border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
     }
     
     .stat {
-      display: flex;
-      flex-direction: column;
+      text-align: center;
     }
     
     .stat-number {
+      display: block;
       font-family: var(--font-serif);
       font-size: 2.5rem;
-      font-weight: 500;
+      font-weight: 600;
       color: var(--accent);
       line-height: 1;
+      margin-bottom: 8px;
     }
     
     .stat-label {
-      font-size: 0.75rem;
+      display: block;
+      font-size: 0.875rem;
+      color: var(--light-gray);
       text-transform: uppercase;
       letter-spacing: 1px;
-      color: var(--light-gray);
-      margin-top: 8px;
     }
     
-    .hero-buttons {
+    .hero-ctas {
       display: flex;
       gap: var(--spacing-sm);
-      margin-top: var(--spacing-lg);
+      margin-top: var(--spacing-md);
+      flex-wrap: wrap;
     }
     
-    /* ================= BUTTONS VELASCA ================= */
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 16px 32px;
-      font-family: var(--font-sans);
+    .hero-badges {
+      display: flex;
+      gap: var(--spacing-sm);
+      margin-top: var(--spacing-md);
+      flex-wrap: wrap;
       font-size: 0.875rem;
-      font-weight: 400;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      border: 1px solid var(--black);
-      background: var(--black);
-      color: var(--white);
-      cursor: pointer;
-      transition: all 0.3s ease;
+      color: var(--light-gray);
+    }
+    
+    .hero-badges span {
+      display: flex;
+      align-items: center;
       gap: 8px;
     }
     
-    .btn:hover {
-      background: var(--accent);
-      border-color: var(--accent);
-      transform: translateY(-2px);
-      box-shadow: var(--shadow-hover);
+    /* ================= BUTTONS ================= */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 16px 32px;
+      font-family: var(--font-sans);
+      font-size: 0.875rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: none;
     }
     
-    .btn-outline {
+    .btn-primary {
+      background: var(--black);
+      color: var(--white);
+      border: 2px solid var(--black);
+    }
+    
+    .btn-primary:hover {
       background: transparent;
       color: var(--black);
     }
     
-    .btn-outline:hover {
+    .btn-secondary {
+      background: transparent;
+      color: var(--black);
+      border: 2px solid var(--black);
+    }
+    
+    .btn-secondary:hover {
       background: var(--black);
       color: var(--white);
     }
     
-    .btn-large {
-      padding: 20px 40px;
-      font-size: 1rem;
-    }
-    
-    /* ================= SECTIONS VELASCA ================= */
+    /* ================= SECTIONS ================= */
     .section-header {
       text-align: center;
-      margin-bottom: var(--spacing-lg);
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
+      max-width: 700px;
+      margin: 0 auto var(--spacing-lg);
     }
     
     .section-subtitle {
-      font-size: 1rem;
+      font-size: 1.125rem;
       color: var(--light-gray);
       margin-top: var(--spacing-sm);
-    }
-    
-    /* ================= ABOUT VELASCA ================= */
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: var(--spacing-lg);
-      align-items: center;
-    }
-    
-    .about-image {
-      position: relative;
-      overflow: hidden;
-      border-radius: 4px;
-    }
-    
-    .about-image img {
-      width: 100%;
-      height: 500px;
-      object-fit: cover;
-      transition: transform 0.6s ease;
-    }
-    
-    .about-image:hover img {
-      transform: scale(1.05);
-    }
-    
-    .about-content {
-      padding: var(--spacing-lg);
-    }
-    
-    .about-list {
-      margin: var(--spacing-md) 0;
-    }
-    
-    .about-list li {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      margin-bottom: 16px;
-      font-size: 1rem;
-    }
-    
-    .about-list i {
-      color: var(--accent);
-      font-size: 1.2rem;
-      margin-top: 2px;
-    }
-    
-    /* ================= SERVICES VELASCA ================= */
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: var(--spacing-md);
-      margin-top: var(--spacing-lg);
-    }
-    
-    .service-card {
-      padding: var(--spacing-md);
-      border: 1px solid var(--border);
-      transition: all 0.3s ease;
-      background: var(--white);
-    }
-    
-    .service-card:hover {
-      border-color: var(--accent);
-      transform: translateY(-8px);
-      box-shadow: var(--shadow-hover);
-    }
-    
-    .service-icon {
-      font-size: 2rem;
-      color: var(--accent);
-      margin-bottom: var(--spacing-sm);
-    }
-    
-    /* ================= PROJECTS VELASCA ================= */
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: var(--spacing-md);
-      margin-top: var(--spacing-lg);
-    }
-    
-    .project-card {
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .project-image {
-      height: 300px;
-      overflow: hidden;
-    }
-    
-    .project-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.6s ease;
-    }
-    
-    .project-card:hover .project-image img {
-      transform: scale(1.05);
-    }
-    
-    .project-info {
-      padding: var(--spacing-md);
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-top: none;
-    }
-    
-    .project-tags {
-      display: flex;
-      gap: 8px;
-      margin: var(--spacing-sm) 0;
-      flex-wrap: wrap;
     }
     
     .tag {
-      font-size: 0.7rem;
-      padding: 4px 12px;
-      background: var(--beige);
-      color: var(--accent-dark);
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
       text-transform: uppercase;
-      letter-spacing: 0.5px;
+      letter-spacing: 1.5px;
+      color: var(--accent);
+      background: var(--beige);
+      padding: 6px 12px;
+      border-radius: 4px;
+      margin-bottom: var(--spacing-xs);
     }
     
-    .project-metrics {
-      display: flex;
-      gap: var(--spacing-md);
-      margin-top: var(--spacing-sm);
-      padding-top: var(--spacing-sm);
-      border-top: 1px solid var(--border);
+    /* ================= CASE STUDIES ================= */
+    .case-study {
+      background: var(--beige);
+      border-radius: 8px;
+      padding: var(--spacing-lg);
+      margin-bottom: var(--spacing-lg);
+      border: 1px solid var(--border);
+      transition: all 0.3s ease;
+    }
+    
+    .case-study:hover {
+      box-shadow: var(--shadow-hover);
+      transform: translateY(-4px);
+    }
+    
+    .case-study.featured {
+      background: linear-gradient(135deg, var(--beige) 0%, var(--white) 100%);
+      border: 2px solid var(--accent);
+    }
+    
+    .case-header {
+      margin-bottom: var(--spacing-md);
+    }
+    
+    .case-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--spacing-lg);
+      align-items: start;
+    }
+    
+    .case-content img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+    }
+    
+    .case-metrics {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: var(--spacing-sm);
+      margin: var(--spacing-md) 0;
     }
     
     .metric {
-      display: flex;
-      flex-direction: column;
+      background: var(--white);
+      padding: var(--spacing-sm);
+      border-radius: 8px;
+      text-align: center;
+      border: 1px solid var(--border);
     }
     
-    .metric-value {
+    .metric strong {
+      display: block;
       font-family: var(--font-serif);
-      font-size: 1.2rem;
+      font-size: 2rem;
       color: var(--accent);
+      margin-bottom: 4px;
     }
     
-    .metric-label {
-      font-size: 0.7rem;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
+    .metric span {
+      font-size: 0.875rem;
       color: var(--light-gray);
     }
     
-    /* ================= PROCESS VELASCA ================= */
-    .process-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: var(--spacing-md);
-      margin-top: var(--spacing-lg);
-    }
-    
-    .process-step {
-      text-align: center;
+    .case-highlights {
+      background: var(--white);
       padding: var(--spacing-md);
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      margin: var(--spacing-sm) 0;
     }
     
-    .step-number {
-      width: 60px;
-      height: 60px;
-      border: 1px solid var(--accent);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto var(--spacing-md);
-      font-family: var(--font-serif);
-      font-size: 1.5rem;
+    .case-highlights ul {
+      list-style: none;
+      padding: 0;
+    }
+    
+    .case-highlights li {
+      padding: 8px 0;
+      padding-left: 28px;
+      position: relative;
+      color: var(--gray);
+    }
+    
+    .case-highlights li:before {
+      content: "✓";
+      position: absolute;
+      left: 0;
       color: var(--accent);
+      font-weight: 600;
     }
     
-    /* ================= TESTIMONIALS VELASCA ================= */
-    .testimonials {
+    .case-note {
       background: var(--beige);
-      padding: var(--spacing-xl) 0;
+      padding: var(--spacing-sm);
+      border-radius: 4px;
+      font-size: 0.875rem;
+      color: var(--gray);
+      margin: var(--spacing-sm) 0;
+      border-left: 3px solid var(--accent);
     }
     
-    .testimonials-grid {
+    .btn-case {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--accent);
+      font-weight: 500;
+      padding: 12px 0;
+      border-bottom: 1px solid transparent;
+      transition: all 0.3s ease;
+    }
+    
+    .btn-case:hover {
+      border-bottom-color: var(--accent);
+    }
+    
+    /* ================= PROJECTS GRID ================= */
+    .project-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: var(--spacing-md);
       margin-top: var(--spacing-lg);
     }
     
-    .testimonial-card {
-      padding: var(--spacing-lg);
+    .project-card {
       background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+    
+    .project-card:hover {
+      box-shadow: var(--shadow-hover);
+      transform: translateY(-4px);
+    }
+    
+    .project-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    
+    .project-info {
+      padding: var(--spacing-md);
+    }
+    
+    .project-info h3 {
+      font-size: 1.25rem;
+      margin-top: var(--spacing-xs);
+    }
+    
+    .project-info p {
+      font-size: 1rem;
+      margin-bottom: var(--spacing-sm);
+    }
+    
+    /* ================= ABOUT ================= */
+    .about-content {
+      background: var(--beige);
+      padding: var(--spacing-lg);
+      border-radius: 8px;
       border: 1px solid var(--border);
     }
     
-    .testimonial-text {
-      font-style: italic;
-      color: var(--gray);
-      margin-bottom: var(--spacing-md);
-      line-height: 1.6;
+    .about-content h3 {
+      margin-top: var(--spacing-md);
+      color: var(--accent);
     }
     
-    .testimonial-author {
-      display: flex;
-      align-items: center;
-      gap: var(--spacing-sm);
+    .methodology-list {
+      list-style: none;
+      padding: 0;
+      margin: var(--spacing-md) 0;
     }
     
-    .testimonial-avatar {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      background: var(--accent);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-weight: 500;
+    .methodology-list li {
+      padding: var(--spacing-sm) 0;
+      padding-left: 32px;
+      position: relative;
+      border-bottom: 1px solid var(--border);
+    }
+    
+    .methodology-list li:before {
+      content: "→";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: 600;
       font-size: 1.25rem;
     }
     
-    .testimonial-name {
-      font-weight: 500;
-      color: var(--black);
+    .credentials {
+      background: var(--white);
+      padding: var(--spacing-md);
+      border-radius: 8px;
+      margin-top: var(--spacing-md);
+      border-left: 3px solid var(--accent);
     }
     
-    .testimonial-role {
-      font-size: 0.8rem;
-      color: var(--light-gray);
+    .credentials p {
+      margin: 0;
+      font-size: 0.9375rem;
+      line-height: 1.8;
     }
     
-    /* ================= CONTACT VELASCA ================= */
+    .credentials a {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+    
+    /* ================= CONTACT ================= */
     .contact-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1.5fr 1fr;
       gap: var(--spacing-lg);
       margin-top: var(--spacing-lg);
     }
     
     .contact-form {
-      display: flex;
-      flex-direction: column;
-      gap: var(--spacing-md);
+      background: var(--beige);
+      padding: var(--spacing-lg);
+      border-radius: 8px;
+      border: 1px solid var(--border);
     }
     
     .form-group {
-      display: flex;
-      flex-direction: column;
+      margin-bottom: var(--spacing-md);
     }
     
     .form-group label {
-      font-size: 0.875rem;
+      display: block;
       font-weight: 500;
-      color: var(--gray);
       margin-bottom: 8px;
+      color: var(--black);
     }
     
     .form-group input,
     .form-group textarea {
-      padding: 16px;
+      width: 100%;
+      padding: 12px 16px;
       border: 1px solid var(--border);
+      border-radius: 4px;
       font-family: var(--font-sans);
       font-size: 1rem;
-      transition: all 0.3s ease;
       background: var(--white);
-      color: var(--gray);
+      color: var(--black);
+      transition: all 0.3s ease;
     }
     
     .form-group input:focus,
     .form-group textarea:focus {
       outline: none;
       border-color: var(--accent);
-      box-shadow: 0 0 0 3px rgba(139, 115, 85, 0.1);
     }
     
     .contact-info {
+      background: var(--white);
       padding: var(--spacing-lg);
-      background: var(--beige);
+      border-radius: 8px;
+      border: 1px solid var(--border);
     }
     
     .contact-methods {
-      margin-top: var(--spacing-lg);
+      margin-top: var(--spacing-md);
     }
     
     .contact-method {
       display: flex;
-      align-items: center;
       gap: var(--spacing-sm);
-      margin-bottom: var(--spacing-md);
+      padding: var(--spacing-sm) 0;
+      border-bottom: 1px solid var(--border);
+    }
+    
+    .contact-method:last-child {
+      border-bottom: none;
     }
     
     .contact-method i {
+      font-size: 1.5rem;
       color: var(--accent);
-      font-size: 1.2rem;
     }
     
-    /* ================= FOOTER VELASCA ================= */
+    .contact-method strong {
+      display: block;
+      color: var(--black);
+      margin-bottom: 4px;
+    }
+    
+    .contact-method a {
+      color: var(--accent);
+    }
+    
+    .contact-method a:hover {
+      text-decoration: underline;
+    }
+    
+    /* ================= FOOTER ================= */
     .footer {
-      padding: var(--spacing-lg) 0;
-      border-top: 1px solid var(--border);
+      background: var(--black);
+      color: var(--white);
+      padding: var(--spacing-md) 0;
       text-align: center;
-      color: var(--light-gray);
-      font-size: 0.875rem;
     }
     
-    /* ================= CV SECTION ================= */
-    .cv-section {
-      padding: var(--spacing-xl) 0;
-      background: var(--beige);
+    .footer p {
+      color: var(--white);
+      margin: 0;
     }
     
-    .cv-download {
-      text-align: center;
-      padding: var(--spacing-lg);
-    }
-    
-    .cv-download .btn {
-      margin-top: var(--spacing-md);
-    }
-    
-    /* ================= 3D ANIMATIONS SIMPLIFIED ================= */
-    .shape-3d-container {
-      position: relative;
-      width: 100%;
-      height: 400px;
-      margin: var(--spacing-lg) 0;
-    }
-    
-    .shape-3d {
-      position: absolute;
-      width: 200px;
-      height: 200px;
-      border: 1px solid var(--accent);
-      border-radius: 50%;
-      background: linear-gradient(135deg, 
-        rgba(139, 115, 85, 0.1) 0%, 
-        rgba(201, 160, 32, 0.05) 100%);
-      animation: float3d 6s ease-in-out infinite;
-    }
-    
-    .shape-3d:nth-child(1) {
-      top: 20%;
-      left: 10%;
-      animation-delay: 0s;
-    }
-    
-    .shape-3d:nth-child(2) {
-      top: 40%;
-      right: 15%;
-      animation-delay: -2s;
-    }
-    
-    .shape-3d:nth-child(3) {
-      bottom: 20%;
-      left: 20%;
-      animation-delay: -4s;
-    }
-    
-    @keyframes float3d {
-      0%, 100% {
-        transform: translateY(0) rotate(0deg);
-      }
-      50% {
-        transform: translateY(-20px) rotate(180deg);
-      }
-    }
-    
-    /* ================= RESPONSIVE VELASCA ================= */
-    @media (max-width: 1200px) {
-      :root {
-        --spacing-xl: 96px;
-        --spacing-lg: 64px;
-        --spacing-md: 32px;
-      }
-    }
-    
-    @media (max-width: 992px) {
-      h1 {
-        font-size: 2.5rem;
-      }
-      
-      h2 {
-        font-size: 2rem;
-      }
-      
-      .hero {
-        padding: 140px 0 80px;
-      }
-      
-      .about-grid,
-      .contact-grid {
-        grid-template-columns: 1fr;
-        gap: var(--spacing-lg);
-      }
-      
+    /* ================= RESPONSIVE ================= */
+    @media (max-width: 768px) {
       .nav-menu {
         display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--white);
+        flex-direction: column;
+        padding: var(--spacing-md);
+        box-shadow: var(--shadow);
+        border-top: 1px solid var(--border);
+      }
+      
+      [data-theme="dark"] .nav-menu {
+        background: var(--beige);
+      }
+      
+      .nav-menu.active {
+        display: flex;
       }
       
       .nav-toggle {
         display: block;
       }
       
-      .nav-menu.active {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: var(--white);
-        padding: var(--spacing-md);
-        border-top: 1px solid var(--border);
-        box-shadow: var(--shadow);
-      }
-      
       .hero-stats {
-        flex-direction: column;
-        gap: var(--spacing-md);
-      }
-      
-      .hero-buttons {
-        flex-direction: column;
-      }
-    }
-    
-    @media (max-width: 768px) {
-      :root {
-        --spacing-lg: 48px;
-        --spacing-xl: 64px;
-      }
-      
-      .section {
-        padding: var(--spacing-lg) 0;
-      }
-      
-      .services-grid,
-      .projects-grid,
-      .testimonials-grid,
-      .process-grid {
         grid-template-columns: 1fr;
       }
       
-      .container {
-        padding: 0 var(--spacing-sm);
-      }
-    }
-    
-    @media (max-width: 480px) {
-      h1 {
-        font-size: 2rem;
+      .case-content {
+        grid-template-columns: 1fr;
       }
       
-      h2 {
-        font-size: 1.5rem;
+      .project-grid {
+        grid-template-columns: 1fr;
       }
       
-      .nav-cv-button {
-        display: none;
+      .contact-grid {
+        grid-template-columns: 1fr;
       }
       
-      .stat-number {
-        font-size: 2rem;
+      .hero-ctas {
+        flex-direction: column;
       }
       
-      .btn {
+      .hero-ctas .btn {
         width: 100%;
         justify-content: center;
-      }
-      
-      .hero-buttons .btn {
-        width: 100%;
       }
     }
     
     /* ================= ANIMATIONS ================= */
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-    
     .fade-in {
-      animation: fadeIn 0.6s ease-out forwards;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
     }
     
-    /* ================= ACCESSIBILITY ================= */
-    @media (prefers-reduced-motion: reduce) {
-      * {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-      }
-    }
-    
-    :focus-visible {
-      outline: 2px solid var(--accent);
-      outline-offset: 2px;
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
   </style>
 </head>
-
 <body>
 
 <!-- ================= NAVIGATION ================= -->
 <nav class="navbar">
   <div class="container nav-container">
-    <a href="#" class="nav-logo">
-      <i class="ri-palette-line"></i>
-      David Sebastián Díaz
-    </a>
+    <a href="#" class="nav-logo">David Sebastián Díaz</a>
     
-    <button class="nav-toggle" id="navToggle">
-      <i class="ri-menu-line"></i>
-    </button>
-    
-    <ul class="nav-menu" id="navMenu">
-      <li><a href="#about" class="nav-link">Sobre mí</a></li>
-      <li><a href="#services" class="nav-link">Servicios</a></li>
-      <li><a href="#projects" class="nav-link">Proyectos</a></li>
-      <li><a href="#process" class="nav-link">Proceso</a></li>
-      <li><a href="#testimonials" class="nav-link">Testimonios</a></li>
-      <li><a href="#contact" class="nav-link">Contacto</a></li>
-      <li><a href="CV_David_Sebastian_Diaz.pdf" class="nav-link" target="_blank" download>
-        <i class="ri-download-line"></i> CV
-      </a></li>
-    </ul>
-    
-    <div class="nav-actions">
-      <a href="CV_David_Sebastian_Diaz.pdf" class="nav-cv-button" target="_blank" download>
-        <i class="ri-download-line"></i> Descargar CV
-      </a>
+    <div class="nav-menu" id="navMenu">
+      <a href="#about" class="nav-link">Sobre mí</a>
+      <a href="#cases" class="nav-link">Casos de Estudio</a>
+      <a href="#projects" class="nav-link">Proyectos</a>
+      <a href="#contact" class="nav-link">Contacto</a>
       <button class="theme-toggle" id="themeToggle">
         <i class="ri-sun-line"></i>
       </button>
     </div>
+    
+    <button class="nav-toggle" id="navToggle">
+      <i class="ri-menu-line"></i>
+    </button>
   </div>
 </nav>
 
 <!-- ================= HERO ================= -->
-<header class="hero">
+<section class="hero">
   <div class="container">
     <div class="hero-content">
-      <h1 class="fade-in">Diseñador de Producto UX/UI con enfoque estratégico</h1>
-      <p class="hero-subtitle fade-in">Transformo problemas complejos en experiencias digitales elegantes y funcionales, combinando investigación profunda, diseño intuitivo y análisis de datos.</p>
+      <span class="hero-badge">PRODUCT DESIGNER · UX RESEARCH + DATA</span>
       
-      <div class="hero-stats fade-in">
+      <h1 class="hero-title">
+        Product Designer con enfoque en <span class="highlight">Research + Data + Sistemas</span>
+      </h1>
+      
+      <p class="hero-subtitle">
+        Transformo insights de usuarios en productos digitales validados. Combino UX research riguroso, análisis de datos y diseño de sistemas para crear experiencias que resuelven problemas reales.
+      </p>
+      
+      <div class="hero-stats">
         <div class="stat">
-          <span class="stat-number">30+</span>
-          <span class="stat-label">Proyectos</span>
+          <span class="stat-number">+166%</span>
+          <span class="stat-label">Conversión en Amara</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">150+</span>
+          <span class="stat-label">Horas de Research</span>
         </div>
         <div class="stat">
           <span class="stat-number">18+</span>
           <span class="stat-label">Certificaciones</span>
         </div>
-        <div class="stat">
-          <span class="stat-number">5M+</span>
-          <span class="stat-label">Usuarios</span>
-        </div>
       </div>
       
-      <div class="hero-buttons">
-        <a href="#contact" class="btn btn-large">
-          <i class="ri-calendar-line"></i>Agendar consulta
-        </a>
-        <a href="#projects" class="btn btn-outline btn-large">Ver proyectos</a>
-        <a href="CV_David_Sebastian_Diaz.pdf" class="btn btn-outline btn-large" target="_blank" download>
-          <i class="ri-download-line"></i>Ver CV
-        </a>
+      <div class="hero-ctas">
+        <a href="#cases" class="btn btn-primary">Ver Casos de Estudio</a>
+        <a href="#contact" class="btn btn-secondary">Hablemos de tu Proyecto</a>
+      </div>
+      
+      <div class="hero-badges">
+        <span>✓ Evaluación Heurística Nielsen</span>
+        <span>✓ A/B Testing</span>
+        <span>✓ Data-Driven Design</span>
       </div>
     </div>
   </div>
-  
-  <!-- Simple 3D shapes -->
-  <div class="shape-3d-container">
-    <div class="shape-3d"></div>
-    <div class="shape-3d"></div>
-    <div class="shape-3d"></div>
-  </div>
-</header>
+</section>
 
-<!-- ================= ABOUT ================= -->
-<section id="about" class="section">
+<!-- ================= CASES DE ESTUDIO ================= -->
+<section id="cases" class="section">
   <div class="container">
-    <div class="about-grid">
-      <div class="about-image">
-        <!-- Placeholder para imagen -->
-        <div style="width:100%; height:500px; background:var(--dark-beige); display:flex; align-items:center; justify-content:center;">
-          <i class="ri-user-line" style="font-size: 4rem; color: var(--accent);"></i>
-        </div>
+    <div class="section-header">
+      <h2>Casos de Estudio Documentados</h2>
+      <p class="section-subtitle">
+        Proyectos reales donde combiné research, datos y diseño para generar impacto medible
+      </p>
+    </div>
+    
+    <!-- CASO 1: AMARA -->
+    <div class="case-study featured fade-in">
+      <div class="case-header">
+        <span class="tag">CRO + UX REDESIGN</span>
+        <h3>Amara: +166% Conversión Móvil con Evaluación Heurística</h3>
       </div>
       
-      <div class="about-content">
-        <h2>Sobre mí</h2>
-        <p class="text-lead">Como diseñador de producto, mi enfoque combina la elegancia visual italiana con la precisión del diseño centrado en datos. Creo experiencias que no solo son hermosas, sino también medibles y escalables.</p>
-        
-        <ul class="about-list">
-          <li>
-            <i class="ri-check-line"></i>
-            <span><strong>Research profundo:</strong> Entiendo usuarios reales, no suposiciones</span>
-          </li>
-          <li>
-            <i class="ri-check-line"></i>
-            <span><strong>Data-Driven:</strong> Cada decisión respaldada por métricas</span>
-          </li>
-          <li>
-            <i class="ri-check-line"></i>
-            <span><strong>Design Systems:</strong> Escalabilidad desde día 1</span>
-          </li>
-          <li>
-            <i class="ri-check-line"></i>
-            <span><strong>Impacto medible:</strong> +35% mejora promedio en conversión</span>
-          </li>
-        </ul>
-        
-        <div style="margin-top: var(--spacing-md);">
-          <a href="CV_David_Sebastian_Diaz.pdf" class="btn" target="_blank" download>
-            <i class="ri-download-line"></i>Descargar CV completo
+      <div class="case-content">
+        <div class="case-info">
+          <p>
+            Rediseño completo del funnel de suscripción basado en evaluación heurística Nielsen y análisis de comportamiento de usuarios. Apliqué matriz de severidad/impacto para priorizar cambios de alto ROI.
+          </p>
+          
+          <h4>Metodología aplicada:</h4>
+          <div class="case-highlights">
+            <ul>
+              <li>Evaluación heurística con 10 principios de Nielsen</li>
+              <li>Análisis de heatmaps y session recordings</li>
+              <li>Matriz severidad/impacto para priorizar cambios</li>
+              <li>Rediseño de arquitectura de información</li>
+              <li>A/B testing en implementación</li>
+            </ul>
+          </div>
+          
+          <div class="case-metrics">
+            <div class="metric">
+              <strong>+166%</strong>
+              <span>Conversión móvil</span>
+            </div>
+            <div class="metric">
+              <strong>+100%</strong>
+              <span>Conversión general</span>
+            </div>
+            <div class="metric">
+              <strong>-36%</strong>
+              <span>Bounce rate</span>
+            </div>
+            <div class="metric">
+              <strong>+87%</strong>
+              <span>Tiempo en página</span>
+            </div>
+          </div>
+          
+          <a href="https://diazux.tech/#amara-case" target="_blank" class="btn-case">
+            Ver caso completo con antes/después →
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- CASO 2: PASEO APP -->
+    <div class="case-study fade-in">
+      <div class="case-header">
+        <span class="tag">UX RESEARCH + MVP VALIDATION</span>
+        <h3>PASEO App: Validación de Product-Market Fit</h3>
+      </div>
+      
+      <div class="case-content">
+        <div class="case-info">
+          <p>
+            Proceso completo de UX research para validar MVP antes del desarrollo full. 30+ entrevistas en profundidad, 20 sesiones de usability testing, y validación de roadmap con usuarios reales.
+          </p>
+          
+          <h4>Proceso de research:</h4>
+          <div class="case-highlights">
+            <ul>
+              <li>30+ entrevistas cualitativas con usuarios potenciales</li>
+              <li>20 sesiones de usability testing con prototipos</li>
+              <li>Análisis de jobs-to-be-done (JTBD)</li>
+              <li>Creación de user personas validadas</li>
+              <li>Roadmap priorizado basado en feedback real</li>
+            </ul>
+          </div>
+          
+          <div class="case-metrics">
+            <div class="metric">
+              <strong>92%</strong>
+              <span>Satisfacción en testing</span>
+            </div>
+            <div class="metric">
+              <strong>30+</strong>
+              <span>Entrevistas</span>
+            </div>
+            <div class="metric">
+              <strong>20</strong>
+              <span>Sesiones de testing</span>
+            </div>
+          </div>
+          
+          <a href="https://github.com/dsd228/dsd228-paseo-ux-case-study" target="_blank" class="btn-case">
+            Ver documentación completa en GitHub →
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- CASO 3: NEXUS LOGISTICS -->
+    <div class="case-study fade-in">
+      <div class="case-header">
+        <span class="tag">DESIGN SYSTEM + DASHBOARD B2B</span>
+        <h3>Nexus Logistics: Simplificación de Complejidad</h3>
+      </div>
+      
+      <div class="case-content">
+        <div class="case-info">
+          <p class="case-note">
+            📋 <strong>Proyecto bajo NDA:</strong> Ciertos detalles están limitados por acuerdo de confidencialidad. Caso completo disponible bajo firma de NDA mutuo.
+          </p>
+          
+          <p>
+            Rediseño de dashboard B2B para plataforma de logística. Reducción de complejidad visual mediante arquitectura contextual y creación de design system escalable.
+          </p>
+          
+          <h4>Resultados medidos:</h4>
+          <div class="case-highlights">
+            <ul>
+              <li>Reducción de 200+ campos a 30 campos críticos</li>
+              <li>Design system con componentes contextuales</li>
+              <li>Mejora del 40% en SUS Score (usabilidad)</li>
+              <li>30% menos tiempo de training para nuevos usuarios</li>
+              <li>200+ usuarios activos en B2B</li>
+            </ul>
+          </div>
+          
+          <a href="https://github.com/dsd228/nexus-logistics-ui" target="_blank" class="btn-case">
+            Ver componentes públicos en GitHub →
           </a>
         </div>
       </div>
@@ -1060,300 +1026,188 @@
   </div>
 </section>
 
-<!-- ================= SERVICES ================= -->
-<section id="services" class="section">
+<!-- ================= PROYECTOS DE EXPLORACIÓN ================= -->
+<section id="projects" class="section" style="background: var(--beige);">
   <div class="container">
     <div class="section-header">
-      <h2>Servicios</h2>
-      <p class="section-subtitle">End‑to‑end: investigo, diseño y valido</p>
+      <h2>Proyectos de Exploración & Aprendizaje</h2>
+      <p class="section-subtitle">
+        Ejercicios de diseño, rediseños y análisis técnicos que demuestran mi proceso y habilidades
+      </p>
     </div>
     
-    <div class="services-grid">
-      <div class="service-card fade-in">
-        <div class="service-icon">
-          <i class="ri-search-eye-line"></i>
-        </div>
-        <h3>Discovery Research</h3>
-        <p>Entrevistas, análisis competitivo y estudios para definir problemas y oportunidades.</p>
-      </div>
-      
-      <div class="service-card fade-in">
-        <div class="service-icon">
-          <i class="ri-compasses-2-line"></i>
-        </div>
-        <h3>Product Strategy</h3>
-        <p>Objetivos, métricas, roadmap y propuesta de valor orientada a impacto.</p>
-      </div>
-      
-      <div class="service-card fade-in">
-        <div class="service-icon">
-          <i class="ri-pencil-ruler-line"></i>
-        </div>
-        <h3>UX/UI Design</h3>
-        <p>Flujos, IA, wireframes y visual design con accesibilidad y micro‑interacciones.</p>
-      </div>
-      
-      <div class="service-card fade-in">
-        <div class="service-icon">
-          <i class="ri-test-tube-line"></i>
-        </div>
-        <h3>Validación & Testing</h3>
-        <p>Prototipos, tests de usabilidad y A/B para reducir riesgo y mejorar conversión.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= PROJECTS ================= -->
-<section id="projects" class="section">
-  <div class="container">
-    <div class="section-header">
-      <h2>Proyectos Destacados</h2>
-      <p class="section-subtitle">Casos de estudio donde el diseño impactó métricas de negocio</p>
-    </div>
-    
-    <div class="projects-grid">
-      
-      <!-- Proyecto 1 -->
-      <article class="project-card fade-in">
-        <div class="project-image">
-          <!-- Placeholder -->
-          <div style="width:100%; height:300px; background:linear-gradient(135deg, #0f4c75 0%, #3282b8 100%); display:flex; align-items:center; justify-content:center;">
-            <i class="ri-dashboard-line" style="font-size: 3rem; color: white;"></i>
-          </div>
-        </div>
+    <div class="project-grid">
+      <!-- Yale Redesign -->
+      <div class="project-card fade-in">
         <div class="project-info">
-          <h3>Nexus Logistics</h3>
-          <p>Rediseño de dashboard SaaS B2B que mejoró la usabilidad en un 40%</p>
-          
-          <div class="project-tags">
-            <span class="tag">SaaS</span>
-            <span class="tag">Dashboard</span>
-            <span class="tag">B2B</span>
-          </div>
-          
-          <div class="project-metrics">
-            <div class="metric">
-              <span class="metric-value">+40%</span>
-              <span class="metric-label">Usabilidad</span>
-            </div>
-            <div class="metric">
-              <span class="metric-value">-30%</span>
-              <span class="metric-label">Training</span>
-            </div>
-          </div>
-        </div>
-      </article>
-      
-      <!-- Proyecto 2 -->
-      <article class="project-card fade-in">
-        <div class="project-image">
-          <!-- Placeholder -->
-          <div style="width:100%; height:300px; background:linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%); display:flex; align-items:center; justify-content:center;">
-            <i class="ri-book-line" style="font-size: 3rem; color: white;"></i>
-          </div>
-        </div>
-        <div class="project-info">
-          <h3>School Art UX/UI</h3>
-          <p>Rediseño completo de plataforma educativa con foco en claridad y usabilidad</p>
-          
-          <div class="project-tags">
-            <span class="tag">EdTech</span>
-            <span class="tag">Redesign</span>
-            <span class="tag">UI/UX</span>
-          </div>
-          
-          <div class="project-metrics">
-            <div class="metric">
-              <span class="metric-value">+52%</span>
-              <span class="metric-label">Claridad IA</span>
-            </div>
-            <div class="metric">
-              <span class="metric-value">-38%</span>
-              <span class="metric-label">Fricción</span>
-            </div>
-          </div>
-        </div>
-      </article>
-      
-      <!-- Proyecto 3 -->
-      <article class="project-card fade-in">
-        <div class="project-image">
-          <!-- Placeholder -->
-          <div style="width:100%; height:300px; background:linear-gradient(135deg, #0c40a6 0%, #5b7dd1 100%); display:flex; align-items:center; justify-content:center;">
-            <i class="ri-building-line" style="font-size: 3rem; color: white;"></i>
-          </div>
-        </div>
-        <div class="project-info">
+          <span class="tag">REDESIGN EXERCISE</span>
           <h3>Yale UX Redesign</h3>
-          <p>Reorganización de arquitectura de información y componentes visuales</p>
-          
-          <div class="project-tags">
-            <span class="tag">Education</span>
-            <span class="tag">IA/UX</span>
-            <span class="tag">Design System</span>
-          </div>
-          
-          <div class="project-metrics">
-            <div class="metric">
-              <span class="metric-value">+85%</span>
-              <span class="metric-label">Encuentrabilidad</span>
-            </div>
-            <div class="metric">
-              <span class="metric-value">-40%</span>
-              <span class="metric-label">Confusión</span>
-            </div>
-          </div>
+          <p>
+            Ejercicio de arquitectura de información y consistencia visual. Reorganización de contenidos, mejora de jerarquía y componentes reutilizables.
+          </p>
+          <a href="https://github.com/dsd22/yale-ux-redesign" target="_blank" class="btn-case">
+            Ver en GitHub →
+          </a>
         </div>
-      </article>
+      </div>
       
+      <!-- School Art -->
+      <div class="project-card fade-in">
+        <div class="project-info">
+          <span class="tag">UI CONCEPT</span>
+          <h3>School Art UX/UI</h3>
+          <p>
+            Concepto de diseño con foco en claridad de arquitectura de información, coherencia visual y reducción de fricción en flujos.
+          </p>
+          <a href="https://www.behance.net/gallery/240418895/School-Art-UXUI-Redesign" target="_blank" class="btn-case">
+            Ver en Behance →
+          </a>
+        </div>
+      </div>
+      
+      <!-- Apple Analysis -->
+      <div class="project-card fade-in">
+        <div class="project-info">
+          <span class="tag">DATA ANALYSIS + PYTHON</span>
+          <h3>Apple UX Strategy Analysis</h3>
+          <p>
+            Análisis de estrategia UX de empresa Fortune 500 con visualizaciones avanzadas en Python. 50K+ views, 5K+ shares en comunidad técnica.
+          </p>
+          <a href="https://github.com/dsd228/-Apple-Inc.-2025-UX-KPIs-Innovation-Strategy" target="_blank" class="btn-case">
+            Ver análisis completo →
+          </a>
+        </div>
+      </div>
+      
+      <!-- Fraud Detection -->
+      <div class="project-card fade-in">
+        <div class="project-info">
+          <span class="tag">DATA SCIENCE + ML</span>
+          <h3>Fraud Detection ML Pipeline</h3>
+          <p>
+            Pipeline de machine learning con XGBoost en dataset de 284K transacciones desbalanceado. 97% precision en detección.
+          </p>
+          <a href="https://github.com/dsd228/credit-card-fraud-detection" target="_blank" class="btn-case">
+            Ver proyecto →
+          </a>
+        </div>
+      </div>
+      
+      <!-- Dashboard Analytics -->
+      <div class="project-card fade-in">
+        <div class="project-info">
+          <span class="tag">DASHBOARD + DATA VIZ</span>
+          <h3>Dashboard de Analytics</h3>
+          <p>
+            Sistema de visualización de datos con foco en reducción de tiempo de análisis para equipos ejecutivos. Design system incluido.
+          </p>
+          <a href="https://github.com/dsd228" target="_blank" class="btn-case">
+            Ver en portfolio →
+          </a>
+        </div>
+      </div>
+      
+      <!-- 30+ más en GitHub -->
+      <div class="project-card fade-in">
+        <div class="project-info">
+          <span class="tag">PORTFOLIO TÉCNICO</span>
+          <h3>30+ Proyectos Más</h3>
+          <p>
+            Portfolio técnico completo en GitHub con diseño UX/UI, data analytics, ML, desarrollo web. Todo documentado y verificable.
+          </p>
+          <a href="https://github.com/dsd228" target="_blank" class="btn-case">
+            Explorar GitHub completo →
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ================= PROCESS ================= -->
-<section id="process" class="section">
-  <div class="container container-sm">
-    <div class="section-header">
-      <h2>Mi Proceso</h2>
-      <p class="section-subtitle">De la investigación al impacto medible</p>
-    </div>
-    
-    <div class="process-grid">
-      <div class="process-step fade-in">
-        <div class="step-number">01</div>
-        <h3>Discovery & Research</h3>
-        <p>Entrevistas, análisis competitivo y datos reales para entender el problema.</p>
-      </div>
-      
-      <div class="process-step fade-in">
-        <div class="step-number">02</div>
-        <h3>Strategy & Design</h3>
-        <p>Arquitectura, wireframes y componentes basados en insights y necesidades reales.</p>
-      </div>
-      
-      <div class="process-step fade-in">
-        <div class="step-number">03</div>
-        <h3>Testing & Validation</h3>
-        <p>Usability testing, A/B tests y métricas de impacto real con usuarios.</p>
-      </div>
-      
-      <div class="process-step fade-in">
-        <div class="step-number">04</div>
-        <h3>Launch & Iterate</h3>
-        <p>Deployment y monitoreo continuo basado en feedback real y KPIs.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= TESTIMONIALS ================= -->
-<section id="testimonials" class="testimonials section">
+<!-- ================= ABOUT / ENFOQUE ================= -->
+<section id="about" class="section">
   <div class="container">
     <div class="section-header">
-      <h2>Testimonios</h2>
-      <p class="section-subtitle">Lo que dicen mis clientes y colaboradores</p>
+      <h2>Mi Enfoque: Research + Data + Sistemas</h2>
+      <p class="section-subtitle">
+        No diseño "pantallas bonitas". Encuentro por qué los usuarios abandonan y lo soluciono con metodología rigurosa.
+      </p>
     </div>
     
-    <div class="testimonials-grid">
-      <div class="testimonial-card fade-in">
-        <p class="testimonial-text">
-          "David transformó completamente nuestra plataforma. Su enfoque en research y datos resultó en un aumento del 45% en conversión. Es designer + estratega."
+    <div class="about-content fade-in">
+      <p>
+        Soy Product Designer con fuerte enfoque en research y análisis de datos. Vengo de un background técnico (18+ certificaciones en UX, Data Analytics, Python) que me permite abordar problemas de diseño con metodología científica y validación constante.
+      </p>
+      
+      <h3>Lo que me diferencia:</h3>
+      <ul class="methodology-list">
+        <li>
+          <strong>Research primero:</strong> 150+ horas de entrevistas en profundidad, usability tests y análisis de comportamiento real de usuarios
+        </li>
+        <li>
+          <strong>Data-informed design:</strong> Uso Python, SQL y BI tools para fundamentar cada decisión de diseño con datos concretos
+        </li>
+        <li>
+          <strong>Evaluación Heurística Nielsen:</strong> Framework científico para detectar problemas de usabilidad y priorizarlos por severidad/impacto
+        </li>
+        <li>
+          <strong>Pensamiento sistémico:</strong> Diseño componentes escalables y design systems, no solo pantallas aisladas
+        </li>
+        <li>
+          <strong>Documentación obsesiva:</strong> Cada proyecto está documentado en GitHub con proceso completo y decisiones justificadas
+        </li>
+      </ul>
+      
+      <h3>Mi metodología paso a paso:</h3>
+      <ul class="methodology-list">
+        <li>
+          <strong>1. Evaluación Heurística:</strong> Analizo el producto actual con los 10 principios de Nielsen para identificar problemas críticos
+        </li>
+        <li>
+          <strong>2. User Research Cualitativo:</strong> Entrevistas, heatmaps, session recordings, análisis de comportamiento
+        </li>
+        <li>
+          <strong>3. Matriz Severidad/Impacto:</strong> Priorizo cambios que generarán el mayor ROI con menor esfuerzo
+        </li>
+        <li>
+          <strong>4. Diseño de Hipótesis:</strong> Cada cambio tiene una hipótesis medible que se valida con datos
+        </li>
+        <li>
+          <strong>5. A/B Testing:</strong> Validación antes de desarrollo full para minimizar riesgo
+        </li>
+      </ul>
+      
+      <h3>Actualmente:</h3>
+      <p>
+        Trabajando en proyectos de UX research y diseño de productos complejos. Busco oportunidades para colaborar en productos donde research riguroso, datos y sistemas sean fundamentales para el éxito.
+      </p>
+      
+      <div class="credentials">
+        <p>
+          📚 <strong>Formación:</strong> 18+ certificaciones verificadas en <a href="https://www.credly.com/users/david-sebastian-diaz" target="_blank">Credly</a> (Google UX Design, IBM Data Analytics, Python, BI)<br>
+          🛠️ <strong>Stack técnico:</strong> Figma, Python, SQL, Maze, Hotjar, Google Analytics, Amplitude, Mixpanel<br>
+          🔬 <strong>Metodologías:</strong> Nielsen Heuristics, Jobs-to-be-Done (JTBD), Design Thinking, Lean UX<br>
+          🔗 <strong>Portfolio técnico:</strong> <a href="https://github.com/dsd228" target="_blank">30+ repositorios en GitHub</a> con código y documentación completa<br>
+          💼 <strong>LinkedIn:</strong> <a href="https://linkedin.com/in/david-sebastian-diaz" target="_blank">500+ conexiones profesionales</a>
         </p>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar">MG</div>
-          <div>
-            <div class="testimonial-name">María González</div>
-            <div class="testimonial-role">CEO, SaaS Logistics</div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="testimonial-card fade-in">
-        <p class="testimonial-text">
-          "No es solo un diseñador. Es un socio estratégico. Desde research hasta validación, David entendió nuestro negocio mejor que nosotros mismos."
-        </p>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar">AR</div>
-          <div>
-            <div class="testimonial-name">Alejandra Ruiz</div>
-            <div class="testimonial-role">Founder, EdTech Startup</div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="testimonial-card fade-in">
-        <p class="testimonial-text">
-          "Trabajar con David fue excepcional. Entiende de UX pero también de negocio. Sus análisis de datos llevaron nuestras decisiones de diseño al siguiente nivel."
-        </p>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar">CM</div>
-          <div>
-            <div class="testimonial-name">Carlos Méndez</div>
-            <div class="testimonial-role">Product Manager</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= CV DOWNLOAD SECTION ================= -->
-<section id="cv" class="cv-section section">
-  <div class="container container-sm">
-    <div class="cv-download">
-      <h2>Curriculum Vitae</h2>
-      <p class="section-subtitle">Descarga mi CV completo con experiencia detallada, certificaciones y habilidades</p>
-      
-      <div class="hero-stats" style="max-width: 400px; margin: var(--spacing-md) auto;">
-        <div class="stat">
-          <span class="stat-number">8+</span>
-          <span class="stat-label">Años Exp.</span>
-        </div>
-        <div class="stat">
-          <span class="stat-number">18</span>
-          <span class="stat-label">Certificaciones</span>
-        </div>
-        <div class="stat">
-          <span class="stat-number">30+</span>
-          <span class="stat-label">Proyectos</span>
-        </div>
-      </div>
-      
-      <a href="CV_David_Sebastian_Diaz.pdf" class="btn btn-large" target="_blank" download>
-        <i class="ri-download-line"></i>Descargar CV (PDF)
-      </a>
-      
-      <div class="contact-methods" style="margin-top: var(--spacing-lg);">
-        <div class="contact-method">
-          <i class="ri-mail-line"></i>
-          <div>
-            <div><strong>Email</strong></div>
-            <div>david.diaz.uxdata@gmail.com</div>
-          </div>
-        </div>
-        <div class="contact-method">
-          <i class="ri-linkedin-box-line"></i>
-          <div>
-            <div><strong>LinkedIn</strong></div>
-            <div>linkedin.com/in/david-sebastian-diaz</div>
-          </div>
-        </div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ================= CONTACT ================= -->
-<section id="contact" class="section">
+<section id="contact" class="section" style="background: var(--beige);">
   <div class="container">
     <div class="section-header">
-      <h2>Contacto</h2>
-      <p class="section-subtitle">¿Tienes un proyecto digital complejo que necesita claridad de UX?</p>
+      <h2>Conversemos sobre tu Proyecto</h2>
+      <p class="section-subtitle">
+        ¿Tienes un producto complejo que necesita research, datos o rediseño basado en usabilidad?
+      </p>
     </div>
     
     <div class="contact-grid">
-      <div class="contact-form">
+      <div class="contact-form fade-in">
+        <h3>Cuéntame tu Desafío</h3>
         <form id="contactForm">
           <div class="form-group">
             <label for="name">Nombre</label>
@@ -1365,53 +1219,57 @@
           </div>
           <div class="form-group">
             <label for="message">Mensaje</label>
-            <textarea id="message" name="message" placeholder="Cuéntame sobre tu proyecto" rows="5" required></textarea>
+            <textarea id="message" name="message" placeholder="Cuéntame sobre tu proyecto o desafío de UX" rows="5" required></textarea>
           </div>
-          <button type="submit" class="btn">Enviar mensaje</button>
+          <button type="submit" class="btn btn-primary" style="width: 100%;">
+            <i class="ri-send-plane-line"></i> Enviar Mensaje
+          </button>
         </form>
       </div>
       
-      <div class="contact-info">
-        <h3>Información de contacto</h3>
+      <div class="contact-info fade-in">
+        <h3>Información de Contacto</h3>
         <p>Agenda una consulta estratégica de 30 minutos para definir la dirección de tu proyecto.</p>
         
         <div class="contact-methods">
           <div class="contact-method">
             <i class="ri-mail-line"></i>
             <div>
-              <div><strong>Email</strong></div>
-              <div>david.diaz.uxdata@gmail.com</div>
+              <strong>Email</strong>
+              <div><a href="mailto:david.diaz.uxdata@gmail.com">david.diaz.uxdata@gmail.com</a></div>
             </div>
           </div>
           
           <div class="contact-method">
             <i class="ri-linkedin-box-line"></i>
             <div>
-              <div><strong>LinkedIn</strong></div>
-              <div>linkedin.com/in/david-sebastian-diaz</div>
+              <strong>LinkedIn</strong>
+              <div><a href="https://linkedin.com/in/david-sebastian-diaz" target="_blank">linkedin.com/in/david-sebastian-diaz</a></div>
             </div>
           </div>
           
           <div class="contact-method">
             <i class="ri-github-line"></i>
             <div>
-              <div><strong>GitHub</strong></div>
-              <div>github.com/dsd228</div>
+              <strong>GitHub</strong>
+              <div><a href="https://github.com/dsd228" target="_blank">github.com/dsd228</a></div>
             </div>
           </div>
           
           <div class="contact-method">
-            <i class="ri-file-text-line"></i>
+            <i class="ri-calendar-line"></i>
             <div>
-              <div><strong>Curriculum Vitae</strong></div>
-              <div>
-                <a href="CV_David_Sebastian_Diaz.pdf" style="color: var(--accent); text-decoration: underline;" target="_blank" download>
-                  Descargar PDF
-                </a>
-              </div>
+              <strong>Calendly (opcional)</strong>
+              <div><a href="https://calendly.com/david-sebastian-diaz" target="_blank">Agendar llamada de 30 min</a></div>
             </div>
           </div>
         </div>
+        
+        <p style="margin-top: var(--spacing-md); font-size: 0.875rem; color: var(--light-gray);">
+          ✓ Respuesta en menos de 24 horas<br>
+          ✓ Consulta inicial sin compromiso<br>
+          ✓ NDA disponible para proyectos confidenciales
+        </p>
       </div>
     </div>
   </div>
@@ -1420,8 +1278,10 @@
 <!-- ================= FOOTER ================= -->
 <footer class="footer">
   <div class="container">
-    <p>© 2026 — David Sebastián Díaz · UX / Product Designer</p>
-    <p style="margin-top: 8px; font-size: 0.875rem;">Diseñado con elegancia y precisión</p>
+    <p>© 2026 — David Sebastián Díaz · Product Designer</p>
+    <p style="margin-top: 8px; font-size: 0.875rem; opacity: 0.8;">
+      Research + Data + Design Systems
+    </p>
   </div>
 </footer>
 
@@ -1453,7 +1313,6 @@
     document.documentElement.setAttribute('data-theme', newTheme);
     themeIcon.className = newTheme === 'dark' ? 'ri-moon-line' : 'ri-sun-line';
     
-    // Guardar preferencia
     localStorage.setItem('theme', newTheme);
   });
   
@@ -1475,7 +1334,7 @@
       submitBtn.innerHTML = '<i class="ri-loader-4-line"></i> Enviando...';
       submitBtn.disabled = true;
       
-      // Simulación de envío
+      // Simulación de envío (reemplazar con tu lógica real)
       setTimeout(() => {
         alert('¡Mensaje enviado con éxito! Me pondré en contacto contigo pronto.');
         contactForm.reset();
@@ -1522,26 +1381,14 @@
   const observer = new IntersectionObserver(function(entries) {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        entry.target.style.opacity = '1';
-        entry.target.style.transform = 'translateY(0)';
+        entry.target.classList.add('visible');
       }
     });
   }, observerOptions);
   
   // Aplicar animación a elementos
-  document.querySelectorAll('.fade-in, .service-card, .project-card, .process-step, .testimonial-card').forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(20px)';
-    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+  document.querySelectorAll('.fade-in').forEach(el => {
     observer.observe(el);
-  });
-  
-  // Inicializar animaciones
-  window.addEventListener('DOMContentLoaded', () => {
-    // Forzar reflow para animaciones
-    document.querySelectorAll('.fade-in').forEach(el => {
-      el.offsetHeight;
-    });
   });
 </script>
 
